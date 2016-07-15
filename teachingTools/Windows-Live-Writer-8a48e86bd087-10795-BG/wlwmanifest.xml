@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<manifest xmlns="http://schemas.microsoft.com/wlw/manifest/weblog">
+	<options>
+		<clientType>Metaweblog</clientType>
+		
+		<supportsCustomDate>No</supportsCustomDate>
+		<supportsExcerpt>Yes</supportsExcerpt>
+		<supportsEmptyTitles>No</supportsEmptyTitles>
+		<supportsNewCategories>Yes</supportsNewCategories>
+		<supportsNewCategoriesInline>Yes</supportsNewCategoriesInline>
+		
+		<supportsEmbeds>Yes</supportsEmbeds>
+		<supportsScripts>Yes</supportsScripts>
+		
+		<characterSet>utf-8</characterSet>
+		<requiresHtmlTitles>Yes</requiresHtmlTitles>
+		
+		<invalidPostIdFaultCodePattern>404</invalidPostIdFaultCodePattern>
+		
+	</options>
+	<weblog>
+		<serviceName>FC NoDB-Blog</serviceName>
+	</weblog>
+    <views>
+        <default>WebLayout</default>
+        <view type="WebLayout"  src="http://fremycompany.com/BG/API/xmlrpc/template.wlw1.html" />
+        <view type="WebPreview" src="http://fremycompany.com/BG/API/xmlrpc/template.wlw2.html" />
+    </views>
+</manifest>
