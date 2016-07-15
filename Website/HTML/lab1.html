@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/main2.css" rel="stylesheet" />
+
+    <!--adding bootstrap to code -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <link href="labs.css" rel="stylesheet" />
+
+
+    <link href="../css/layout.css" rel="stylesheet" />
+
+    <title> Lab1 </title>
+</head>
+
+<body>
+    <div class="blackBar">
+        <div class="main">
+
+            <header>
+
+                <h1> FemTechShare</h1>
+                <nav>
+                    <ul>
+                        <li> <a href="../html/index.html">About</a></li>
+                        <li><a href="#"> Labs </a></li>
+                        <li><a href="../html/schedule.html">Schedule </a></li>
+                        <li> <a href="../html/blog.html"> Blog</a></li>
+                        <li><a href="../html/contact.html">Contacts</a></li>
+                        <li> <a href="../html/resources.html">Resources</a> </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <!-- end of main-->
+
+    </div>
+    <!--end blackBar-->
+
+    </header>
+    <div class="container">
+
+        <span class="heading">WEEK 1: INTRODUCTIONS </span>
+        <span class="exercise">OVERVIEW</span>
+        <span class="exercise">LEARNING OBJECTIVES</span>
+        <ul>
+            <li>Meet & Greet</li>
+            <li>Introduce Fem Tech Share, Schedule, and Goals</li>
+            <li>Get working environment set up</li>
+        </ul>
+
+        <span class="exercise">Lab #1: Setup</span>
+        <p>In this lab, we’re going to set up our working environment using the following tools:</p>
+
+        <span class="exercise">I. THE TERMINAL</span>
+
+        <p>This is the interface that you use to directly communicate with the operating system via text-based commands (which are then converted into a language that the computer understands). Search and open the terminal on your computer. We’re going to
+            start by navigating the file (or directory) system. Let’s define some important vocab and commands: </p>
+
+        <ul>
+            <li>“Cd [path/to/file]”: move into or out of a directory</li>
+            <li>“Mkdir [name]”: make a new director</li>
+            <li>“ls”: list the contents of the directory</li>
+            <li>“mv [from_path] [to_path]”: move file from ‘from_path’ to ‘to_path’ if “to_path” exists. If “to_path” does not exist, this changes the name of “from_path” to “to_path”</li>
+
+        </ul>
+        <p>If these commands don’t make sense right now, it’s okay. We’re going to get some practice using the command line </p>
+
+        <span class="exercise">II. Exercise 1: </span>
+        <ol>
+            <li>Open up the Terminal and type “ls.” You should see something like this, indicating that you are currently in your home directory:</li>
+
+            []
+            <li>Now move into your Desktop: $ cd Desktop </li>
+
+            <li>Type “ls.” You should see all the files on your Desktop.</li>
+
+            <li>Create a new directory: “mkdir [name]” </li>
+
+            <li>Move into the directory: “cd [name]”</li>
+
+            <li>Type “ls” -- you should see nothing there. Let’s change that.</li>
+
+            <li>Make a new file: “vim [name].txt”. This should open up the file. Type something -- anything. To save and exit a file: press esc --> wq. (NOTE: Vim is a text editor that is outside the scope of this workshop, but is very useful to learn if
+                you are interested in programming. Check out the main VIM Commands here to find out more: [] )</li>
+
+            <li>Last but not least, change the name of your file to “fem_tech_lab1” using the “mv” command. Try this out on your own --talk with the person next to you if you get stuck. </li>
+
+        </ol>
+        <p>NOTE: The language to navigate the terminal is called UNIX. For this course, understanding the command line is not too relevant. If you’re interested in programming beyond this course, however, knowing UNIX is essential. Here’s some resources
+            to help get you started (optional reading): Basic UNIX Commands: http://mally.stanford.edu/~sr/computing/basic-unix.html Code Academy Learn the Command Line: https://www.codecademy.com/ru/courses/learn-the-command-line/lessons/navigation/exercises/your-first-command?action=resume
+        </p>
+
+
+
+        <span class="exercise">III. BITBUCKET</span>
+        <p>Bitbucket is a Version Control System that allows you to save current ‘drafts’ of your working directory (files) to a remote server. It’s often used in industry by teams, since it allows people to ‘push’ what they’re working on to the remote server,
+            so that their teammates can ‘pull’ the changes from the remote server to their local computers to edit. Think of Bitbucket as a mix between the Cloud and Google Docs. Bitbucket is similar to the Cloud in that it acts like a backup system of
+            your current work. It’s similar to Google Docs in that many people can collaborate on one project, make drafts, and go back to an earlier version of their work if they’re not happy with more recent updates. Here’s the coolest thing about Version
+            Control systems: multiple people can be working on their own copies of the common file. They do so on what’s called ‘branches’ (like a tree -- they all branch off into different directions). When the team decides to go with one person’s version,
+            each team member can ‘merge’ his or her current file with the chosen teammates, so that they are all on the same page.</p>
+
+        <p>That’s a good general overview. If you want to learn about BitBucket (or Version Control), I highly recommend you check out these resources:
+            <ol>
+                <li>Git vs github: http://stephaniehoh.github.io/blog/2013/10/07/git-vs-github-for-dummies/</li>
+                <li>Version control: http://skillcrush.com/2013/02/11/version-control/</li>
+                <li>Basic commands: https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html</li>
+            </ol>
+            <span class="exercise">IV. Create an Account</span>
+            <ol>
+                <li>Create a private repository called “FEMTechShare”</li>
+
+                <li>Initialize Git</li>
+
+                <li>Clone the repository onto your local drive</li>
+
+            </ol>
+            <span class="exercise">V. EDX</span>
+            <p>Last but not least, we’re going to be using the FREE online course: “Creating Web Pages using Hypertext Markup Language (HTML).” This is a great introduction into the material we’ll be covering this term. It will be really helpful if you try
+                to complete one section per week, or at the very least, come to Share with questions. </p>
+
+            <span class="exercise">Homework: </span>
+            <p>EdX Module 1: “Creating Web Pages using Hypertext Markup Language (HTML)”</p>
+    </div>
+    <!-- end container-->
+
+</body>
+
+</html>

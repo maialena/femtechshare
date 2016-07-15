@@ -1,0 +1,38 @@
+.container {
+    display: grid;
+    margin: 100px;
+}
+
+.exercise {
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(darkgrey), to(lightgrey));
+    background-image: -webkit-linear-gradient(top, darkgrey, lightgrey);
+    background-image: -moz-linear-gradient(top, darkgrey, lightgrey);
+    background-image: linear-gradient(to bottom, darkgrey, lightgrey);
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.heading {
+    font-size: 40px;
+    text-decoration: bold;
+    text-decoration: uppercase;
+    font-family: fantasy;
+    border: black dashed 1px;
+    text-align: center;
+    padding: 20px;
+}
+
+.subtitle {
+    font-size: 30px;
+    text-decoration: underline;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    padding: 5px;
+}
+
+ul,
+ol li {
+    list-style: none;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}

@@ -1,0 +1,126 @@
+    /*MAIN */
+    /* GUIDE TO GRIDS: https://css-tricks.com/snippets/css/complete-guide-grid/ */
+    /* Grid is defined mostly in CSS : https://hacks.mozilla.org/2015/09/the-future-of-layout-with-css-grid-layouts/*/
+    /* Grid by example: http://gridbyexample.com/examples/#example2 */
+    
+    body {
+        background-color: antiquewhite;
+    }
+    
+    .some-area > p {
+        margin: 20px 70px;
+        font-family: Courier New, Courier, monospace;
+        font-size: 1.2em;
+    }
+    /*GUTTERS -- makes it so that element stays that width regardless of padding/margins*/
+    
+    *,
+    *:after,
+    *:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    /*OUTSIDE GUTTERS, ADD LEFT PADDING, and restore right-padding to last column */
+    
+    .grid {
+        display: grid;
+        -moz-grid-template-rows: auto;
+        -moz-grid-template-columns: repeat(4, 100px);
+        -moz-grid-template-areas: "main main main main main main" "vid1 vid2 vid3" "vid4 vid5 vid6" " footer footer footer footer footer footer";
+    }
+    
+    .grid-pad {
+        padding: 20px 0 20px 20px;
+    }
+    
+    .grid-pad > [class*='col-']:last-of-type {
+        padding-right: 20px;
+    }
+    /*VIDEO GRID*/
+    
+    .col-1-3 {
+        align-self: stretch;
+        /*this spaces out the videos*/
+        margin: 5px;
+    }
+    
+    .col-1-8 {
+        width: 12.5%;
+    }
+    /*SIDE BAR*/
+    
+    .sidebox {
+        border: 1px #330099 solid;
+        margin: 30px;
+        padding: 5px 10px;
+        text-align: center;
+    }
+    
+    section ol {
+        text-align: left;
+    }
+    
+    section ul {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+        color: darkorange;
+    }
+    /*FLOAT THE COLUMNS TO HAVE THEM NEXT TO EACH OTHER */
+    
+    [class*='col-'] {
+        padding-right: 20px;
+        float: left;
+    }
+    
+    [class*='col-']:last-of-type {
+        padding-right: 0;
+    }
+    /*PREVENT PARENT FROM COLLAPSING TO ZERO SINCE ONLY HAS FLOATED CHILDREN, need to clear it*/
+    
+    .grid:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /*Footer */
+    
+    .footer ul li {
+        padding: 0 50px;
+    }
+    /*ORDERING BOXES */
+    
+    .some-area {
+        -moz-grid-area: main;
+    }
+    
+    .vid1 {
+        -moz-grid-area: vid1;
+    }
+    
+    .vid2 {
+        -moz-grid-area: vid2;
+    }
+    
+    .vid3 {
+        -moz-grid-area: vid3;
+    }
+    
+    .vid4 {
+        -moz-grid-area: vid4;
+    }
+    
+    .vid5 {
+        -moz-grid-area: vid5;
+    }
+    
+    .vid6 {
+        -moz-grid-area: vid6;
+    }
+    
+    .footer {
+        -moz-grid-area: footer;
+    }

@@ -1,0 +1,27 @@
+    header h2,
+    h3 {
+        padding: 0;
+        text-align: center;
+    }
+    
+    h2 {
+        /*Schedule heading*/
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    table {
+        margin: 130px 20px 20px 20px;
+    }
+    
+    .blackBar {
+        height: 200px;
+    }
+    
+    tr {
+        text-align: center;
+    }

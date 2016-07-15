@@ -1,0 +1,183 @@
+/*box sizing reset: https://css-tricks.com/box-sizing/ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/*GRID SET UP*/
+
+body {
+    font-family: fantasy;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-areas: "menu menu menu menu" "sidebar2 about about form " "sidebar2 title title form " "sidebar elem1 elem2 form" "sidebar elem3 elem4 form" ". elem5 elem6 form" ". elem7 elem8 form" ". elem9 elem9 form" " . . . ." "footer footer footer footer";
+    /* color: #444;*/
+    grid-gap: 20px;
+    grid-row: auto;
+}
+
+.box {
+    /*border-radius: 5px; include to show layout */
+}
+
+
+/* VIDEO */
+
+.vid {
+    width: 300px;
+    height: 250;
+}
+
+
+/*GRID AREAS*/
+
+.elem1 {
+    grid-area: elem1;
+    text-align: center;
+}
+
+.elem2 {
+    grid-area: elem2;
+    text-align: center;
+}
+
+.elem3 {
+    grid-area: elem3;
+    text-align: center;
+}
+
+.elem4 {
+    grid-area: elem4;
+    text-align: center;
+}
+
+.elem5 {
+    grid-area: elem5;
+    text-align: center;
+}
+
+.elem6 {
+    grid-area: elem6;
+    text-align: center;
+}
+
+.elem7 {
+    grid-area: elem7;
+    text-align: center;
+}
+
+.elem8 {
+    grid-area: elem8;
+    text-align: center;
+}
+
+.elem9 {
+    grid-area: elem9;
+    text-align: center;
+}
+
+.about {
+    grid-area: about;
+    padding: 10px;
+}
+
+.title,
+.about_title {
+    font-size: 40px;
+    text-align: center;
+}
+
+.title {
+    grid-area: title;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    grid-area: sidebar;
+    padding: 20px;
+}
+
+.sidebar2 {
+    grid-area: sidebar2;
+    padding: 20px;
+}
+
+.sidebar,
+.sidebar2,
+.form {
+    /*background-color: #444;*/
+    color: #fff;
+}
+
+.pitch,
+.form {
+    background-color: black;
+    border-radius: 48%;
+    border: dashed #9975B9 2px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 45px;
+}
+
+.form {
+    grid-area: form;
+}
+
+.right_bar {
+    padding: 45px;
+}
+
+.pitch_square {
+    border-radius: 0%;
+    letter-spacing: 2px;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #262822;
+}
+
+.content {
+    grid-area: content;
+}
+
+
+/*footer nav bar, get rid of margin */
+
+.bottom {
+    margin-top: 0px;
+    height: auto;
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    margin: 0px;
+    height: auto;
+}
+
+
+/*STYLING */
+
+ol {
+    padding: 30px;
+}
+
+a,
+.purple {
+    color: #9975B9;
+    text-decoration: bold;
+    text-transform: uppercase;
+}
