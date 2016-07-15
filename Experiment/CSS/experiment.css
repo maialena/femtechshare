@@ -1,0 +1,87 @@
+body {
+    margin: 40px;
+}
+
+
+/*GRID AREAS*/
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+}
+
+.header {
+    grid-area: header;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.elem1 {
+    grid-area: elem1;
+}
+
+.elem2 {
+    grid-area: elem2;
+}
+
+.elem3 {
+    grid-area: elem3;
+}
+
+.elem4 {
+    grid-area: elem4;
+}
+
+.elem5 {
+    grid-area: elem5;
+}
+
+.elem6 {
+    grid-area: elem6;
+}
+
+.elem7 {
+    grid-area: elem7;
+}
+
+.elem8 {
+    grid-area: elem8;
+}
+
+.elem9 {
+    grid-area: elem9;
+}
+
+.sidebar2 {
+    grid-area: sidebar2;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    grid-template-areas: " header header header header header" "sidebar2 content content content sidebar" "sidebar2 elem1 elem2 elem3 sidebar" " sidebar2 elem4 elem5 elem6 sidebar" " sidebar2 elem7 elem8 elem9 sidebar" " footer footer footer footer  footer";
+    background-color: #fff;
+    color: #444;
+}
+
+.box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.title {
+    font-size: 150%;
+}
+
+.header,
+.footer {
+    background-color: #999;
+}

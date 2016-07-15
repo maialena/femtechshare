@@ -1,0 +1,71 @@
+/*this drastically changes the layout. You are no longer just some  div's sitting on top of each other, 
+taking up space. The section selector is nowa flex parent, 
+so all of its immediate children (the div's) are flex children, so they by default sit along on one row, 
+side by side left to right'*/
+
+.fill-height-or-more {
+    /*the container we're working with */
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    /*try removing this line to see how the blocks flip down as columns (stacked on top of each other), instead of rows (the default)*/
+    /*Now we want to fill the height, so that the container is as tall as it needs to be to cover the entire space...
+    see below that we made html and body height=100%...at least the body is the whole white block. 
+    Now we want the container we're working with to be at least that big.'*/
+    /*or change this to row and see what happens */
+}
+
+.fill-height-or-more div {
+    /*flex children */
+    flex: 1;
+    /*this means take up one equal portion for you */
+    display: flex;
+    /*you can have a child be a flex parent itself, so that div's in it are also flex items */
+    justify-content: center;
+    flex-direction: column;
+    /*what's going to happen: everything is going to center inside the box left to right;
+    this is kinda weird since the flex-direction is default row (left to right); so change flex-direction to column (up and down)*/
+}
+
+.fill-height-or-more div div {
+    /* also flex items */
+}
+
+.some-area div {
+    padding: 1rem;
+}
+
+div:nth-child(1) {
+    background: hsla(200, 100%, 50%, 1);
+}
+
+div:nth-child(2) {
+    background: hsla(230, 100%, 50%, 1);
+}
+
+div:nth-child(3) {
+    background: hsla(240, 100%, 50%, 1);
+}
+
+div:nth-child(4) {
+    background: hsla(250, 100%, 50%, 1);
+}
+
+div:nth-child(5) {
+    background: hsla(260, 100%, 50%, 1);
+}
+
+h1,
+h2 {
+    margin: 0 0 0.2rem 0;
+}
+
+p {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}

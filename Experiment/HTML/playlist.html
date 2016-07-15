@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Planets</title>
+    <meta charset="utf-8">
+    <!--EXERCISE ONE: how javaScript interacts with HTML5 through getElementById and .innerHTML (assignments, variables, functions)
+
+    <script>
+        function init() {
+            var planet = document.getElementById("greenplanet");
+            planet.innerHTML = "Red alert: hit by phaser fire!";
+        }
+        window.onload = init;
+    </script>
+    -->
+
+    <!--EXERCISE TWO: more practice; makePhrase function 
+    <script>
+        function makePhrase() {
+            var nouns = [
+                "cat",
+                "mouse",
+                "potatoe",
+                "seaweed"
+            ];
+            var verbs = [
+                "ran",
+                "spat",
+                "clammered",
+                "peed"
+            ];
+            var adjectives = [
+                "crazy",
+                "fantastic",
+                "sexy",
+                "lonely"
+            ];
+            var punctuation = [
+                "!",
+                "?",
+                ";",
+                "?!?!?!?!"
+            ];
+            var articles = [
+                "a",
+                "the",
+                "this",
+                "that"
+            ];
+
+            var prepositions = [
+                "to",
+                "on",
+                "with",
+                "above",
+                "below"
+            ];
+
+            var rand1 = Math.floor(Math.random() * nouns.length);
+            var rand2 = Math.floor(Math.random() * verbs.length);
+            var rand3 = Math.floor(Math.random() * adjectives.length);
+            var rand4 = Math.floor(Math.random() * punctuation.length);
+            var rand5 = Math.floor(Math.random() * articles.length);
+            var rand6 = Math.floor(Math.random() * prepositions.length);
+
+            var phrase = articles[rand5] + " " + nouns[rand1] + " " + verbs[rand2] + " " + prepositions[rand6] + " " + articles[rand5] + " " + nouns[rand1] + " " + punctuation[rand4];
+
+            var planet = document.getElementById("redplanet");
+            planet.innerHTML = phrase;
+
+
+
+        }
+        window.onload = makePhrase;
+    </script>
+    -->
+
+    <!--EXERCISE THREE: PLAY WITH BUTTONS!-->
+
+    <!--added 2nd: new script for storing playlist, add above playlist.css-->
+    <script src="../JS/playlist_store.js"></script>
+    <!--added 1st: we're going to put script in playlist.js file -->
+    <script src="../JS/playlist.js"></script>
+    <link rel="stylesheet" href="../css/playlist.css" />
+
+</head>
+
+<body>
+    <h1> Green Planet</h1>
+    <p id="greenplanet"> all is well</p>
+    <h1> Red Planet</h1>
+    <p id="redplanet"> Nothing to report
+    </p>
+    <h1> Blue Planet
+            </h1>
+    <p id="blueplanet"> all systems a - Ok
+    </p>
+
+    <!--Exercise Three: Playlist -->
+    <form>
+        <!--key thing to notice: we gave the button and the song id's! So we know how to access those: getElementById()-->
+        <!--placeholder attribute allows the user to input the song he/she wants to hear -->
+        <input type="text" id="songTextInput" size="40" placeholder="Song name">
+        <!-- this creates the button. the button object has a '.onclick' property that you can assign some function to to determine what happens when clicked -->
+        <input type="button" id="addButton" value="addSong">
+    </form>
+    <ul id="playlist">
+        <!--use a list for the songs-->
+    </ul>
+</body>
+
+</html>

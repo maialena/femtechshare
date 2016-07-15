@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Look What I Drew</title>
+    <meta charset="utf-8">
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+
+    <!--drawing a rectangle 
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById("tshirtCanvas");
+            var context = canvas.getContext("2d");
+            context.fillRect(10, 10, 100, 100);
+        };
+    </script>
+    -->
+</head>
+
+<body>
+    <canvas id="tshirtCanvas" width="600" height="200">Hey you, update your browser!</canvas>
+    <form>
+        <p>
+            <label for="backgroundColor"> Select background color:</label>
+            <select id="backgroundColor">
+            <option value="white" selected="selected">White</option>
+            <option value="black">Black</option>
+        </select>
+        </p>
+        <p>
+            <label for="shape"> Circle or squares?</label>
+            <select id="backgroundColor">
+                <option value="none" selected="selected">Neither</option>
+                <option value="circles">Circles</option>
+                <option value="squares">Squares</option>
+            </select>
+        </p>
+        <p>
+            <label for="foregroundColor"> Select Text Color:</label>
+            <select id="foregroundColor">
+                <option value="black" selected="selected">Black</option>
+                <option value="white">White</option>
+            </select>
+        </p>
+        <p>
+            <label for="tweets">Pick a tweet:</label>
+            <select id="tweets"> 
+            </select>
+        </p>
+        <p>
+            <input type="button" id="previewButton" value="Preview">
+        </p>
+    </form>
+
+</body>
+
+
+</html>
