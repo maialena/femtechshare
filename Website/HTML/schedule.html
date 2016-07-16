@@ -7,36 +7,33 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
 
 <head>
     <meta charset="UTF-8">
-    <link href="../css/layout.css" style="text/css" rel="stylesheet" />
-    <link href="../css/schedule.css" style="text/css" rel="stylesheet" />
+    <link href="../CSS/layout.css" style="text/css" rel="stylesheet" />
+    <link href="../CSS/schedule.css" style="text/css" rel="stylesheet" />
+    <!--<link href="../CSS/style.css" rel="stylesheet">-->
     <title> Schedule </title>
-
 </head>
 
 <body>
-    <div class="blackBar">
-        <div class="main">
+    <div class="wrapper">
+        <div class="menu main">
             <header>
-                <h1>Schedule </h1>
+                <h1> Schedule</h1>
                 <nav>
                     <ul>
-                        <li> <a href="../html/index.html">About</a></li>
-                        <li><a href="../html/schedule.html">Schedule </a></li>
-                        <li> <a href="#"> Blog</a></li>
-                        <li><a href="../html/contact.html">Contacts</a></li>
-                        <li> <a href="../html/resources.html">Resources</a> </li>
+                        <li> <a href="../html/index.html ">About</a></li>
+                        <li><a href="../html/schedule.html ">Schedule </a></li>
+                        <li><a href="../html/contact.html ">Contacts</a></li>
+                        <li> <a href="../html/resources.html ">Resources</a> </li>
                     </ul>
                 </nav>
-                <h2> FemTech Share Schedule Fall 16 </h2>
-                <h3> <a href="https://www.google.com/maps/place/Jacobs+Hall/@37.8760221,-122.2609905,17z/data=!3m1!4b1!4m5!3m4!1s0x80857c23ccfbbf49:0x2ec2613adefd8354!8m2!3d37.8760221!4d-122.2588018">Jacobs Hall </a>Fridays 2-4PM </h3>
-
+            </header>
         </div>
-        <!--end of blackBar-->
-        </header>
+        <!-- end of main-->
 
         <!--table attributes: border is boolean (1 for border, else 0), 
     cellpadding defines width of border, 
     ellspacing is amount of white space between border and content-->
+        <h2 class="content"> FemTECH Share Fall 2016 </h2>
         <table class="flex-container" border="1" cellpadding="5" cellspacing="5">
             <!--th := "table headers"-->
             <th>Week</th>
@@ -52,9 +49,9 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
                 <!--row1, column2-->
                 <td>September</td>
                 <!--row1, column3-->
-                <td>What Brought You Here?</td>
+                <td>Welcome</td>
                 <!--row1, column4-->
-                <td><a href="../labs/lab1.html">Lab1: SetUp (edX, BitBucket, VSC, UNIX/Terminal, your blog)</a></td>
+                <td><a href="lab1.html">Lab1: Setup & Work flow</a></td>
                 <!--row1, column5-->
                 <td>
                     <ol>
@@ -66,37 +63,46 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
             </tr>
             <tr>
                 <td>Design</td>
-                <td>September</td>
-                <td>Color Theory, Fonts, Layout</td>
-                <td><a href="../labs/lab2.html">Lab2: Illustrator Mockops</a></td>
+                <td>September []</td>
+                <td>HTML & Design</td>
+                <td><a href="lab2.html">Lab2: Mockup, Markup & Blog </a></td>
                 <td>
                     <ol>
                         <li>EdX Module2: “Creating Sophisticated Document Structures using HTML”</li>
-                        <li>Work on Mockups </li>
+                        <li> Blog </li>
                 </td>
             </tr>
             <tr>
-                <td>HTML</td>
-                <td></td>
-                <td>HTML Basics</td>
-                <td><a href="../labs/lab3.html">Lab3: Team Code - HTML Doc </a></td>
-                <td>Kahn Academy HTML (only the <a href="https://www.khanacademy.org/computing/computer-programming/html-css">HTML sections</a>)</td>
-            </tr>
-            <tr>
-                <td>Intro to CSS</td>
-                <td></td>
-                <td>The Basics: Stylesheets, Selectors, Attributes</td>
-                <td><a href="../labs/lab4.html">Lab4: Play With Style</a></td>
-                <td>EdX Module3: "Design Web Page Elements Using Cascading Style Sheets (CSS)”</td>
+                <td>Stayin' Alive with HTML5</td>
+                <td>September []</td>
+                <td>HTML5 Selectors & Syntax</td>
+                <td><a href="lab3.html">Lab3: Team Code - HTML Doc </a></td>
+                <td>
+                    <ol>
+                        <li>Kahn Academy HTML (only the <a href="https://www.khanacademy.org/computing/computer-programming/html-css">HTML sections</a></li>
+                        <li> Blog </li>
+                    </ol>
+                </td>
             </tr>
             <tr>
                 <td>meSS with cSS</td>
                 <td></td>
-                <td>The Grid, Scrolling Panels</td>
-                <td><a href="../labs/lab5.html">Lab5: Create Grid Layout</a></td>
+                <td>The Basics: Stylesheets, Selectors, Attributes</td>
+                <td><a href="lab4.html">Lab4: Playin' With Style</a></td>
                 <td>
                     <ol>
-                        <li>Start Website in VisualStudioCode </li>
+                        <li>EdX Module3: "Design Web Page Elements Using Cascading Style Sheets (CSS)”</li>
+                        <li> Blog </li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>Layout with CSS</td>
+                <td></td>
+                <td>The Grid, Scrolling Panels</td>
+                <td><a href="lab5.html">Lab5: Create Grid Layout</a></td>
+                <td>
+                    <ol>
                         <li> Course Evaluation
                             <!--link-->
                         </li>
@@ -109,18 +115,23 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
                 <td><em>cSS</em> is the beSSt</td>
                 <td></td>
                 <td>Animations</td>
-                <td><a href="../labs/lab6.html">Lab6: Create an Animation</a></td>
-                <td>Work on Website</td>
+                <td><a href="lab6.html">Lab6: Create an Animation</a></td>
+                <td>
+                    <ul>
+                        <li>Work on Website</li>
+                        <li> Blog </li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td>fineSS with cSS</td>
                 <td>[]</td>
                 <td>??</td>
-                <td><a href="../labs/lab9.html">Lab9: ??</a></td>
+                <td><a href="lab9.html">Lab9: ??</a></td>
                 <td>
                     <ol>
                         <li>Work on Website</li>
-                        <li> <a></a></li>
+                        <li> Blog </li>
                     </ol>
                 </td>
             </tr>
@@ -128,23 +139,23 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
                 <td>Intro to JavaScript: The Building Blocks</td>
                 <td>[]</td>
                 <td>OOP, API's, & the DOM</td>
-                <td><a href="../labs/lab7.html">Lab7: Write a Script</a></td>
+                <td><a href="lab7.html">Lab7: Write a Script</a></td>
                 <td>Work on Website</td>
             </tr>
             <tr>
                 <td>We love JavaScript</td>
                 <td></td>
                 <td>Drop-down menus, playlist, and more</td>
-                <td><a href="../labs/lab8.html">Lab8: Upgrade website</a></td>
+                <td><a href="lab8.html">Lab8: Upgrade website</a></td>
                 <td>Work on Website</td>
             </tr>
 
-            
+
             <tr>
-                <td>Go JavaScript!</td>
+                <td>More JavaScript</td>
                 <td>[]</td>
                 <td>TBD</td>
-                <td><a href="../labs/lab10.html">Lab10: Upgrade wesbite</a></td>
+                <td><a href="lab10.html">Lab10: Upgrade wesbite</a></td>
                 <td>Work on Website</td>
 
             </tr>
@@ -152,7 +163,7 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
                 <td>TBD</td>
                 <td>[]</td>
                 <td>TBD</td>
-                <td><a href="../labs/lab11.html">Lab11: Upgrade website</a></td>
+                <td><a href="lab11.html">Lab11: Upgrade website</a></td>
                 <td>Get Ready for Final Sharecase</td>
 
             </tr>
@@ -186,6 +197,10 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
         <!--end footer-->
     </div>
     <!--end main-->
+    </div>
+    <!--end of blackBar-->
+    </div>
+    <!--end wrapper -->
 </body>
 
 </html>

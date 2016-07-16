@@ -1,3 +1,76 @@
+    /*box sizing reset: https://css-tricks.com/box-sizing/ */
+    /*PRACTICING THE GRID */
+    
+    html {
+        box-sizing: border-box;
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+    /*GRID SET UP*/
+    
+    body {
+        font-family: fantasy;
+        font-size: 20px;
+    }
+    
+    .wrapper {
+        display: grid;
+        grid-template-columns: 300px 300px 300px 300px;
+        grid-template-areas: "menu menu menu menu " "content content content content " "table table table table " "footer footer footer footer";
+        /* color: #444;*/
+        grid-column-gap: 40px;
+        grid-row-gap: 0px;
+        /*grid-row: auto;*/
+        /*width: 100%;*/
+    }
+    
+    .box {
+        /*border-radius: 5px; include to show layout */
+    }
+    /*GRID AREAS*/
+    
+    .menu {
+        grid-area: menu;
+        background-color: #262822;
+    }
+    
+    .content {
+        grid-area: content;
+        text-align: center;
+    }
+    /*footer nav bar, get rid of margin */
+    
+    .bottom {
+        margin-top: 0px;
+        height: auto;
+        /*padding: 20px;*/
+    }
+    
+    .footer {
+        grid-area: footer;
+        margin: 0px;
+        height: auto;
+    }
+    
+    .flex-container {
+        grid-area: table;
+    }
+    /*STYLING */
+    
+    ol {
+        padding: 10px;
+    }
+    
+    a {
+        color: blue;
+        text-decoration: bold;
+        text-transform: uppercase;
+    }
+    
     header h2,
     h3 {
         padding: 0;
@@ -18,10 +91,22 @@
         margin: 130px 20px 20px 20px;
     }
     
-    .blackBar {
-        height: 200px;
+    tr {
+        text-align: left;
     }
     
-    tr {
+    th {
+        text-transform: uppercase;
         text-align: center;
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    td {
+        padding: 20px;
+    }
+    /*striped cells */
+    
+    tr:nth-child(even) {
+        background-color: #f2f2f2
     }
