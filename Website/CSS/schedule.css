@@ -1,22 +1,6 @@
     /*box sizing reset: https://css-tricks.com/box-sizing/ */
     /*PRACTICING THE GRID */
     
-    html {
-        box-sizing: border-box;
-    }
-    
-    *,
-    *:before,
-    *:after {
-        box-sizing: inherit;
-    }
-    /*GRID SET UP*/
-    
-    body {
-        font-family: fantasy;
-        font-size: 20px;
-    }
-    
     .wrapper {
         display: grid;
         grid-template-columns: 300px 300px 300px 300px;
@@ -27,15 +11,10 @@
         /*grid-row: auto;*/
         /*width: 100%;*/
     }
-    
-    .box {
-        /*border-radius: 5px; include to show layout */
-    }
     /*GRID AREAS*/
     
     .menu {
         grid-area: menu;
-        background-color: #262822;
     }
     
     .content {
@@ -60,16 +39,6 @@
         grid-area: table;
     }
     /*STYLING */
-    
-    ol {
-        padding: 10px;
-    }
-    
-    a {
-        color: blue;
-        text-decoration: bold;
-        text-transform: uppercase;
-    }
     
     header h2,
     h3 {
@@ -98,7 +67,7 @@
     th {
         text-transform: uppercase;
         text-align: center;
-        background-color: #4CAF50;
+        background-color: blue;
         color: white;
     }
     
@@ -108,5 +77,9 @@
     /*striped cells */
     
     tr:nth-child(even) {
-        background-color: #f2f2f2
+        background-color: lightgrey;
+    }
+    
+    .menu {
+        background-color: #262822;
     }

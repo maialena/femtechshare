@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="../css/layout.css" rel="stylesheet" />
-    <link href="../css/main2.css" rel="stylesheet" />
-    <link href="labs.css" rel="stylesheet" />
+    <link href="../CSS/style.css" rel="stylesheet">
+    <link href="../CSS/layout.css" rel="stylesheet" />
+    <!--<link href="../CSS/main2.css" rel="stylesheet" />-->
+    <link href="../CSS/labs.css" rel="stylesheet" />
+
 
     <!--adding bootstrap to code -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
@@ -14,48 +16,90 @@
 </head>
 
 <body>
-    <div class="blackBar">
-        <div class="main">
-
-            <header>
-
-                <h1> FemTechShare</h1>
-                <nav>
-                    <ul>
-                        <li> <a href="../html/index.html">About</a></li>
-                        <li><a href="#"> Labs </a></li>
-                        <li><a href="../html/schedule.html">Schedule </a></li>
-                        <li> <a href="../html/blog.html"> Blog</a></li>
-                        <li><a href="../html/contact.html">Contacts</a></li>
-                        <li> <a href="../html/resources.html">Resources</a> </li>
-                    </ul>
-                </nav>
-        </div>
-        <!-- end of main-->
-
+    <div class="main menu">
+        <header>
+            <h1> FemTechShare</h1>
+            <nav>
+                <ul>
+                    <li> <a href="../html/index.html">About</a></li>
+                    <li><a href="../html/schedule.html">Schedule </a></li>
+                    <li><a href="../html/contact.html">Contacts</a></li>
+                    <li> <a href="../html/resources.html">Resources</a> </li>
+                </ul>
+            </nav>
     </div>
-    <!--end blackBar-->
+    <!-- end of main-->
 
-    <div class="container">
-        <span class="heading">WEEK#3: HTML BASICS </span>
-        <span class="exercise">OVERVIEW</span>
-        <span class="exercise">LEARNING OBJECTIVES</span>
-        <span class="exercise">LAB 3</span>
-        <span class="exercise">Lecture:</span>
-        <p>
+    <div class="content">
+        <div class="heading">WEEK#3: HTML BASICS </div>
+        <div class="exercise">OVERVIEW</div>
+        HTML stands for Hyper Text Markup Language. It's what you use to create the bare-bones layout of your website. Think of HTML as a plain ole' Word Document with just the content, and CSS as the styling (font, color, bold, size, etc.).
+        <div class="exercise">LEARNING OBJECTIVES</div>
+        <ol>
+            <li> Understand the basic building blocks of an HTML5 Doc </li>
+            <li> Feel comfortable cloning a website in HTML</li>
+            <li> Add style to your page with CSS</li>
+        </ol>
+
+        <div class="exercise">I. Group Warmup</div>
+        <p> As a warmup, open up your favorite text editor, and whip up a basic HTML5 doc with header, a few articles, main content, footer </p>
+        <div class="checkoff">
+            <p> Hint: can you use the same selector for header, articles, content, and footer? If so, how do you distinguish between the elements? If not, what's the alternative?</p>
+            <p> Hint to the hint: there's more than one right answer.</p>
             <ul>
-                <li>Go over Best CSS Practices for Beginners: http://code.tutsplus.com/tutorials/30-css-best-practices-for-beginners--net-6741 </li>
-                <li> Start EdX Module 3 (CSS) in class Lab: </li>
-                <p>On terminal, create the web development environment (ie make directories/folders for images, html files, and css files using UNIX commands) </p>
-                <li>As a class review basic HTML doc components and code it for your website !DOCTIME, lang = "en-US", etc., head, body etc. Have people come to the whiteboard and add a line, one at a time </li>
-                <li>Parts of the page: header, tagsetc. </li>
-                <li>Syntax (everyone should open up a text editor at the same time the teacher has text-editor up on his/her window and goes through line-by-line what everything does) </li>
-                <li>Theory of heading tags: readability -- a good web page is modeled after a well-written book </li>
-                <li>Discussion of go-to resources to use when come into a problem; discussion of how important it is for coders to learn how to learn early on (ie looking things up that they don’t know in coding blogs, etc. </li>
-                <li>Individually, open up style.css sheet and start playing around with the fonts/colors/background-color, etc. See what changes on the web page by mainpulating margin, padding, etc. Homework: Continue working on EdX Module 3: “Design Web
-                    Page Elements Using Cascading Style Sheets (CSS)”</li>
+        </div>
+
+        <p> Lesson 1: Tags, Attributes, & Semantic Markup </p>
+        <ol>
+            <li> <span class="emphasis">Tags </span>are like containers -- they 'hold' information. They are always enclosed in &lt &gt brackets. Most tags include a starting and closing tag like so:
+                <pre class="output"><span class="input"> This is a line of text </span></pre> Notice in this example that the closing tag has a forward slash ('\').
+                <p> <a href="http://www.danfergusdesign.com/classfiles/generalReference/html5reference.php">Here's </a> a list of the most common tags in HTML5</p>
+            </li>
+            <li> <span class="emphasis">Attributes</span> tell us more about the elements. Most attributes can be used only on certain elements, but a few (like "lang") can be used on any elements.
+                <pre class="output"><span class="input"> &ltp lang="en-US" &gt Paragraph in English &lt/p&gt</span></pre>
+            </li>
+            <li> <span class="emphasis">Semantic Markup</span> refers to HTML text elements that are not used for markup, but instead add some style to the page -- like bolding, underlining, and italicizing (to name a few).</li>
+            <p>Rather than paraphrasing the key Text elements you can use in your web page, let's read Chapter 2 of Jon Duckett's <em>HTMl & CSS: Design and Build Websites </em> which you can find <a href=""> here </a> FOR FREE (this is an AWESOME resource)</p>
+            <p> SKIM over pages 40-90 (don't worry - most are pictures and things you've seen before, so you don't need to read it in any detail)</p>
+        </ol>
+
+        <div class="checkoff"> Pro Tip: It's best practice to do as LITTLE styling in your HTML file, since styling is mainly CSS territory. You may think that adding an &ltem&gt &lt/&gt tag to your text isn't a big deal. And you're right -- it's okay to use sparingly. But
+            what if down the line you wanted to change the italic font to bold...then you'd have to sift through your <em> entire </em> html file to find all the times you used the emphasis tags. Wouldn't it be easier to use the &ltspan&gt tag instead?
+            That way you can just go to your SINGLE style.css file and change one line of code, instead of (potentially) hundreds....(we'll learn more about CSS soon).
+        </div>
+        </ol>
+        <br/>
+        <div class="exercise"> II. Clone This Website</div>
+        <p> Now you're ready to pair program! Partner up with someone for the next exercise. We're going to clone <a href=" http://www.berkshirehathaway.com "> this </a> website i.e. create an exact replica.
+            <div class="checkoff">
+                <p> Pro Tip: Pair programming is often harder than it sounds. It's all about developing the right workflow to allow both people to contribute. WHat you <em> don't </em> want to happen is have one person type, while the other is on her phone
+                    playing Pokemon Go. So here's one suggestion: tradeoff typing. While Person A is at the keyboard, Person B should still follow along and dictate lines of code for Person A to type in. After some time, switch.
+                </p>
+            </div>
+            <ul>
+        </p>
+        <p> This exercise is going to incorporate a lot of the HTML elements that we've learned so far, including:
+            <ul>
+                <li> Different sized headers (h1-h6)</li>
+                <li> paragraphs (p)</li>
+                <li> ordered and unordered lists ('ul' vs 'ol')</li>
+                <li> header and footers </li>
             </ul>
-            </ul>
+        </p>
+
+        <p> Notice how the links are lined up in two nice columns? That's accomplished with a <span class="emphasis"> TABLE </span></p>
+        <p> This is something new that we haven't yet learned...so we're going to learn it now! Read about the table <a href="http://www.tutorialspoint.com/html/html_tables.htm"> here </a></p>
+        <p> Still confused? Have no fear, Jon Duckett is <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">here </a>(pages 130-140)</p>
+        <div class="checkoff"> Pro Tip: When designing the layout of your website, developers often use a 'dummy language'' called Lorem Impsum, which is used as a placeholder for the actual content. This allows designers to worry about the layout and style of the page rather
+            than the text, which they can fill in later. To use Lorem Impsum, check out <a href="http://www.lipsum.com/"> this </a> free online generator </div>
+
+
+        <div class="exercise"> Homework</div>
+        <ul>
+            <li> Continue working on EdX Module 3: “Design Web Page Elements Using Cascading Style Sheets (CSS)”</li>
+            <li> Start EdX Module 3 (CSS) in class Lab: </li>
+        </ul>
+        </ul>
 
 
 </body>

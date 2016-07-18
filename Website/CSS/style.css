@@ -1,0 +1,197 @@
+/*box sizing reset: https://css-tricks.com/box-sizing/ */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 430px 200px 400px 300px;
+    /*grid-template-rows: 200px 400px 400px 300px;*/
+    /*grid-template-columns: repeat(6, 100px);
+    grid-template-rows: 100px 100px 100px;*/
+    /*grid-auto-flow: column;*/
+    grid-template-areas: "menu menu menu menu " " . about about . " "elem1 elem1 elem3 ." "elem1 elem1 elem3 ." "elem4 elem4 elem3 ." "footer footer footer footer";
+    /* color: #444;*/
+    /*grid-gap: 10px;*/
+    grid-column-gap: 40px;
+    grid-row-gap: 0px;
+    /*grid-row: auto;*/
+    /*width: 100%;*/
+    /*margin: 50px;*/
+    justify-content: center;
+}
+
+
+/* VIDEO */
+
+.vid {
+    width: 300px;
+    height: 300px;
+    border: 3px blue dashed;
+}
+
+.big-video {
+    width: 400px;
+    height: 400px;
+    border: 3px blue dashed;
+}
+
+
+/*
+/*.videos {
+    grid-area: videos;
+}*/
+
+
+/*GRID AREAS*/
+
+.elem1 {
+    grid-area: elem1;
+    text-align: center;
+}
+
+.elem2 {
+    grid-area: elem2;
+    text-align: center;
+}
+
+.elem3 {
+    grid-area: elem3;
+    text-align: center;
+}
+
+.elem4 {
+    grid-area: elem4;
+    text-align: center;
+}
+
+.elem5 {
+    grid-area: elem5;
+    text-align: center;
+}
+
+.elem6 {
+    grid-area: elem6;
+    text-align: center;
+}
+
+.elem7 {
+    grid-area: elem7;
+    text-align: center;
+}
+
+.elem8 {
+    grid-area: elem8;
+    text-align: center;
+}
+
+.elem9 {
+    grid-area: elem9;
+    text-align: center;
+}
+
+.about {
+    grid-area: about;
+    /*padding: 10px;*/
+}
+
+.title {
+    grid-area: title;
+}
+
+.content {
+    grid-area: content;
+}
+
+.form {
+    grid-area: form;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+
+/*SIDEBAR */
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.sidebar2 {
+    grid-area: sidebar2;
+}
+
+.sidebar,
+.sidebar2,
+.form {
+    color: #fff;
+}
+
+.pitch,
+.form {
+    background-color: black;
+    border-radius: 48%;
+    border: dashed #9975B9 2px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.pitch_square {
+    border-radius: 0%;
+    letter-spacing: 2px;
+}
+
+
+/*STYLING */
+
+ol {
+    /*padding: 30px;*/
+}
+
+.title,
+.about_title {
+    font-size: 40px;
+    text-align: center;
+}
+
+
+/*footer nav bar, get rid of margin */
+
+.bottom {
+    margin-top: 0px;
+    height: auto;
+    /*padding: 20px;*/
+}
+
+.footer {
+    grid-area: footer;
+    margin: 0;
+    height: auto;
+}
+
+.menu {
+    background-color: #262822;
+}
+
+ol {
+    padding: 10px;
+}
+
+a {
+    /*color: navajowhite;*/
+    text-decoration: bold;
+    text-transform: uppercase;
+}
+
+
+/*a:hover MUST come after a:visited and a:link in style.css */
+
+a:hover {
+    color: green;
+    text-decoration: underline;
+    background-color: lightblue;
+}
+
+a:link {
+    /*color: navajowhite;*/
+    text-decoration: bold;
+    text-transform: uppercase;
+}

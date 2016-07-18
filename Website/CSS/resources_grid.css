@@ -1,10 +1,12 @@
-/*inherit rest from style.css*/
+/*NEED TO FIX STYLE OF LINKS/NAV BAR*/
+
+
+/*inherit rest from style.css and layout.css*/
 
 .wrapper {
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
     grid-template-areas: "menu menu menu menu " ". scroll scroll ." ". scroll scroll ." ". scroll scroll ." ". scroll scroll ." ". scroll scroll ." ". scroll scroll ." ". scroll scroll ." "footer footer footer footer";
-    /* color: #444;*/
     grid-gap: 50px;
     /*grid-row: auto;*/
     /*width: 100%;*/
@@ -12,32 +14,45 @@
 
 .scroll {
     grid-area: scroll;
-    border: dashed 3px blue;
+    /*border: dashed 3px blue;*/
     padding: 50px;
 }
 
 
-/* style */
+/* STYLE */
 
 .titles {
     font-size: 30px;
     text-align: center;
     font-family: cursive;
     border: 1px solid;
-    background-color: #4CAF50;
     font-weight: bold;
-    color: navajowhite;
+    color: black;
     padding: 10px;
+    width: 130%;
 }
 
 ul li {
     list-style: circle;
 }
 
+
+/*remove bullets from menu bar */
+
 nav ul li {
     list-style: none;
 }
 
 p {
-    line-height: 5px;
+    line-height: 10px;
+}
+
+a:link {
+    color: black;
+    text-decoration: bold;
+    text-transform: uppercase;
+}
+
+a:hover {
+    background-color: purple;
 }

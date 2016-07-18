@@ -1,4 +1,4 @@
-/*inherited all other elements from style.css */
+/*inherited all other elements from style.css and layout.css*/
 
 .wrapper {
     display: grid;
@@ -9,7 +9,7 @@
     /*grid-row: auto;*/
     /*width: 100%;*/
     padding-left: -8px;
-    padding-right:-8px;
+    padding-right: -8px;
 }
 
 .subtitle {
@@ -21,17 +21,7 @@ h3 {
     text-align: center;
 }
 
-.box {
-    z-index: 30;
-}
-
 .subtitle {
     font-size: 30px;
     font-style: italic;
 }
-
-
-/*.gutter {
-    margin-left: 50px;
-    margin-right: 40px;
-}*/

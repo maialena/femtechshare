@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="../css/layout.css" rel="stylesheet" />
-    <link href="../css/main2.css" rel="stylesheet" />
-    <link href="labs.css" rel="stylesheet" />
+    <link href="../CSS/layout.css" rel="stylesheet" />
+    <link href="../CSS/labs.css" rel="stylesheet" />
+    <link href="../CSS/style.css" rel="stylesheet">
 
     <!--adding bootstrap to code -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
@@ -14,60 +14,69 @@
 </head>
 
 <body>
-    <div class="blackBar">
-        <div class="main">
+    <div class="main menu">
+        <header>
 
-            <header>
-
-                <h1> FemTechShare</h1>
-                <nav>
-                    <ul>
-                        <li> <a href="../html/index.html">About</a></li>
-                        <li><a href="#"> Labs </a></li>
-                        <li><a href="../html/schedule.html">Schedule </a></li>
-                        <li> <a href="../html/blog.html"> Blog</a></li>
-                        <li><a href="../html/contact.html">Contacts</a></li>
-                        <li> <a href="../html/resources.html">Resources</a> </li>
-                    </ul>
-                </nav>
-        </div>
-        <!-- end of main-->
-
-    </div>
-    <!--end blackBar-->
-    <div class="container">
-        <span class="heading">WEEK 4: CSS (BASICS) </span>
-        <span class="exercise">OVERVIEW</span>
-        <span class="exercise">LEARNING OBJECTIVES</span>
-
-        <span class="subtitle"> I. MeSS with cSS </span>
-        <p> Maia to do: Lab (in pairs or teams of three)-->create HTML and CSS files that everyone can access (like this: https://benfrain.com/independent-scrolling-panels-body-scroll-using-just-css/). Then have everyone view the HTML in their browser, and
-            one by one comment out a line of the CSS code. Open word and write out what they think each line of CSS code does. Afterwards, study the Guide to Flexbox. Check to see if right/wrong. Come up with questions. Put questions on board. Have people
-            answer each other’s questions. (alternatively: open up a website and mess with cSS and see how things change)
-        </p>
-        <span class="subtitle"> II. Clone a Website </span>
-        <p>
-            Go over a few of these chapters together in class Lab Pair Program exercise to clone this website: http://www.berkshirehathaway.com OR: to make this website: http://code.tutsplus.com/tutorials/design-and-code-your-first-website-in-easy-to-understand-steps--net-6062
-            Maia to-do: adapt the second exercise into your own lab (condensed). DO NOT LET THEM SIMPLY COPY AND PASTE THE CODE! </p>
-
-        <span class="subtitle"> III. (Bonus) The Magic of CSS </span>
-        <p>from CodeAcademy The Magic of CSS http://adamschwartz.co/magic-of-css/</p>
-
-
-
-        <span class="exercise">Homework: </span>
-        <ul>
-            <li> <a href="https://davidwalsh.name/css-circles">(optional) CIRCLES!!!!!!</a>
-
-            <li>Fill out a mid-semester course evaluation --
+            <h1> FemTechShare</h1>
+            <nav>
                 <ul>
-                    <li>what’s working? </li>
-                    <li>What’s not? </li>
-                    <li>What are they looking forward to? What would they like to see more/less of in the coming weeks? </li>
-                    <li>What can instructors do to improve their experience?</li>
+                    <li> <a href="../html/index.html">About</a></li>
+                    <li><a href="../html/schedule.html">Schedule </a></li>
+                    <li><a href="../html/contact.html">Contacts</a></li>
+                    <li> <a href="../html/resources.html">Resources</a> </li>
                 </ul>
+            </nav>
+    </div>
+    <!-- end of main-->
+
+    <div class="content">
+        <div class="heading">WEEK 4: CSS (BASICS) </div>
+        <div class="exercise">OVERVIEW</div>
+        Today we're going to learn about <span class="emphasis">CSS </span>
+
+
+        <p><span class="question">'What's CSS??'</span></p>
+
+        <p><em>Here's how <span class="emphasis">edX </span>defines it. </em>
+            <p>'Cascading Syle Sheets (CSS) is a language that controls and allows one to define the look of an HTML document. It permits the separation between the content of the HTML document from the style of the HTML file. CSS enables one to specify
+                things such as the font you want on your page, the size of your text, the columns of the page, whether the text on a page is to be in bold or italics, background, link colors, margins, and placement of objects on a page and so on. By way
+                of explanation, it is the part that controls the looks of a web page. With CSS, it is much easier to manage the appearance of multiple web pages since it separates the HTML element from display information. CSS also enables faster downloading
+                of web pages, which works best with older computers and modems. It provides a method for retaining a common style.'</p>
+        </p>
+        <div class="exercise">LEARNING OBJECTIVES</div>
+
+        <div class="subtitle"> I. MeSS with cSS </div>
+        <p> We're going to learn about the super cool <span class="emphasis"> INSPECT </span> tool available in many web browsers (for this exercise, it's best to use Chrome if you can).
+            <ul>
+                <li>Step 1: Partner Up. </li>
+                <li>Step 2: Open <a href="https://zapier.com/blog/inspect-element-tutorial/"> this </a> tutorial to get started. You can skim (or skip) over the first part, and start reading at the section entitled 'Change Anything With Elements.' </li>
+                <li> Step 3: Follow along with the Tutorial! Ask questions (first to the people around you) if you get stuck. </li>
+            </ul>
+        </p>
+
+        <div class="subtitle"> II. Find The CSS From Within </div>
+        <p>Now that it's Week 4 it's time for some reflection. We want you to appreciate HOW MUCH you've learned in such a short amount of time. Seriously -- it might not look like a lot, but HTML & CSS are the backbone of almost every website out there.
+            So if you can get these languages down, you're well on your way to being an amazing front end web developer! To show you the power of CSS, we're going to follow along the <span class="emphasis"> CSS Zen Garden</span> exercise. Create a new
+            subdirectory in your Share folder (<span class="emphasis">challenge:</span> can you do this from your terminal?) and download the index.html & style.css files from the website.</p>
+        <p> Partner up and look through both files. First make sure you have a general sense of what's going on -- if you don't, talk through what you <em> think </em> the elements you're unsure about do.</p>
+        <p> Then test it out! Play with the CSS files and log your findings by writing comments next to the elements you've learned about. Use '/* */' to write comments like so:
+            <pre class="output"><span class="input"> /* This is a comment. The processor will not render it as code */ </span></pre>
+            <br/> If you really want to be the above-and-beyond-student, open up a TextEditor and log all the new things you've learned so that you can use it for reference later.
+        </p>
+        <p> We'll mess with the css for 20 minutes or so and then come to the board with our findings and any lingering questions.</p>
+
+
+        <div class="exercise">Homework: </div>
+        <ol>
+            <li> (optional): <a href="https://davidwalsh.name/css-circles">CIRCLES!!!!!!</a></li>
+            <li> (optional) Browse through <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started"> this </a>website to learn more about CSS selectors, inheritance, cascading, layout, and more! If anything doesn't make sense to you,
+                GOOGLE IT (and then come back next week with questions if you're still confused;) </li>
+            <li> (optional) Another <a href="http://cssvideos.com/">awesome resource </a>for refining your CSS Skilss </li>
+
+            <li>Fill out a mid-semester course evaluation by <span class="emphasis"> Wednesday</span> so that we have time to make adjustments accordingly. Please be brutally honest. This is the first time FemTECH has ever run a Web Design & Development series,
+                so any constructive criticism (or positive reviews) are really, really appreciated. We want to make this as best as we can, and are constantly looking for ways to improve!</li>
             </li>
-        </ul>
+        </ol>
     </div>
     <!--end container-->
 </body>

@@ -3,112 +3,156 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="../css/main2.css" rel="stylesheet" />
 
-    <!--adding bootstrap to code -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
-    <link href="labs.css" rel="stylesheet" />
+    <link href="../CSS/labs.css" rel="stylesheet" />
+    <link href="../CSS/layout.css" rel="stylesheet" />
+    <link href="../CSS/style.css" rel="stylesheet">
 
-
-    <link href="../css/layout.css" rel="stylesheet" />
 
     <title> Lab1 </title>
 </head>
 
 <body>
-    <div class="blackBar">
-        <div class="main">
-
-            <header>
-
-                <h1> FemTechShare</h1>
-                <nav>
-                    <ul>
-                        <li> <a href="../html/index.html">About</a></li>
-                        <li><a href="#"> Labs </a></li>
-                        <li><a href="../html/schedule.html">Schedule </a></li>
-                        <li> <a href="../html/blog.html"> Blog</a></li>
-                        <li><a href="../html/contact.html">Contacts</a></li>
-                        <li> <a href="../html/resources.html">Resources</a> </li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-        <!-- end of main-->
-
+    <div class="main menu">
+        <header>
+            <h1> FemTechShare</h1>
+            <nav>
+                <ul>
+                    <li> <a href="../html/index.html">About</a></li>
+                    <li><a href="../html/schedule.html">Schedule </a></li>
+                    <li><a href="../html/contact.html">Contacts</a></li>
+                    <li> <a href="../html/resources.html">Resources</a> </li>
+                </ul>
+            </nav>
+        </header>
     </div>
-    <!--end blackBar-->
+    <!-- end of main-->
 
     </header>
-    <div class="container">
+    <!--<div class="container">-->
+    <div class="content">
+        <div class="heading"> WEEK 1: INTRODUCTIONS</div>
+        <!--start of content-->
+        <div class="exercise">OVERVIEW</div>
+        <p>Welcome to FemTECH Share! The purpose of this course is to teach you the basics of HTML5, CSS3, and JavaScript, which you will use to create your very own website in just 8 weeks. By the end of this semester, you will not know <em>everything</em>            there is to know about web development, since there are always new frameworks, layouts, and techniques to explore. You will, however, build a powerful foundation of skills, confidence, and know-how to dive as deep into the world of programming
+            as you want to go. Without further ado, let's dive in!
+        </p>
 
-        <span class="heading">WEEK 1: INTRODUCTIONS </span>
-        <span class="exercise">OVERVIEW</span>
-        <span class="exercise">LEARNING OBJECTIVES</span>
-        <ul>
-            <li>Meet & Greet</li>
-            <li>Introduce Fem Tech Share, Schedule, and Goals</li>
-            <li>Get working environment set up</li>
-        </ul>
+        <div class="exercise">LEARNING OBJECTIVES</div>
+        <p>
+            <ul>
+                <li>Meet & Greet</li>
+                <li>Schedule, Syllabus, and Goals</li>
+                <li>Understand how to navigate directories from the command line</li>
+                <li>Understand GitHub & create first repository</li>
+                <li>Sign up for EdX "HTML, CSS, javaScript online course (free)"</li>
+            </ul>
+        </p>
 
-        <span class="exercise">Lab #1: Setup</span>
-        <p>In this lab, we’re going to set up our working environment using the following tools:</p>
+        <div class="exercise">Lab #1: Setup</div>
+        <p>In this lab, we’re going to set up our working environment.</p>
 
-        <span class="exercise">I. THE TERMINAL</span>
+        <div class="exercise">I. THE TERMINAL</div>
 
-        <p>This is the interface that you use to directly communicate with the operating system via text-based commands (which are then converted into a language that the computer understands). Search and open the terminal on your computer. We’re going to
-            start by navigating the file (or directory) system. Let’s define some important vocab and commands: </p>
+        <p>This is the interface that you use to directly communicate with the operating system via text-based commands (which are then converted into a language that the computer understands). FOR MAC USERS:
+            <ul>
+                <li> Lucky for you, all Mac's come with a built-in terminal!</li>
+                <li> Simply go to your Spotlight and search "Terminal."</li>
+                <li> It should pop right up</li>
+            </ul>
 
-        <ul>
-            <li>“Cd [path/to/file]”: move into or out of a directory</li>
-            <li>“Mkdir [name]”: make a new director</li>
-            <li>“ls”: list the contents of the directory</li>
-            <li>“mv [from_path] [to_path]”: move file from ‘from_path’ to ‘to_path’ if “to_path” exists. If “to_path” does not exist, this changes the name of “from_path” to “to_path”</li>
+            FOR PC USERS:
+            <ul>
+                <li> fill in instructions</li>
+            </ul>
 
-        </ul>
-        <p>If these commands don’t make sense right now, it’s okay. We’re going to get some practice using the command line </p>
-
-        <span class="exercise">II. Exercise 1: </span>
-        <ol>
-            <li>Open up the Terminal and type “ls.” You should see something like this, indicating that you are currently in your home directory:</li>
-
-            []
-            <li>Now move into your Desktop: $ cd Desktop </li>
-
-            <li>Type “ls.” You should see all the files on your Desktop.</li>
-
-            <li>Create a new directory: “mkdir [name]” </li>
-
-            <li>Move into the directory: “cd [name]”</li>
-
-            <li>Type “ls” -- you should see nothing there. Let’s change that.</li>
-
-            <li>Make a new file: “vim [name].txt”. This should open up the file. Type something -- anything. To save and exit a file: press esc --> wq. (NOTE: Vim is a text editor that is outside the scope of this workshop, but is very useful to learn if
-                you are interested in programming. Check out the main VIM Commands here to find out more: [] )</li>
-
-            <li>Last but not least, change the name of your file to “fem_tech_lab1” using the “mv” command. Try this out on your own --talk with the person next to you if you get stuck. </li>
-
-        </ol>
-        <p>NOTE: The language to navigate the terminal is called UNIX. For this course, understanding the command line is not too relevant. If you’re interested in programming beyond this course, however, knowing UNIX is essential. Here’s some resources
-            to help get you started (optional reading): Basic UNIX Commands: http://mally.stanford.edu/~sr/computing/basic-unix.html Code Academy Learn the Command Line: https://www.codecademy.com/ru/courses/learn-the-command-line/lessons/navigation/exercises/your-first-command?action=resume
         </p>
 
 
 
-        <span class="exercise">III. BITBUCKET</span>
-        <p>Bitbucket is a Version Control System that allows you to save current ‘drafts’ of your working directory (files) to a remote server. It’s often used in industry by teams, since it allows people to ‘push’ what they’re working on to the remote server,
-            so that their teammates can ‘pull’ the changes from the remote server to their local computers to edit. Think of Bitbucket as a mix between the Cloud and Google Docs. Bitbucket is similar to the Cloud in that it acts like a backup system of
-            your current work. It’s similar to Google Docs in that many people can collaborate on one project, make drafts, and go back to an earlier version of their work if they’re not happy with more recent updates. Here’s the coolest thing about Version
-            Control systems: multiple people can be working on their own copies of the common file. They do so on what’s called ‘branches’ (like a tree -- they all branch off into different directions). When the team decides to go with one person’s version,
-            each team member can ‘merge’ his or her current file with the chosen teammates, so that they are all on the same page.</p>
+        <div class="exercise">II. Exercise 1: </div>
+        <p>
+            Now that we've got the terminal open, we’re going to learn how to create, move, and organize directories from the command line. First, some important terminology:
 
-        <p>That’s a good general overview. If you want to learn about BitBucket (or Version Control), I highly recommend you check out these resources:
+
+            <ul>
+                <li>"The command line" - this simply refers to the commands you type into the terminal </li>
+                <li>Move into or out of a directory:</li>
+                <pre class="output">$ <span class="input"> cd [path/to/file]”:  </span></pre>
+                <li>Make a new directory:</li>
+                <pre class="output">$ <span class="input"> mkdir [name] </span></pre>
+                <li>List the contents of the directory:</li>
+                <pre class="output">$ <span class="input">  ls </span></pre>
+                <li>Move file from ‘from_path’ to ‘to_path’ if “to_path” exists. If “to_path” does not exist, this changes the name of “from_path” to “to_path” </li>
+                <pre class="output">$ <span class="input"> mv [from_path] [to_path]”  </span></pre>
+
+
+            </ul>
+
+            If these commands don’t make sense right now, it’s okay. We’re going to get some practice using the command line below.
+        </p>
+        <ul>
+            <li>Open up the Terminal and type “ls.” You should see something like this. The '~' indicates that you are currently in your home directory:</li>
+
+            <img src="../Design/images/terminal.png" style="width: 500px; height: 350px" />
+
+            <li>Now move into your Desktop: </li>
+            <pre class="output">$ <span class="input">cd Desktop </span></pre>
+
+            <li>Type “ls.” </li>
+            <pre class="output">$ <span class="input"> ls </span></pre>
+
+            <li> You should see all the files on your Desktop.</li>
+
+            <li>Create a new directory: </li>
+            <pre class="output">$ <span class="input"> mkdir [name] </span></pre>
+
+            <li>Move into the directory:</li>
+            <pre class="output">$ <span class="input"> cd [name] </span></pre>
+
+            <li>Type “ls” -- you should see nothing there. Let’s change that.</li>
+
+            <li>Make a new file</li>:
+            <pre class="output">$ <span class="input"> vim [name].txt </span></pre>
+            <li>This should open up the file. Type something -- anything. To save and exit a file: press esc --> wq. (NOTE: Vim is a text editor that is outside the scope of this workshop, but is very useful to learn if you are interested in programming.
+                Check out the main VIM Commands <a href="http://vim.rtorr.com">here </a>to find out more)</li>
+
+            <li>Last but not least, change the name of your file to “fem_tech_lab1” using the “mv” command. Try this out on your own --talk with the person next to you if you get stuck. </li>
+
+        </ul>
+        <p>
+            <div class="checkoff">
+                NOTE: The language to navigate the terminal is called UNIX. For this course, understanding the command line is not too relevant. If you’re interested in programming beyond this course, however, knowing UNIX is essential. Here's a list of resources to
+                help get you started(optional reading):
+                <ul>
+                    <li><a href="http://mally.stanford.edu/~sr/computing/basic-unix.html"> Basic UNIX Commands </a></li>
+                    <li><a href=" https://www.codecademy.com/ru/courses/learn-the-command-line/lessons/navigation/exercises/your-first-command?action=resume">Code Academy Learn the Command Line</a></li>
+                </ul>
+            </div>
+        </p>
+
+
+
+        <div class="exercise">III. GitHub</div>
+        <p>Github is a Version Control System that allows you to save current ‘drafts’ of your working directory (files) to a remote server. Think of it like a backup file system, a way to save drafts as you go. It’s often used in industry by teams, since
+            so that people working on a team can edit/update the same collection of files. GitHub is similar to the Cloud in that it acts like a backup system of your current work. It’s similar to Google Docs in that many people can collaborate on one
+            project, make drafts, and go back to an earlier version of their work if they want to scrap their edits. Here’s the coolest thing about Version Control systems: multiple people can be working on their own copies of the same file. They do so
+            on what’s called ‘branches’ (like a tree -- they all branch off into different directions). When the team decides to go with one person’s version, each team member can ‘merge’ his or her current file with the chosen teammates', so that they're
+            once again on the same page.</p>
+
+        <p>That’s a general overview. If you want to learn about GitHub (or Version Control in general), I highly recommend you check out these resources:
             <ol>
-                <li>Git vs github: http://stephaniehoh.github.io/blog/2013/10/07/git-vs-github-for-dummies/</li>
-                <li>Version control: http://skillcrush.com/2013/02/11/version-control/</li>
-                <li>Basic commands: https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html</li>
+                <li class="resources"><a href="http://stephaniehoh.github.io/blog/2013/10/07/git-vs-github-for-dummies/">Git VS Github </a></li>
+                <li class="resources"><a href="http://skillcrush.com/2013/02/11/version-control/"> Version Control 101 </a></li>
+                <li class="resources"><a href="https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html">Basic GIT Commands</a> </li>
             </ol>
-            <span class="exercise">IV. Create an Account</span>
+        </p>
+        <div class="checkoff">
+            NOTE: In this course we're not going to learn the intricacies of GitHub. There are many commands like "merge" and "branch" which are useful for collaborating with others on a project. This course is mainly concerned with teaching you web development,
+            so the only commands we'll use for GitHub are "add," "status," "commit," and "push" (all necessary for saving the files to the remote repository). If you continue coding beyond this course, you'll likely want to learn the in's and out's of
+            GitHub in greater detail.
+        </div>
+        <p> If you're all caught up to speed, it's time to make an account.
             <ol>
                 <li>Create a private repository called “FEMTechShare”</li>
 
@@ -117,14 +161,36 @@
                 <li>Clone the repository onto your local drive</li>
 
             </ol>
-            <span class="exercise">V. EDX</span>
-            <p>Last but not least, we’re going to be using the FREE online course: “Creating Web Pages using Hypertext Markup Language (HTML).” This is a great introduction into the material we’ll be covering this term. It will be really helpful if you try
-                to complete one section per week, or at the very least, come to Share with questions. </p>
+        </p>
+        <p> Finally, let's learn the basic commands
+            <ul>
+                <li> <a href="https://try.github.io/levels/1/challenges/1">Click me! </a> for an official Git tutorial </li>
+            </ul>
+        </p>
 
-            <span class="exercise">Homework: </span>
-            <p>EdX Module 1: “Creating Web Pages using Hypertext Markup Language (HTML)”</p>
+        <div class="exercise">V. EDX</div>
+        <p>Last but not least, we’re going to be using the FREE online course: “HTML5 Introduction.” This is a great introduction to the material we’ll be covering this term. It will be really helpful if you try to complete one section per week, or at the
+            very least, come to Share with questions. </p>
+        <p> Sign up for the course <a href="https://www.edx.org/course/html5-introduction-w3cx-html5-0x-0"> here </a> </p>
+
+        <div class="exercise">Homework: </div>
+        <ol>
+            <li>
+                EdX Module 1: “Creating Web Pages using Hypertext Markup Language (HTML)”
+            </li>
+            <li>
+                (optional): Next week we're going to start designing our websites. Get a head start with <a href="http://www.designbombs.com/"> designbombs.com </a> to read up on things to think about when choosing colors, fonts, styles (and more) for
+                your website.
+            </li>
+            <li>
+                (optional) <em> Fast forward to 1:45 (the first part is kinda boring -- if you can speed up the video in general, you might want to) and watch<a href="http://www.dontfeartheinternet.com/04-from-scratch/">Start From Scratch: Part 1 - HTML </a></em>                (note: we're going to do something similar to this in Week 2, so if you want a head start, check it out!)
+            </li>
+        </ol>
     </div>
-    <!-- end container-->
+    <!--end content-->
+
+    <!--</div>
+    end container-->
 
 </body>
 

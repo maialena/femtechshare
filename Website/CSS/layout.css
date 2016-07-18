@@ -1,143 +1,135 @@
-/* PLAY AROUND WITH LAYOUT RESET and TRY TO EXTEND NAV BAR AND HEADER TO FULL WIDTH OF PAGE */
-
-
-/**RESETS **/
-
-.header,
-.main,
-.nav,
-.aside,
-.footer {
-    flex: 1 100%;
-    height: 100%;
-    width: 100%;
-}
-
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
+    /* PLAY AROUND WITH LAYOUT RESET and TRY TO EXTEND NAV BAR AND HEADER TO FULL WIDTH OF PAGE */
+    /*USING FLEXBOX*/
+    /**RESETS **/
+    
+    .header,
+    .main,
+    .nav,
+    .aside,
+    .footer {
+        flex: 1 100%;
+        height: 100%;
+        width: 100%;
+    }
+    /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-
-html,
-body,
-div,
-span,
-applet,
-object,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-caption,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-
-/* HTML5 display-role reset for older browsers */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-
-/*HEADER*/
-
-.blackBar {
+    
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    caption,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+    
+    body {
+        line-height: 1;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    blockquote,
+    q {
+        quotes: none;
+    }
+    
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+    
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /*HEADER*/
+    /*.blackBar {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -145,74 +137,98 @@ table {
     flex-direction: row;
     color: black;
     background-color: #262822;
-}
-
-.main {
-    background: url(../Design/images/newestLogo.jpg) top no-repeat;
-}
-
-body {
-    background-color: antiquewhite;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    background: #330099;
-    color: navajowhite;
-    width: 100%;
-    height: 75px;
-    margin-top: 126px;
-    font-size: 15px;
-}
-
-nav ul {
-    list-style: none;
-    /*get rid of bullets */
-    display: flex;
-    /*put items in a row, ul needs to be flex so it's li children are in a row; alt way: inline*/
-}
-
-nav ul a {
-    text-transform: uppercase;
-    /*no underline */
-    color: navajowhite;
-    /*space between letters */
-    padding: 15px 40px 0 0;
-    /*chunky area to be clickable */
-    display: inline-block;
-    ;
-}
-
-h1 {
-    font-size: 14px;
-    color: navajowhite;
-    font-family: cursive;
-}
-
-
-/*Footer */
-
-.footer {
+}*/
+    /*PRACTICING THE GRID */
+    
+    html {
+        box-sizing: border-box;
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+    /*GRID SET UP*/
+    
+    body {
+        font-family: fantasy;
+        font-size: 20px;
+        margin: 0;
+        /*BODY MARGIN NEEDS TO BE ZERO FOR HEADER AND FOOTER TO BE SET RIGHT!*/
+    }
+    
+    .main {
+        background: url(../Design/images/newestLogo.jpg) top no-repeat;
+    }
+    
+    body {
+        background: #eee
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        background: #330099;
+        color: navajowhite;
+        width: 100%;
+        height: 50px;
+        margin-top: 126px;
+        font-size: 15px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#330099), to(#590099));
+        background-image: -webkit-linear-gradient(top, #330099, #590099);
+        background-image: -moz-linear-gradient(top, #330099, #590099);
+        background-image: linear-gradient(to bottom, #330099, #590099);
+    }
+    
+    nav ul {
+        list-style: none;
+        /*get rid of bullets */
+        display: flex;
+        /*put items in a row, ul needs to be flex so it's li children are in a row; alt way: inline*/
+    }
+    
+    nav ul a {
+        text-transform: uppercase;
+        /*no underline */
+        color: navajowhite;
+        /*space between letters */
+        padding: 15px 40px 0 0;
+        /*chunky area to be clickable */
+        display: inline-block;
+        ;
+    }
+    
+    h1 {
+        font-size: 14px;
+        color: navajowhite;
+        font-family: cursive;
+    }
+    /*Footer */
+    /*.footer {
     display: flex;
     font-size: .7rem;
-    /*flex-direction: column;*/
+    /*flex-direction: column;
     align-items: center;
 }
 
 .footer ul li {
     padding: 0 50px;
-}
-
-
-/*Links */
-
-a {
-    text-decoration: none;
-}
-
-.copyright {
-    font-size: 10px;
-}
+}*/
+    /*Links */
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .copyright {
+        font-size: 10px;
+    }
+    /*include box to show layout*/
+    
+    .box {
+        border-radius: 5px;
+        border: 3px black solid;
+    }
