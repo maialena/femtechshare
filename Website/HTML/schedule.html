@@ -2,6 +2,11 @@
 
 resource: http://www.tutorialspoint.com/html/html_tables.htm-->
 
+<!--THINGS TO INCLUDE IN CLASS:
+1. Daily News (cool thing about tech)
+2. What is the Internet video?
+-->
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -23,7 +28,6 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
                     <ul>
                         <li> <a href="../html/index.html ">About</a></li>
                         <li><a href="../html/schedule.html ">Schedule </a></li>
-                        <li><a href="../html/contact.html ">Contacts</a></li>
                         <li> <a href="../html/resources.html ">Resources</a> </li>
                     </ul>
                 </nav>
@@ -34,12 +38,15 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
         <!--table attributes: border is boolean (1 for border, else 0), 
     cellpadding defines width of border, 
     ellspacing is amount of white space between border and content-->
-        <h2 class="content"> FemTECH Share Fall 2016 </h2>
-        <table class="flex-container" border="1" cellpadding="5" cellspacing="5">
+        <div class="content"> 
+            <div class="title">
+                <h2>FemTECH Share Fall 2016 </h2>
+            </div>
+        </div>
+        <table class="table" border="1" cellpadding="5" cellspacing="5">
             <!--th := "table headers"-->
             <th>Week</th>
             <th>Date</th>
-            <th>Discussion</th>
             <th>Lab</th>
             <th>Homework</th>
 
@@ -48,25 +55,21 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
                 <!--table date := row1, column1-->
                 <td>Introduction</td>
                 <!--row1, column2-->
-                <td>September</td>
+                <td>September 16</td>
                 <!--row1, column3-->
-                <td>Welcome</td>
-                <!--row1, column4-->
-                <td><a href="lab1.html">Lab1: Setup & Work flow</a></td>
+                <td><a href="lab1.html">Lab1: Setup, GitHub, & Workflow</a></td>
                 <!--row1, column5-->
                 <td>
                     <ol>
                         <li>EdX Module1: "Creating Web Pages using Hypertext Markup Language (HTML)"</li>
-                        <li> Blog </li>
                     </ol>
                 </td>
                 <!--LInk-->
             </tr>
             <tr>
-                <td>Design</td>
-                <td>September []</td>
-                <td>HTML & Design</td>
-                <td><a href="lab2.html">Lab2: Mockup, Markup & Blog </a></td>
+                <td>HTML Basics & Design</td>
+                <td>September 23</td>
+                <td><a href="lab2.html">Lab2: &lt!DOC&gt, Colors Theory, & Blog </a></td>
                 <td>
                     <ol>
                         <li>EdX Module2: “Creating Sophisticated Document Structures using HTML”</li>
@@ -74,10 +77,10 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
                 </td>
             </tr>
             <tr>
+                <!--lab 3-->
                 <td>Stayin' Alive with HTML5</td>
-                <td>September []</td>
-                <td>HTML5 Selectors & Syntax</td>
-                <td><a href="lab3.html">Lab3: Team Code - HTML Doc </a></td>
+                <td>September 30</td>
+                <td><a href="lab3.html">Lab3: HTML5 Selectors & Syntax </a></td>
                 <td>
                     <ol>
                         <li>Kahn Academy HTML (only the <a href="https://www.khanacademy.org/computing/computer-programming/html-css">HTML sections</a></li>
@@ -87,9 +90,8 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
             </tr>
             <tr>
                 <td>meSS with cSS</td>
-                <td></td>
-                <td>The Basics: Stylesheets, Selectors, Attributes</td>
-                <td><a href="lab4.html">Lab4: Playin' With Style</a></td>
+                <td>October 7</td>
+                <td><a href="lab4.html">Lab4: Stylesheets, Selectors, Attributes/a></td>
                 <td>
                     <ol>
                         <li>EdX Module3: "Design Web Page Elements Using Cascading Style Sheets (CSS)”</li>
@@ -98,10 +100,10 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
                 </td>
             </tr>
             <tr>
+                <!--lab 5-->
                 <td>Layout with CSS</td>
-                <td></td>
-                <td>The Grid, Scrolling Panels</td>
-                <td><a href="lab5.html">Lab5: Create Grid Layout</a></td>
+                <td>October 14</td>
+                <td><a href="lab5.html">Lab5: The Grid</a></td>
                 <td>
                     <ol>
                         <li> Course Evaluation
@@ -113,22 +115,21 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
                 </td>
             </tr>
             <tr>
-                <td><em>cSS</em> is the beSSt</td>
-                <td></td>
-                <td>Animations</td>
-                <td><a href="lab6.html">Lab6: Create an Animation</a></td>
+                <td>Animations & Forms</td>
+                <td>October 21</td>
+                <td><a href="lab6.html">Lab6: HTML5 Tricks</a></td>
                 <td>
                     <ul>
-                        <li>Work on Website</li>
+                        <li> Work on Website</li>
                         <li> Blog </li>
                     </ul>
                 </td>
             </tr>
             <tr>
-                <td>fineSS with cSS</td>
-                <td>[]</td>
-                <td>??</td>
-                <td><a href="lab7.html">Lab7: CSS Tricks</a></td>
+                <!--lab 7-->
+                <td>Intro to JavaScript</td>
+                <td>October 28</td>
+                <td><a href="lab7.html">Lab7: DOM-da-DOM</a></td>
                 <td>
                     <ol>
                         <li>Work on Website</li>
@@ -137,47 +138,50 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
                 </td>
             </tr>
             <tr>
-                <td>Intro to JavaScript: The Building Blocks</td>
-                <td>[]</td>
-                <td>OOP, API's, & the DOM</td>
-                <td><a href="lab8.html">Lab8: Write a Script</a></td>
-                <td>Work on Website</td>
+                <td>More JavaScript</td>
+                <td>November 4</td>
+                <td><a href="lab8.html">Lab8: javaScript API's</a></td>
+                <td>
+                    <ol>
+                        <li>Work on Website</li>
+                        <li> Blog </li>
+                    </ol>
+                </td>
             </tr>
-            <tr>
-                <td>We love JavaScript</td>
-                <td></td>
-                <td>Drop-down menus, playlist, and more</td>
-                <td><a href="lab9.html">Lab9: Upgrade website</a></td>
-                <td>Work on Website</td>
-            </tr>
-
-
+            <!--lab 9-->
             <tr>
                 <td>TBD</td>
-                <td>[]</td>
+                <td>November 11</td>
+                <td><a href="lab9.html">Lab9: Drop-down menu, playlist, & more</a></td>
+                <td>
+                    <ol>
+                        <li>Work on Website</li>
+                        <li> Blog </li>
+                    </ol>
+                </td>
+            </tr>
+
+            <!--THANKSGIVING BREAK: NOVEMBER 24th-->
+
+            <!--lab 10-->
+            <tr>
                 <td>TBD</td>
+                <td>November 18</td>
                 <td><a href="lab10.html">Lab10: Upgrade wesbite</a></td>
-                <td>Work on Website</td>
+                <td>
+                    <ol>
+                        <li>Work on Website</li>
+                        <li> Get Ready for Final ShareCase</li>
+                    </ol>
+                </td>
 
             </tr>
+            <!--LAST MEETING !!!-->
             <tr>
-                <td>TBD</td>
-                <td>[]</td>
-                <td>TBD</td>
-                <td><a href="lab11.html">Lab11: Upgrade website</a></td>
-                <td>Get Ready for Final Sharecase</td>
-
-            </tr>
-            <tr>
-                <td>Sharecase (and Party)</td>
-
-                <td>[]</td>
-
-                <td>NA</td>
-
-                <td>Share Websites with FemTech Fam</td>
-
-                <td>Feel Proud of All That You've Accomplished!</td>
+                <td>ShareCase</td>
+                <td>December 2</td>
+                <td><a href="http://31.media.tumblr.com/88ee2a56006928ef66128912fec100f1/tumblr_n1cq2oeUeD1t77ydgo1_400.gif">You're now a budding front end developer!!! CONGRATULATIONS!</a></td>
+                <td>Keep on learning:)</td>
 
             </tr>
         </table>
@@ -188,7 +192,6 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
                 <li><a href="about.html" target="_self"> About </a></li>
                 <li><a href="schedule.html" target="_self"> Schedule </a></li>
                 <li><a href="resources.html" target="_self"> Resources </a></li>
-                <li><a href="contact.html" target="_self"> Contact </a></li>
             </ul>
 
             Copyright @2016. All Rights Reserved

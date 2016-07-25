@@ -6,16 +6,11 @@
 .wrapper {
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
-    grid-template-areas: "menu menu menu menu " ". scroll scroll ." ". scroll scroll ." ". scroll scroll ." ". scroll scroll ." ". scroll scroll ." ". scroll scroll ." ". scroll scroll ." "footer footer footer footer";
+    grid-template-areas: "menu menu menu menu " ". title title . " ". elem1 elem1 ." ". elem2 elem2 ." ". elem3 elem3 ." ". elem4 elem4 ." ". elem5 elem5 ." ". elem6 elem6 ." ". elem7 elem7 ." "footer footer footer footer";
     grid-gap: 50px;
-    /*grid-row: auto;*/
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
     /*width: 100%;*/
-}
-
-.scroll {
-    grid-area: scroll;
-    /*border: dashed 3px blue;*/
-    padding: 50px;
 }
 
 
@@ -34,25 +29,10 @@
 
 ul li {
     list-style: circle;
+    text-align: left;
 }
 
-
-/*remove bullets from menu bar */
-
-nav ul li {
-    list-style: none;
-}
-
-p {
-    line-height: 10px;
-}
-
-a:link {
-    color: black;
-    text-decoration: bold;
-    text-transform: uppercase;
-}
-
-a:hover {
-    background-color: purple;
+h3 {
+    font-size: 30px;
+    text-align: left;
 }

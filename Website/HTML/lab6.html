@@ -16,10 +16,9 @@
             <h1> FemTechShare</h1>
             <nav>
                 <ul>
-                    <li> <a href="../html/index.html">About</a></li>
-                    <li><a href="../html/schedule.html">Schedule </a></li>
-                    <li><a href="../html/contact.html">Contacts</a></li>
-                    <li> <a href="../html/resources.html">Resources</a> </li>
+                    <li> <a href="../html/index.html ">About</a></li>
+                    <li><a href="../html/schedule.html ">Schedule </a></li>
+                    <li> <a href="../html/resources.html ">Resources</a> </li>
                 </ul>
             </nav>
 
@@ -28,30 +27,89 @@
     <div class="content">
         <div class="heading">WEEK 6: HTML Animations & Forms</div>
         <div class="exercise">OVERVIEW</div>
-        Today we're going to keep the lab pretty short since we want to spend most of our time refining our websites. We'll learn one or two cool new things about HTML5, which hopefully you'll want to incorporate in your site.
+        <p>Today we're going to keep the lab pretty short since we want to spend most of our time refining our websites. We'll learn one or two cool new things about HTML5, which hopefully you'll want to incorporate in your site. Here's the twist: you're
+            going to learn the new techniques like most programmers do in the real world -- by looking up the API! What's an API? It stands for "Application Programming Interface." Think of API's' as the 'messengers of the internet' that allow programmers
+            to communicate with applications. Say you want to embed a Google Map into your website (what we'll do today). Well, you have to send a request to the Geolocation API (made up of precise specifications for how programmers can use the service).
+            The API accepts the request, and if the request is valid, it provides the given data (in this case, a location on a map). Another example: say you want to access data about the number of Twitter posts are made about some company on a daily
+            basis. You can't just ask the Twitter folks to give you the info any time you want. Instead, the API handles that -- pulling that info from Twitter's database. If you're still confused, check out <a href="https://www.youtube.com/watch?v=s7wmiS2mSXY"> this </a>Youtube
+            clip (it uses a waiter analogy that may be helpful). The four API's that we're going to look at are these: 1. Geolocation 2. Forms 3. Audio Player 4. Video Player</p>
+
+        <p> NOTE: Sifting through tons of online forums, blogs, and educational sites can feel frustrating at times. It's easy to lose patience, and even feel discouraged, when you can't find exactly what you're looking for, despite hours of effort. Don't
+            fret! It might seem like 'wasted' time, but
+            <span class="emphasis"> all </span> that work is actually really useful. Think of it like exercise. You're training your search-engine muscles and learning how to pull useful information from technical articles. You'll become faster at this
+            over time, so be patient with the learning process.</p>
+        <div class="checkoff"> Pro Tip: Here's a general workflow when looking up how to implement something online:
+            <ol>
+                <li> Check out <a href="http://stackoverflow.com/"> Stack Overflow </a> for general programming questions. </li>
+                <li> If you get an error message, try copying and pasting the exact error into the search engine. See what comes up </li>
+                <li> The process: Code --> [problem] --> Search --> Read --> Implement --> If still running into problems, revise search --> repeat.</li>
+        </div>
+        <br/>
+
         <div class="exercise">LEARNING OBJECTIVES</div>
         <ol>
             <li> Incorporate a HTML5 Animation in your site (or in a separate .html file)</li>
             <li> Incorporate a HTML5 Form in your site (or in a separate .html file)</li>
             <li> Incorporate an HTML5 audio track in your site (or in a separate .html file) </li>
+            <li> Learn about methods, API's, and looking things up on StackOverflow </li>
         </ol>
 
-        <div class="exercise"> I. Video in HTML5</div>
-        <p>Duckett <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">Chapter 9, pages 2002-222</a></p>
-        <div class="exercise"> II. Audio in HTML5</div>
+        <div class="exercise"> Programming 101</div>
+        <p>Okay, so we're not going to completely throw you in the deep end. We'll first build up our tool kit with some basic programming terminology & lingo:</p>
+        <ol>
+            <li> Method </li>
+            <li> "Calling" a method </li>
+            <li> Boolean expressions </li>
+            <li> The Console </li>
+            <li>
+        </ol>
+        <div class="exercise"> I. Video & Audio in HTML5</div>
+        <p>
+            <ol>
+                <li>Jon Duckett <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">Chapter 9, pages 2002-222</a></li>
+                <li><a href="http://html5doctor.com/html5-audio-the-state-of-play/">HTMl5 Audio Properties </a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video"> Basics Audio/Video in HTML5 </a></li>
+                <li><a href="http://www.w3schools.com/tags/ref_av_dom.aspAudio/Video"> Audio/Video DOM Reference Sheet </a></li>
+            </ol>
+        </p>
+
         <p> </p>
 
-        <div class="exercise"> III. Form in HTML5 </div>
-        <p>Let's add a form to your site!</p>
-        <p> We'll call upon our goold ole' friend Duckket for help: Scroll down to <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">Chapter 7, Pages 144-172</a></p>
 
+        <div class="exercise"> II. Geolocation in HTML5 </div>
+        <p> * NOTE: These tutorials pretty much all same the same thing -- so you only have to look at one or maybe two. If you get stuck, check out another way that might be getting at the same lesson in a different way. We all have different learning styles,
+            and part of being a web developer (or programmer in general) is learning to research, research, research until something clicks.</p>
+        <ol>
+            <li> <a href="https://www.sitepoint.com/html5-geolocation/"> Resource Numero Uno </a></li>
+            <li> <a href="http://www.w3schools.com/html/html5_geolocation.asp"> Resource Numero Dos </a></li>
+            <li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation"> Resource Numero Tres</a></li>
+            <li><a href="http://www.tutorialspoint.com/html5/html5_geolocation.htm">Resource Numero Cuatro </a></li>
+            <li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation"> Resource Numero Cinco </a></li>
+
+        </ol>
+
+        <div class="exercise"> (optional) III. Form in HTML5 </div>
+        <p>Let's add a form to your site!</p>
+        <ol>
+            <li>For the basics, we'll call upon our goold ole' friend Jon Duckket for help. Scroll down to <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">Chapter 7, Pages 144-172</a></li>
+            <li> For a more in-depth look at forms, check out <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form"> this </a> website</li>
+            <li>Where does the data go? That's a bit beyond the scope of this course -- to actually retrieve the data, you'd have to implement a few methods using Python, Ruby, or PHP. Fortunately, you now have the research skills to learn those languages
+                on your own! If you want a sneak peak about the underlying mechanics of the form, check out <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data"> this </a> article</li>
+            <li> And if you're still SUPER intrigued by the form, read <a href="http://apress.jensimmons.com/v5/pro-html5-programming/ch8.html"> this </a> article about everything and anything you could possibly want to learn about html5 form </li>
+        </ol>
+        <div class="exercise"> IV. Video & Audio in HTML5 & JavaScript</div>
+        <a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery"> Audio & Video </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement"> HTML Media element </a>
 
         <div class="exercise">Homework: </div>
-        <ul>
+        <ol>
 
             <li> Continue working on your site!</li>
             <li> (optional) EdX Module 4: “Implementing Program Flow Using JavaScript” (we'll start learning JavaScript next week so if you want to get a headstart, do this lesson!)</li>
-        </ul>
+        </ol>
+        <div class="subtitle"> Good Reads </div>
+
+        <div class="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API"> 2D & 3D Graphics with JavaScript </div>
     </div>
     <!--end container-->
 

@@ -4,7 +4,7 @@
     .wrapper {
         display: grid;
         grid-template-columns: 300px 300px 300px 300px;
-        grid-template-areas: "menu menu menu menu " "content content content content " "table table table table " "footer footer footer footer";
+        grid-template-areas: "menu menu menu menu " "content content content content " "table table table table " "table table table table" "footer footer footer footer";
         /* color: #444;*/
         grid-column-gap: 40px;
         grid-row-gap: 0px;
@@ -13,48 +13,11 @@
     }
     /*GRID AREAS*/
     
-    .menu {
-        grid-area: menu;
-    }
-    
-    .content {
-        grid-area: content;
-        text-align: center;
-    }
-    /*footer nav bar, get rid of margin */
-    
-    .bottom {
-        margin-top: 0px;
-        height: auto;
-        /*padding: 20px;*/
-    }
-    
-    .footer {
-        grid-area: footer;
-        margin: 0px;
-        height: auto;
-    }
-    
-    .flex-container {
+    .table {
         grid-area: table;
+        margin: 70px;
     }
     /*STYLING */
-    
-    header h2,
-    h3 {
-        padding: 0;
-        text-align: center;
-    }
-    
-    h2 {
-        /*Schedule heading*/
-        font-size: 30px;
-        margin-top: 20px;
-    }
-    
-    h3 {
-        font-size: 20px;
-    }
     
     table {
         margin: 130px 20px 20px 20px;
@@ -80,6 +43,3 @@
         background-color: lightgrey;
     }
     
-    .menu {
-        background-color: #262822;
-    }

@@ -3,13 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <link href="../CSS/labs.css" rel="stylesheet" />
     <link href="../CSS/layout.css" rel="stylesheet" />
+    <link href="../CSS/labs.css" rel="stylesheet" />
     <link href="../CSS/style.css" rel="stylesheet">
 
 
-    <title> Lab1 </title>
+    <title> Lab9 </title>
 </head>
 
 <body>
@@ -18,38 +17,39 @@
             <h1> FemTechShare</h1>
             <nav>
                 <ul>
-                    <li> <a href="../html/index.html">About</a></li>
-                    <li><a href="../html/schedule.html">Schedule </a></li>
-                    <li><a href="../html/contact.html">Contacts</a></li>
-                    <li> <a href="../html/resources.html">Resources</a> </li>
+                    <li> <a href="../html/index.html ">About</a></li>
+                    <li><a href="../html/schedule.html ">Schedule </a></li>
+                    <li> <a href="../html/resources.html ">Resources</a> </li>
                 </ul>
             </nav>
-        </header>
+
     </div>
-    <!-- end of main-->
-
-    </header>
-    <!--<div class="container">-->
+    <!--end main-->
     <div class="content">
-        <div class="heading"> WEEK 1: INTRODUCTIONS</div>
-        <!--start of content-->
+        <div class="heading">WEEK 9: </div>
         <div class="exercise">OVERVIEW</div>
-        <p>Welcome to FemTECH Share! The purpose of this course is to teach you the basics of HTML5, CSS3, and JavaScript, which you will use to create your very own website in just 8 weeks. By the end of this semester, you will not know <em>everything</em>            there is to know about web development, since there are always new frameworks, layouts, and techniques to explore. You will, however, build a powerful foundation of skills, confidence, and know-how to dive as deep into the world of programming
-            as you want to go. Without further ado, let's dive in!
-        </p>
-
+        <p></p>
         <div class="exercise">LEARNING OBJECTIVES</div>
-        <p>
-            <ul>
-                <li>Meet & Greet</li>
-                <li>Schedule, Syllabus, and Goals</li>
-                <li>Understand how to navigate directories from the command line</li>
-                <li>Understand GitHub & create first repository</li>
-                <li>Sign up for EdX "HTML, CSS, javaScript online course (free)"</li>
-            </ul>
-        </p>
+        <ol>
+            <li> Publish your website!</li>
+            <li> </li>
+        </ol>
 
-        <div class="exercise">Lab #1: Setup</div>
+        <div class="exercise">I. Publish your website!</div>
+        You did it!!
+        <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Publishing_your_website"> Publishing Your Website How To </a>
+        <div class="exercise">Homework </div>
+        <ul>
+            <li> Continue working on your site!</li>
+        </ul>
+    </div>
+    <!--end container-->
+</body>
+
+</html> </p>
+
+        
+        <div class="exercise">Setup</div>
         <p>In this lab, we’re going to set up our working environment.</p>
 
         <div class="exercise">I. THE TERMINAL</div>
@@ -89,7 +89,7 @@
 
             </ul>
 
-            If these commands don’t make sense right now, it’s okay. We’re going to get some practice using the command line below.
+            If these commands don’t make sense right now, it’s okay. We’re going to get some practice by setting up our file system! Where should your website live on your computer? In a folder! Let's create that now.
         </p>
         <ul>
             <li>Open up the Terminal and type “ls.” You should see something like this. The '~' indicates that you are currently in your home directory:</li>
@@ -105,22 +105,26 @@
             <li> You should see all the files on your Desktop.</li>
 
             <li>Create a new directory: </li>
-            <pre class="output">$ <span class="input"> mkdir [name] </span></pre>
+            <pre class="output">$ <span class="input"> mkdir [myWebsiteName] </span></pre>
 
             <li>Move into the directory:</li>
-            <pre class="output">$ <span class="input"> cd [name] </span></pre>
+            <pre class="output">$ <span class="input"> cd [myWebsiteName] </span></pre>
 
             <li>Type “ls” -- you should see nothing there. Let’s change that.</li>
 
-            <li>Make a new file</li>:
-            <pre class="output">$ <span class="input"> vim [name].txt </span></pre>
-            <li>This should open up the file. Type something -- anything. To save and exit a file: press esc --> wq. (NOTE: Vim is a text editor that is outside the scope of this workshop, but is very useful to learn if you are interested in programming.
+            <li>Make your main webpage file</li>:
+            <pre class="output">$ <span class="input"> vim index.txt </span></pre>
+            <li>This should open up the file. Type something -- anything. To save and exit a file: press 'esc'' then ':wq'. (NOTE: Vim is a text editor that is outside the scope of this workshop, but is very useful to learn if you are interested in programming.
                 Check out the main VIM Commands <a href="http://vim.rtorr.com">here </a>to find out more)</li>
 
-            <li>Last but not least, change the name of your file to “fem_tech_lab1” using the “mv” command. Try this out on your own --talk with the person next to you if you get stuck. </li>
-
-        </ul>
-        <p>
+            <li>Now let's create some subdirectories for your images, CSS, and javaScript files: </li>
+            <pre class="output"> $ <span class="input"> mkdir html </span> </pre>
+            <pre class="output"> $ <span class="input"> mkdir styles </span> </pre>
+            <pre class="output"> $ <span class="input"> mkdir scripts </span> </pre>
+            <pre class="output"> $ <span class="input"> mkdir images </span> </pre>
+            <p> Now let's move our index.html file into our html folder </p>
+            <pre class="output"> $ <span class="input"> mv index.html html </span> </pre>
+            <br/>
             <div class="checkoff">
                 NOTE: The language to navigate the terminal is called UNIX. For this course, understanding the command line is not too relevant. If you’re interested in programming beyond this course, however, knowing UNIX is essential. Here's a list of resources to
                 help get you started(optional reading):
@@ -129,10 +133,36 @@
                     <li><a href=" https://www.codecademy.com/ru/courses/learn-the-command-line/lessons/navigation/exercises/your-first-command?action=resume">Code Academy Learn the Command Line</a></li>
                 </ul>
             </div>
-        </p>
+            <br/>
+            <p> You now know enough to create your first (primitive) web page!
+                <div class="emphasis">Let's do it.</div>
+            </p>
+            <li> Open up your index.html file in your textEditor of choice. Copy & paste the code below (we're going to go over this in more detail next lab, so don't worry if the code doesn't make sense yet):</li>
+            <pre class="output"><span class="input"> 
+                &lt!DOCTYPE html&gt
+                    &lthtml&gt
+                        &lthead&gt
+                            &ltmeta charset="utf-8"&gt
+                            &lttitle&gtMy test page&lt/title&gt
+                        &lt/head&gt
+                        &ltbody&gt
+                            &ltimg src="[]" alt="My test image"&gt
+                        &lt/body&gt
+                    &lt/html&gt        
 
-
-
+            </span></pre>
+            <br/>
+            <li> Now we need to fill in the space between the quotation marks in 'img src="[]" ' with a picture of your choice! Go to Google. Download an image into your Desktop/myWebsite/images directory. Make sure you save it as an '.jpeg' or '.png' Update
+                the image source with the <em> path </em> to the image you saved: </li>
+            <br/>
+            <pre class="output"><span class="input">&ltimg src="../images/myImage.png"/&gt</span></pre>
+            <br/>
+            <div class="checkoff"> NOTE: To walk from one directory to another, use forward slashes to indicate moving one level in (deeper) from the current subfolder. If you're nestled in a folder and want to move 'out' use two dots like so: "../images/myImage.html". We use
+                the two dots here because we're currently in the HTML directory, and our image is in the 'images' directory. So we have to pop out of the HTML directory to then move into (using the forward slash) the images directory</div>
+            <br/>
+            <li> Final step: Save your file and open it in the browser. Viola! </li>
+        </ul>
+        <br/>
         <div class="exercise">III. GitHub</div>
         <p>Github is a Version Control System that allows you to save current ‘drafts’ of your working directory (files) to a remote server. Think of it like a backup file system, a way to save drafts as you go. It’s often used in industry by teams, since
             so that people working on a team can edit/update the same collection of files. GitHub is similar to the Cloud in that it acts like a backup system of your current work. It’s similar to Google Docs in that many people can collaborate on one
@@ -186,6 +216,13 @@
                 (optional) <em> Fast forward to 1:45 (the first part is kinda boring -- if you can speed up the video in general, you might want to) and watch<a href="http://www.dontfeartheinternet.com/04-from-scratch/">Start From Scratch: Part 1 - HTML </a></em>                (note: we're going to do something similar to this in Week 2, so if you want a head start, check it out!)
             </li>
         </ol>
+        <div class="subtitle"> Good Reads </div>
+        Here I'll be posting extra articles, clips, and tutorials that are somewhat extraneous to the course, but useful/interesting/cool/fun nonetheless. This week's choice picks:
+        <ol>
+            <li> <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/How_the_Web_works"> How The Web Works </a></li>
+            <li> <a href="https://developer.mozilla.org/en-US/Learn/Common_questions/How_does_the_Internet_work"> How Does the Internet Work? </a></li>
+        </ol>
+
     </div>
     <!--end content-->
 
