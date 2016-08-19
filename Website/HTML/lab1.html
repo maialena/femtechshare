@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <link href="../CSS/layout.css" rel="stylesheet" />
-    <link href="../CSS/labs.css" rel="stylesheet" />
     <link href="../CSS/style.css" rel="stylesheet">
+    <link href="../CSS/labs.css" rel="stylesheet" />
 
 
-    <title> Lab9 </title>
+    <title> Lab1 </title>
 </head>
 
 <body>
@@ -17,160 +17,150 @@
             <h1> FemTechShare</h1>
             <nav>
                 <ul>
-                    <li> <a href="../html/index.html ">About</a></li>
-                    <li><a href="../html/schedule.html ">Schedule </a></li>
-                    <li> <a href="../html/resources.html ">Resources</a> </li>
+                    <li> <a href="../HTML/index.html">About</a></li>
+                    <li><a href="../HTML/schedule.html">Schedule </a></li>
+                    <li> <a href="../HTML/resources.html">Resources</a> </li>
                 </ul>
             </nav>
-
+        </header>
     </div>
-    <!--end main-->
+    <!-- end of main-->
+
+    <!--</header>-->
+    <!--<div class="container">-->
     <div class="content">
-        <div class="heading">WEEK 9: </div>
+        <div class="heading"> WEEK 1: INTRODUCTIONS</div>
+        <!--start of content-->
         <div class="exercise">OVERVIEW</div>
-        <p></p>
-        <div class="exercise">LEARNING OBJECTIVES</div>
-        <ol>
-            <li> Publish your website!</li>
-            <li> </li>
-        </ol>
-
-        <div class="exercise">I. Publish your website!</div>
-        You did it!!
-        <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Publishing_your_website"> Publishing Your Website How To </a>
-        <div class="exercise">Homework </div>
-        <ul>
-            <li> Continue working on your site!</li>
-        </ul>
-    </div>
-    <!--end container-->
-</body>
-
-</html> </p>
-
-        
-        <div class="exercise">Setup</div>
-        <p>In this lab, we’re going to set up our working environment.</p>
-
-        <div class="exercise">I. THE TERMINAL</div>
-
-        <p>This is the interface that you use to directly communicate with the operating system via text-based commands (which are then converted into a language that the computer understands). FOR MAC USERS:
-            <ul>
-                <li> Lucky for you, all Mac's come with a built-in terminal!</li>
-                <li> Simply go to your Spotlight and search "Terminal."</li>
-                <li> It should pop right up</li>
-            </ul>
-
-            FOR PC USERS:
-            <ul>
-                <li> fill in instructions</li>
-            </ul>
-
+        <p>Welcome to FemTECH Share! The purpose of this course is to teach you the basics of HTML5, CSS3, and JavaScript, which you will use to create your very own website in just 8 weeks. By the end of this semester, you will not know <em>everything</em>            there is to know about web development, since there are always new frameworks, layouts, and techniques to explore. You will, however, build a powerful foundation of skills, confidence, and know-how to dive as deep into the world of programming
+            as you want to go. Without further ado, let's dive in!
         </p>
 
-
-
-        <div class="exercise">II. Exercise 1: </div>
+        <div class="exercise">LEARNING OBJECTIVES</div>
         <p>
-            Now that we've got the terminal open, we’re going to learn how to create, move, and organize directories from the command line. First, some important terminology:
+            <ol>
+                <li>Navigate directories from the command line</li>
+                <li>Understand GitHub & set up directories/work environment</li>
+                <li>Sign up for EdX "HTML, CSS, javaScript online course (free)"</li>
+            </ol>
+        </p>
 
+        <div class="exercise">Lab #1: Setup</div>
+        <p>In this lab, we’re going to set up our working environment.</p>
 
+        <div class="exercise">I. The Terminal</div>
+
+        <p>This is the interface that you use to directly communicate with the operating system via text-based commands (which are then converted into a language that the computer understands). Other names for the 'terminal' include:
+            <ol>
+                <li> Shell </li>
+                <li> Console </li>
+                <li> Command line </li>
+                <li> Command prompt </li>
+            </ol>
+        </p>
+        <p>
+            To get started, simply search for "Terminal" (probably in your 'Applications'). If you'd like to read more about the terminal, check out the Ubuntu documentation <a href="https://help.ubuntu.com/community/UsingTheTerminal"> here </a>
+
+        </p>
+        <p>
+            Now that we've got the terminal open, we’re going to learn how to create, move, and organize directories from the command line. First, some important commands:
+
+        </p>
+        <p>
             <ul>
-                <li>"The command line" - this simply refers to the commands you type into the terminal </li>
                 <li>Move into or out of a directory:</li>
                 <pre class="output">$ <span class="input"> cd [path/to/file]”:  </span></pre>
+                <br/>
                 <li>Make a new directory:</li>
                 <pre class="output">$ <span class="input"> mkdir [name] </span></pre>
+                <br/>
                 <li>List the contents of the directory:</li>
                 <pre class="output">$ <span class="input">  ls </span></pre>
+                <br/>
                 <li>Move file from ‘from_path’ to ‘to_path’ if “to_path” exists. If “to_path” does not exist, this changes the name of “from_path” to “to_path” </li>
                 <pre class="output">$ <span class="input"> mv [from_path] [to_path]”  </span></pre>
 
 
             </ul>
-
-            If these commands don’t make sense right now, it’s okay. We’re going to get some practice by setting up our file system! Where should your website live on your computer? In a folder! Let's create that now.
         </p>
-        <ul>
-            <li>Open up the Terminal and type “ls.” You should see something like this. The '~' indicates that you are currently in your home directory:</li>
+        <p>
 
-            <img src="../Design/images/terminal.png" style="width: 500px; height: 350px" />
+            If these commands don’t make sense right now, it’s okay. We’re going to get some practice using the command line below.
+        </p>
+        <p>
+            <ul>
+                <li>Open up the Terminal and type “ls.” You should see something like this. The '~' indicates that you are currently in your home directory:</li>
 
-            <li>Now move into your Desktop: </li>
-            <pre class="output">$ <span class="input">cd Desktop </span></pre>
+                <img src="../images/terminal.png" style="width: 500px; height: 350px" />
 
-            <li>Type “ls.” </li>
-            <pre class="output">$ <span class="input"> ls </span></pre>
+                <li>Now move into your Desktop: </li>
+                <pre class="output">$ <span class="input">cd Desktop </span></pre>
+                <br/>
 
-            <li> You should see all the files on your Desktop.</li>
+                <li>Type “ls.” </li>
+                <pre class="output">$ <span class="input"> ls </span></pre>
+                <br/>
 
-            <li>Create a new directory: </li>
-            <pre class="output">$ <span class="input"> mkdir [myWebsiteName] </span></pre>
+                <li> You should see all the files on your Desktop.</li>
 
-            <li>Move into the directory:</li>
-            <pre class="output">$ <span class="input"> cd [myWebsiteName] </span></pre>
+                <li>Create a new directory: </li>
+                <pre class="output">$ <span class="input"> mkdir [name] </span></pre>
+                <br/>
 
-            <li>Type “ls” -- you should see nothing there. Let’s change that.</li>
+                <li>Move into the directory:</li>
+                <pre class="output">$ <span class="input"> cd [name] </span></pre>
+                <br/>
 
-            <li>Make your main webpage file</li>:
-            <pre class="output">$ <span class="input"> vim index.txt </span></pre>
-            <li>This should open up the file. Type something -- anything. To save and exit a file: press 'esc'' then ':wq'. (NOTE: Vim is a text editor that is outside the scope of this workshop, but is very useful to learn if you are interested in programming.
-                Check out the main VIM Commands <a href="http://vim.rtorr.com">here </a>to find out more)</li>
+                <li>Type “ls” -- you should see nothing there. Let’s change that.</li>
+                <br/>
+                <li>Make a new file:</li>
+                <pre class="output">$ <span class="input"> vim [name].txt </span></pre>
+                <br/>
+                <li>This should open up the file. Type something -- anything. To save and exit a file: press esc --> wq. (NOTE: Vim is a text editor that we won't explicitly teach in this workshop, but is very useful to learn if you are interested in programming.
+                    Check out the main VIM Commands <a href="http://vim.rtorr.com">here </a>to find out more)</li>
 
-            <li>Now let's create some subdirectories for your images, CSS, and javaScript files: </li>
-            <pre class="output"> $ <span class="input"> mkdir html </span> </pre>
-            <pre class="output"> $ <span class="input"> mkdir styles </span> </pre>
-            <pre class="output"> $ <span class="input"> mkdir scripts </span> </pre>
-            <pre class="output"> $ <span class="input"> mkdir images </span> </pre>
-            <p> Now let's move our index.html file into our html folder </p>
-            <pre class="output"> $ <span class="input"> mv index.html html </span> </pre>
-            <br/>
+                <br/>
+                <li>Last but not least, change the name of your file to “fem_tech_lab1” using the “mv” command. Try this out on your own --talk with the person next to you if you get stuck. </li>
+
+            </ul>
+        </p>
+        <p>
             <div class="checkoff">
                 NOTE: The language to navigate the terminal is called UNIX. For this course, understanding the command line is not too relevant. If you’re interested in programming beyond this course, however, knowing UNIX is essential. Here's a list of resources to
                 help get you started(optional reading):
-                <ul>
+                <ol>
                     <li><a href="http://mally.stanford.edu/~sr/computing/basic-unix.html"> Basic UNIX Commands </a></li>
                     <li><a href=" https://www.codecademy.com/ru/courses/learn-the-command-line/lessons/navigation/exercises/your-first-command?action=resume">Code Academy Learn the Command Line</a></li>
-                </ul>
+                </ol>
             </div>
-            <br/>
-            <p> You now know enough to create your first (primitive) web page!
-                <div class="emphasis">Let's do it.</div>
-            </p>
-            <li> Open up your index.html file in your textEditor of choice. Copy & paste the code below (we're going to go over this in more detail next lab, so don't worry if the code doesn't make sense yet):</li>
-            <pre class="output"><span class="input"> 
-                &lt!DOCTYPE html&gt
-                    &lthtml&gt
-                        &lthead&gt
-                            &ltmeta charset="utf-8"&gt
-                            &lttitle&gtMy test page&lt/title&gt
-                        &lt/head&gt
-                        &ltbody&gt
-                            &ltimg src="[]" alt="My test image"&gt
-                        &lt/body&gt
-                    &lt/html&gt        
+        </p>
 
-            </span></pre>
-            <br/>
-            <li> Now we need to fill in the space between the quotation marks in 'img src="[]" ' with a picture of your choice! Go to Google. Download an image into your Desktop/myWebsite/images directory. Make sure you save it as an '.jpeg' or '.png' Update
-                the image source with the <em> path </em> to the image you saved: </li>
-            <br/>
-            <pre class="output"><span class="input">&ltimg src="../images/myImage.png"/&gt</span></pre>
-            <br/>
-            <div class="checkoff"> NOTE: To walk from one directory to another, use forward slashes to indicate moving one level in (deeper) from the current subfolder. If you're nestled in a folder and want to move 'out' use two dots like so: "../images/myImage.html". We use
-                the two dots here because we're currently in the HTML directory, and our image is in the 'images' directory. So we have to pop out of the HTML directory to then move into (using the forward slash) the images directory</div>
-            <br/>
-            <li> Final step: Save your file and open it in the browser. Viola! </li>
+
+        <div class="exercise"> II. Environment Set-Up </div>
+        <p> We're going to create all the subdirectories we will need to build a website. There are a few conventions that website developers use, so we'll start by learning them.</p>
+        <ul>
+            <li> First, open your terminal and <span class="code"> $ cd </span> into your main directory </li>
+            <li> Let's create some folders! We'll need a <span class="code"> HTML, CSS, images, </span> & <span class="code"> JSS </span> (javaScript) directories for now. Do you remember the UNIX command for making directories? If not, look it up ;) </li>
+            <li> <span class="code"> $ cd </span> into your HTML directory, and make a new <span class="code"> index.html </span> file </li>
+            <li> <span class="code"> $ cd </span> into your CSS directory, and make a new <span class="code"> style.html </span> file </li>
+        </ul>
+        <p> Why "index.html" and "style.css"? No particular reason. It's just the convention that Web Developers use, and it's best practice to stick with it. </p>
+        <p> Now we're ready to code! </p>
+        <ul>
+            <li> Open up VisualStudioCode text editor (refer to <a href="../lab1.html/">Lab1 </a>if you don't have it set up yet) </li>
+            <li> We'll walk through the basics of a markup page together on the board in class. If you miss class, or want a refresher later on, use <a href="https://www.sitepoint.com/a-basic-html5-template/">this resource </a>to get started. </a>
+            </li>
         </ul>
         <br/>
-        <div class="exercise">III. GitHub</div>
-        <p>Github is a Version Control System that allows you to save current ‘drafts’ of your working directory (files) to a remote server. Think of it like a backup file system, a way to save drafts as you go. It’s often used in industry by teams, since
-            so that people working on a team can edit/update the same collection of files. GitHub is similar to the Cloud in that it acts like a backup system of your current work. It’s similar to Google Docs in that many people can collaborate on one
-            project, make drafts, and go back to an earlier version of their work if they want to scrap their edits. Here’s the coolest thing about Version Control systems: multiple people can be working on their own copies of the same file. They do so
-            on what’s called ‘branches’ (like a tree -- they all branch off into different directions). When the team decides to go with one person’s version, each team member can ‘merge’ his or her current file with the chosen teammates', so that they're
-            once again on the same page.</p>
 
-        <p>That’s a general overview. If you want to learn about GitHub (or Version Control in general), I highly recommend you check out these resources:
+        <div class="exercise">III. GitHub</div>
+        <p>Github is a <a href="https://www.atlassian.com/git/tutorials/what-is-version-control">Version Control System </a> that allows you to save drafts as you go to remote server. Think of it as a backup file system, like the Cloud, or even better, as
+            a tool that's analogous to the "Save As" option in Word. By recording all your changes as you go, you can always go back to earlier versions of your code if you want to scrap recent edits.
+        </p>
+        <p> Github is used in industry by teams, so that people working on the same project can edit local versions of the code without overriding each other's work. Team members can work separately on their own local copies of the code, or they can merge
+            together their work so that everyone is on the same page. </p>
+
+        <p>If you want to learn more about GitHub (or Version Control in general), I highly recommend you check out these resources:
             <ol>
                 <li class="resources"><a href="http://stephaniehoh.github.io/blog/2013/10/07/git-vs-github-for-dummies/">Git VS Github </a></li>
                 <li class="resources"><a href="http://skillcrush.com/2013/02/11/version-control/"> Version Control 101 </a></li>
@@ -180,27 +170,36 @@
         <div class="checkoff">
             NOTE: In this course we're not going to learn the intricacies of GitHub. There are many commands like "merge" and "branch" which are useful for collaborating with others on a project. This course is mainly concerned with teaching you web development,
             so the only commands we'll use for GitHub are "add," "status," "commit," and "push" (all necessary for saving the files to the remote repository). If you continue coding beyond this course, you'll likely want to learn the in's and out's of
-            GitHub in greater detail.
+            GitHub, and the above tutorials are a great place to start.
         </div>
-        <p> If you're all caught up to speed, it's time to make an account.
+
+
+        <p> It's time to make an account. Github has an awesome deal for students: an unlimited number of <span class="emphasis"> free </span> repositories (folders) for projects. Get the pack <a href="https://education.github.com/"> here. </a></p>
+        <p> Time to make your first repository.
             <ol>
-                <li>Create a private repository called “FEMTechShare”</li>
-
-                <li>Initialize Git</li>
-
-                <li>Clone the repository onto your local drive</li>
-
+                <li>Create a repository (private or public, it's up to you -- you can change the status at any time) called “FEMTechShare”</li>
+                <li> Open your terminal and navigate to the directory you made for FemTech.</li>
+                <li> Initialize Git. This command is used to create an empty Git repository. It creates a .git folder that allows you to start recording revisions of your files.</li>
+                <pre class="output">$ <span class="input"> git init </span></pre>
+                <br/>
+                <li> Test that the .git folder is in your directory with the "ls" command </li>
+                <li> Open your repository on GitHub and click the "Clone or download" button to left. Copy the code </li>
+                <li> From the terminal, type the following to connect your local repo with your Git repo:</li>
+                <pre class="output">$ <span class="input"> git clone [paste url] </span></pre>
+                <br/>
+                <li> Double check that you've cloned your remote repo correctly </li>
+                <pre class="output">$ <span class="input"> git remote -v  </span></pre>
+                <br/>
+                <li> You should see something like this </li>
+                <img src="../images/git_clone_repo.png" />
+                <li> Tada! That's it.</li>
             </ol>
         </p>
-        <p> Finally, let's learn the basic commands
-            <ul>
-                <li> <a href="https://try.github.io/levels/1/challenges/1">Click me! </a> for an official Git tutorial </li>
-            </ul>
-        </p>
+        <p> Finally, let's learn the basic commands with <a href="https://try.github.io/levels/1/challenges/1">another tutorial</a> </p>
 
         <div class="exercise">V. EDX</div>
-        <p>Last but not least, we’re going to be using the FREE online course: “HTML5 Introduction.” This is a great introduction to the material we’ll be covering this term. It will be really helpful if you try to complete one section per week, or at the
-            very least, come to Share with questions. </p>
+        <p>Last but not least, we’re going to be using the FREE online course: “HTML5 Introduction.” This is a great introduction to the material we’ll be covering this term. It will be really helpful if you try to complete one section per week so that you
+            can come to Share with questions. </p>
         <p> Sign up for the course <a href="https://www.edx.org/course/html5-introduction-w3cx-html5-0x-0"> here </a> </p>
 
         <div class="exercise">Homework: </div>
@@ -213,18 +212,11 @@
                 your website.
             </li>
             <li>
-                (optional) <em> Fast forward to 1:45 (the first part is kinda boring -- if you can speed up the video in general, you might want to) and watch<a href="http://www.dontfeartheinternet.com/04-from-scratch/">Start From Scratch: Part 1 - HTML </a></em>                (note: we're going to do something similar to this in Week 2, so if you want a head start, check it out!)
+                (optional) <em> Fast forward to 1:45 (the first part is kinda boring -- if you can speed up the video in general, you might want to) and watch <a href="http://www.dontfeartheinternet.com/04-from-scratch/"> Start From Scratch: Part 1 - HTML </a></em>
+                <span class="checkoff">NOTE: we're going to do something similar to this in Week 2, so if you want a head start, check it out!)</span>
             </li>
         </ol>
-        <div class="subtitle"> Good Reads </div>
-        Here I'll be posting extra articles, clips, and tutorials that are somewhat extraneous to the course, but useful/interesting/cool/fun nonetheless. This week's choice picks:
-        <ol>
-            <li> <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/How_the_Web_works"> How The Web Works </a></li>
-            <li> <a href="https://developer.mozilla.org/en-US/Learn/Common_questions/How_does_the_Internet_work"> How Does the Internet Work? </a></li>
-        </ol>
-
     </div>
-    <!--end content-->
 
     <!--</div>
     end container-->

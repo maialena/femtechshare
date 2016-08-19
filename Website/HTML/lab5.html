@@ -1,11 +1,12 @@
+<!--NEED TO BEEF THIS UP -->
 <!DOCTYPE html>
 <html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <link href="../CSS/layout.css" rel="stylesheet" />
-    <link href="../CSS/labs.css" rel="stylesheet" />
     <link href="../CSS/style.css" rel="stylesheet">
+    <link href="../CSS/labs.css" rel="stylesheet" />
 
 
     <title> Lab5 </title>
@@ -17,72 +18,132 @@
             <h1> FemTechShare</h1>
             <nav>
                 <ul>
-                    <li> <a href="../html/index.html ">About</a></li>
-                    <li><a href="../html/schedule.html ">Schedule </a></li>
-                    <li> <a href="../html/resources.html ">Resources</a> </li>
+                    <li> <a href="../HTML/index.html ">About</a></li>
+                    <li><a href="../HTML/schedule.html ">Schedule </a></li>
+                    <li> <a href="../HTML/resources.html ">Resources</a> </li>
                 </ul>
             </nav>
     </div>
     <!-- end of main-->
 
     <div class="content">
-        <div class="heading">WEEK 5: THE GRID</div>
+        <div class="heading">WEEK 5: Layout</div>
         <div class="exercise">OVERVIEW</div>
-        <p>We're going to talk about perhaps the most important concept in web design and development: LAYOUT! To start, let's read about <a href="http://www.creativebloq.com/netmag/create-balanced-page-layouts-7-pro-tips-121310009"> 7 Pro Tips </a> when
-            it comes to layout</p>
+        <p>We're going to talk about perhaps the most important concept in web design and development: LAYOUT. A good layout is readable and highlights the most important information on the page. Here are <a href="http://www.creativebloq.com/netmag/create-balanced-page-layouts-7-pro-tips-121310009"> 7 Pro Layout Tips </a>            to get you thinking about how you want to structure your page. </p>
+        <p> Today we'll take a closer look at something called 'responsive web design.' Responsive web design is the about making your content look good on any screen (tablet, phone, computer). There are many ways to do this, but today we'll go over three:
+            <ol>
+                <li>Flexbox </li>
+                <li>Bootstrap </li>
+                <li>The Grid </li>
+            </ol>
+        </p>
+        <p> Today we're jsut going to focus on Flexbox. Next class we'll dabble with Bootstrap, and if we have time, we'll venture into the Grid model (if not, it's left as an exercise to do on your own). </p>
+        <p> Creating a decent layout is perhaps the most confusing/frustrating parts of web development -- especially at the beginning. So it's important to spend adequate time building a strong foundation before jumping
+            into more complex projects. If there are two things you take away from this course -- flexbox and bootstrap -- you'll be miles ahead of the game in the world of web development </p>
+        <p> Without further, ado, let's get started! </p>
         <div class="exercise">LEARNING OBJECTIVES</div>
         <ol>
-            <li> Understand the Grid model and practice implementing different box alignment exercises</li>
-            <li> Tinker with layouts that you can use for your website</li>
+            <li>Understand the basics of flexbox</li>
+            <li>Implement a flex navigation bar, mobile app layout, and online booking form</li>
         </ol>
 
-        <div class="exercise">I. Grid By Example</div>
-        <p>We're going to look at one of my favorite articles of all time: <a href="http://gridbyexample.com/examples/#example17"> Grid By Example </a>. Seriously. I use this ALL the time -- and so will you! The Grid is magical.</p>
-
-        To appreciate the Grid, let's look at what code <em> used </em> to look like when people had to hack contrived ways to get a proper layout going: And now, drumroll please....the code for Grid: Cool, right? Before we dive into the details, there's
-        some things you should know about 'the Grid':
+        <div class="exericse">I. Flexbox </div>
         <ul>
-            <li> Pro's
+            <li> <u>Pro's</u>
+                <ol>
+                    <li> It's supported by most browsers</li>
+                    <li> It's dynamic, meaning that each flex items (ie the children of the flex container) will shrink or expand according to the size of your screen.</li>
+                    <li> Once you get the hang of it, it's easy to use. </li>
+                </ol>
+            </li>
+            <li> <u>Con's</u>
+                <ol>
+                    <li> It may be difficult to learn at first, but this isn't really a Con because we're going to go through everything you need to know to get started together!</li>
+                </ol>
+            </li>
+        </ul>
+        <p> Create a new folder called "Flexbox" and in it make a flexbox.html and flexbox.css file. The following exercises are NOT my own but rather adopted from "flexbox.io" (a GREAT reference btw if you miss class or want a refresher). We're going to
+            walk through the content in videos 1-13 together on the board. For quick reference, use the flex tool summaries below </p>
+        <div class="subtitle">Flex Direction</div>
+        <div class="subtitle">Flex Wrap</div>
+        <div class="subtitle">Alignment with Align-Content </div>
+        <div class="subtitle">Alignment with Justify-Content </div>
+        <div class="subtitle">Flex properties: grow, shrink, baseline </div>
+        <div class="subtitle">Auto-prefixing & Gulp</div>
+        <!--WALK THROUGH THESE EXERCISES TOGETHER -- MAIA: TURN THIS INTO A LESSON PLAN!!!!: http://flexbox.io/view/ND8SjPJOk_M 
+        1. container with boxes (with borders and different colors so can see. declare container display: flex and explain how all the div's become flex items. min-height: 100vh
+        2. flex-direction:row (put side by side = default, main axis = left to right, so content goes left to right) vs. column (stack vertically, main axis = top to bottom, why main content goes top to bottom) vs. row-reverse vs. column-reverse
+        3. flex-wrap: (what happens when run out of space when give these things width? give widths to children, and flexbox will distribute widths evenly if over amount of pixels of screen...by default it's no wrap.But also have flex-wrap:wrap and flex-wrap: wrap.reverse.
+        Note: before we wrapped them, flex items will by default try to stretch their way across the container (ie the height you give it). When we turn the wrap on, it says 'Okay we need to stretch across the container and split it up between the 10 of us, so the browser figures out
+        that we need 4 rows here, and will split it amongst the others...main axis: left to right and cross axis: top to bottom. But if we do flex-wrap: wrap-reverse, the cross-axis is bottom to top now, and main axis is still left to right.-->
+
+        <div class="exercise"> II. Make A Nav Bar </div>
+        <p> Let's see flexbox in action by making a basic Nav Bar </p>
+
+        <div clas="exercise"> III. Make A Mobile App Layout </div>
+        <div class="exercise"> IV. Flexible Pricing Grid </div>
+        <div class="exericse"> V. Online Booking Form </div>
+
+        <div class="exericse"> III. Bootstrap </div>
+        <ul>
+            <li> <u>Pro's</u>
+                <ol>
+                    <li> </li>
+                </ol>
+            </li>
+            <li> <u>Con's</u>
+                <ol>
+                    <li> </li>
+                </ol>
+            </li>
+        </ul>
+        <div class="exercise">III (optional) Grid By Example</div>
+        <p> The Grid is magical.</p>
+        <ul>
+            <li> <u>Pro's</u>
                 <ol>
                     <li> It's supported by Chrome and a few other browsers (lookup)</li>
                     <li> It's SUPER easy and convenient to use once you get the hang of it </li>
                     <li> It makes your CSS Style sheet look beautiful and neat </li>
                 </ol>
             </li>
-            <li> Con's
+            <li> <u>Con's</u>
                 <ol>
-                    <li> Many browsers don't use it (lookup)</li>
-                    <li> Because they don't support it, you'll have to provide alternatives (we'll get more into the details of this later)</li>
+                    <li> The biggest one: most browsers don't (currently) support the Grid. In fact, only IE officially does. </li>
                 </ol>
             </li>
         </ul>
 
-        <p> Yes, there's only one real Con -- but it's kinda a big one. If a Browser doesn't support the Grid, all your pretty formatting won't show up to the user, which is bad news bear. The good news is that a lot of browsers are in <em> the process </em>of
-            developing support for the Grid since it's so popular and 'up and coming.' So it is still something valuable for you to learn and master.
+        <p> Yes, there's only one real Con -- but it's a biggie. If a Browser doesn't support the Grid, all your pretty formatting won't show up to the user, which is bad news bear. The good news is that a lot of browsers (Including Firefox, Chrome, and Safari)
+            are in <em> the process </em>of developing support for the Grid since it's so 'up and coming.' In other words, it is still something valuable for you to learn. For the remainder of the lab, we'll work through the Grid examples on <a href="http://gridbyexample.com/examples/#example17"> this </a>            website from CSS-Tricks </p>
         </p>
-        <p> First, create a new file in your Share folder (challenge: can you do this from your terminal?). Make a new "grids_practice.html" file. Open it up and start walking through the exercises from <em> Grid By Example </em> above. If you don't understand
-            one, ask for help or skip it for now and come back. </p>
-        <div class="checkoff"> Pro Tip: Try not to copy and paste the provided .html and .css files from the website. You'll learn more if you actually type it out. </div>
+        <p> Create a new file in your Share folder (challenge: can you do this from your terminal?). Name it something like "grid_practice.html." Open it up and start walking through the exercises from <em> Grid By Example </em> above. If you don't understand
+            something, ask for help or skip the exercise for now and come back. </p>
+        <div class="checkoff"> Pro Tip: Try NOT to copy and paste the provided .html and .css files from the website. You'll learn more if you actually type it out. </div>
         <br/>
-        <div class="exercise"> II. (optional) The Box Model </div>
-        <p> The Box Model is the foundation of Web layout and is perhaps the most commonly used layout. Though I prefer the Grid, feel free to check out <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Box_model"> the Box Model </a>            and experiment with the structure in your page </p>
-        <div class="exercise"> II. It's Go Time </div>
-        <p> The moment we've all been waiting for: start your website (using the Grid + all other tools we've learned so far)!! By now you should know the spiel: Create a new folder for your website files. In it, create two folders, one for your CSS files,
-            the other for your HTML (challenge: terminal). If you have questions, get in the habit of looking them up online -- or ask, that's what we're here for!
-        </p>
 
-        <div class="exercise"> III. (optional) More Fun With CSS </div>
-        <p> <a herf="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units">Here are some more cool things you can do with CSS</a>, including rotating an element and calling functions. If you can master some of these techniques,
-            you'll officially move from beginner web designer to advanced. </p>
+        <!--<div class="exercise"> II. (optional) The Box Model </div>
+        <p> The Box Model is the foundation of Web layout and is perhaps the most commonly used layout. Though I prefer the Grid, feel free to check out <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Box_model"> the Box Model </a>            and experiment with the structure in your page. </p>
+        <div class="exercise"> III. It's Go Time </div>
+        <p> The moment we've all been waiting for: buff up your website using the Grid + all other tools we've learned so far. By now you should know the spiel: Create a new folder for your website files. In it, create two folders, one for your CSS files,
+            the other for your HTML (challenge: do this via the command line). If you have questions, get in the habit of looking them up online -- or ask, that's what we're here for;)
+        </p>-->
+
+
         <div class="exercise">Homework </div>
-        <ul>
+        <ol>
+            <li>Fill out a mid-semester course evaluation by <span class="emphasis"> Wednesday</span> so that we have time to make adjustments accordingly. Please be honest with your feedback. This is the first time FemTECH has ever run a Web Design & Development
+                series, so any constructive criticism (or positive reviews) are appreciated. We're always looking for ways to improve!</li>
+
+            <li> (optional) <a herf="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units"> More Fun With CSS </a> </li>
             <li> Continue working on your site!</li>
-        </ul>
+        </ol>
 
         <div class="subtitle"> Good Reads </div>
-        <ul>
+        <ol>
             <li><a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">CSS Inheritance, Specificity, & Cascading </a></li>
             <li><a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Debugging_CSS"> Debugging CSS </a></li>
+        </ol>
     </div>
     <!--end container-->
 </body>

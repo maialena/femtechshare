@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
     grid-template-areas: "menu menu menu menu " ". title title . " ". elem1 elem1 ." ". elem2 elem2 ." ". elem3 elem3 ." ". elem4 elem4 ." ". elem5 elem5 ." ". elem6 elem6 ." ". elem7 elem7 ." "footer footer footer footer";
-    grid-gap: 50px;
+    /*grid-gap: 50px;*/
     grid-column-gap: 40px;
     grid-row-gap: 20px;
     /*width: 100%;*/

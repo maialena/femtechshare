@@ -1,0 +1,54 @@
+  th {
+      text-transform: uppercase;
+      text-align: center;
+      background-color: rgba(0, 0, 255, 0.4);
+      color: white;
+  }
+  
+  table {
+      order: 99;
+      border: 10px solid rgba(255, 228, 225, 0.2);
+      border-radius: 4px;
+  }
+  
+  table > * {
+      font-family: sans-serif;
+      font-weight: 100;
+      color: white;
+  }
+  
+  th {
+      text-align: center;
+  }
+  
+  tr > td {
+      text-align: center;
+  }
+  
+  .hw {
+      text-align: left;
+  }
+  
+  tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  tr:nth-child(even) td {
+      color: black;
+  }
+  
+  tr:nth-child(even) td > a {
+      color: black;
+  }
+  
+  tr:nth-child(odd) {
+      background-color: rgba(30, 30, 30, 0.2);
+  }
+  
+  td a {
+      background: rgba(0, 0, 0, 0);
+  }
+  
+  td {
+      font-family: sans-serif;
+  }

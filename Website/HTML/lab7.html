@@ -1,212 +1,77 @@
-<!--everything you'd ever need to know about javaScript: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide -->
-<!--getting started with the web: https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web -->
-<!--tutorials: https://developer.mozilla.org/en-US/docs/Web/Tutorials -->
 <!DOCTYPE html>
 <html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
-    <link href="../CSS/style.css" rel="stylesheet">
     <link href="../CSS/layout.css" rel="stylesheet" />
+    <link href="../CSS/style.css" rel="stylesheet">
     <link href="../CSS/labs.css" rel="stylesheet" />
-    <title> Lab7 </title>
+    <title> Lab6 </title>
 </head>
 
 <body>
+
     <div class="main menu">
         <header>
             <h1> FemTechShare</h1>
             <nav>
                 <ul>
-                   <li> <a href="../html/index.html ">About</a></li>
-                        <li><a href="../html/schedule.html ">Schedule </a></li>
-                        <li> <a href="../html/resources.html ">Resources</a> </li>
+                    <li> <a href="../HTML/index.html ">About</a></li>
+                    <li><a href="../HTML/schedule.html ">Schedule </a></li>
+                    <li> <a href="../HTML/resources.html ">Resources</a> </li>
                 </ul>
             </nav>
 
     </div>
-    <!--end main-->
+
     <div class="content">
-        <div class="heading">WEEK 7: Intro to JavaScript</div>
+        <div class="heading">WEEK 7: Deep Dive Into JS</div>
         <div class="exercise">OVERVIEW</div>
-        <p> Today we get to explore the wonderful world of JavaScript. By now your website is looking pretty snazzy. You've got the layout. You've got the style. But perhaps you feel there's something missing....like animation, or a search box, or an interactive
-            form/survey, or give users feedback when they interact with your website in a particular way (like <a href="#"> this </a>). That's where JavaScript comes in.
-        </p>
-        <p> What exactly is JavaScript? Here's what the <span class="emphasis"> creators </span> of the language have to say about it: "JavaScript ("JS" for short) is a full-fledged dynamic programming language that, when applied to an HTML document, can
-            provide dynamic interactivity on websites. It was invented by Brendan Eich, co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation. You can do pretty much anything with JavaScript. You'll start small with simple
-            features such as carousels, image galleries, fluctuating layouts, and responses to button clicks. Eventually as you get more experienced with the language, you'll be able to create games, animated 2D and 3D graphics, full blown database-driven
-            apps, and more!"
-        </p>
-        You can read the Mozilla Foundation's full description of JS <a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/What_is_JavaScript"> here </a> but we'll be going through most of the material together in class. Like we said
-        before, JavaScript can do just about <em> anything </em>, including:
-        <ol>
-            <li> Make websites respond to users </li>
-            <li> Build apps and games </li>
-            <li> Access info on the internet (like Twitter feeds)</li>
-            <li> Create a sign-up form</li>
-            <li> Search box with autocompletion features (brings up suggestions based on what you've typed so far -- typing "de" for instance would signal "desert," "delaware," "dentist")</li>
-            <li> Info that changes when you reload the page, like dates, times, sports match results, weather, stock market prices, etc.</li>
-            <li> Drop down menu bar </li>
-            <li> Organization and modification to the DOM (more on this this later)</li>
-            <li> Animate elements on a page (ex: show/hide info, highlight sections, etc.)</li>
-        </ol>
-        So without further ado, <span class="emphasis">let's get started!</span>
-        </p>
-        <div class="exercise">LEARNING OBJECTIVES</div>
-        <ol>
-            <li> Learn what an API is </li>
-            <li> Understand how JavaScript works with CSS and HTML</li>
-            <li> Incorporate new script in website </li>
-            <li> Learn basic data types </li>
-        </ol>
-        <div class="exercise"> I. Object Oriented Programming </div>
-        <p> Before we can get into 'the DOM' & javaScript API's, we're going to learn some terminology that is relevant to <em> all </em> Object Oriented languages, including (but not limited to) Java & Ruby on Rails. So if you get this stuff down, you're
-            well on your way to doing back end development as well </p>
-        <p> Last week we learned about 'methods' and how to call them. This week we'll learn about where these functions come from, and what to call them on: </p>
-        <ol>
-            <li> <span class="emphasis">Object </span></li>
-            <li> <span class="emphasis">Class </span></li>
-            <li> <span class="emphasis">Interface</span> </li>
-            <li> <span class="emphasis">Inheritance </span></li>
-            <li> <span class="emphasis">Data Type </span>
-                <ul>
-                    <li> Numbers - read about them <a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Math"> here </a></li>
-                    <li> Strings -- read about them <a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Strings"> here </a></li>
-                    <li> Trees -- see below </li>
-                    <li> Arrays -- read about them <a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Arrays"> here </a></li>
-                    <li> Variables -- read about them <a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Variables"> here </a></li>
-                </ul>
-            </li>
-            <li> <span class="emphasis"> Operators </span>
-                <ul>
-                    <li> &lt (less than) </li>
-                    <li> &gt (greater than) </li>
-                    <li> &lt= (less than or equal to) </li>
-                    <li> &gt= (greater than or equal to) </li>
-                    <li> = (assignment operator, e.g.: a = 5) </li>
-                    <li> === (equal to, e.g: a === b) </li>
-                    <li> !== (not equal to, e.g.: a !== b) </li>
-                </ul>
-                <li> Last but not least, read about <span class="emphasis"> String operations </span><a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Useful_string_methods">here </a></li>
-        </ol>
-        <div class="exercise"> II. The DOM</div>
-        <div class="subtitle"> What is the DOM? </div>
-        <p> Think of the 'Document Object Model' as a <em> standard </em> that allows programs to dynamically access and manipulate the content, style, and structure of elements on your web page. The DOM is made up of:
-            <ol>
-                <li> A set of <span class="emphasis"> objects</span> </li>
-                <li> <span class="emphasis">A structure </span> of how these objects can be used/combined </li>
-                <li> <span class="emphasis">An interface </span> to access and modify them </li>
-            </ol>
-        </p>
-        <span class="emphasis"> Guess what? </span>You've been using the DOM this whole time! Read <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/How_CSS_works"> here </a> about how the browser turns HTMl into a DOM & applies
-        CSS to parts of the DOM. For a more complete description of the DOM in general, read all about <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"> here, </a>though we'll be going over most of the content together as a class.
-        <br/>
-        <br/>
-        <div class="checkoff"> Quiz: test yourself on these key terms. Without looking at the answers, turn to the person next to you and try to give a definition of 'object,' 'data type,' & 'interface' in your own words </div>
-
-        <p> Last step before we get more into the gory details of how the DOM works: let's define an REALLY important
-            <span class="emphasis"> data structure </span> that will help us understand the DOM.
-            <br/> Introducing "THE TREE"
-            <ol>
-                <li> <span class="emphasis">Tree </span> - a way to represent data in a hierarchial (upside down)'tree-like' structure (we'll see examples of this that'll make it clearer). </li>
-                <li> <span class="emphasis">Root </span> the top node of a tree, from which all other 'child nodes' and subtrees branch. It has no 'parents.'</li>
-                <li> <span class="emphasis"> Node </span> - an element or entry on a tree</li>
-                <li> <span class="emphasis">Parent Node </span> a node that is one level 'higher' (towards the top) than a child node, connecting </li>
-                <li> <span class="emphasis">Child Node </span>- an entry branching from a parent, one level 'deeper' in the tree -- think of the tree as growing <em> downward </em> such that the children are closer to the bottom of the structure</li>
-                <li> <span class="emphasis">Leaf</span> - nodes without children</li>
-                <li> <span class="emphasis">Branch</span> - the edges connecting nodes together</li>
-            </ol>
-        </p>
-
-        <p> Now we're ready to answer what's on our minds, 'What exactly <em> is </em> the DOM?' ... it's a tree! </p>
-        <p> We're going to learn about the DOM together on the board, but for your reference later (and as a strong recommendation), read <a href="http://eloquentjavascript.net/13_dom.html"> this EXCELLENT article </a> all about the DOM. It's clear, informative,
-        and will catch you up to speed with everything you'll need to know to get started. </p>
-        <p> Let's follow <a href="http://www.elated.com/articles/javascript-retrieving-page-elements-via-the-dom/"> this article </a> and <a href="http://www.elated.com/articles/looking-inside-dom-page-elements/"> this </a> article in our Scratchpad to access different elements of the DOM via javaScript </p>
-
-        <div class="checkoff"> Pro Tip: If you're still itching to read more, here are some more technical explanations for the DOM (the last resource is great for learning more about what you can <em> do </em> with javaScript by manipulating the DOM:
-            <ol>
-                <li><a href="http://www.elated.com/articles/javascript-dom-intro/"> Another introduction </a></li>
-                <li><a href="https://www.w3.org/"> World Wide Web Consortium (W3C)</a>'s <a href="https://www.w3.org/TR/DOM-Level-2-Core/introduction.html"> explanation </a>(these are the guys who MADE the DOM)</li>
-                <li> Mozilla Developer Network's <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"> meaty explanation of the DOM </a></li>
-                <li>Mozilla's <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/API"> list of Web API's accessed via the DOM</a></li>
-            </ol>
-        </div>
-        <br/>
-        <div class="subtitle"> Let's turn your webpage into a DOM! </div>
-        <p> Now we're going to turn your webpage into a graphical 'tree' model using the DOM. For this exercise we're going to use some good ole fashion pen and paper (gasp). We'll do an exmaple together on the board to get you started.
-
-            <p> Here's a lecture slide from <em>CS61A: 'The Structure & Interpretation of Computer Programs'</em> of the tree for your reference:
-                <br/>
-                <img align="center" width="500px" height="500px" align="center" src="../images/the_tree.png" />
+        <p> Today we're going try practice everything that we've learned so far with JS. There's no better way to learn JS than jumping straight in with practical applications </p>
+        <div class="exercise"> I. Warm Up: Number Guessing Game </div>
+        <p> We're going to build <a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/A_first_splash"> this number guessing game </a>from MDN</p>
+        <p> You may find that your number guessing game doesn't work right away. That's okay. Writing code is only half the work in programming. Arguably most of your job (especially in the beginning) is debugging. One of the key things to remember when programming
+            is that syntax matters, and there are many opportunities for simple errors. For instance, "=" and "==" mean two different things. Say we changed:
+            <pre class="output"> <span class="input"> var num = 8 </span></pre>
+            <br/>
+            <p> to </p>
+            <pre class="output"> <span class="input"> var num === 8 </span></pre>
+            <br/>
+            <p> the program would error because "=" is used for assignments, while "===" is used to test equality.
             </p>
         </p>
-        <div class="subtitle"> More Practice with the DOM </div>
-        <p> If you're still a little fuzzy with all this DOM stuff, watch this great <a href="https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-access/p/finding-elements-by-id"> Kahn Academy Tutorial on 'DOM Access Methods'  </a>   and try to follow along in your terminal. The whole thing will take 30-45 minutes, but is definitely worth the time to really get you comfortable with javaScript.</p>
-        <p> Let's learn how to <em> change </em> elements on your page using the DOM with <a href="http://www.elated.com/articles/changing-page-elements-with-the-dom/"> this </a> article </p>
-        <div class="checkoff"> Pro Tip: Check out <a href="http://stackoverflow.com/questions/436411/where-is-the-best-place-to-put-script-tags-in-html-markup">this discussion on Stack Overflow </a>about where to put the &ltscript&gt tags in your doc </div>
-        <br/>
+        <p> To avoid similar mistakes, check out <a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/What_went_wrong"> this </a> MDN article on Troubleshooting JavaScript and handling common errors.</p>
+        <div class="exercise"> II. Silly Story Generator </div>
+        <p> Second challenge of the day: <a href=" https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Silly_story_generator"> create a silly story generator! </a> You've learned all that you need to know by now, so jump in, ask questions, and
+            be proud of how far you've come!</p>
 
-        <div class="exercise"> III. javaScript Basics </div>
-        <div class="subtitle"> Your first program </div>
-        <p> For this program, we're going to learn a real nifty tool that comes with most web browsers: Scratchpad. So that we're on the same page, I'm going to be talking about Scratchpad in Chrome, which you can <a href="https://developer.mozilla.org/en-US/docs/Tools/Scratchpad">download for free </a> as an extension. Scratchpad is a JavaScript tool that allows you to write and run code that interacts with your window. </p>
-
-
+        <div class="exercise"> III. JS Fundamentals </div>
+        <p> We'll continue learning the JS fundamentals. Again, we'll go over these together in class, but in case you miss the session or want a refresher, use the links below:</p>
         <ol>
-            <li> Once you've downloaded Scratchpad, open up Chrome and navigate to your favorite site. </li>
-            <li> On the top-right hand corner of the browser, click the symbol with the three horizontal lines: </li>
-            <img width="400px" height="300px" src="../images/three_line_symbol.png"/> 
-            <li> Click 'More Tools' >> 'Developer Tools' like so:</li>
-            <img width="400px" height="300px" src="../images/developer_tools.png"/>
-            <li> Click the double right-arrow symbol: '>>' and select "Scratch JS". Your screen should look something like this:</li>
-            <img width="400px" height="300px"src="../images/scratch_js.png">
-            <li> Now let's write your first program! We'll disect each part of the code below, but for now just copy and paste it into your browser:</li>
-            <img width="400px" height="300px"src="../images/scratch_code.png">
-            <li> Click "Run" at the bottom right hand of the Scratchpad. </li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration"> Loops & Iteration </a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions"> Functions </a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates"> Numbers & Dates </a></li>
+            <li><a href=""> Expressions</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/Learn/JavaScript/Building_blocks/conditionals"> Conditionals </a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Text_formatting"> Text Formatting </a></li>
 
         </ol>
-        Pretty cool, right?!
-        <div class="subtitle"> Using conditionals</div>
-        <p> So we know that javaScript can do basic math and represent data as Strings. Now let's learn about <span class="emphasis"> boolean logic </span> </p>
-        <p> Introducing the 'if/else' statement </p>
-        <p> Now let's write an if/else program in Scratchpad:
-            <pre class="output"> &lt <span class="input"> if ("myName".length >= 5){ console.log("You have a long name!");} </span> </pre>
 
-        <p> NOTE: Now we're writing to the console, which is a window that logs info about the current web page, including errors in your code, warnings, network information, etc. Click "Run" on Scratchpad, then move over to the "Console" tab to see if your message was printed </p>
-        <div class="checkoff"> Pro Tip: The method console.log("stuff") is equivalent to the 'print' statement you see in other languages. This is a GREAT way to debug your code if it is not running how you'd expect. The idea is to throw print statements all throughout your program and run it. When you hit an error in your code, the browser will just stop running your code entirely. If you have two print statements sandwiching your code, and the first statement printed but the second didn't, you've now narrowed down the area of your code that the error is occuring! You can then apply the same strategy to just that area of code (write more print statements and see which ones don't get printed) until you narrow down the error to one or two lines. Usually errors occur with simple syntax mistakes, so by then the fix should be more obvious! </div>
-        <br/>
-        <div class="subtitle"> Building the Foundation </div>
-        <p> To really understand what's going on with JS, we're going to run through Mozilla Foundation's <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics"> Getting Started with the Web: JavaScript Basics </a> Tutorial. It has everything you need to know to learn the ABC's of javaScript <em> and </em> other programming languages like Java and Python, which it heavily borrows from. Let's go!</p>
-
-        <div class="exercise"> IV. Feedback </div>
-        <p>
-            <ul>
-                <li>Work on Website Peer feedback: how to give constructive criticism, analysis “Experience psychology” (not just designing for appearance, but also functionality) - navigate through each other’s sites, thinking about the positionality and
-                    appearance of everything (tool bar, scroll, images, etc.) </li>
-                <li>The goal is to receive feedback so that people can 1. See where their teammates are at (and get inspired) </li>
-                <li>2. Identify which areas of their site to focus on in the remaining weeks 3. Have a space for analytic dialogue -- this isn’t just a ‘technical’ course devoid of conversation and peer-to-peer interaction;</li>
-            </ul>
-        </p>
-
-
-
-        <div class="exercise">Homework</div>
-        <p>
-            <ol>
-                <li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples">Read up </a>on cool examples of using the DOM. Come next week with questions and readiness to continue using the DOM! </li>
-                <li>Improve website, incorporating feedback that you got from your peers.</li>
-                <li> (optional) Check out <a href="http://www.javascriptkit.com/cutpastejava.shtml">this <span class="emphasis"> free </span> archive of JavaScript scripts </a>that you can use in your website </li>
-
-            </ol>
-        </p>
-
+        <div class="exercise"> IV. Working With Objects </div>
+        <p>  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects"> Working With Objects </a></p>
+        <p> <a href=""></a></p>
+        <div class="exercise">Homework: </div>
+        <ol>
+            <li> Continue working on your site!</li>
+            <li> (optional) EdX Module 4: “Implementing Program Flow Using JavaScript” (we'll start learning JavaScript next week so if you want to get a headstart, do this lesson!)</li>
+        </ol>
         <div class="subtitle"> Good Reads </div>
-        <ul>
-            <li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"> DOM Interfaces </li>
-            <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Basics"> JS Grammer and Syntax -- warning: this is for more experienced programmers. Feel free to read it if you're new to programming, but don't worry if it's all a little confusing. </a></li>
-        </a>
-
+        <ol>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API"> 2D & 3D Graphics with JavaScript </a></li>
+        </ol>
     </div>
-    <!--container-->
+    <!--end container-->
+
 </body>
 
 
