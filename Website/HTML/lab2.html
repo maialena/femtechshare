@@ -1,170 +1,207 @@
+<!--this page is about HTML/CSS Tables 
+
+resource: http://www.tutorialspoint.com/html/html_tables.htm-->
+
+<!--THINGS TO INCLUDE IN CLASS:
+1. Daily News (cool thing about tech)
+2. What is the Internet video?
+-->
+
 <!DOCTYPE html>
 <html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
-    <link href="../CSS/layout.css" rel="stylesheet" />
-    <link href="../CSS/style.css" rel="stylesheet">
-    <link href="../CSS/labs.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/flexStyle.css" />
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" " href="../CSS/flexSchedule.css "/>
 
-    <!--adding bootstrap to code 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />-->
-    <title> Lab2 </title>
+    <title> Schedule </title>
 </head>
 
 <body>
-    <div class="main menu">
-        <header>
-            <h1> FemTechShare</h1>
-            <nav>
-                <ul>
-                    <li> <a href="../HTML/index.html">About</a></li>
-                    <li><a href="../HTML/schedule.html">Schedule </a></li>
-                    <li> <a href="../HTML/resources.html">Resources</a> </li>
-                </ul>
-            </nav>
+    <div class="wrapper ">
+        <header class="top ">
+            <h1> Share Schedule </h1>
         </header>
-    </div>
-    <!-- end of main-->
-
-
-
-    <!--Main-->
-    <div class="content">
-        <div class="heading">WEEK#2: MOCKUP, HTML DOC, & Blog</div>
-        <div class="exercise">OVERVIEW</div>
-        <p>Today you're going to start building your first website. </p>
-
-        <div class="exercise">LEARNING OBJECTIVES</div>
-        <ol>
-            <li> Create HubPress Blog page. Begin blogging this week about experiences.</li>
-            <li> Understand basic design thinking. Create mockup of website. </li>
-            <li> Write first html doc! </li>
-        </ol>
-
-        <div class="exercise">I. Start Your Blog</div>
-        <p> All you need to do to start your blog is "fork" (ie download) a ready-made repository onto your GitHub account. Let's walk through the steps.</p>
-        <ol>
-            <li> Watch this Demo <a href="https://www.youtube.com/watch?v=7gP3i4tHlRM"> here </a> (there's no sound, but you'll get the point) </li>
-            <li> Now it's time to "fork"! Scroll down to the "Get App" section of <a href="http://hubpress.io">this page </a>and click "fork"</li>
-            <li> GitHub will ask where you'd like them to save the HubPress repository. Once saved, scroll down to the "README" doc at the bottom and read about HubPress and how to get it started. It might be a little confusing how to change the <span class="code">hubpress.io/hubress/config.json </span>                file so let's enumerate the steps in closer detail:</li>
-
-            <li> Click on the <span class="code">hubpress.io </span> directory >> <span class="code">Settings </span> >> change the repo name to <span class="code"> gitHubUsername.github.io</span> </li>
-            <span class="checkoff"> NOTE: It's important that you set the <span class="code"> gitHubUsername</span> to your <em> actual </em> gitHub username! Don't make a new one up. Alternatively, if you want to change your gitHub Username in addition
-            to your GitHug Pages username, you can do <em> both </em> in Settings to make sure they're consistent </span>
-            <li> Now for the real fun: modifying a file from your terminal! </li>
-            <li> Open your Terminal </li>
-            <li> <span class="code"> cd </span> into your working directory </li>
-            <pre class="output"> $ <span class="input"> cd ~/Desktop/path/to/femtech/directory </span></pre>
-            <li><span class="code"> clone </span> your gitHub repository into the main directory (ask for help if this is unclear by now).</li>
-            Now your entire directory should be in your local repository! Double check that this is so with 'ls.''
-            <pre class="output"> $ <span class="input"> ls </span></pre> [insert image of all the files]
-            <li> Check that your <span class="code"> gitHubUsername.github.io </span> directory is connected to the file </li>
-            <pre class="output"> $ <span class="input"> git remote -v </span></pre> You should see something like this [insert image]
-            <li> Now you should cd into <span class="code"> gitHubUsername.github.io/hubpress/ </span> directory </li>
-            <li> Open the file <span class="code">config.json </span> with the "vim" command. To edit files in VIM, press "i". Use the arrow keys to move around. Change the <span class="code"> username </span> and <span class="code"> repository </span> name
-                (as listed on the HubPress README instructions -- if you forget this part, look back there fore reference) </li>
-            <li>Once you're done press <span class="code"> esc </span> followed by the keys <span class="code"> ":wq"</span> to save and quit </li>
-            <li> Now it's time to commit your changes! Follow these commands: </li>
-            <pre class="output"> $ <span class="input"> git add config.json </span> <br/> $ <span class="input"> git status </span> # check your config.json is in the working directory <br/> $ <span class="input"> git commit -m "Updated config.json file"</span> <br/> $ <span class="input"> git push origin master </span> </pre>
-            <li> Last but not least, go to <span class="code"> https://gitHubUsername.github.io </span> to check out your blog! </li>
-
-        </ol>
-        <p> Now that your blog is set up, read up on how to make posts <a href="https://github.com/maialena/maialena.github.io/blob/master/Administration.adoc#about-the-administration-console"> here. </a> Check out HubPress's <a href="http://asciidoctor.org/docs/asciidoc-writers-guide/"> Writer's Guide </a>to
-            learn Ascii (ie plain text). Your homework this week (and from hereon out) is to blog about your experiences learning to code. If you don't know where to start writing, here are some suggestions:
-            <ol>
-                <li> What you learned that week </li>
-                <li> What you're struggling with </li>
-                <li> An 'aha' moment that got you through your struggle </li>
-                <li> Cool websites/designs you're inspired by </li>
-                <li> Ideas for projects </li>
-                <li> Recommendations/tips/tricks you've picked up and want to share </li>
-            </ol>
-        </p>
-
-        <div class="exercise">II. HyperText Markup Language</div>
-        <p> HTML stands for Hyper Text Markup Language. It's what you use to create the bare-bones layout of your website. Think of HTML as a plain ole' Word Document with just the content, and CSS as the styling (font, color, bold, size, etc.).</p>
-        <p> Lesson 1: Tags, Attributes, & Semantic Markup </p>
-        <ol>
-            <li> <span class="emphasis">Tags </span>are like containers -- they 'hold' information. They are always enclosed in &lt &gt brackets. Most tags include a starting and closing tag like so:
-                <pre class="output"><span class="input"> This is a line of text </span></pre> Notice in this example that the closing tag has a forward slash ('\').
-                <p> <a href="http://www.danfergusdesign.com/classfiles/generalReference/html5reference.php">Here's </a> a list of the most common tags in HTML5</p>
-            </li>
-            <li> <span class="emphasis">Attributes</span> tell us more about the elements. Most attributes can be used only on certain elements, but a few (like "lang") can be used on any elements.
-                <pre class="output"><span class="input"> &ltp lang="en-US" &gt Paragraph in English &lt/p&gt</span></pre>
-            </li>
-            <li> <span class="emphasis">Semantic Markup</span> refers to HTML text elements that are not used for markup, but instead add some style to the page -- like bolding, underlining, and italicizing (to name a few).</li>
-            <p>Rather than paraphrasing the key Text elements you can use in your web page, let's read Chapter 2 of Jon Duckett's <em>HTMl & CSS: Design and Build Websites </em> which you can find <a href=""> here </a> FOR FREE (this is an AWESOME resource)</p>
-            <p> SKIM over pages 40-90 (don't worry - most are pictures and things you've seen before, so you don't need to read it in any detail)</p>
-        </ol>
-
-        <div class="checkoff"> Pro Tip: It's best practice to do as LITTLE styling in your HTML file, since styling is mainly CSS territory. You may think that adding an &ltem&gt &lt/&gt tag to your text isn't a big deal. And you're right -- it's okay to use sparingly. But
-            what if down the line you wanted to change the italic font to bold...then you'd have to sift through your <em> entire </em> html file to find all the times you used the emphasis tags. Wouldn't it be easier to use the &ltspan&gt tag instead?
-            That way you can just go to your SINGLE style.css file and change one line of code, instead of (potentially) hundreds....(we'll learn more about CSS soon).
-        </div>
-        <br/>
-        <img width="400px" height="300px" src="../images/html5_doctype.png " />
-        <br/>
-
-        <div class="exercise ">III. COLOR THEORY</div>
-        <p>There's no way we can teach all of 'design' in one exercise (or course, for that matter). If you're interested in digging deeper into the subject, there's an AWESOME compilation of design resources to read up on <a href="https://gist.github.com/jenmyers/7354863 "> here </a>.
-            For our purposes, we're just goint to learn about the basics of color theory</p>
-        <p> First, let's get our terminology down. There are three color schemes that we're going to explore: </p>
-        <ol>
-            <li> <span class="emphasis ">Traidic</span> - composed of three colors on separate ends of the color scheme. To find, pick any color on the color wheel and draw an equilateral triangle. These points make up your tri-color scheme.</li>
-            <li> <span class="emphasis ">Compound </span>- two colors are chosen from opposite ends of the spectrum to form a 'complimentary' scheme </li>
-            <li><span class="emphasis "> Analogous </span></li> - careful selection of colors from the same area of the color spectrum, like shades of orange and yellow or 'monochramatic selection' (shades of a base color)
-        </ol>
-        <p> You can test these color schemes out with <a href="https://color.adobe.com/create/color-wheel/?base=2&rule=Triad&selected=1&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.7,0.631372549019511,0.06999999999999998,0.09999999999999998,0.8769865841074079,1,1,0.8910675381262081,0,0.8,0.07999999999999999,0.4210196078438275,0.7,0.03500000000000003,0.34996949891131296&swatchOrder=0,1,2,3,4 "> Kuler, </a>            a super cool design tool made by Adobe </p>
-        <p> Other (maybe) useful lingo that you can (if you want but don't have to) look up: hue, saturation, and contrast.</p>
-        <div class="checkoff "> Pro Tip: As you're browsing the internet, keep an eye out for these color schemes. The more familiary you have with them, the better your intuition will be when it comes to selecting colors for your website </div>
-
-        <p> Next, we'll learn about color representation in CSS & HTMl. Every color is represented by a <span class="emphasis "> hexadecimal </span> number (ie 6 digits). The first two digits represent shades of red, the second two are green, and the last
-            two are blue. Together, you can get all the colors of the rainbow! Take 5 minutes to read <a href="http://skillcrush.com/2012/05/07/hexadecimal/ "> this brief explanation </a> of how to break down the hexidecimal colors.</p>
-        <p> Now create a new HTML and CSS page titled "colors.html " and "colors.css " respectively. Create a basic HTML doc, as we did together in the previous exercise. Link the doc to your CSS file (pop quiz: do you remember how to do this? If not, refer
-            to the above exercise). In the body section, make a paragraph and type whatever you like.</p>
-        <p> Let's play with colors!
+        <img src="../images/sleek_logo.jpg " />
+        <nav class="flex-nav ">
+            <a href="# " class="toggleNav "> <i class="fa fa-bars "></i> Menu </a>
+            <!--the flex container is NOT flex-nav...it's ul!-->
             <ul>
-                <li>Open up your "colors.css " doc and type the following: </li>
-                <pre class="output "> <span class="input "> body { background: #eee; } </span></pre>
-                <br/>
-                <li>Check it out in your browser</li>
-                <li> Now let's play with the text. Add another line in your css file: </li>
-                <pre class="output "> <span class="input "> p { color: #fff; } </span></pre>
-                <br/>
-                <li> You can also change up the font and text size: </li>
-                <pre class="output "><span class="input "> p { color: #fff; font-size: 30px; font-family: fantasy;} </span></pre>
-                <br/>
-                <li> Continue to play around with the color, size, and fonts until you're happy with what you see. Feel free to add more paragraphs, make a list (look this up if you're curious), headers, and more</li>
+                <li><a href="http://femtechshare.comli.com/HTML/index.html ">About</a></li>
+                <li><a href="http://femtechshare.comli.com/HTML/schedule.html ">Schedule</a></li>
+                <li><a href="http://femtechshare.comli.com/HTML/resources.html ">Resources</a></li>
+                <li class="social ">
+                    <a href="https://twitter.com/femtechberkeley "><i class="fa fa-twitter "></i></a>
+                </li>
+                <li class="social ">
+                    <a href="https://www.facebook.com/FEMTechBerkeley/?fref=ts "><i class="fa fa-facebook "></i></a>
+                </li>
+                <li class="social ">
+                    <a href="http://femtechberkeley.com/ "><i class = "fa fa-users "></i>
+                    </a>
+                </li>
             </ul>
-        </p>
-        <div class="checkoff "> NOTE: We're jumping ahead a few lessons by diving into CSS. It's okay if you don't understand the syntax yet -- we'll get there. For now, all you need to know is that CSS provides the style to your HTML document. You can choose which elements
-            you want to stylize with the above syntax. In this case, we're manipulating everything in the "body " section of the HTML doc. What if you wanted to make your paragraph different than the background? Try it out for yourself and see! </div>
+        </nav>
 
-        <p> Finally, here's an alternative way to represent colors. Rather than using a hexadecimal number, we can use HSLa (which stands for Hue, Saturation, Ligtness (& alpha) to represent colors. This is a REALLY wonderful way to find the perfect color
-            you're looking for, though it's not as commonly used by developers simply because....well there's no real good reason. People often stick to what they know, so you might not come accross HSLa that often when you read other people's code. But
-            if you can get a hang of it, it makes changing colors MUCH easier to do. Read about it <a href="https://css-tricks.com/yay-for-hsla/ "> here </a></p>
+        <!--table attributes: border is boolean (1 for border, else 0), 
+    cellpadding defines width of border, 
+    ellspacing is amount of white space between border and content-->
+        
+        <table class="table " border="1 " cellpadding="5 " cellspacing="5 ">
+            <!--th := "table headers "-->
+            <th>Week</th>
+            <th>Date</th>
+            <th>Lab</th>
+            <th>Homework</th>
 
-        <p>Check out <a href="http://www.awwwards.com/trendy-web-color-palettes-and-material-design-color-schemes-tools.html"> this article </a>on 20 sites with great color schemes </p>
-
-        <div class="exercise"> Homework</div>
-        <ul>
-            <li> Work on EdX Module 2</li>
-        </ul>
-
-        <p> (Optional) More tools to check out when designing your website:
+            <!--tr:=table row-->
+            <tr>
+                <!--table date := row1, column1-->
+                <td>Introductions & Setup</td>
+                <!--row1, column2-->
+                <td>September 16</td>
+                <!--row1, column3-->
+                <td><a href="lab1.html ">Lab1: Setup, GitHub, & Workflow</a></td>
+                <!--row1, column5-->
+                <td class="hw ">
+                    <ol>
+                        <li>EdX Module1: "Creating Web Pages using Hypertext Markup Language (HTML) "</li>
+                    </ol>
+                </td>
+                <!--LInk-->
+            </tr>
+            <tr>
+                <td>HTML Basics & Design</td>
+                <td>September 23</td>
+                <td><a href="lab2.html ">Lab2: &lt!DOC&gt, Colors Theory, & Blog </a></td>
+                <td class="hw ">
+                    <ol>
+                        <li>EdX Module2: “Creating Sophisticated Document Structures using HTML”</li>
+                        <li> Blog </li>
+                </td>
+            </tr>
+            <tr>
+                <!--lab 3-->
+                <td>HTML5 & CSS</td>
+                <td>September 30</td>
+                <td><a href="lab3.html ">Lab3: COOL HTML5 & CSS </a></td>
+                <td class="hw ">
+                    <ol>
+                        <li>  EdX Module 3: “Design Web Page Elements Using Cascading Style Sheets (CSS)” </li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>meSS with cSS</td>
+                <td>October 7</td>
+                <td><a href="lab4.html ">Lab4: Stylesheets, Selectors, Attributes/a></td>
+                <td class="hw ">
+                    <ol>
+                        <li>EdX Module3: "Design Web Page Elements Using Cascading Style Sheets (CSS)”</li>
+    <li> Blog </li>
+    </ol>
+    </td>
+    </tr>
+    <tr>
+        <!--lab 5-->
+        <td>Layout with CSS</td>
+        <td>October 14</td>
+        <td><a href="lab5.html">Lab5: The Grid</a></td>
+        <td class="hw">
             <ol>
-                <li> <a href="http://paletton.com/#uid=12F0u0kllllaFw0g0qFqFg0w0aF "> Paletton</a></li>
-                <li> <a href="http://www.w3schools.com/colors/colors_hsl.asp "> Colors HSL</a></li>
-                <li> <a href="https://www.google.com/fonts "> Google Fonts </a></li>
+                <li> Course Evaluation
+                    <!--link-->
+                </li>
+                <li> (optional) Bootstrap on CodeAcademy </li>
+                <!--link-->
             </ol>
-        </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Animations & Forms</td>
+        <td>October 21</td>
+        <td><a href="lab6.html">Lab6: HTML5 Tricks</a></td>
+        <td class="hw">
+            <ul>
+                <li> Work on Website</li>
+                <li> Blog </li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <!--lab 7-->
+        <td>Intro to JavaScript</td>
+        <td>October 28</td>
+        <td><a href="lab7.html">Lab7: DOM-da-DOM</a></td>
+        <td class="hw">
+            <ol>
+                <li>Work on Website</li>
+                <li> Blog </li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td>More JavaScript</td>
+        <td>November 4</td>
+        <td><a href="lab8.html">Lab8: javaScript API's</a></td>
+        <td class="hw">
+            <ol>
+                <li>Work on Website</li>
+                <li> Blog </li>
+            </ol>
+        </td>
+    </tr>
+    <!--lab 9-->
+    <tr>
+        <td>TBD</td>
+        <td>November 11</td>
+        <td><a href="lab9.html">Lab9: Drop-down menu, playlist, & more</a></td>
+        <td class="hw">
+            <ol>
+                <li>Work on Website</li>
+                <li> Blog </li>
+            </ol>
+        </td>
+    </tr>
 
-        </ul>
+    <!--THANKSGIVING BREAK: NOVEMBER 24th-->
 
+    <!--lab 10-->
+    <tr>
+        <td>TBD</td>
+        <td>November 18</td>
+        <td><a href="lab10.html">Lab10: Upgrade wesbite</a></td>
+        <td class="hw">
+            <ol>
+                <li>Work on Website</li>
+                <li> Get Ready for Final ShareCase</li>
+            </ol>
+        </td>
+
+    </tr>
+    <!--LAST MEETING !!!-->
+    <tr>
+        <td>ShareCase</td>
+        <td>December 2</td>
+        <td><a href="http://31.media.tumblr.com/88ee2a56006928ef66128912fec100f1/tumblr_n1cq2oeUeD1t77ydgo1_400.gif">You're now a budding front end developer!!! CONGRATULATIONS!</a></td>
+        <td class="hw">Keep on learning:)</td>
+
+    </tr>
+    </table>
+
+    <!--Footer-->
+    <footer>
+
+        <p>&copy; Maia Rosengarten </p>
+    </footer>
+    <!--END NAV BAR -->
+
+    <!--end footer-->
 
     </div>
-    <!--end container-->
-</body>
+    <!--end wrapper -->
+    </body>
 
 </html>

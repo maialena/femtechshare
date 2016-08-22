@@ -3,176 +3,176 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="../CSS/layout.css" rel="stylesheet" />
-    <link href="../CSS/style.css" rel="stylesheet">
-    <link href="../CSS/labs.css" rel="stylesheet" />
-
-
-    <!--adding bootstrap to code -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../CSS/flexLabs.css" />
 
     <title> Lab3 </title>
 </head>
 
 <body>
-    <div class="main menu">
-        <header>
-            <h1> FemTechShare</h1>
-            <nav>
-                <ul>
-                    <li> <a href="../HTML/index.html ">About</a></li>
-                    <li><a href="../HTML/schedule.html ">Schedule </a></li>
-                    <li> <a href="../HTML/resources.html ">Resources</a> </li>
-                </ul>
-            </nav>
+    <div class="wrapper">
+        <header class="top">
+            <h1> WEEK3: HTML5 & CSS </h1>
         </header>
-    </div>
-    <!-- end of main-->
-
-    <div class="content">
-        <div class="heading">WEEK#3: HTML Syntax & Elements </div>
-        <div class="exercise">OVERVIEW</div>
-        <p> We're going to practice our HTML today and dive into a pair programming challenge focused on CSS. </p>
-        <div class="exercise">LEARNING OBJECTIVES</div>
-        <ol>
-            <li> Learn HTML5 Audio, Video, Form, and Geolocation </li>
-        </ol>
-
-
-        <div class="exercise">LEARNING OBJECTIVES</div>
-        <ol>
-            <li> Understand the basic building blocks of an HTML5 Doc </li>
-            <li> Understand the differences between CSS and HMTL </li>
-            <li> Clone a website</li>
-            <li> Practice pair programming</li>
-        </ol>
-
-        <div class="exercise">I. Group Warmup</div>
-        <p> As a warmup, open up your favorite text editor, and whip up a basic HTML5 doc with header, a few articles, main content, footer </p>
-        <div class="checkoff">
-            <p> Hint: can you use the same selector for header, articles, content, and footer? If so, how do you distinguish between the elements? If not, what's the alternative?</p>
-            <p> Hint to the hint: there's more than one right answer.</p>
+        <img src="../images/8-21Logo.jpg" />
+        <nav class="flex-nav">
             <ul>
-        </div>
-        <br/>
-        <p> Exercises II-V are intended to show you how powerful HTML5 is on its own. Sure, CSS adds style to the page and javaScript adds interactivity. But even without those languages, you can have a fully functioning website with HTML alone. </p>
-        <p>Don't worry about completing all these exercisees today. Choose one or two to focus on, grab a partner (or work alone), and use the tutorials as <em> starting points. </em> If you come accross something you're confused about, I encourage you to
-            continue Google searching until you find an answer. Of course if you're really stuck, ask for help. Though you're not expected to learn all these in lab today, I encourage you to try the exercises out when you have the time.</p>
-        <div class="checkoff"> Pro Tip: Here's a list of go-to websites to consult when you have a programming question, want to implement something new for the first time, or need help debugging</p>
+                <li><a href="http://femtechshare.comli.com/HTML/index.html">About</a></li>
+                <li><a href="http://femtechshare.comli.com/HTML/schedule.html">Schedule</a></li>
+                <li><a href="http://femtechshare.comli.com/HTML/resources.html">Resources</a></li>
+                <li class="social">
+                    <a href="https://twitter.com/femtechberkeley"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="social">
+                    <a href="https://www.facebook.com/FEMTechBerkeley/?fref=ts"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="social">
+                    <a href="http://femtechberkeley.com/"><i class = "fa fa-users"></i>
+                        </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="lesson">
+
+            <div class="exercise">OVERVIEW</div>
+            <p> We're going to practice our HTML today and dive into a pair programming challenge focused on CSS. </p>
+            <div class="exercise">LEARNING OBJECTIVES</div>
             <ol>
-                <li> <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network </a> -- the official website for development and documentation of web standards for CSS, HTML, and JavaScript </li>
-                <li> <a href="http://stackoverflow.com/"> Stack Overflow </a> -- a Q & A site for programmers </li>
-                <li> <a href="https://css-tricks.com/"> CSS-Tricks </a> -- despite its name, this is site about all things web-related, not just CSS. It includes blog posts, video tutorials, and an active forum </li>
+                <li>Understand the basic building blocks of an HTML5 Doc </li>
+                <li> Learn HTML5 Audio, Video, Form, and Geolocation </li>
+                <li> Clone a website </li>
+                <li> Pair program </li>
             </ol>
-        </div>
-        <br/>
-        <p>Let's put those search-engine skills to practice. Choose one or two(or all) of the exercises below, and use the links provided as <em> starting </em> points. This is the fun and challenging part about programming. Don't treat it like a homeework
-            assignment, or a chore. Treat it like you're finally getting to play with that cool new toy you got for Christmas. Remember, ask for help if you get stuck. </p>
 
-        <div class="exercise"> II. Video in HTML5</div>
-        <p>
-            If you want to feature a video from YouTube or some video hosting site, you can easily do so by embedding it. Nowadays, many sites make this easy. You can often right-click on the video, choose "Copy embed code" and paste it into your html doc. What's
-            copied is something like this: &ltiframe width="640" height="360" src="https://www.youtube.com/embed/J---aiyznGQ" frameborder="0" allowfullscreen&gt&lt/iframe&gt
-        </p>
-        <p> Simply adjust the width and height attributes to the appropriate size, and you're done. 'Frameborder' is a boolean attribute (meaning it has two values, "on" or "of") that indicate whether or not you want to have a border. 0 is "off", 1 is "yes."
-        </p>
-        <p> Say you have a .mp4 or .ogv file on your computer (say something you've filmed yourself, or an animated clip you've made with Flash) that you want to include on your website. Again, the easiest way to do so is to host the video through a site
-            like Youtube and embed it on your site as above. The upside is that video hosting sites will automatically convert your video into the various formats required by browsers. The downside of that is if you want your video to play exclusively
-            on your website. If that's the case, you'll have to host it, which takes a few more steps </p>
-        <p> The main consideration when hosting your own video is including all the various formats supported by different browsers, including AVI, Flash, MPEG, Quicktime, and more. Fortunately, HTML5 (which unfortunately is not supported by all browsers)
-            makes this easy with its &ltvideo&gt element. If you're interested in using HTML5 to embed video into your page, use the following links (ordered by usefulness) to learn more: </p>
-        <ol>
-            <li>Flash and HTML5<a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">Chapter 9, pgs 211-216</a></li>
-
-        </ol>
-        <div class="exercise"> III. Audio in HTML5 </div>
-        <p> As with video, there are different ways to embed audio into your webpage. The first is through a hosted service like Soundcloud.com that allows you to upload your audio; this route also provides an audio player that you can embed in your page
-            - making it really easy. The second method is harder, and relies on Flash. The third is through using HTML5's built-in &ltaudio&gt element. To delve into any of these methods, use the following links:</p>
-
-        <ol>
-            <li>Adding a Flash or HTML5 Audio Player<a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">Chapter 9, pgs 218-222</a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video"> Basics Audio/Video in HTML5 </a></li>
-            <!--<li> <a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery"> Audio & Video </a></li>-->
-            <!--<li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement"> HTML Media element </a></li>-->
-        </ol>
-        </p>
-
-        <div class="exercise"> IV. Geolocation in HTML5 </div>
-        <p> * NOTE: The following tutorials pretty much all same the same thing -- so you only have to look at one or maybe two. If you get stuck, check out another way that might be getting at the same lesson in a different way. We all have different learning
-            styles, and part of being a web developer (or programmer in general) is learning to research, research, research until something clicks.</p>
-        <ol>
-            <li> <a href="https://www.sitepoint.com/html5-geolocation/"> Resource Numero Uno </a></li>
-            <li> <a href="http://www.w3schools.com/html/html5_geolocation.asp"> Resource Numero Dos </a></li>
-            <li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation"> Resource Numero Tres</a></li>
-            <li><a href="http://www.tutorialspoint.com/html5/html5_geolocation.htm">Resource Numero Cuatro </a></li>
-            <li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation"> Resource Numero Cinco </a></li>
-
-        </ol>
-
-        <div class="exercise"> V. Form in HTML5 </div>
-        <p>Let's add a form to your site! Navigate through the following tutorials for guidance:</p>
-        <ol>
-            <li>For the basics, we'll call upon Jon Duckket for help. Scroll down to <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">Chapter 7, Pages 144-172</a></li>
-            <li> For a more in-depth look at forms, check out <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form"> this </a> website</li>
-            <li>Where does the data go? That's a bit beyond the scope of this course -- to actually retrieve the data, you'd have to implement a few methods using Python, Ruby, or PHP. Fortunately, you now have the research skills to learn those languages
-                on your own! If you want a sneak peak about the underlying mechanics of the form, check out <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data"> this </a> article</li>
-            <li> And if you're still SUPER intrigued by the form, read <a href="http://apress.jensimmons.com/v5/pro-html5-programming/ch8.html"> this </a> article about everything and anything you could possibly want to learn about html5 form </li>
-        </ol>
-
-        <p> That was great. You just learned a lot about HTML. Get up. Stretch it out. Take Five. </p>
-        <p> .... </p>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <p>Time for some CSS </p>
-
-
-
-        <div class="exercise"> VI. CSS 101 </div>
-        <p><span class="question">'What is CSS??'</span></p>
-
-        <p><em>Here's how <span class="emphasis">edX </span>defines it. </em>
-            <p>'Cascading Syle Sheets (CSS) is a language that controls and allows one to define the look of an HTML document. It permits the separation between the content of the HTML document from the style of the HTML file. CSS enables one to specify
-                things such as the font you want on your page, the size of your text, the columns of the page, whether the text on a page is to be in bold or italics, background, link colors, margins, and placement of objects on a page and so on. By way
-                of explanation, it is the part that controls the looks of a web page. With CSS, it is much easier to manage the appearance of multiple web pages since it separates the HTML element from display information. CSS also enables faster downloading
-                of web pages, which works best with older computers and modems. It provides a method for retaining a common style.'</p>
-        </p>
-
-        <p> We're going to spend the next 20 minutes or so of this lab getting as far through <a href="https://www.codecademy.com/en/courses/web-beginner-en-TlhFi/0/1?curriculum_id=5035038ff76159000200b73c"> Code Academy's 'CSS: An Overview' video. </a> Feel
-            free to work solo or with a partner, and ask questions if you get stuck! </p>
-
-        <div class="exercise"> VII. Clone This Website</div>
-        <p> Now you're ready to pair program! Partner up with someone for the next exercise. We're going to clone <a href=" http://www.berkshirehathaway.com "> this </a> website i.e. create an exact replica.
+            <div class="exercise">I. Group Warmup</div>
+            <p> As a warmup, open up your favorite text editor, and whip up a basic HTML5 doc with header, a few articles, main content, footer </p>
             <div class="checkoff">
-                <p> Pro Tip: Pair programming is often harder than it sounds. It's all about developing the right workflow to allow both people to contribute. WHat you <em> don't </em> want to happen is have one person type, while the other is on her phone
-                    playing Pokemon Go. So here's one suggestion: tradeoff typing. While Person A is at the keyboard, Person B should still follow along and dictate lines of code for Person A to type in. After some time, switch.
-                </p>
+                <p> Hint: can you use the same selector for header, articles, content, and footer? If so, how do you distinguish between the elements? If not, what's the alternative?</p>
+                <p> Hint to the hint: there's more than one right answer.</p>
+                <ul>
             </div>
-            <ul>
-        </p>
-        <p> This exercise is going to incorporate a lot of the HTML elements that we've learned so far, including:
+            <br/>
+            <p> Exercises II-V are intended to show you how powerful HTML5 is on its own. Sure, CSS adds style to the page and javaScript adds interactivity. But even without those languages, you can have a fully functioning website with HTML alone. </p>
+            <p>Don't worry about completing all these exercisees today. Choose one or two to focus on, grab a partner (or work alone), and use the tutorials as <em> starting points. </em> If you come accross something you're confused about, I encourage you
+                to continue Google searching until you find an answer. Of course if you're really stuck, ask for help. Though you're not expected to do all these exercises in lab today, I encourage you to try them out when you have the time.</p>
+            <div class="checkoff"> Pro Tip: Here's a list of go-to websites to consult when you have a programming question, want to implement something new for the first time, or need help debugging</p>
+                <ol>
+                    <li> <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network </a> -- the official website for development and documentation of web standards for CSS, HTML, and JavaScript </li>
+                    <li> <a href="http://stackoverflow.com/"> Stack Overflow </a> -- a Q & A site for programmers </li>
+                    <li> <a href="https://css-tricks.com/"> CSS-Tricks </a> -- despite its name, this is site about all things web-related, not just CSS. It includes blog posts, video tutorials, and an active forum </li>
+                </ol>
+            </div>
+            <br/>
+            <p>Let's put those search-engine skills to practice. Choose one or two(or all) of the exercises below, and use the links provided as <em> starting </em> points. This is the fun and challenging part about programming. Don't treat it like a homeework
+                assignment, or a chore. Treat it like you're finally getting to play with that cool new toy you got for Christmas. Remember, ask for help if you get stuck. </p>
+
+            <div class="exercise"> II. Video in HTML5</div>
+            <p>
+                If you want to feature a video from YouTube or some video hosting site, you can easily do so by embedding it. Nowadays, many sites make this easy. You can often right-click on the video, choose "Copy embed code" and paste it into your html doc. What's
+                copied is something like this: &ltiframe width="640" height="360" src="https://www.youtube.com/embed/J---aiyznGQ" frameborder="0" allowfullscreen&gt&lt/iframe&gt
+            </p>
+            <p> Simply adjust the width and height attributes to the appropriate size, and you're done. 'Frameborder' is a boolean attribute (meaning it has two values, "on" or "of") that indicate whether or not you want to have a border. 0 is "off", 1 is
+                "yes."
+            </p>
+            <p> Say you have a .mp4 or .ogv file on your computer (say something you've filmed yourself, or an animated clip you've made with Flash) that you want to include on your website. Again, the easiest way to do so is to host the video through a site
+                like Youtube and embed it on your site as above. The upside is that video hosting sites will automatically convert your video into the various formats required by browsers. The downside of that is if you want your video to play exclusively
+                on your website. If that's the case, you'll have to host it, which takes a few more steps </p>
+            <p> The main consideration when hosting your own video is including all the various formats supported by different browsers, including AVI, Flash, MPEG, Quicktime, and more. Fortunately, HTML5 (which unfortunately is not supported by all browsers)
+                makes this easy with its &ltvideo&gt element. If you're interested in using HTML5 to embed video into your page, use the following links (ordered by usefulness) to learn more: </p>
             <ol>
-                <li> Different sized headers (&lth1&gt-&lth6&gt)</li>
-                <li> paragraphs (&ltp&gt)</li>
-                <li> ordered and unordered lists (&ltul&gt vs &lol&gt)</li>
-                <li> header and footers </li>
+                <li>Flash and HTML5<a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">Chapter 9, pgs 211-216</a></li>
+
             </ol>
-        </p>
-        <p> It's also going to include some things we haven't learned yet. Notice how the links are lined up in two nice columns? That's accomplished with a <span class="emphasis"> TABLE </span></p>
-        Read about the table <a href="http://www.tutorialspoint.com/html/html_tables.htm"> here </a></p>
-        <p> Still confused? Have no fear, Jon Duckett is <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">here </a>(pages 130-140)</p>
-        <div class="checkoff"> Pro Tip: When designing the layout of your website, developers often use a 'dummy language'' called Lorem Impsum, which is used as a placeholder for the actual content. This allows designers to worry about the layout and style of the page rather
-            than the text, which they can fill in later. To use Lorem Impsum, check out <a href="http://www.lipsum.com/"> this </a> free online generator </div>
+            <div class="exercise"> III. Audio in HTML5 </div>
+            <p> As with video, there are different ways to embed audio into your webpage. The first is through a hosted service like Soundcloud.com that allows you to upload your audio; this route also provides an audio player that you can embed in your page
+                - making it really easy. The second method is harder, and relies on Flash. The third is through using HTML5's built-in &ltaudio&gt element. To delve into any of these methods, use the following links:</p>
 
-        <br/>
-        <div class="exercise"> Homework</div>
-        <ol>
-            <li> Continue working on EdX Module 3: “Design Web Page Elements Using Cascading Style Sheets (CSS)”</li>
-        </ol>
+            <ol>
+                <li>Adding a Flash or HTML5 Audio Player<a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">Chapter 9, pgs 218-222</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video"> Basics Audio/Video in HTML5 </a></li>
+                <!--<li> <a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery"> Audio & Video </a></li>-->
+                <!--<li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement"> HTML Media element </a></li>-->
+            </ol>
+            </p>
 
-    </div>
-    <!--end container-->
+            <div class="exercise"> IV. Geolocation in HTML5 </div>
+            <p> * NOTE: The following tutorials pretty much all same the same thing -- so you only have to look at one or maybe two. If you get stuck, check out another way that might be getting at the same lesson in a different way. We all have different
+                learning styles, and part of being a web developer (or programmer in general) is learning to research, research, research until something clicks.</p>
+            <ol>
+                <li> <a href="https://www.sitepoint.com/html5-geolocation/"> Resource Numero Uno </a></li>
+                <li> <a href="http://www.w3schools.com/html/html5_geolocation.asp"> Resource Numero Dos </a></li>
+                <li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation"> Resource Numero Tres</a></li>
+                <li><a href="http://www.tutorialspoint.com/html5/html5_geolocation.htm">Resource Numero Cuatro </a></li>
+                <li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation"> Resource Numero Cinco </a></li>
+
+            </ol>
+
+            <div class="exercise"> V. Form in HTML5 </div>
+            <p>Let's add a form to your site! Navigate through the following tutorials for guidance:</p>
+            <ol>
+                <li> For the basics, scroll down to <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">Chapter 7, Pages 144-172</a> of Jon Duckett's <em> HTML & CSS </em></li>
+                <li> For a more in-depth look at forms, check out <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form"> this </a> website</li>
+                <li>Where does the data go? That's a bit beyond the scope of this course -- to actually retrieve the data, you'd have to implement a few methods using Python, Ruby, or PHP. Fortunately, you now have the research skills to learn those languages
+                    on your own! If you want a sneak peak about the underlying mechanics of the form, check out <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data"> this </a> article</li>
+                <li> And if you're still SUPER intrigued by the form, read <a href="http://apress.jensimmons.com/v5/pro-html5-programming/ch8.html"> this </a> article about everything and anything you could possibly want to learn about html5 form </li>
+            </ol>
+
+            <p> That was great. You just learned a lot about HTML. Get up. Stretch. Take Five. </p>
+            <p> ..................................................... </p>
+            <p> .............................. </p>
+            <p> ......................</p>
+            <p> ............. </p>
+            <p> ....... </p>
+            <p> ... </p>
+            <p>Now for some CSS </p>
+
+
+
+            <div class="exercise"> VI. CSS 101 </div>
+            <p><span class="question">'What is CSS??'</span></p>
+
+            <p>Here's how <span class="emphasis">edX </span>defines it.
+                <p>'Cascading Syle Sheets (CSS) is a language that controls and allows one to define the look of an HTML document. It permits the separation between the content of the HTML document from the style of the HTML file. CSS enables one to specify
+                    things such as the font you want on your page, the size of your text, the columns of the page, whether the text on a page is to be in bold or italics, background, link colors, margins, and placement of objects on a page and so on.
+                    By way of explanation, it is the part that controls the looks of a web page. With CSS, it is much easier to manage the appearance of multiple web pages since it separates the HTML element from display information. CSS also enables
+                    faster downloading of web pages, which works best with older computers and modems. It provides a method for retaining a common style.'</p>
+            </p>
+
+            <p> We're going to spend the next 20 minutes or so of this lab getting as far through <a href="https://www.codecademy.com/en/courses/web-beginner-en-TlhFi/0/1?curriculum_id=5035038ff76159000200b73c"> Code Academy's 'CSS: An Overview' video. </a>                Feel free to work solo or with a partner, and ask questions if you get stuck! </p>
+
+            <div class="exercise"> VII. Clone This Website</div>
+            <p> Now you're ready to pair program! Partner up with someone for the next exercise. We're going to clone <a href=" http://www.berkshirehathaway.com "> this </a> website i.e. create an exact replica.
+                <div class="checkoff">
+                    <p> Pro Tip: Pair programming is often harder than it sounds. It's all about developing the right workflow to allow both people to contribute. WHat you <em> don't </em> want to happen is have one person type, while the other is on her
+                        phone playing Pokemon Go. So here's one suggestion: tradeoff typing. While Person A is at the keyboard, Person B should still follow along and dictate lines of code for Person A to type in. After some time, switch.
+                    </p>
+                </div>
+                <ul>
+            </p>
+            <p> This exercise is going to incorporate a lot of the HTML elements that we've learned so far, including:
+                <ol>
+                    <li> Different sized headers (&lth1&gt-&lth6&gt)</li>
+                    <li> paragraphs (&ltp&gt)</li>
+                    <li> ordered and unordered lists (&ltul&gt vs &lol&gt)</li>
+                    <li> header and footers </li>
+                </ol>
+            </p>
+            <p> It's also going to include some things we haven't learned yet. Notice how the links are lined up in two nice columns? That's accomplished with a <span class="emphasis"> TABLE </span></p>
+            Read about the table <a href="http://www.tutorialspoint.com/html/html_tables.htm"> here </a></p>
+            <p> Still confused? Have no fear, Jon Duckett is <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">here </a>(pages 130-140)</p>
+            <div class="checkoff"> Pro Tip: When designing the layout of your website, developers often use a 'dummy language'' called Lorem Impsum, which is used as a placeholder for the actual content. This allows designers to worry about the layout and style of the page
+                rather than the text, which they can fill in later. To use Lorem Impsum, check out <a href="http://www.lipsum.com/"> this </a> free online generator </div>
+
+            <br/>
+            <div class="exercise"> Homework</div>
+            <ol>
+                <li> Continue working on EdX Module 3: “Design Web Page Elements Using Cascading Style Sheets (CSS)”</li>
+            </ol>
+
+        </div>
+        <!--end container-->
 </body>
 
 

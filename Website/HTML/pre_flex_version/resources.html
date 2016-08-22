@@ -3,52 +3,47 @@
 
 <head>
     <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/flexResources.css" />
-    <linkn rel="stylesheet" href="../CSS/flexLabs.css" />
-    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+    <link href="../CSS/layout.css" rel="stylesheet" />
+    <link href="../CSS/style.css" rel="stylesheet" />
+    <link href="../CSS/resources_grid.css" rel="stylesheet" />
     <title> Resources </title>
-</head>
 
+</head>
 
 <body>
     <div class="wrapper">
-        <header class="top">
-            <h1> Share Resources </h1>
-        </header>
-        <img src="../images/8-21Logo.jpg" />
-        <nav class="flex-nav">
-            <ul>
-                <li><a href="http://femtechshare.comli.com/">About</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li class="social">
-                    <a href="https://twitter.com/femtechberkeley"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li class="social">
-                    <a href="https://www.facebook.com/FEMTechBerkeley/?fref=ts"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li class="social">
-                    <a href="http://femtechberkeley.com/"><i class = "fa fa-users"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="lesson">
-            <div class="elem1">
-                <div class="titles">Tips, Tricks, and Guides for Getting Started </div>
-                <p>
+        <div class="menu main">
+            <header>
+                <h1> Resources</h1>
+                <nav>
                     <ul>
-                        <li><a href="http://lifehacker.com/five-best-text-editors-1564907215" alt="Best TextEditors">5 Best Text Editors </a></li>
-                        <li><a href=http://stephaniehoh.github.io/blog/2013/10/07/git-vs-github-for-dummies/ " alt="Git v GitHub "> Git V Github</a></li>
-                        <li><a href="http://skillcrush.com/2013/02/11/version-control/ ">What Is 'Version Control'?</a></li>
-                        <li><a href="http://skillcrush.com/2013/02/20/get-started-working-with-git/ " alt="git 101 ">Git 101 </a></li>
-                        <li><a href="https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html " alt="git cmds ">Git Commands </a></li>
-                        <li><a href="https://www.codecademy.com/ru/courses/learn-the-command-line/lessons/navigation/exercises/your-first-command?action=resume " alt="cmd line ">Code Academy: <em>Learn the Command Line</em></a> </li>
-                        <li><a href="http://mally.stanford.edu/~sr/computing/basic-unix.html " alt="UNIX "> Basic UNIX Commands</a></li>
-                        <li><a href="https://css-tricks.com/video-screencasts/125-how-to-stay-up-to-date-with-web-technology/ ">How To Stay Up To Date On Web Stuff</a></li>
-                        <li><a href="https://css-tricks.com/video-screencasts/124-a-modern-web-designers-workflow/ ">A Modern Web Designer's WorkFlow</a></li>
+                        <li> <a href="../HTML/index.html ">About</a></li>
+                        <li><a href="../HTML/schedule.html ">Schedule </a></li>
+                        <li> <a href="#">Resources</a> </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <!-- end of main-->
+
+
+
+        <div class="title">
+            <h2> Resources </h2>
+        </div>
+        <div class="elem1">
+            <div class="titles">Tips, Tricks, and Guides for Getting Started </div>
+            <p>
+                <ul>
+                    <li><a href="http://lifehacker.com/five-best-text-editors-1564907215" alt="Best TextEditors">5 Best Text Editors </a></li>
+                    <li><a href=http://stephaniehoh.github.io/blog/2013/10/07/git-vs-github-for-dummies/ " alt="Git v GitHub "> Git V Github</a></li>
+                    <li><a href="http://skillcrush.com/2013/02/11/version-control/ ">What Is 'Version Control'?</a></li>
+                    <li><a href="http://skillcrush.com/2013/02/20/get-started-working-with-git/ " alt="git 101 ">Git 101 </a></li>
+                    <li><a href="https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html " alt="git cmds ">Git Commands </a></li>
+                    <li><a href="https://www.codecademy.com/ru/courses/learn-the-command-line/lessons/navigation/exercises/your-first-command?action=resume " alt="cmd line ">Code Academy: <em>Learn the Command Line</em></a </li>
+                    <li><a href="http://mally.stanford.edu/~sr/computing/basic-unix.html " alt="UNIX "> Basic UNIX Commands</a></li>
+                    <li><a href="https://css-tricks.com/video-screencasts/125-how-to-stay-up-to-date-with-web-technology/ ">How To Stay Up To Date On Web Stuff</a></li>
+                    <li><a href="https://css-tricks.com/video-screencasts/124-a-modern-web-designers-workflow/ ">A Modern Web Designer's WorkFlow</a></li>
           	    </ul>
             </p>
         </div>
@@ -94,7 +89,7 @@
                 <li><a href="https://philipwalton.github.io/solved-by-flexbox/ "> Solved by FlexBox </a></li>
                 <li><a href="https://davidwalsh.name/responsive-images "> Responsive Images </a></li>
                 <li><a href="https://css-tricks.com/creating-meet-team-page-wordpress/ ">"Meet the Team " Page with CSS </a></li>
-                <li> <a href="http://flexbox.io/view/ND8SjPJOk_M "> 20 Free Tutorials to Learn FlexBox </a></li>
+                <li> <a href="http://flexbox.io/view/ND8SjPJOk_M"> 20 Free Tutorials to Learn FlexBox </a></li>
 
                 </ul>
             </p>
@@ -132,49 +127,56 @@
                 <li><a href="http://justinharter.com/my-approach-to-teaching-web-design/ ">Awesome blog that I used to develop the curriculum for FemTech Share</a></li>    
             </ul>
             </p>
-        </div>
         
         <div class="elem6 ">
             <div class="titles ">DIY Projects</div>
             <p>
             <ul>
                 <li><a href="http://code.tutsplus.com/tutorials/design-and-code-your-first-website-in-easy-to-understand-steps--net-6062 ">Make First Website </a></li>
-                <li><a href="http://www.berkshirehathaway.com "> Clone  this website </a> </li>
+                <li>Clone <a href="http://www.berkshirehathaway.com "> this </a> website</li>
                 <li><a href="http://www.thingiverse.com " alt="ThingiVerse>"> ThingiVerse </a>
-                        </li>
-                    </ul>
-                </p>
-            </div>
-
-            <div class="elem7">
-                <div class="titles">Good Reads</div>
-                <p>
-                    <ul>
-                        <li><a href="http://www.ted.com/talks/andrew_blum_what_is_the_internet_really">What is the internet?</a></li>
-                        <li><a href="http://www.dontfeartheinternet.com"> Don't Fear the Internet! </a></li>
-                        <li><a href="http://www.cio.com/article/3085116/hpe-shows-off-a-computer-intended-to-emulate-the-human-brain.html"> Computers Emulating Human Brain </a></li>
-                        <li><a href="https://www.ucdavis.edu/news/worlds-first-1000-processor-chip"> The World's First 10000-processor chip</a></li>
-                    </ul>
-                </p>
-            </div>
+                    </li>
+                </ul>
+            </p>
         </div>
 
-        <footer>
+        <div class="elem7">
+            <div class="titles">Good Reads</div>
+            <p>
+                <ul>
+                    <li><a href="http://www.ted.com/talks/andrew_blum_what_is_the_internet_really">What is the internet?</a></li>
+                    <li><a href="http://www.dontfeartheinternet.com"> Don't Fear the Internet! </a></li>
+                    <li><a href="http://www.cio.com/article/3085116/hpe-shows-off-a-computer-intended-to-emulate-the-human-brain.html"> Computers Emulating Human Brain </a></li>
+                    <li><a href="https://www.ucdavis.edu/news/worlds-first-1000-processor-chip"> The World's First 10000-processor chip</a></li>
+                </ul>
+            </p>
+        </div>
 
-            <p>&copy; Maia Rosengarten </p>
-        </footer>
+        <!--</div>-->
+        <!--end Middle -->
+        <!--<div class="Right"></div>-->
+        <!--</div>-->
+
+
+
+        <!--end container -->
+        <!--Footer-->
+        <nav class="footer">
+            <ul>
+                <li> <a href="../html/index.html ">About</a></li>
+                <li><a href="../html/schedule.html ">Schedule </a></li>
+                <li> <a href="../html/resources.html ">Resources</a> </li>
+            </ul>
+
+            Copyright @2016. All Rights Reserved
+        </nav>
+        <!--END NAV BAR -->
+
+        <!--end footer-->
     </div>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        $(function() {
-            /*toggleClass goes between adding and removing our own class of open on the ul */
-            $('.toggleNav').on('click', function() {
-                $('.flex-nav ul').toggleClass('open');
-            });
-        });
-    </script>
+    <!--end main -->
+    <!--</div>-->
+    <!--end container-->
 </body>
 
 </html>
