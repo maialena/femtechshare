@@ -1,0 +1,106 @@
+/*CSS Setup -- nothing to do with flexbox */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: ihnerit;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    color: white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px 5px;
+    /*transition: all 0.5s;*/
+}
+
+a:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+/*Flex Container */
+
+.slider-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /*the hard part: can't just do align-items: center...remember align-items is on the cross-axis (top to bottom) */
+    /*if unsure where to put align-items check css.tricks -- goes on the parent, flex container: ul */
+    /*center isn't what you want. default is stretch...sicne on the list items...they are stretching as high as the highest one */
+    /*align-items: center;
+    align-items: stretch;*/
+    /*we want a combo of stretch and center...can't do that */
+    /*we want the links and list items to stretch all the way...so will use nested flexbox */
+}
+
+
+/*our first flex item */
+
+.slider-nav li {
+    flex: 2;
+    /*This is a property that goes on the flex-item*/
+    /*always add this border to debug */
+    /*border: 1px solid red;*/
+    text-align: center;
+    /*but now we also want to make the list item a flex container too...*/
+    display: flex;
+    /*This is a flex container -ish...the flex item is the link <a> */
+}
+
+.slider-nav .arrow {
+    flex: 1;
+}
+
+.arrow a {
+    font-size: 30px;
+}
+
+/*want to make each link in the nav bar space evenly in the conatiner */
+
+.slider-nav a {
+    /*width and display are our temporary fixes (before these become flex items)*/
+    /*width: 100%;
+    display: block;*/
+    /*now that we have the list items being flex containers, we can use flex-basis to make the list elements bloxks */
+    flex-basis: 100%;
+    /*to center align-content: center and justify-content: center don't work */
+    /*align-content: center;*/
+    /*we want to stretch as well as align in the center */
+    display: flex;
+    /*problem: the link doesn't have a flex item inside of it...*/
+    /*to fix: add an element inside the link by wrapping a span around all the elments that we have */
+    align-items: center;
+}
+
+
+/*this is the flex item of our links*/
+
+.slider-nav span {
+    /*because by default spans are display inline, we need to display: block and give it a width */
+    display: block;
+    width: 100%;
+}

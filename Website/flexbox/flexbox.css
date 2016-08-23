@@ -1,0 +1,688 @@
+/*THIS CLASS WAS TAKEN FROM FLEXBOX.IO AND CSS-TRICKS: A COMPLETE GUIDE TO FLEXBOX */
+
+
+/*http://flexbox.io/view/qBvW8KC9bb4*/
+
+
+/*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+
+
+/*CSS Normalize article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+audio,
+input[type=reset],
+input [type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+input[type=submit]
+Box-sizing border box */
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*Default styles to make each box visible */
+
+.box {
+    color: white;
+    font-size: 100px;
+    /*for alignment exercise, lesson 4 */
+    /*font-size: 20px;*/
+    text-align: center;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0, 1);
+    padding: 10px;
+}
+
+
+/* Colors for each box */
+
+.box1 {
+    background: #1abc9c;
+}
+
+.box2 {
+    background: #3498db;
+}
+
+.box3 {
+    background: #ff3d9d;
+}
+
+.box4 {
+    background: #bb99dd;
+}
+
+.box5 {
+    background: #f1c40f;
+}
+
+.box6 {
+    background: #e67e22;
+}
+
+.box7 {
+    background: #e74c3c;
+}
+
+.box8 {
+    background: #2ecc71;
+}
+
+.box9 {
+    background: #16a085;
+}
+
+.box10 {
+    background: #1abc9c;
+}
+
+
+/*We start out flexbox h ere. The above is just page setup */
+
+
+/***************************/
+
+
+/*LESSON 1: FLEX, FLEX-DIRECTION, FLEX-WRAP */
+
+
+/***************************/
+
+.container {
+    /* change display:flex to display:inline-flex to see the difference */
+    /*inline-flex just wraps around content. normal flex will stretch width of page */
+    /*gold border helps see difference */
+    /*by displaying as flex, automatically the div's (immediate children) become flex items */
+    display: flex;
+    border: 10px solid goldenrod;
+    /*in real world websites, height comes from content that takes up elements. */
+    /*but here want to display height to show what's happening with our boxes */
+    /*vh = "viewport height" -- will make the container stretch the entire height, like height=100% */
+    /*make this min-height in case screen is above 100vh 
+        min-height: 100vh;
+        /*flex direction sets the axis when doing direction, so important.*/
+    /*main-axis v cross-axis */
+    /*later will run into things like 'justify-content' and 'align items' which can align your content along the axis */
+    /*flex-direction:row is the default (the boxes span vertically, going left to right = main axis, and cross axis is top to bottom) */
+    /*flex-direction: row;*/
+    /*flex-direction: column: the main axis is top to bottom, so the boxes span horizontally across the page; cross-axis is left to right */
+    /*play with flex-direction:row-reverse and flex-direction:column-reverse */
+    /*ask yourself, 'where are the main axis?' and the cross-axis is just the opposite */
+    /*if you are stuck in flexbox, ask 'where is my axis?' and check flex-direction. If don't set it, then it's row */
+    /*flex-direction: column;
+        flex-direction: row;
+        /*flex-wrap:nowrap is the default; nothing happens */
+    /*flex-wrap: nowrap;*/
+    /*notice with flex-wrap: wrap, the browser figures that we need to stretch each item across its container but need to split it up amongst the 10 of them:*/
+    /*the browser figures that you need 4 fours and will split it up as much as you can ...will stretch across and fit it */
+    /*notice here that the boxes don't fit snug on the numbers, they are stretching as much as they can to fit the container 
+        flex-wrap: wrap;
+        /*can change this to flex-wrap:wrap-reverse. Cross-axis doesn't go top to bottom, instead from bottom to top ..not common*/
+    /*flex-wrap: wrap-reverse;*/
+}
+
+
+/***************************/
+
+
+/*LESSON 4: ALIGNMENT WITH JUSTIFY-CONTENT (see below )*/
+
+
+/***************************/
+
+.container {
+    /*nothing happens with justify-content: flex-start since default */
+    /*justify-content: flex-start;*/
+    /*flex-end makes it start on the right hand side */
+    /*can also do center or space-betwen, play with those */
+    /*justify-content: center;*/
+    /*space-between will start the first one at flex-start and the last at flex-end and divy the rest up between, which is really nice. No math */
+    /*justify-content: space-between;*/
+    /*space-around will include space around the first and last item:*/
+    /*justify-content: space-around;*/
+    /*try playing with justify-content with flex-direction;column and all that nice spacing is gone */
+    /*this is because we switched the main axis from left to right to top to bottom. So we need to give it a height, otherwise boxes will stretch to fix container */
+    /*giving it min-height: 100vh will do nothing since need to give box's smaller size so can visualize it. Change font-size to 20px from 100px*/
+    /*flex-direction: column;
+    /*now change justify content to flex-start or flex end-- starts at top to bottom or for end, goes bottom to end; else use center!! */
+    /*justify-content: flex-start;
+        justify-content: flex-end;
+        justify-content: center;*/
+    /*always ask: what's my main axis, what's my cross axis?? if get confused */
+}
+
+
+/***************************/
+
+
+/*LESSON 5: ALIGNMENT WITH ALIGN-ITEMS*/
+
+
+/***************************/
+
+.container {
+    /*nothing happens with align-items because need to give container a height. might not need this is one of the items is bigger than the others and gives the container its max height*/
+    /*align-items: center;*/
+    /*now will center with the height */
+    /*height: 100vh;*/
+    /*default is stretch*/
+    /*align-items: stretch;*/
+    /*also have flex-start and flex-end*/
+    /*align-items: flex-end;*/
+    /*the cool one is baseline. It looks at the text in your items and makes sure that the bottom of the number/letter is aligned properly.*/
+    /*we can see this by changing the font-size for a few of the boxes...see below 'LESSON5 with the box's having different font-size*/
+    /*align-items: baseline;*/
+    /*let's also change the direction and align-items */
+    /*this is very similar to justify-content but difference is that this is along the CROSS-AXIS and needs a HEIGHT to work */
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+}
+
+
+/***************************/
+
+
+/*LESSON 2: Width, margin, width:calc, padding */
+
+
+/***************************/
+
+
+/* .box: select all the flex-items 
+    .box {
+        /*10 boxes, each 300 px. The screen is not 3000 px wide */
+
+
+/*nature of flexbox: will try to work with widths, but if doesn't work out */
+
+
+/*will evenly distribute among children, or can use flex-property to assign widths */
+
+
+/*width: 300px;*/
+
+
+/*like all box models, can create three columns like so */
+
+
+/*with this, try flex-direction-column and change min-height to heigh: 100vh, and see what happens...*/
+
+
+/*what happens: there's white space because at the bottom, the browser says okay my height is 100hv and 
+        I can't fit everything here, so I'm going to wrap around...change to min-height 100hv, and you'll never wrap araound. Can have 100 items and it'll fit in one column
+        width: 33.333%;
+        /*margin is not part of the box-model. So giving each box 33.3% + 10px, which is over budget
+        This will break onto the other side */
+
+
+/*margin: 10px;*/
+
+
+/*instead use width:calc in order resize the boxes so that they fit container...-20px since it's 10 on each side ) */
+
+
+/*width: calc(33.333% - 20px);*/
+
+
+/*now get rid of margin and just do padding */
+
+
+/*padding is part of box model whereas margin is not, so using padding:10 does not break it */
+
+
+/*padding: 10px;*/
+
+
+/*flex:1 is a flex property that will evenly distribute the boxes on the same row or column, based on the flex-direction */
+
+
+/*do this so that the demo looks nice */
+
+
+/***************************/
+
+
+/*LESSON 3: flex:1, order*/
+
+
+/***************************/
+
+.container {
+    /*flex: 1;*/
+    /*helpful to make everything order 1 and then can specify the boxes that you want to be later in the order 
+        order: 1; */
+}
+
+
+/*ORDERING: will take a number */
+
+
+/*this is really helpful because can make box 3 be in the footer by changing its order */
+
+
+/*.box3 {
+        /*this moves onto the end 
+        order: 5;
+        /*change it to order: 1 and see nothing happens*/
+
+
+/*this is because everything is default order:0*/
+
+
+/*so anything that's >0, ie 1 will put it at the end 
+    }
+    /*watch this: this puts 7 at the end since 7>5 and 3 second to last  since 3 > 0 */
+
+
+/*    
+    .box7 {
+        order: 2;
+    }
+    
+    .box4 {
+        /*works with negatives too -- goes at the beginning */
+
+
+/*order: -2;
+    }*/
+
+
+/*one caveat: make everything order:1 and box3 order: 2...then try to select box4...will select box 3 at the end!*/
+
+
+/*this might be an issue if you try to copy text */
+
+
+/***************************/
+
+
+/*LESSON 4: ALIGNMENT WITH JUSTIFY-CONTENT */
+
+
+/***************************/
+
+
+/*open up CSS-Tricks: Complete Guide to Flex-box: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+
+
+/*justify-content says 'how are items aligned along the main-axis (by default is left to right; and cross-axis is top to bottom */
+
+
+/*LESSON 5: ALIGNMENT WITH ALIGN-ITEMS */
+
+
+/*now concerned with cross-axis (top to bottom), not main axis */
+
+
+/*THIS IS SUPER HELPFUL to align items on baseline and not the font, like if you have a date next to a headline/title, which are different sizes..*/
+
+
+/*before had to mess with position-relative or margin and push them around...*/
+
+
+/*
+.box1 {
+    font-size: 30px;
+}
+.box2 {
+    font-size: 200px;
+}
+.box4 {
+    font-size: 50px;
+}
+.box5 {
+    font-size: 70px;
+}
+.box7 {
+    font-size: 10px;
+}*/
+
+
+/***************************/
+
+
+/*LESSON 6: CENTERING WITH ALIGN-CONTENT */
+
+
+/***************************/
+
+.container {
+    /*height: 100vh;*/
+    /*align-content does what justify-content does but along the CROSS-AXIS, not the main-axis */
+    /*so align-content only works when we have multiple lines of code... because if we do align-content:space-between
+    and we have flex-directoin:row...nothing happens because we don't have any extra space top to bottom. Try this */
+    /*align-content: space-between;*/
+    /*note that justify-content:space-between does what we want on the main axis, left to right */
+    /*justify-content: space-between;*/
+    /*first thing we need to do is get some wrapping and give the box some width */
+    /*flex-wrap: wrap;*/
+    /*align-content: flex-start;*/
+    /*now go into the html and in box2 do a break then a happy face...that means that everything else on the same row as that 2 will be the same heigh = handy */
+    /*notice we still have a lot of room */
+    /*this will put the space at the top */
+    /*align-content: flex-end;*/
+    /*align-content: center;*/
+    /*now what if want to align the straggler 10 at the center */
+    /*what we can do is use justify-content (aligning on the main axis = horizontally) and cross-axis via align-content (top to bottom).
+    /*things to remember with align-content: need to wrap to work)*/
+    /*justify-content: center;*/
+}
+
+
+/*.box {*/
+
+
+/*browser figures out need 4 rows and give each about a 25% height (done with default: align-content:stretch*/
+
+
+/*width: 33.333%;
+}*/
+
+
+/***************************/
+
+
+/*LESSON 7: ALIGNMENT WITH ALIGN SELF */
+
+
+/***************************/
+
+
+/*remember that align-items default is stretch*/
+
+
+/*we also had flex-start and flex-end */
+
+
+/*now moving from container to flex items*/
+
+
+/*make each box a little different. How it anchors itself = padding-bottom */
+
+
+/*to see the difference, make align-items: flex-start;*/
+
+
+/*exactly like align-items but work on individual flex child, not container */
+
+
+/*.container {
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.box2 {
+    padding-bottom: 200px;
+}
+
+.box6 {
+    padding-bottom: 0;
+}*/
+
+
+/*say we want to pop box9 out of the line */
+
+
+/*.box9 {
+    padding-bottom: 50px;
+    align-self: center;
+    align-self: flex-end;
+    align-self: baseline;
+}*/
+
+
+/***************************/
+
+
+/*LESSON 8: FLEXBOX SIZING WITH FLEX PROPERTY */
+
+
+/***************************/
+
+
+/*switch up content for this one with some emoji's */
+
+
+/*flex answers the question, "what do I do whith too much space?' or what do i do with not enough space?*/
+
+
+/*.container {
+    display: flex;
+}*/
+
+
+/*try commenting flex:1 out and see that there's extra space */
+
+
+/*so flex figures out what to do with that extra space */
+
+
+/*.box {*/
+
+
+/*this gives ALL the boxes a flex-property of 1 so each will divy up the extra space proportionally */
+
+
+/*flex: 1;
+}*/
+
+
+/*now differentiate between boxes. Make box2 twice the size of the tohers*/
+
+
+/*.box2 {
+    flex: 2;
+}*/
+
+
+/*Also as we shrink the space by making the bowser window smaller, then you start having the problem of not having enough space */
+
+
+/*flex takes care of this by shrinking/expanding accordingly */
+
+
+/*.box5 {
+    flex: 4;
+}*/
+
+
+/***************************/
+
+
+/*LESSON 9: FLEXBOX SIZING WITH FLEX-GROW, FLEX-SHRING, FLEX_BASIS*/
+
+
+/***************************/
+
+.container {
+    display: flex;
+}
+
+.box {
+    /*flex:1 is a shorthand for flex-grow:1 and flex-shrink:1 */
+    /*flex: 1;*/
+    /*flex-shrink: 1 ;*/
+    /*flex grow is 'when have extra space how much to grow the items to fill that space */
+    /*flex-grow:1;*/
+    /*flex-basis: in an idea world, between we alot extra space between items, how wide or high should our item be if we switch our axis?*/
+    /*flex-basis: ;*/
+}
+
+
+/*flex-basis says in an idea world each of these boxes will be 400px wide with the conatiner being 800 px wide */
+
+
+/*NOTE: Inspect this and see that it says 380 x 10, which is because there's built in padding of 10 on each side with box-sizing */
+
+.box1 {
+    /*flex-basis: 400px;*/
+    /*what should happen here?*/
+    /*we didn't apply anything to box2, so the efault flex-grow is 0 for anything. When there is extra room: don't do anything...so box2 will just eat up 400 px)*/
+    /*so box1 will fill up the rest */
+    /*flex-grow: 1;*/
+    /*flex: grow shrink basis */
+    /*flex: 10 5 400px;*/
+}
+
+.box2 {
+    /*flex-basis: 400px;*/
+    /*this will evenly distribute */
+    /*flex-grow: 1;*/
+    /*slight difference */
+    /*flex-grow: 2;*/
+    /*lots of difference */
+    /*flex-grow: 10;*/
+    /*OPEN UP DEV TOOLS HERE AND SEE IN TOP RIGHT HAND CORNER THE SIZE OF THE BROWSER WHEN YOU RESEIZE */
+    /*problem: what happens when we go unde 400px? */
+    /*that's where flex-shrink comes in: how do we slim ourselves down when there's not enough space for us */
+    /*ideally there's space to fit 400px for each item, but if browser is really skinny need to shrink*/
+    /*default for flex box: when there's not enough room, evenly divide amongst yourselves and everyone is happy */
+    /*flex-shrink default is 1 */
+    /*flex-shrink says: When I don't have enough room, I will shirnk myself # times more than the other items */
+    /*flex-shrink: 10;*/
+    /*THIS IS REALLY IMPORTANT FOR RESPONSIVE DESIGN IF YOU HAVE A SIDEBAR AND ARE RESIZING THE BROWSER */
+    /*you'll probably never write it out as three different things so shorthand is as follows:*/
+    /*flex: grow shrink basis */
+    /*flex: 1 1 400px;*/
+}
+
+
+/***************************/
+
+
+/*LESSON 10: FLEX-BASIS AND WRAPPING*/
+
+
+/***************************/
+
+.container {
+    /*display: flex;
+    flex-wrap: wrap;*/
+}
+
+.box {
+    /*what's kicking in right now? flex-grow or flex-shrink? do we have enoguh room for all thse 6? */
+    /*this is a problem with flex-shrink: what happens when we don't have enough room for it...we'd need 500 * 6 = 3000 px...but check the browser with Inspect;: it's only  1281px wide. */
+    /*in Inspect, click on each of the item ...not 500 px wide */
+    /*when you click on flex-shrink the default is 1 so that each gets same pace */
+    /*so let's go back to container and turn on flex-wrap:wrap */
+    /*flex-basis: 500px;*/
+    /*now we have a problem with too much space; so that's a problem for flex-grow*/
+    /*flex-grow: 1;*/
+}
+
+.box3 {
+    /*this is great since flex-grow/shrink/basis only work on the row that the element/item is on, so don't have any effect on item before or after, which is great */
+    /*flex-grow: 10;*/
+}
+
+
+/*now let's change the axis: default is left to right (main) and cross is top to bottom*/
+
+.container {
+    /*flex-direction: column;*/
+    /*the items are now stacking vertically sicne main axis is now top to bottom */
+    /*now if put a flex grow of 1 on one of them and 5 on another notice that nothing happens. That's because there's no height on this contianer */
+    /*that's because the container has no height, so there's no extra space for tthe items to fill */
+    /*get rid of .box3 .box attributes to see this */
+    /*add a min-height to conatiner to change that */
+    /*min-height: 100vh;*/
+}
+
+
+/*.box3 {
+    flex-grow: 5;
+}
+
+.box6 {
+    flex-grow: 1;
+}*/
+
+
+/*now give each item a flex-basis*/
+
+.box {
+    /*this makes all of them divy evenly */
+    /*flex-basis: 250px;
+    flex-grow: 1;*/
+    /*but if you change the container's height to 100vh then will have wrap around effect */
+}
+
+.container {
+    /*hard height instead of min-height*/
+    /*we have our 250 pixels for each one, but since box3 has a flexgrow of 5...browser will-change: divy up the 250, 250, 250...then there's a little bit of room left, so give box3 more space */
+    /*the interesting part: now instead of wrapping around underneath (wtih rows) will wrap around to the side (because flex-direction is column) */
+    /*height: 100vh;*/
+}
+
+
+/*give other boxes a flex-basis */
+
+
+/*now box4 will shrink to 100, and box3 will still try to fill 5 times as much as the rest. box 5 will just fill the basic 1 times. And box 6 will wrap around and fill 2 times 'the rest' -- in this case it's the only one in the column, so fills the whole thing.*/
+
+
+/*.box4 {
+    flex-basis: 100px;
+}*/
+
+
+/*try replicating this in your html by copying and pasting box1-6 two or three times and see what happens */
+
+
+/*move your browser around..shrink and expand..to see the layout change */
+
+
+/***************************/
+
+
+/*LESSON 11: CROSS BORWSWER FLEX SUPPORT*/
+
+
+/*open autoprefix.css and autoprefix.html for this step */
+
+
+/***************************/
+
+
+/*OLD VS NEW FLEXBOX: https://css-tricks.com/old-flexbox-and-new-flexbox/*/
+
+
+/*Problems if run flexbox in any browser except newest Chrome and Firefox */
+
+
+/*lucky for us don't need to figure out all the different thigns. Instead run code through compile step */
+
+
+/*AUTOPREFIXER! this takes your code, written by the latest and cleanest flex-box spec */
+
+
+/*see the flex2/autoprefix.css file for steps */
