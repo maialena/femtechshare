@@ -1,0 +1,27 @@
+/*inherited all other elements from style.css and layout.css*/
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-areas: "menu menu menu menu" ". title title ." ". elem2 elem3 elem4" " . elem6 elem7 elem8" " . elem9 elem1 elem5" "footer footer footer footer";
+    /* color: #444;*/
+    grid-column-gap: 40px;
+    grid-row-gap: 10px;
+    /*grid-row: auto;*/
+    /*width: 100%;*/
+    /*padding-left: -8px;
+    padding-right: -8px;*/
+    justify-content: center;
+}
+
+
+/*
+h2,
+h3 {
+    text-align: center;
+}*/
+
+.subtitle {
+    font-size: 30px;
+    font-style: italic;
+}

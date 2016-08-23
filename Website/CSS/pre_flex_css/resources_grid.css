@@ -1,0 +1,38 @@
+/*NEED TO FIX STYLE OF LINKS/NAV BAR*/
+
+
+/*inherit rest from style.css and layout.css*/
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-areas: "menu menu menu menu " ". title title . " ". elem1 elem1 ." ". elem2 elem2 ." ". elem3 elem3 ." ". elem4 elem4 ." ". elem5 elem5 ." ". elem6 elem6 ." ". elem7 elem7 ." "footer footer footer footer";
+    /*grid-gap: 50px;*/
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    /*width: 100%;*/
+}
+
+
+/* STYLE */
+
+.titles {
+    font-size: 30px;
+    text-align: center;
+    font-family: cursive;
+    border: 1px solid;
+    font-weight: bold;
+    color: black;
+    padding: 10px;
+    width: 130%;
+}
+
+ul li {
+    list-style: circle;
+    text-align: left;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: left;
+}

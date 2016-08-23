@@ -1,0 +1,125 @@
+.container {
+    display: grid;
+    margin: 100px;
+}
+
+.exercise {
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(darkgrey), to(lightgrey));
+    background-image: -webkit-linear-gradient(top, darkgrey, lightgrey);
+    background-image: -moz-linear-gradient(top, darkgrey, lightgrey);
+    background-image: linear-gradient(to bottom, darkgrey, lightgrey);
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.heading {
+    font-size: 40px;
+    text-decoration: bold;
+    text-decoration: uppercase;
+    /*font-family: fantasy;*/
+    border: black dashed 1px;
+    text-align: center;
+    padding: 20px;
+}
+
+.subtitle {
+    font-size: 30px;
+    text-decoration: underline;
+    /*font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;*/
+    padding: 5px;
+}
+
+
+/*ul,
+ol li {
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}*/
+
+.resources {
+    font-size: 23px;
+    text-decoration: bold;
+}
+
+a {
+    color: purple;
+}
+
+
+/*NEW from cs61c: Style for terminal code*/
+
+li {
+    line-height: 135%;
+}
+
+
+/* Page structure. */
+
+body {
+    background: #eee;
+}
+
+pre {
+    background: #cdc;
+    border: 1px dotted #aba;
+    margin: 0;
+    padding: 10px;
+}
+
+.input {
+    font-family: monospace;
+    color: #004080;
+    font-weight: bold;
+}
+
+.output {
+    font-family: monospace;
+    color: #800080
+}
+
+code {
+    white-space: nowrap;
+    font-size: 1.1em;
+}
+
+div.checkoff {
+    background: #eeeee0;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    border-radius: 1em;
+    border: 1px solid #ddd;
+}
+
+
+/*wrapper*/
+
+div.content {
+    color: #000;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+    /*max-width sets the width of the element...play around to see how it stretches or contracts */
+    line-height: 135%;
+}
+
+li {
+    line-height: 150%;
+}
+
+.emphasis {
+    text-decoration: bold;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.question {
+    font-style: italic;
+}
+
+
+/* images */
+
+img {
+    display: block;
+    margin: 0 auto;
+}

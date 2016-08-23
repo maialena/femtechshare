@@ -1,0 +1,313 @@
+/* NEED TO ADD MEDIA/AUDIO ELEMENTS */
+
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+img {
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ebe8e8;
+}
+
+
+/* HEADER */
+
+#main {
+    background: url(../images/new_logo.jpg) top repeat-x;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#title {
+    text-indent: -9999px;
+}
+
+header {
+    padding-top: 60px;
+}
+
+
+/*NAVIGATION MENU */
+
+nav ul {
+    list-style: none;
+    padding-top: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+nav ul a {
+    font-size: 33px;
+    color: #676666;
+    text-decoration: none;
+}
+
+nav li {
+    float: left;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+
+/*THIS wil center navigation on medium screens and make is single-columned on small screens */
+
+.nav {
+    display: flex;
+    flex-flow: row wrap;
+    /* This aligns items to the end line on main-axis */
+    justify-content: flex-end;
+}
+
+@media all and (max-width: 800px) {
+    .nav {
+        /* When on medium sized screens, we center it by evenly distributing empty space around items */
+        justify-content: space-around;
+    }
+}
+
+
+/* Small screens */
+
+@media all and (max-width: 500px) {
+    .nav {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+    }
+}
+
+
+/*CONTENT */
+
+.content {
+    border: 3px bold deeppink;
+    color: black;
+    width: 510px;
+    float: left;
+}
+
+.content h2 {
+    font-size: 36px;
+    color: #015878;
+    padding-top: 50px;
+}
+
+.content h3 {
+    font-size: 24px;
+    color: #444444;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.content h4 {
+    font-size: 18px;
+    color: #373737;
+    font-weight: normal;
+    padding-top: 10px;
+}
+
+.content p {
+    font-size: 14px;
+    color: #595858;
+    padding-top: 20px;
+}
+
+.content a {
+    color: #0f6c8d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*FORM */
+
+#form {
+    padding-top: 10px;
+}
+
+form > h3 {
+    text-align: center;
+}
+
+legend {
+    font-family: Cochin;
+    font-size: 15px;
+    border: 2px gradient orange;
+    border-radius: gradient;
+}
+
+
+/*SIDEBAR*/
+
+aside {
+    float: left;
+    margin-left: 550px;
+    margin-top: -1800px;
+    background: lightblue;
+    border: 5px solid #BEBDBD;
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+aside h3 {
+    font-size: 24px;
+    color: darkblue;
+    font-weight: normal;
+    padding-left: 15px;
+    text-align: center;
+    font-weight: bolder;
+    line-height: 150%;
+}
+
+aside ul {
+    text-align: center;
+    list-style: none;
+    padding-bottom: 25px;
+    padding-left: 0px;
+    line-height: 150%;
+}
+
+aside ul li a,
+ol {
+    font-size: 16px;
+    color: #393838;
+}
+
+#pitch ol li {
+    text-align: left;
+    padding-top: 0px;
+}
+
+aside h2 {
+    font-size: 16px;
+    text-align: center;
+    color: #393838;
+}
+
+#emphasis {
+    font-size: 18px;
+}
+
+
+/*FOOTER */
+
+footer {
+    font-size: 10px;
+    background-color: darkgrey;
+    color: black;
+    font-family: cursive;
+    text-align: center;
+}
+
+footer nav ul {
+    list-style: none;
+    padding-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+footer nav ul a {
+    font-size: 14px;
+    color: maroon;
+    text-decoration: none;
+}
+
+footer nav li {
+    float: left;
+    padding-left: 160px;
+    padding-right: 0px;
+}
+
+
+/*JUMP TO TOP*/
+
+section > a {
+    color: blue;
+    padding-left: 550px;
+}
+
+
+/****************CONTACTS PAGE****************/
+
+#title {
+    text-indent: -9999px;
+}
+
+header {
+    padding-top: 60px;
+}
+
+
+/*people*/
+
+#leaders {
+    /*Title "Meet the People"*/
+    border: 3px solid blue;
+    background-color: black;
+    font-family: Verdana, sans-serif;
+    font-weight: bolder;
+    color: orange;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 78px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+}
+
+#team {
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-weight: bolder;
+    color: darkblue;
+    font-size: 20px;
+    /*padding-top: 20px;
+	margin-top: 20px;*/
+    text-align: center;
+}
+
+.col-md-4 a {
+    display: block;
+    color: black;
+    border: 2px blue solid;
+    background-color: beige;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/*photos
+
+#photo {
+	display: flex;
+	padding: 0px;
+	margin: auto;
+	height: auto;
+	width: 300px;
+}
+
+*/
+
+
+/****************RESOURCES *****************/
+
+#openbook {
+    width: 800px;
+    height: 800px;
+    display: table-cell;
+    margin: 0 auto;
+}

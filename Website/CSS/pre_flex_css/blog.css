@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    min-height: 100%;
+    min-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    margin: 0 auto;
+}
+
+article {
+    /*children*/
+    border: 1px blue solid;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: antiquewhite;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-family: fantasy;
+    font-size: 30px;
+}

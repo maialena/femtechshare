@@ -1,0 +1,111 @@
+    /*MAIN */
+    /* GUIDE TO GRIDS: https://css-tricks.com/snippets/css/complete-guide-grid/ */
+    /* Grid is defined mostly in CSS : https://hacks.mozilla.org/2015/09/the-future-of-layout-with-css-grid-layouts/*/
+    /* Grid by example: http://gridbyexample.com/examples/#example2 */
+    /* starting off with grid: https://www.sitepoint.com/understanding-css-grid-systems/ */
+    /*RESET THE BOX MODEL */
+    
+    .row,
+    .column {
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: antiquewhite;
+        margin: 40px;
+    }
+    /* Need to float the columns, so clear the floating elements in the row */
+    /*.row:before,
+    .row:after {
+        content: " ";
+        display: table;
+    }
+    
+    .row:after {
+        clear: both;
+    }
+    /* defining columns */
+    /*.column {
+        position: relative;
+        float: left;
+    }
+    */
+    /*GUTTERS -- makes it so that element stays that width regardless of padding/margins*/
+    /**,
+*:after,
+*:before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}*/
+    /*OUTSIDE GUTTERS, ADD LEFT PADDING, and restore right-padding to last column */
+    /*LAYOUT */
+    
+    .container {
+        display: grid;
+        /*-ms-grid-template-columns: 40px 50px auto 50px 40px;
+-ms-grid-template-rows: auto;*/
+        background-color: #fff;
+        color: #444;
+        grid-template-areas: "header header header header" "videos videos videos sidebar " "footer footer footer footer";
+        grid-gap: 10px;
+    }
+    
+    .header {
+        grid-area: header;
+    }
+    
+    .videos {
+        grid-area: videos;
+    }
+    
+    .sidebar {
+        grid-area: sidebar;
+    }
+    
+    .footer {
+        grid-area: footer;
+    }
+    /*.box {
+        background-color: #444;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 20px;
+    }*/
+    
+    .a {
+        grid-area: a;
+        grid-column: col 2 / span 2;
+        grid-row: row;
+    }
+    
+    .b {
+        grid-area: b;
+    }
+    
+    .c {
+        grid-area: c;
+    }
+    
+    .d {
+        grid-area: d;
+    }
+    
+    .e {
+        grid-area: e;
+    }
+    /*STYLE */
+    
+    section ul {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+        color: darkorange;
+    }
+    /*    
+section ol {
+text-align: left;
+}*/
