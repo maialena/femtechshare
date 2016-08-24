@@ -12,26 +12,24 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../CSS/flexStyle.css" />
-    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" " href="../CSS/flexSchedule.css "/>
 
-    <title> Schedule </title>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" " href="../CSS/flexLabs.css "/>
+
+    <title> Lab2 </title>
 </head>
 
 <body>
-    <div class="wrapper ">
+   <div class="wrapper ">
         <header class="top ">
-            <h1> Share Schedule </h1>
+            <h1> Week2: HTML, Blog, & Color Theory</h1>
         </header>
-        <img src="../images/sleek_logo.jpg " />
+        <img src="../images/8-21Logo.jpg " />
         <nav class="flex-nav ">
-            <a href="# " class="toggleNav "> <i class="fa fa-bars "></i> Menu </a>
-            <!--the flex container is NOT flex-nav...it's ul!-->
             <ul>
-                <li><a href="http://femtechshare.comli.com/HTML/index.html ">About</a></li>
-                <li><a href="http://femtechshare.comli.com/HTML/schedule.html ">Schedule</a></li>
-                <li><a href="http://femtechshare.comli.com/HTML/resources.html ">Resources</a></li>
+                <li><a href="../index.html ">About</a></li>
+                <li><a href="schedule.html ">Schedule</a></li>
+                <li><a href="resources.html ">Resources</a></li>
                 <li class="social ">
                     <a href="https://twitter.com/femtechberkeley "><i class="fa fa-twitter "></i></a>
                 </li>
@@ -40,168 +38,148 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
                 </li>
                 <li class="social ">
                     <a href="http://femtechberkeley.com/ "><i class = "fa fa-users "></i>
-                    </a>
+                        </a>
                 </li>
             </ul>
         </nav>
-
-        <!--table attributes: border is boolean (1 for border, else 0), 
-    cellpadding defines width of border, 
-    ellspacing is amount of white space between border and content-->
+        <div class="lesson ">
+            <div class="exercise "> Overview</div>
+            Welcome to the real first day of coding! Today we're going to set up a blog so that you can write about your web development journeys throughout the semester. We'll also explore the world of color theory and disect the parts of a HTML Doc. 
+            <p> Before we dive in, let's pick up on last week's intro to the internet with a clip on the basic <a href="https://www.youtube.com/watch?annotation_id=annotation_2686974021&feature=iv&index=1&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&src_vid=Dxcc6ycZ73M&v=ZhEf7e4kopM ">internet infrastructure. </a> </p>
+            <div class="exercise "> Learning Objectives </div>
+            <ol>
+                <li> Set up free Git-supported blod </li>
+                <li> Understand components of HTML doc </li>
+                <li> Get an introduction into color theory </li>
+            </ol>
+            <div class="exercise "> Blog</div>
+            <p> To start, we're going to set up a free, Git supported blog with <a href="http://hubpress.io/index.html "> Hubpress.io</a>. Writing a blog is awesome for a few reasons. 
+            <ol>
+                <li> It tracks your progress, so that you can go review how far you've come at the end of the semester </li>
+                <li> Jot down your goals, project ideas, inspirations, and due dates. Writing it down will hold you accountable to yourself, and give you something concrete to work towards. </li>
+                <li> It allows you to process difficulties, insights, frustrations, revelations, emotions, thoughts, inspirations etc. In other words, it forces you to slow down and work through what's coming up for you as you tackle this new challenge. For those of you who have never programmed before, you're about to pick up a new language (or a few), and that's no small feat! Sometimes just talking about it makes the process more enjoyable. </li>
+                <li> Put it on your resume. Show employers something more lively and real than just the end result. Disclose your process: the up's, down's, challenges, and triumphs. Put your personality into it. For many of you, coding is 100% new and out of your comfort zone. Own it! The fact that you're willing to blog about your experiences shows courage, willingness to take risks, and ownership over your own learning. </li>
         
-        <table class="table " border="1 " cellpadding="5 " cellspacing="5 ">
-            <!--th := "table headers "-->
-            <th>Week</th>
-            <th>Date</th>
-            <th>Lab</th>
-            <th>Homework</th>
-
-            <!--tr:=table row-->
-            <tr>
-                <!--table date := row1, column1-->
-                <td>Introductions & Setup</td>
-                <!--row1, column2-->
-                <td>September 16</td>
-                <!--row1, column3-->
-                <td><a href="lab1.html ">Lab1: Setup, GitHub, & Workflow</a></td>
-                <!--row1, column5-->
-                <td class="hw ">
-                    <ol>
-                        <li>EdX Module1: "Creating Web Pages using Hypertext Markup Language (HTML) "</li>
-                    </ol>
-                </td>
-                <!--LInk-->
-            </tr>
-            <tr>
-                <td>HTML Basics & Design</td>
-                <td>September 23</td>
-                <td><a href="lab2.html ">Lab2: &lt!DOC&gt, Colors Theory, & Blog </a></td>
-                <td class="hw ">
-                    <ol>
-                        <li>EdX Module2: “Creating Sophisticated Document Structures using HTML”</li>
-                        <li> Blog </li>
-                </td>
-            </tr>
-            <tr>
-                <!--lab 3-->
-                <td>HTML5 & CSS</td>
-                <td>September 30</td>
-                <td><a href="lab3.html ">Lab3: COOL HTML5 & CSS </a></td>
-                <td class="hw ">
-                    <ol>
-                        <li>  EdX Module 3: “Design Web Page Elements Using Cascading Style Sheets (CSS)” </li>
-                    </ol>
-                </td>
-            </tr>
-            <tr>
-                <td>meSS with cSS</td>
-                <td>October 7</td>
-                <td><a href="lab4.html ">Lab4: Stylesheets, Selectors, Attributes/a></td>
-                <td class="hw ">
-                    <ol>
-                        <li>EdX Module3: "Design Web Page Elements Using Cascading Style Sheets (CSS)”</li>
-    <li> Blog </li>
-    </ol>
-    </td>
-    </tr>
-    <tr>
-        <!--lab 5-->
-        <td>Layout with CSS</td>
-        <td>October 14</td>
-        <td><a href="lab5.html">Lab5: The Grid</a></td>
-        <td class="hw">
+            </ol>
+            <p>To get started, follow the instructions on this link to copy the hubpress repository to your GitHub account.For step 2, it tells you to set the values in your hubpress/config.json file. Let's do this from our terminal:
+                <ol>
+                    <li>"CD " into your [name].io directory </li>
+                    <li>"CD " into your hubpress directory </li>
+                    <li> Open the config.json file with the "vim " command (remember this from lab1?)</li>
+                    <pre class="output ">$ <span class="input "> vim config.json </span></pre>
+                    <br/>
+                    <li> To edit the file, type "i " (this stands for insert). Use the arrow keys to move down to your userName and repositoryName parameters, and change them accordingly.</li>
+                    <li> To save your changse, type "esc " followed by ":wq " which should bring you back to your terminal.</li>
+                </ol>
+            Step 3 asks you to commit your changes. 
             <ol>
-                <li> Course Evaluation
-                    <!--link-->
+                <li>To do this, you need to first "stage " the updated config.json file to what's called your "working directory " (if you need a refresher about Git, return to <a href="lab1.html "> Exercise III: Github </a> from lab 1).</li>
+                <pre class="output ">$ <span class="input "> git add config.json </span></pre>
+                <br/>
+                <li> Next, we need to commit our changes to our remote repository (this is like pushing "Save " on a Word document). The "-m " stands for "message, " and is followed by some message that indicates the changes you've made. Messages make it easier for you to navigate through old commits and distinguish one version from another.</li>
+                <pre class="output ">$ <span class="input "> git commit -m "adding updated config.json file " </span></pre></li>
+                <br/>
+                <li> Finally, we have to push our changes to our remote repository.
                 </li>
-                <li> (optional) Bootstrap on CodeAcademy </li>
-                <!--link-->
+                <pre class="output ">$ <span class="input "> git push origin master </span></pre>
+                    <br/>
+                That's it! Open up your git account to make sure you commited your changes.
             </ol>
-        </td>
-    </tr>
-    <tr>
-        <td>Animations & Forms</td>
-        <td>October 21</td>
-        <td><a href="lab6.html">Lab6: HTML5 Tricks</a></td>
-        <td class="hw">
-            <ul>
-                <li> Work on Website</li>
-                <li> Blog </li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <!--lab 7-->
-        <td>Intro to JavaScript</td>
-        <td>October 28</td>
-        <td><a href="lab7.html">Lab7: DOM-da-DOM</a></td>
-        <td class="hw">
+           Like it says on the Hubpress ReadMe doc, you should see <a href="https://camo.githubusercontent.com/bd45364c6c64475d1816cef50ddc8395f0f4165b/687474703a2f2f68756270726573732e696f2f696d672f686f6d652d696e7374616c6c2e706e67 ">this </a>image when you're done. Now it's time to post your first blog.
             <ol>
-                <li>Work on Website</li>
-                <li> Blog </li>
+                <li> Go to https://[username].github.io/hubpress/ </li>
+                <li> Follow <a href="https://github.com/HubPress/hubpress.io/blob/master/Administration.adoc "> this </a>set of instructions for how to make posts.</li>
+                <li> Your blog will require you to know <a href="http://asciidoctor.org/docs/asciidoc-writers-guide/ ">Ascii syntax</a>, which is just plain text. Once you learn Ascii, read <a href="https://github.com/HubPress/hubpress.io/blob/master/Writers_Guide.adoc "> this Writer's Guide </a> on creating successful blog posts on HubPress. </li>
             </ol>
-        </td>
-    </tr>
-    <tr>
-        <td>More JavaScript</td>
-        <td>November 4</td>
-        <td><a href="lab8.html">Lab8: javaScript API's</a></td>
-        <td class="hw">
-            <ol>
-                <li>Work on Website</li>
-                <li> Blog </li>
-            </ol>
-        </td>
-    </tr>
-    <!--lab 9-->
-    <tr>
-        <td>TBD</td>
-        <td>November 11</td>
-        <td><a href="lab9.html">Lab9: Drop-down menu, playlist, & more</a></td>
-        <td class="hw">
-            <ol>
-                <li>Work on Website</li>
-                <li> Blog </li>
-            </ol>
-        </td>
-    </tr>
+            Throughout this semester, I hope that you blog at least once a week on your progress. It can be as simple as a list of things you did that day or want to do that week. Just have fun with it.</p>
+          
+            <div class="exercise ">III. HTML Doc</div>
+            <p> HTML is the language we use to provide structure to our web pages. If you think of a word document, it's all the different parts of the page that make up its form: header, footer, title, subtitles, main text (or 'body' in HTML), paragraphs, etc.) The font, text color, background color, and text size is all <em> styling </em> which is left to CSS (Cascading Style Sheets). We'll leave CSS to next week, but for now let's look at the basic building blocks of our HTML doc </p>
+           <p> To do so, we're going to go through Chapters 1-5 pages 12-94 from <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf ">Jon Ducket's HTML & CSS: Design and Build Websites </a> (don't worry -- they're mostly pictures). Create a lab2.html file in your HTML directory, open up your text editor, and follow along as we play with HTML syntax.</p>
+                
+            
+            <div class="exercise ">III. Color Theory </div>
+            <p> When we talk about color theory, we're moving into CSS land. Though that's next week's material. we'll get a sneak peak today with a very basic stylesheet. Create a new subdirectory in your main folder called "CSS " and make a lab2.css file in it. Copy the following code:
+            <pre class="output "><span class="input "> body {</span></pre></li>
+            <pre class="output "><span class="input ">      background-color: ;</span></pre></li>
+            <pre class="output "><span class="input "> }</span></pre></li>
+            <pre class="output "><span class="input "> h1 {</span></pre></li>
+            <pre class="output "><span class="input ">      color: ; </span></pre></li>
+            <pre class="output "><span class="input "> }</span></pre></li>
+            <pre class="output "><span class="input "> p {</span></pre></li>
+            <pre class="output "><span class="input ">      color: ;</span></pre></li>
+            <pre class="output "><span class="input ">}</span></pre></li>
+            Make sure your selectors (body, h1, and p) are followed by opening and closing braces "{} " and the color properties are followed by a colon, [color], and semi-colon. Don't worry about this syntax now. We'll go over it in detail next week. For now, let's play with colors. </p>
+            
+            <div class="subtitle
+        "> Hexadecimal Values </div>
+            <p> On the web, colors come in the form of hexadecimal values, which are a string of 6 integers that specify the intensity of a color. All colors are made up of combinations of red, green, and blue. Accordingly, we represent hexadecimal values with a "# " sign followed by two values that signal the amount of red, two values for blue, and two values for green, like so: #RRGGBB. </p>
+            <p class="red "> This is red, represented as #FF0000 </p>
+            <p class="green "> This is green, represented as #00FF00</p>
+            <p class="blue
+        "> This is blue, represented as #0000FF</p>
+            <p> What's with the F's? This goes back to how computers represent hexadecimal values. You've probably heard of 'binary representation,' where the computer translates values into two values: 0's and 1's. Hexadecimal representation counts up to 16 numbers, beginning with 0 and ending with 15. The first 10 numbers are 0 through 9. The number 10 is represented as "a ", 11 is "b ", 12 is "c ",  13 is "d ", 14 is "e ", and "15 " is f. So you can think of the values 00 through FF as a scale from 00 to 15, with 00 being "0%, 15 being "100%," and everything else being somewhere in between. </p>
+    <p> You can play with hexadecimal colors <a href="http://www.w3schools.com/colors/colors_hexadecimal.asp"> here </a></p>
 
-    <!--THANKSGIVING BREAK: NOVEMBER 24th-->
+    <div class="subtitle "> RGB </div>
+    <p> RGB representation is exactly like hexadecimal, except we separate out the colors red, green, blue and specify the intensity as an integer between 0 and 255. In other words, we can represent the same colors as above as follows: </p>
+    <p class="red "> This is red, represented as rgb(255, 0, 0)</p>
+    <p class="green "> This is green, represented as rgb(0, 255, 0)</p>
+    <p class="blue
+        "> This is blue, represented as rgb(0, 0, 255) </p>
+    <div class="subtitle "> HSLa </div>
+    <p> HSLa stands for "Hue Saturation Lightness and alpha." The first three values (hue, saturation, and lightness) determine the color, the last determines the transparency. This isn't as common as rgba but it's really useful if you want to make your text
+        or background-color more transparent. </p>
+    <p> Here's an example with text:
+        <p class="hsla10">Here's red with hsla(0,100%,50%, 1) </p>
+        <p class="hsla9">Here's red with hsla(0,100%,50%, 0.9) </p>
+        <p class="hsla8">Here's red with hsla(0,100%,50%, 0.8) </p>
+        <p class="hsla7">Here's red with hsla(0,100%,50%, 0.7) </p>
+        <p class="hsla6">Here's red with hsla(0,100%,50%, 0.6) </p>
+        <p class="hsla5">Here's red with hsla(0,100%,50%, 0.5) </p>
+        <p class="hsla4">Here's red with hsla(0,100%,50%, 0.4) </p>
+        <p class="hsla3">Here's red with hsla(0,100%,50%, 0.3) </p>
+        <p class="hsla2">Here's red with hsla(0,100%,50%, 0.2) </p>
+        <p class="hsla1">Here's red with hsla(0,100%,50%, 0.1) </p>
+        <p class="hsla0">Here's red with hsla(0,100%,50%, 0.0) </p>
+        <div class="checkoff"> NOTE: The last line above is "Here's red with hsla(0, 100%, 50%, 0.0)" but it's not showing up. Do you see why?</div>
+        <p> And here's an example with background color:
+            <p class="hslag10">Here's green with hsla(0,100%,50%, 1) </p>
+            <p class="hslag9">Here's green with hsla(0,100%,50%, 0.9) </p>
+            <p class="hslag8">Here's green with hsla(0,100%,50%, 0.8) </p>
+            <p class="hslag7">Here's green with hsla(0,100%,50%, 0.7) </p>
+            <p class="hslag6">Here's green with hsla(0,100%,50%, 0.6) </p>
+            <p class="hslag5">Here's green with hsla(0,100%,50%, 0.5) </p>
+            <p class="hslag4">Here's green with hsla(0,100%,50%, 0.4) </p>
+            <p class="hslag3">Here's green with hsla(0,100%,50%, 0.3) </p>
+            <p class="hslag2">Here's green with hsla(0,100%,50%, 0.2) </p>
+            <p class="hslag1">Here's green with hsla(0,100%,50%, 0.1) </p>
+            <p class="hslag0">Here's green with hsla(0,100%,50%, 0.0) </p>
+            <br/>
+        </p>
+        <p>Pretty cool huh? You can read more about Browser support and HSLa tools <a href="https://css-tricks.com/yay-for-hsla/"> here </a>.</p>
+        <div class="subtitle "> Color theory</div>
+        <p> Now that we know how to represent colors, we need to think about which colors we want to use in our website. Welcome to the world of design. This isn't an exact science here, and often good designers have an intuition and artistic eye that they've
+            cultivated over years of practice. But there are some basic guidelines that we can explore. Read about complentary, split complementary, triadic, analogous, and tetradic color schemes <a href="http://lifehacker.com/learn-the-basics-of-color-theory-to-know-what-looks-goo-1608972072"> here. </a>            </p>
+        <div class="exercise ">Play With Colors</div>
+        <p> Let's return to your lab2.css file. We have to link your lab2.html file to this css file. To do so, we include a link in the &lhead&gt section of your html file like so: </p>
+        <pre class="output "><span class="input "> &ltlink rel="stylesheet" href="../CSS/lab2.html"/&gt</span></pre></li>
+        <p> The property "rel" specifies the relation of the thing that you are linking to the html doc. In this case, it's the html document's stylesheet. "Href" points to the location of the file. There are two types of paths you can specify in your href
+            property. The first is <em> relative </em> and is relative to your local directory. That's what we're using here. The two dots ".." tell your browser to go one level up from the current directory (HTML, where your lab2.html file is). From
+            there, each "/" tells your browser to go down a level into the sub-directory to access the file. This is the same exact syntax we used to navigate through our directories in the terminal. You can also link an <em> absolute </em> path by specifying
+            the full domain page of a website, like "http://www.mywebsite.com." </p>
+        <p> Now it's time to fill in some colors!. Use Adobe's <a href="https://color.adobe.com/create/color-wheel/?base=2&rule=Compound&selected=1&name=My%20Color%20Theme&mode=rgb&rgbvalues=1,0.8064516129034018,0.09999999999999998,0.4,0.3655913978494937,0.24,0.8,0.5333333333331393,0.15999999999999998,0.37124999999999997,0.7692763157893561,0.8250000000000001,0.09999999999999998,1,0.8641509433963848&swatchOrder=0,1,2,3,4"> Kuler </a>            color wheel to mess with different colors in your html doc. If you're using <a href=""> Visual Studio Code</a> (highly recommended), you can split the view between your html and css file by pushing the "Split Editor" icon on the top right-hand
+            side of the page: <img height="50" width="50" src="../images/split_editor.jpg" /></p>
 
-    <!--lab 10-->
-    <tr>
-        <td>TBD</td>
-        <td>November 18</td>
-        <td><a href="lab10.html">Lab10: Upgrade wesbite</a></td>
-        <td class="hw">
-            <ol>
-                <li>Work on Website</li>
-                <li> Get Ready for Final ShareCase</li>
-            </ol>
-        </td>
+        <div class="exercise"> Homework</div>
+        <ol>
+            <li> Blog! </li>
+            <li>EdX Module2: “Creating Sophisticated Document Structures using HTML”
+            </li>
+            <li>(optional) <a href="https://www.khanacademy.org/computing/computer-programming/html-css">Kahn Academy Intro to HTML </a>(only the HTML sections)</li>
+        </ol>
 
-    </tr>
-    <!--LAST MEETING !!!-->
-    <tr>
-        <td>ShareCase</td>
-        <td>December 2</td>
-        <td><a href="http://31.media.tumblr.com/88ee2a56006928ef66128912fec100f1/tumblr_n1cq2oeUeD1t77ydgo1_400.gif">You're now a budding front end developer!!! CONGRATULATIONS!</a></td>
-        <td class="hw">Keep on learning:)</td>
-
-    </tr>
-    </table>
-
-    <!--Footer-->
-    <footer>
-
-        <p>&copy; Maia Rosengarten </p>
-    </footer>
-    <!--END NAV BAR -->
-
-    <!--end footer-->
-
-    </div>
-    <!--end wrapper -->
-    </body>
+        </div>
+        </div>
 
 </html>
