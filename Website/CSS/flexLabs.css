@@ -406,7 +406,7 @@ a:hover {
     }
     /*need to specify a flex basis on that .social case */
     .flex-nav .social {
-        flex: 1 1 25%;
+        flex: 1 1 15%;
     }
 }
 
@@ -450,14 +450,8 @@ a:hover {
     .top {
         order: 2;
     }
-    .details {
+    .lesson {
         order: 3;
     }
-    .about {
-        order: 4;
-    }
-    .signup {
-        order: 5;
-    }
-    /*the photo and footer will naturally be 5 and 6 because that's the order they appear in in the html */
+    
 }

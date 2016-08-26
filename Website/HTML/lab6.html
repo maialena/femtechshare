@@ -20,6 +20,7 @@
         </header>
         <img src="../images/8-21Logo.jpg" />
         <nav class="flex-nav">
+            <a href="#" class="toggleNav"> <i class="fa fa-bars"></i> Menu </a>
             <ul>
                 <li><a href="../index.html">About</a></li>
                 <li><a href="schedule.html">Schedule</a></li>
@@ -46,7 +47,7 @@
                 of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation. You can do pretty much anything with JavaScript. You'll start small with simple features such as carousels, image galleries, fluctuating layouts, and responses
                 to button clicks. Eventually as you get more experienced with the language, you'll be able to create games, animated 2D and 3D graphics, full blown database-driven apps, and more!"
             </p>
-            
+
             <p> Let's break some of those words down:
                 <ul>
                     <li> A <span class="emphasis">dynamic programming langauge </span> is one that executes a lot of behavior during 'run time' that 'static programming languages' would execute at compile time. 'Run time' refers to the time that a program
@@ -361,6 +362,17 @@
 
         </div>
         <!--container-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function() {
+            /*toggleClass goes between adding and removing our own class of open on the ul */
+            $('.toggleNav').on('click', function() {
+                $('.flex-nav ul').toggleClass('open');
+            });
+        });
+    </script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 
