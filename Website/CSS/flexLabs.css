@@ -269,3 +269,195 @@ a:hover {
     font-size: 16px;
     line-height: 135%;
 }
+
+
+/*for lab2 color theory */
+
+.red {
+    color: #FF0000;
+}
+
+.green {
+    color: #00FF00;
+}
+
+.blue {
+    color: #0000FF;
+}
+
+.hslRed {
+    color: #FF0000;
+}
+
+.hslGreen {
+    color: #00FF00;
+}
+
+.hslBlue {
+    color: #0000FF;
+}
+
+
+/*shades of red */
+
+.hsla0 {
+    color: hsla(0, 100%, 50%, 0);
+}
+
+.hsla1 {
+    color: hsla(0, 100%, 50%, .1);
+}
+
+.hsla2 {
+    color: hsla(0, 100%, 50%, .2);
+}
+
+.hsla3 {
+    color: hsla(0, 100%, 50%, .3);
+}
+
+.hsla4 {
+    color: hsla(0, 100%, 50%, .4);
+}
+
+.hsla5 {
+    color: hsla(0, 100%, 50%, .5);
+}
+
+.hsla6 {
+    color: hsla(0, 100%, 50%, .6);
+}
+
+.hsla7 {
+    color: hsla(0, 100%, 50%, .7);
+}
+
+.hsla8 {
+    color: hsla(0, 100%, 50%, .8);
+}
+
+.hsla9 {
+    color: hsla(0, 100%, 50%, .9);
+}
+
+.hsla10 {
+    color: hsla(0, 100%, 50%, 1);
+}
+
+
+/*for green example */
+
+.hslag0 {
+    background-color: hsla(120, 100%, 50%, 0);
+}
+
+.hslag1 {
+    background-color: hsla(120, 100%, 50%, .1);
+}
+
+.hslag2 {
+    background-color: hsla(120, 100%, 50%, .2);
+}
+
+.hslag3 {
+    background-color: hsla(120, 100%, 50%, .3);
+}
+
+.hslag4 {
+    background-color: hsla(120, 100%, 50%, .4);
+}
+
+.hslag5 {
+    background-color: hsla(120, 100%, 50%, .5);
+}
+
+.hslag6 {
+    background-color: hsla(120, 100%, 50%, .6);
+}
+
+.hslag7 {
+    background-color: hsla(120, 100%, 50%, .7);
+}
+
+.hslag8 {
+    background-color: hsla(120, 100%, 50%, .8);
+}
+
+.hslag9 {
+    background-color: hsla(120, 100%, 50%, .9);
+}
+
+.hslag10 {
+    background-color: hsla(120, 100%, 50%, 1);
+}
+
+@media all and (max-width: 1000px) {
+    .flex-nav ul {
+        /*don't wnat flex-direction column since will all stack */
+        /*flex-direction: column;*/
+        flex-wrap: wrap;
+        /*flex wrap won't work without some height. Do this with flex-basis property */
+    }
+    .flex-nav li {
+        /*grow shrink baseline */
+        /*baseline 50% means will be 50% widened, so will stack in two columns */
+        /*problem here is that social ones are squished to the right. Why? Open up inspect and see that this flex: 1 1 50% is being overwritdden by flex-nav .social {flex:1}; */
+        flex: 1 1 50%;
+    }
+    /*need to specify a flex basis on that .social case */
+    .flex-nav .social {
+        flex: 1 1 25%;
+    }
+}
+
+
+/*new conditions when screen is really smushed */
+
+@media all and (max-width: 500px) {
+    .flex-nav li {
+        flex-basis: 100%;
+        /*this makes them all stack */
+    }
+    /*Flex Container */
+    .wrapper {
+        display: flex;
+        /*nothing changes at first, but when hit 500px breakpoint everything breaks */
+        /*need to change flex-directioN! */
+        flex-direction: column;
+    }
+    /*Flex item */
+    .wrapper > * {
+        /*just needs to be > 1 */
+        order: 9999;
+    }
+    .flex-nav {
+        /*making it 1 sends nav to the end, because by default the order for everything is 0 */
+        /*so need to set the default order for everything else */
+        order: 1;
+    }
+    /*display the Menu toggleNav */
+    .toggleNav {
+        display: block;
+    }
+    .flex-nav ul {
+        display: none;
+    }
+    /*jQuery toggle or slideToggle turns the flex container to display:block but we need display:flex */
+    .flex-nav ul.open {
+        display: flex;
+    }
+    /*reorder when screen is small */
+    .top {
+        order: 2;
+    }
+    .details {
+        order: 3;
+    }
+    .about {
+        order: 4;
+    }
+    .signup {
+        order: 5;
+    }
+    /*the photo and footer will naturally be 5 and 6 because that's the order they appear in in the html */
+}
