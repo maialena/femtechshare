@@ -1,136 +1,201 @@
-  th {
-      text-transform: uppercase;
-      text-align: center;
-      background-color: rgba(0, 0, 255, 0.4);
-      color: white;
-  }
-  
-  table {
-      order: 99;
-      border: 3px solid black;
-      border-radius: 4px;
-  }
-  
-  table > * {
-      font-family: sans-serif;
-      font-weight: 100;
-      color: white;
-  }
-  
-  th {
-      text-align: center;
-  }
-  
-  tr > td {
-      text-align: center;
-  }
-  
-  tr:nth-child(even) {
-      background-color: rgba(255, 255, 255, 0.4);
-  }
-  
-  tr:nth-child(even) td {
-      color: black;
-  }
-  
-  tr:nth-child(even) td > a {
-      color: black;
-  }
-  
-  tr:nth-child(odd) {
-      background-color: rgba(30, 30, 30, 0.2);
-  }
-  
-  td a {
-      background: rgba(0, 0, 0, 0);
-  }
-  
-  td {
-      font-family: sans-serif;
-  }
-  /*NEED TO FIX THIS */
-  /*this is for the td elements in homework sectio n*/
-  
-  .homework {
-      text-align: left;
-  }
-  /*this is for the a elements in homework section */
-  
-  .hw_link {
-      /*text-align: left;*/
-      display: inline;
-      color: #d6cba0;
-      font-weight: bold;
-      /*font-size: 1em;*/
-  }
-  
-  .hw_link:hover {
-      background: none;
-      text-decoration: underline;
-  }
-  
-  .list-unstyled {
-      list-style: none;
-  }
-  
-  @media all and (max-width: 1000px) {
-      .flex-nav ul {
-          /*don't wnat flex-direction column since will all stack */
-          /*flex-direction: column;*/
-          flex-wrap: wrap;
-          /*flex wrap won't work without some height. Do this with flex-basis property */
-      }
-      .flex-nav li {
-          /*grow shrink baseline */
-          /*baseline 50% means will be 50% widened, so will stack in two columns */
-          /*problem here is that social ones are squished to the right. Why? Open up inspect and see that this flex: 1 1 50% is being overwritdden by flex-nav .social {flex:1}; */
-          flex: 1 1 50%;
-      }
-      /*need to specify a flex basis on that .social case */
-      .flex-nav .social {
-          flex: 1 1 15%;
-      }
-  }
-  /*new conditions when screen is really smushed */
-  
-  @media all and (max-width: 500px) {
-      .flex-nav li {
-          flex-basis: 100%;
-          /*this makes them all stack */
-      }
-      /*Flex Container */
-      .wrapper {
-          display: flex;
-          /*nothing changes at first, but when hit 500px breakpoint everything breaks */
-          /*need to change flex-directioN! */
-          flex-direction: column;
-      }
-      /*Flex item */
-      .wrapper > * {
-          /*just needs to be > 1 */
-          order: 9999;
-      }
-      .flex-nav {
-          /*making it 1 sends nav to the end, because by default the order for everything is 0 */
-          /*so need to set the default order for everything else */
-          order: 1;
-      }
-      /*display the Menu toggleNav */
-      .toggleNav {
-          display: block;
-      }
-      .flex-nav ul {
-          display: none;
-      }
-      /*jQuery toggle or slideToggle turns the flex container to display:block but we need display:flex */
-      .flex-nav ul.open {
-          display: flex;
-      }
-      /*reorder when screen is small */
-      .top {
-          order: 2;
-      }
-      .table {
-          order: 3;
-      }
-  }
+/*override bootstrap setting to box-sizing: inherit */
+
+a:hover {
+    background: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: white;
+}
+
+*,
+::after,
+::before {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    display: block;
+    font-weight: bold;
+    padding: 20px;
+}
+
+th {
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.4);
+    color: white;
+}
+
+table {
+    order: 99;
+    /*border: 3px solid black;*/
+    /*border-radius: 4px;*/
+}
+
+table > * {
+    font-family: sans-serif;
+    font-weight: 100;
+    color: white;
+}
+
+th {
+    text-align: center;
+}
+
+tr > td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+tr:nth-child(even) td {
+    color: black;
+}
+
+tr:nth-child(even) td > a {
+    color: black;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(30, 30, 30, 0.2);
+}
+
+td a {
+    background: rgba(0, 0, 0, 0);
+}
+
+td {
+    font-family: sans-serif;
+}
+
+
+/*this is for the td elements in homework sectio n*/
+
+.homework {
+    text-align: left;
+}
+
+
+/*this is for the a elements in homework section */
+
+.hw_link {
+    /*text-align: left;*/
+    display: inline;
+    color: #d6cba0;
+    font-weight: bold;
+    /*font-size: 1em;*/
+}
+
+.hw_link:hover {
+    background: none;
+    text-decoration: underline;
+}
+
+.list-unstyled {
+    list-style: none;
+}
+
+
+/*order elements on page, widescreen */
+
+.logo {
+    order: 1;
+}
+
+.top {
+    order: 3;
+}
+
+.flex-nav {
+    order: 2;
+}
+
+.table-responsive {
+    order: 10;
+}
+
+@media all and (max-width: 1000px) {
+    .flex-nav ul {
+        /*don't wnat flex-direction column since will all stack */
+        /*flex-direction: column;*/
+        flex-wrap: wrap;
+        /*flex wrap won't work without some height. Do this with flex-basis property */
+    }
+    .flex-nav li {
+        /*grow shrink baseline */
+        /*baseline 50% means will be 50% widened, so will stack in two columns */
+        /*problem here is that social ones are squished to the right. Why? Open up inspect and see that this flex: 1 1 50% is being overwritdden by flex-nav .social {flex:1}; */
+        flex: 1 1 30%;
+    }
+    /*need to specify a flex basis on that .social case */
+    .flex-nav .social {
+        flex: 1 1 15%;
+    }
+    .flex-nav > ul > li > a {
+        padding: 8px 1px;
+    }
+}
+
+
+/*new conditions when screen is really smushed */
+
+@media all and (max-width: 810px) {
+    .table {
+        display: flex;
+        flex-direction: column;
+    }
+    .td {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .flex-nav li {
+        flex-basis: 100%;
+        /*this makes them all stack */
+    }
+    /*Flex Container */
+    .wrapper {
+        display: flex;
+        /*nothing changes at first, but when hit 500px breakpoint everything breaks */
+        /*need to change flex-directioN! */
+        flex-direction: column;
+    }
+    /*Flex item */
+    .wrapper > * {
+        /*just needs to be > 1 */
+        order: 9999;
+    }
+    /*display the Menu toggleNav */
+    .toggleNav {
+        display: block;
+    }
+    .flex-nav ul {
+        display: none;
+    }
+    /*jQuery toggle or slideToggle turns the flex container to display:block but we need display:flex */
+    .flex-nav ul.open {
+        display: flex;
+    }
+    /*reorder when screen is small */
+    .flex-nav {
+        /*making it 1 sends nav to the end, because by default the order for everything is 0 */
+        /*so need to set the default order for everything else */
+        order: 1;
+    }
+    .logo {
+        order: 2;
+    }
+    .top {
+        order: 3;
+    }
+    .table-responsive {
+        order: 4;
+    }
+}

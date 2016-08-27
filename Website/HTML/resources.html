@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/flexResources.css" />
-    <linkn rel="stylesheet" href="../CSS/flexLabs.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+
+    <linkn rel="stylesheet" href="../CSS/flexLabs.css" />
+    <link rel="stylesheet" href="../CSS/flexResources.css" />
+
     <title> Resources </title>
 </head>
 
@@ -16,7 +18,7 @@
         <header class="top">
             <h1> Share Resources </h1>
         </header>
-        <img src="../images/8-21Logo.jpg" />
+        <img class="logo" src="../images/8-21Logo.jpg" />
         <nav class="flex-nav">
             <a href="#" class="toggleNav"> <i class="fa fa-bars"></i> Menu </a>
             <ul>
@@ -50,9 +52,9 @@
                         <li><a href="http://mally.stanford.edu/~sr/computing/basic-unix.html " alt="UNIX "> Basic UNIX Commands</a></li>
                         <li><a href="https://css-tricks.com/video-screencasts/125-how-to-stay-up-to-date-with-web-technology/ ">How To Stay Up To Date On Web Stuff</a></li>
                         <li><a href="https://css-tricks.com/video-screencasts/124-a-modern-web-designers-workflow/ ">A Modern Web Designer's WorkFlow</a></li>
-          	    </ul>
-            </p>
-        </div>
+          	        </ul>
+                 </p>
+             </div>
             
         <div class="elem2 ">
             <div class="titles ">Free Online Tools</div>
@@ -96,6 +98,7 @@
                 <li><a href="https://davidwalsh.name/responsive-images "> Responsive Images </a></li>
                 <li><a href="https://css-tricks.com/creating-meet-team-page-wordpress/ ">"Meet the Team " Page with CSS </a></li>
                 <li> <a href="http://flexbox.io/view/ND8SjPJOk_M "> 20 Free Tutorials to Learn FlexBox </a></li>
+                <li><a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties "> Visual Guide to Flexbox Properties </a></li>
 
                 </ul>
             </p>
@@ -150,8 +153,11 @@
                 <div class="tittles"> Responsive Web Development</div>
                 <p>
                     <ul>
+                        <li><a href="http://flexbox.io/"> What the Flexbox?!</a></li>
                         <li><a href="http://www.w3schools.com/html/html_responsive.asp">HTML Responsive Web Design </a></li>
                         <li><a href="https://developers.google.com/web/fundamentals/getting-started/your-first-multi-screen-site/responsive?hl=en"> Google Developer's Guide Responsive Design </a></li>
+                        <li><a href="https://hashnode.com/post/really-responsive-tables-using-css3-flexbox-cijzbxd8n00pwvm53sl4l42cx"> <em> Really </em> responsive tables </a></li>
+                        <li><a href="https://css-tricks.com/accessible-simple-responsive-tables/"> CSS Tricks Responsive Tables </a></li>
                     </ul>
                 </p>
             </div>-->
@@ -181,7 +187,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         $(function() {
-            /*toggleClass goes between adding and removing our own class of open on the ul */
             $('.toggleNav').on('click', function() {
                 $('.flex-nav ul').toggleClass('open');
             });

@@ -4,11 +4,12 @@ html {
     box-sizing: border-box;
 }
 
-*,
+
+/**,
 *:before,
 *:after {
-    box-sizing: ihnerit;
-}
+    box-sizing: inherit;
+}*/
 
 body {
     font-family: sans-serif;
@@ -23,7 +24,7 @@ a {
     letter-spacing: 2px;
     text-decoration: none;
     background: rgba(0, 0, 0, 0.2);
-    padding: 20px 5px;
+    padding: 20px 1px;
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -129,7 +130,7 @@ footer {
 /*once we hit 1000px (small) we want our social icons to be under the main elem */
 
 
-/* to do this we need to turn on our wrapper */
+/* to do this we need to turn on our wrapper.  */
 
 
 /*Flex Item Ordering */
@@ -175,11 +176,11 @@ footer {
         /*grow shrink baseline */
         /*baseline 50% means will be 50% widened, so will stack in two columns */
         /*problem here is that social ones are squished to the right. Why? Open up inspect and see that this flex: 1 1 50% is being overwritdden by flex-nav .social {flex:1}; */
-        flex: 1 1 50%;
+        flex: 1 1 25%;
     }
     /*need to specify a flex basis on that .social case */
     .flex-nav .social {
-        flex: 1 1 15%;
+        flex: 1 1 5%;
     }
 }
 
@@ -203,11 +204,6 @@ footer {
         /*just needs to be > 1 */
         order: 9999;
     }
-    .flex-nav {
-        /*making it 1 sends nav to the end, because by default the order for everything is 0 */
-        /*so need to set the default order for everything else */
-        order: 1;
-    }
     /*display the Menu toggleNav */
     .toggleNav {
         display: block;
@@ -220,17 +216,25 @@ footer {
         display: flex;
     }
     /*reorder when screen is small */
-    .top {
+    .flex-nav {
+        /*making it 1 sends nav to the end, because by default the order for everything is 0 */
+        /*so need to set the default order for everything else */
+        order: 1;
+    }
+    .group {
         order: 2;
     }
-    .details {
+    .top {
         order: 3;
     }
-    .about {
+    .details {
         order: 4;
     }
-    .signup {
+    .about {
         order: 5;
     }
+    /*.signup {
+        order: 5;
+    }*/
     /*the photo and footer will naturally be 5 and 6 because that's the order they appear in in the html */
 }
