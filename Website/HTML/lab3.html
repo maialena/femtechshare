@@ -47,14 +47,7 @@
                 <li> Pair program </li>
             </ol>
 
-            <div class="exercise">I. Group Warmup</div>
-            <p> As a warmup, open up your favorite text editor, and whip up a basic HTML5 doc with header, a few articles, main content, footer </p>
-            <div class="checkoff">
-                <p> Hint: can you use the same selector for header, articles, content, and footer? If so, how do you distinguish between the elements? If not, what's the alternative?</p>
-                <p> Hint to the hint: there's more than one right answer.</p>
-                <ul>
-            </div>
-            <br/>
+            <div class="exercise">I. Stayin' Alive With HTML5</div>
             <p> Exercises II-V are intended to show you how powerful HTML5 is on its own. Sure, CSS adds style to the page and javaScript adds interactivity. But even without those languages, you can have a fully functioning website with HTML alone. </p>
             <p>Don't worry about completing all these exercisees today. Choose one or two to focus on, grab a partner (or work alone), and use the tutorials as <em> starting points. </em> If you come accross something you're confused about, I encourage you
                 to continue Google searching until you find an answer. Of course if you're really stuck, ask for help. Though you're not expected to do all these exercises in lab today, I encourage you to try them out when you have the time.</p>
@@ -120,64 +113,21 @@
                 <li> And if you're still SUPER intrigued by the form, read <a href="http://apress.jensimmons.com/v5/pro-html5-programming/ch8.html"> this </a> article about everything and anything you could possibly want to learn about html5 form </li>
             </ol>
 
-            <p> That was great. You just learned a lot about HTML. Get up. Stretch. Take Five. </p>
-            <p> ..................................................... </p>
-            <p> .............................. </p>
-            <p> ......................</p>
-            <p> ............. </p>
-            <p> ....... </p>
-            <p> ... </p>
-            <p>Now for some CSS </p>
+            <p> That was great. You just learned a lot about HTML!
 
 
-
-            <div class="exercise"> VI. CSS 101 </div>
-            <p><span class="question">'What is CSS??'</span></p>
-
-            <p>Here's how <span class="emphasis">edX </span>defines it.
-                <p>'Cascading Syle Sheets (CSS) is a language that controls and allows one to define the look of an HTML document. It permits the separation between the content of the HTML document from the style of the HTML file. CSS enables one to specify
-                    things such as the font you want on your page, the size of your text, the columns of the page, whether the text on a page is to be in bold or italics, background, link colors, margins, and placement of objects on a page and so on.
-                    By way of explanation, it is the part that controls the looks of a web page. With CSS, it is much easier to manage the appearance of multiple web pages since it separates the HTML element from display information. CSS also enables
-                    faster downloading of web pages, which works best with older computers and modems. It provides a method for retaining a common style.'</p>
-            </p>
-
-            <p> We're going to spend the next 20 minutes or so of this lab getting as far through <a href="https://www.codecademy.com/en/courses/web-beginner-en-TlhFi/0/1?curriculum_id=5035038ff76159000200b73c"> Code Academy's 'CSS: An Overview' video. </a>                Feel free to work solo or with a partner, and ask questions if you get stuck! </p>
-
-            <div class="exercise"> VII. Clone This Website</div>
-            <p> Now you're ready to pair program! Partner up with someone for the next exercise. We're going to clone <a href=" http://www.berkshirehathaway.com "> this </a> website i.e. create an exact replica.
-                <div class="checkoff">
-                    <p> Pro Tip: Pair programming is often harder than it sounds. It's all about developing the right workflow to allow both people to contribute. WHat you <em> don't </em> want to happen is have one person type, while the other is on her
-                        phone playing Pokemon Go. So here's one suggestion: tradeoff typing. While Person A is at the keyboard, Person B should still follow along and dictate lines of code for Person A to type in. After some time, switch.
-                    </p>
-                </div>
-                <ul>
-            </p>
-            <p> This exercise is going to incorporate a lot of the HTML elements that we've learned so far, including:
+                <div class="exercise"> Homework</div>
                 <ol>
-                    <li> Different sized headers (&lth1&gt-&lth6&gt)</li>
-                    <li> paragraphs (&ltp&gt)</li>
-                    <li> ordered and unordered lists (&ltul&gt vs &lol&gt)</li>
-                    <li> header and footers </li>
+                    <li> Continue working on EdX Module 3: “Design Web Page Elements Using Cascading Style Sheets (CSS)”</li>
                 </ol>
-            </p>
-            <p> It's also going to include some things we haven't learned yet. Notice how the links are lined up in two nice columns? That's accomplished with a <span class="emphasis"> TABLE </span></p>
-            Read about the table <a href="http://www.tutorialspoint.com/html/html_tables.htm"> here </a></p>
-            <p> Still confused? Have no fear, Jon Duckett is <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">here </a>(pages 130-140)</p>
-            <div class="checkoff"> Pro Tip: When designing the layout of your website, developers often use a 'dummy language'' called Lorem Impsum, which is used as a placeholder for the actual content. This allows designers to worry about the layout and style of the page
-                rather than the text, which they can fill in later. To use Lorem Impsum, check out <a href="http://www.lipsum.com/"> this </a> free online generator </div>
-
-            <br/>
-            <div class="exercise"> Homework</div>
-            <ol>
-                <li> Continue working on EdX Module 3: “Design Web Page Elements Using Cascading Style Sheets (CSS)”</li>
-            </ol>
 
         </div>
         <!--end container-->
+        <!--end wrapper -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script>
             $(function() {
-                /*toggleClass goes between adding and removing our own class of open on the ul */
+
                 $('.toggleNav').on('click', function() {
                     $('.flex-nav ul').toggleClass('open');
                 });
@@ -185,6 +135,10 @@
         </script>
         <script src="http://code.jquery.com/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <!--add bootrap's JS plugins, jquery, and tether -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
 </body>
 
 

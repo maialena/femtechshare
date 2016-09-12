@@ -23,11 +23,11 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
    <div class="wrapper ">
         <header class="top ">
              
-            <h1> Week2: HTML, Blog, & Color Theory</h1>
+            <h1> Week 2: Color Theory & CSS </h1>
         </header>
         <img src="../images/8-21Logo.jpg " />
         <nav class="flex-nav ">
-            <a href="# " class="toggleNav "> <i class="fa fa-bars "></i> Menu </a>s
+            <a href="# " class="toggleNav "> <i class="fa fa-bars "></i> Menu </a>
             <ul>
                 <li><a href="../index.html ">About</a></li>
                 <li><a href="schedule.html ">Schedule</a></li>
@@ -46,62 +46,28 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
         </nav>
         <div class="lesson ">
             <div class="exercise "> Overview</div>
-            Welcome to the real first day of coding! Today we're going to set up a blog so that you can write about your web development journeys throughout the semester. We'll also explore the world of color theory and disect the parts of a HTML Doc. 
+            Welcome to the real first day of CSS! Today we'll explore the world of color theory and start styling the page. 
             <p> Before we dive in, let's pick up on last week's intro to the internet with a clip on the basic <a href="https://www.youtube.com/watch?annotation_id=annotation_2686974021&feature=iv&index=1&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&src_vid=Dxcc6ycZ73M&v=ZhEf7e4kopM ">internet infrastructure. </a> </p>
             <div class="exercise "> Learning Objectives </div>
             <ol>
-                <li> Set up free Git-supported blod </li>
-                <li> Understand components of HTML doc </li>
-                <li> Get an introduction into color theory </li>
+                <li> Create a basic stylesheet </li>
+                <li> Get an introduction to color theory </li>
             </ol>
-            <div class="exercise "> Blog</div>
-            <p> To start, we're going to set up a free, Git supported blog with <a href="http://hubpress.io/index.html "> Hubpress.io</a>. Writing a blog is awesome for a few reasons. 
-            <ol>
-                <li> It tracks your progress, so that you can go review how far you've come at the end of the semester </li>
-                <li> Jot down your goals, project ideas, inspirations, and due dates. Writing it down will hold you accountable to yourself, and give you something concrete to work towards. </li>
-                <li> It allows you to process difficulties, insights, frustrations, revelations, emotions, thoughts, inspirations etc. In other words, it forces you to slow down and work through what's coming up for you as you tackle this new challenge. For those of you who have never programmed before, you're about to pick up a new language (or a few), and that's no small feat! Sometimes just talking about it makes the process more enjoyable. </li>
-                <li> Put it on your resume. Show employers something more lively and real than just the end result. Disclose your process: the up's, down's, challenges, and triumphs. Put your personality into it. For many of you, coding is 100% new and out of your comfort zone. Own it! The fact that you're willing to blog about your experiences shows courage, willingness to take risks, and ownership over your own learning. </li>
+                 
+            <div class="exercise "> I. CSS 101 </div>
+            <p><span class="question ">'What is CSS??'</span></p>
+
+            <p>Here's how <span class="emphasis ">edX </span>defines it.
+             'Cascading Syle Sheets (CSS) is a language that controls and allows one to define the look of an HTML document. It permits the separation between the content of the HTML document from the style of the HTML file. CSS enables one to specify
+                    things such as the font you want on your page, the size of your text, the columns of the page, whether the text on a page is to be in bold or italics, background, link colors, margins, and placement of objects on a page and so on.
+                    By way of explanation, it is the part that controls the looks of a web page. With CSS, it is much easier to manage the appearance of multiple web pages since it separates the HTML element from display information. CSS also enables
+                    faster downloading of web pages, which works best with older computers and modems. It provides a method for retaining a common style.'
+            </p>
+            <p> To get a taste of CSS, we'll begin with messing with colors.</p>
+
         
-            </ol>
-            <p>To get started, follow the instructions on this link to copy the hubpress repository to your GitHub account.For step 2, it tells you to set the values in your hubpress/config.json file. Let's do this from our terminal:
-                <ol>
-                    <li>"CD " into your [name].io directory </li>
-                    <li>"CD " into your hubpress directory </li>
-                    <li> Open the config.json file with the "vim " command (remember this from lab1?)</li>
-                    <pre class="output ">$ <span class="input "> vim config.json </span></pre>
-                    <br/>
-                    <li> To edit the file, type "i " (this stands for insert). Use the arrow keys to move down to your userName and repositoryName parameters, and change them accordingly.</li>
-                    <li> To save your changse, type "esc " followed by ":wq " which should bring you back to your terminal.</li>
-                </ol>
-            Step 3 asks you to commit your changes. 
-            <ol>
-                <li>To do this, you need to first "stage " the updated config.json file to what's called your "working directory " (if you need a refresher about Git, return to <a href="lab1.html "> Exercise III: Github </a> from lab 1).</li>
-                <pre class="output ">$ <span class="input "> git add config.json </span></pre>
-                <br/>
-                <li> Next, we need to commit our changes to our remote repository (this is like pushing "Save " on a Word document). The "-m " stands for "message, " and is followed by some message that indicates the changes you've made. Messages make it easier for you to navigate through old commits and distinguish one version from another.</li>
-                <pre class="output ">$ <span class="input "> git commit -m "adding updated config.json file " </span></pre></li>
-                <br/>
-                <li> Finally, we have to push our changes to our remote repository.
-                </li>
-                <pre class="output ">$ <span class="input "> git push origin master </span></pre>
-                    <br/>
-                That's it! Open up your git account to make sure you commited your changes.
-            </ol>
-           Like it says on the Hubpress ReadMe doc, you should see <a href="https://camo.githubusercontent.com/bd45364c6c64475d1816cef50ddc8395f0f4165b/687474703a2f2f68756270726573732e696f2f696d672f686f6d652d696e7374616c6c2e706e67 ">this </a>image when you're done. Now it's time to post your first blog.
-            <ol>
-                <li> Go to https://[username].github.io/hubpress/ </li>
-                <li> Follow <a href="https://github.com/HubPress/hubpress.io/blob/master/Administration.adoc "> this </a>set of instructions for how to make posts.</li>
-                <li> Your blog will require you to know <a href="http://asciidoctor.org/docs/asciidoc-writers-guide/ ">Ascii syntax</a>, which is just plain text. Once you learn Ascii, read <a href="https://github.com/HubPress/hubpress.io/blob/master/Writers_Guide.adoc "> this Writer's Guide </a> on creating successful blog posts on HubPress. </li>
-            </ol>
-            Throughout this semester, I hope that you blog at least once a week on your progress. It can be as simple as a list of things you did that day or want to do that week. Just have fun with it.</p>
-          
-            <div class="exercise ">III. HTML Doc</div>
-            <p> HTML is the language we use to provide structure to our web pages. If you think of a word document, it's all the different parts of the page that make up its form: header, footer, title, subtitles, main text (or 'body' in HTML), paragraphs, etc.) The font, text color, background color, and text size is all <em> styling </em> which is left to CSS (Cascading Style Sheets). We'll leave CSS to next week, but for now let's look at the basic building blocks of our HTML doc </p>
-           <p> To do so, we're going to go through Chapters 1-5 pages 12-94 from <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf ">Jon Ducket's HTML & CSS: Design and Build Websites </a> (don't worry -- they're mostly pictures). Create a lab2.html file in your HTML directory, open up your text editor, and follow along as we play with HTML syntax.</p>
-                
-            
-            <div class="exercise ">III. Color Theory </div>
-            <p> When we talk about color theory, we're moving into CSS land. Though that's next week's material. we'll get a sneak peak today with a very basic stylesheet. Create a new subdirectory in your main folder called "CSS " and make a lab2.css file in it. Copy the following code:
+            <div class="exercise color ">II. Color!</div>
+            <p> Let's create a very basic stylesheet. Make a new subdirectory in your main folder called "CSS " with a lab2.css file in it. Copy the following code:
             <pre class="output "><span class="input "> body {</span></pre></li>
             <pre class="output "><span class="input ">      background-color: ;</span></pre></li>
             <pre class="output "><span class="input "> }</span></pre></li>
@@ -111,7 +77,7 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
             <pre class="output "><span class="input "> p {</span></pre></li>
             <pre class="output "><span class="input ">      color: ;</span></pre></li>
             <pre class="output "><span class="input ">}</span></pre></li>
-            Make sure your selectors (body, h1, and p) are followed by opening and closing braces "{} " and the color properties are followed by a colon, [color], and semi-colon. Don't worry about this syntax now. We'll go over it in detail next week. For now, let's play with colors. </p>
+            Make sure your selectors (body, h1, and p) are followed by opening and closing braces "{} " and the color properties are followed by a colon, [color], and semi-colon. Don't worry about this syntax now. We'll go over it soon. For now, let's play with colors. </p>
             
             <div class="subtitle
         "> Hexadecimal Values </div>
@@ -163,7 +129,7 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
         <div class="subtitle "> Color theory</div>
         <p> Now that we know how to represent colors, we need to think about which colors we want to use in our website. Welcome to the world of design. This isn't an exact science here, and often good designers have an intuition and artistic eye that they've
             cultivated over years of practice. But there are some basic guidelines that we can explore. Read about complentary, split complementary, triadic, analogous, and tetradic color schemes <a href="http://lifehacker.com/learn-the-basics-of-color-theory-to-know-what-looks-goo-1608972072"> here. </a>            </p>
-        <div class="exercise ">Play With Colors</div>
+        <div class="exercise ">III. Play With Colors</div>
         <p> Let's return to your lab2.css file. We have to link your lab2.html file to this css file. To do so, we include a link in the &lhead&gt section of your html file like so: </p>
         <pre class="output "><span class="input "> &ltlink rel="stylesheet" href="../CSS/lab2.html"/&gt</span></pre></li>
         <p> The property "rel" specifies the relation of the thing that you are linking to the html doc. In this case, it's the html document's stylesheet. "Href" points to the location of the file. There are two types of paths you can specify in your href
@@ -173,26 +139,64 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
         <p> Now it's time to fill in some colors!. Use Adobe's <a href="https://color.adobe.com/create/color-wheel/?base=2&rule=Compound&selected=1&name=My%20Color%20Theme&mode=rgb&rgbvalues=1,0.8064516129034018,0.09999999999999998,0.4,0.3655913978494937,0.24,0.8,0.5333333333331393,0.15999999999999998,0.37124999999999997,0.7692763157893561,0.8250000000000001,0.09999999999999998,1,0.8641509433963848&swatchOrder=0,1,2,3,4"> Kuler </a>            color wheel to mess with different colors in your html doc. If you're using <a href=""> Visual Studio Code</a> (highly recommended), you can split the view between your html and css file by pushing the "Split Editor" icon on the top right-hand
             side of the page: <img height="50" width="50" src="../images/split_editor.jpg" /></p>
 
-        <div class="exercise"> Homework</div>
-        <ol>
-            <li> Blog! </li>
-            <li>EdX Module2: “Creating Sophisticated Document Structures using HTML”
-            </li>
-            <li>(optional) <a href="https://www.khanacademy.org/computing/computer-programming/html-css">Kahn Academy Intro to HTML </a>(only the HTML sections)</li>
-        </ol>
+        <div class="exercise ">IV. CSS: An Overview </div>
+        You do it! You stylized a page. Now you're ready to see what CSS has to offer.
+        <p> We're going to spend the next 20 minutes or so of this lab getting as far through <a href="https://www.codecademy.com/en/courses/web-beginner-en-TlhFi/0/1?curriculum_id=5035038ff76159000200b73c"> Code Academy's 'CSS: An Overview' video. </a> Feel
+            free to work solo or with a partner, and ask questions if you get stuck! </p>
 
-        </div>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>
-            $(function() {
-                /*toggleClass goes between adding and removing our own class of open on the ul */
-                $('.toggleNav').on('click', function() {
-                    $('.flex-nav ul').toggleClass('open');
-                });
+
+        <div class="exercise"> V. Clone This Website</div>
+        <p> Now you're ready to pair program! Partner up with someone for the next exercise (this might spill into next week, so no worries if you don't finish.) We're going to clone <a href=" http://www.berkshirehathaway.com "> this </a> website i.e. create
+            an exact replica.
+            <div class="checkoff">
+                <p> Pro Tip: Pair programming is often harder than it sounds. It's all about developing the right workflow to allow both people to contribute. WHat you <em> don't </em> want to happen is have one person type, while the other is on her phone
+                    playing Pokemon Go. So here's one suggestion: tradeoff typing. While Person A is at the keyboard, Person B should still follow along and dictate lines of code for Person A to type in. After some time, switch.
+                </p>
+            </div>
+            <ul>
+        </p>
+        <p> This exercise is going to incorporate a lot of the HTML elements that we've learned so far, including:
+            <ol>
+                <li> Different sized headers (&lth1&gt-&lth6&gt)</li>
+                <li> paragraphs (&ltp&gt)</li>
+                <li> ordered and unordered lists (&ltul&gt vs &lol&gt)</li>
+                <li> header and footers </li>
+            </ol>
+        </p>
+        <p> It's also going to include some things we haven't learned yet. Notice how the links are lined up in two nice columns? That's accomplished with a <span class="emphasis"> TABLE </span></p>
+        Read about the table <a href="http://www.tutorialspoint.com/html/html_tables.htm"> here </a></p>
+    <p> Still confused? Have no fear, Jon Duckett is <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">here </a>(pages 130-140)</p>
+    <div class="checkoff"> Pro Tip: When designing the layout of your website, developers often use a 'dummy language'' called Lorem Impsum, which is used as a placeholder for the actual content. This allows designers to worry about the layout and style of the page rather than
+        the text, which they can fill in later. To use Lorem Impsum, check out <a href="http://www.lipsum.com/"> this </a> free online generator </div>
+
+    <br/>
+
+
+    <div class="exercise"> Homework</div>
+    <ol>
+        <li>EdX Module2: “Creating Sophisticated Document Structures using HTML”
+        </li>
+        <li>(optional) <a href="https://www.khanacademy.org/computing/computer-programming/html-css">Kahn Academy Intro to HTML </a>(only the HTML sections)</li>
+    </ol>
+
+    </div>
+    </div>
+    <!--end wrapper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function() {
+
+            $('.toggleNav').on('click', function() {
+                $('.flex-nav ul').toggleClass('open');
             });
-        </script>
-        <script src="http://code.jquery.com/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        });
+    </script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--add bootrap's JS plugins, jquery, and tether -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+    </body>
 
 </html>

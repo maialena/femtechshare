@@ -210,11 +210,15 @@ div.checkoff {
     font-style: italic;
 }
 
-img {
-    display: block;
+.warpper img {
+    /*display: flex;
+    flex-wrap: wrap;*/
     margin: 0 auto;
     /*padding: 30px;*/
     border: 1px black solid;
+    /*how to get the image to resize with the page: http://stackoverflow.com/questions/30788131/css3-flexbox-maintain-image-aspect-ratio */
+    /*create a flex wrapper around image and then set its width to 100% its flex parent*/
+    width: 100%;
 }
 
 h1 {
@@ -275,6 +279,12 @@ a:hover {
 
 .hslBlue {
     color: #0000FF;
+}
+
+.color {
+    background: orange;
+    color: blue;
+    border: 3px dashed purple;
 }
 
 
@@ -389,16 +399,39 @@ a.toggleNav {
         /*grow shrink baseline */
         /*baseline 50% means will be 50% widened, so will stack in two columns */
         /*problem here is that social ones are squished to the right. Why? Open up inspect and see that this flex: 1 1 50% is being overwritdden by flex-nav .social {flex:1}; */
-        flex: 1 1 50%;
+        flex: 1 1 25%;
     }
     /*need to specify a flex basis on that .social case */
     .flex-nav .social {
-        flex: 1 1 15%;
+        flex: 1 1 5%;
     }
 }
 
 
 /*new conditions when screen is really smushed */
+
+@media all and (max-width: 570px) {
+    .flex-nav a {
+        font-size: 16px;
+        padding: 5px 0;
+    }
+    .flex-nav ul {
+        /*don't wnat flex-direction column since will all stack */
+        /*flex-direction: column;*/
+        flex-wrap: wrap;
+        /*flex wrap won't work without some height. Do this with flex-basis property */
+    }
+    .flex-nav li {
+        /*grow shrink baseline */
+        /*baseline 50% means will be 50% widened, so will stack in two columns */
+        /*problem here is that social ones are squished to the right. Why? Open up inspect and see that this flex: 1 1 50% is being overwritdden by flex-nav .social {flex:1}; */
+        flex: 1 1 30%;
+    }
+    /*need to specify a flex basis on that .social case */
+    .flex-nav .social {
+        flex: 1 1 20%;
+    }
+}
 
 @media all and (max-width: 500px) {
     .flex-nav li {

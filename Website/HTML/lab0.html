@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../CSS/flexLabs.css" />
+
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+    <title> Lab0 </title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="top">
+            <h1> Week 0: (Optional) Setup</h1>
+        </header>
+        <img src="../images/8-21Logo.jpg" />
+        <nav class="flex-nav">
+            <a href="#" class="toggleNav"> <i class="fa fa-bars"></i> Menu </a>
+            <ul>
+                <li><a href="../index.html">About</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li class="social">
+                    <a href="https://twitter.com/femtechberkeley"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="social">
+                    <a href="https://www.facebook.com/FEMTechBerkeley/?fref=ts"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="social">
+                    <a href="http://femtechberkeley.com/"><i class = "fa fa-users"></i>
+                        </a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <div class="lesson">
+
+            <div class="exercise">OVERVIEW</div>
+            <p>This was originally Week 1's lab, but after some feedback from the FEMTech team, I thought that learning Git might take away from the web design/development part of this course -- ie what you came here for. That being said, Git is 100% necessary
+                for building your portfolio as a budding web developer. Thus I've turned all things Git-related into Lab 0 so that it's here as a resource for anyone who's interested in diving into Git Land. If you do these exercises on your own and get
+                stuck, feel free to bring in questions to Share next week!</p>
+
+            <div class="checkoff"> WORD OF WARNING: The following tutorial is for Mac Users only (sorry Windows!). The reason is simply because I own a Mac so know how to teach it. Windows computers don't have the same built-in terminal as Mac's, so if you're a Window's user,
+                you'll have to scavange Google for online tutorials instead. Fortunately there are plenty of resources out there! </div>
+
+            <div class="exercise">LEARNING OBJECTIVES</div>
+            <p>
+                <ol>
+                    <li>Navigate directories from the command line</li>
+                    <li>Understand GitHub & set up work environment</li>
+                    <li>Sign up for EdX "HTML, CSS, javaScript online course" (free)</li>
+                </ol>
+            </p>
+
+            <div class="exercise">I. The Terminal</div>
+
+            <p>This is the interface that you use to directly communicate with the operating system via text-based commands (which are then converted into a language that the computer understands). Other names for the 'terminal' include:
+                <ol>
+                    <li> Shell </li>
+                    <li> Console </li>
+                    <li> Command line </li>
+                    <li> Command prompt </li>
+                </ol>
+            </p>
+            <p>
+                To get started, simply search for "Terminal" (probably in your 'Applications'). If you'd like to read more about the terminal, check out the Ubuntu documentation <a href="https://help.ubuntu.com/community/UsingTheTerminal"> here </a>
+
+            </p>
+            <p>
+                Now that we've got the terminal open, we’re going to learn how to create, move, and organize directories from the command line. First, some important commands:
+
+            </p>
+            <p>
+                <ul>
+                    <li>Move into or out of a directory:</li>
+                    <pre class="output">$ <span class="input"> cd [path/to/file]”:  </span></pre>
+                    <br/>
+                    <li>Make a new directory:</li>
+                    <pre class="output">$ <span class="input"> mkdir [name] </span></pre>
+                    <br/>
+                    <li>List the contents of the directory:</li>
+                    <pre class="output">$ <span class="input">  ls </span></pre>
+                    <br/>
+                    <li>Move file from ‘from_path’ to ‘to_path’ if “to_path” exists. If “to_path” does not exist, this changes the name of “from_path” to “to_path” </li>
+                    <pre class="output">$ <span class="input"> mv [from_path] [to_path]”  </span></pre>
+
+
+                </ul>
+            </p>
+            <p>
+
+                If these commands don’t make sense right now, it’s okay. We’re going to get some practice using the command line below.
+            </p>
+            <p>
+                <ul>
+                    <li>Open up the Terminal and type “ls.” You should see something like this. The '~' indicates that you are currently in your home directory:</li>
+
+                    <img src="../images/terminal.png" style="width: 500px; height: 350px" />
+
+                    <li>Now move into your Desktop: </li>
+                    <pre class="output">$ <span class="input">cd Desktop </span></pre>
+                    <br/>
+
+                    <li>Type “ls.” </li>
+                    <pre class="output">$ <span class="input"> ls </span></pre>
+                    <br/>
+
+                    <li> You should see all the files on your Desktop.</li>
+
+                    <li>Create a new directory: </li>
+                    <pre class="output">$ <span class="input"> mkdir [name] </span></pre>
+                    <br/>
+
+                    <li>Move into the directory:</li>
+                    <pre class="output">$ <span class="input"> cd [name] </span></pre>
+                    <br/>
+
+                    <li>Type “ls” -- you should see nothing there. Let’s change that.</li>
+                    <br/>
+                    <li>Make a new file:</li>
+                    <pre class="output">$ <span class="input"> vim [name].txt </span></pre>
+                    <br/>
+                    <li>This should open up the file. Type something -- anything. To save and exit a file: press esc --> wq. (NOTE: Vim is a text editor built into your terminal that we won't explicitly teach in this workshop, but is very useful to learn
+                        if you are interested in programming. Check out the main VIM Commands <a href="http://vim.rtorr.com">here </a>to find out more)</li>
+
+                    <br/>
+                    <li>Last but not least, change the name of your file to “fem_tech_lab1” using the “mv” command. Try this out on your own --talk with the person next to you if you get stuck. </li>
+
+                </ul>
+            </p>
+            <p>
+                <div class="checkoff">
+                    NOTE: The language to navigate the terminal is called UNIX. For this course, understanding the command line is not too relevant. If you’re interested in programming beyond this course, however, knowing UNIX is essential. Here's a list of resources to
+                    help get you started(optional reading):
+                    <ol>
+                        <li><a href="http://mally.stanford.edu/~sr/computing/basic-unix.html"> Basic UNIX Commands </a></li>
+                        <li><a href=" https://www.codecademy.com/ru/courses/learn-the-command-line/lessons/navigation/exercises/your-first-command?action=resume">Code Academy Learn the Command Line</a></li>
+                    </ol>
+                </div>
+            </p>
+
+
+            <div class="exercise">II. GitHub</div>
+            <p>Github is a <a href="https://www.atlassian.com/git/tutorials/what-is-version-control">Version Control System </a> that allows you to save drafts as you go to remote server. Think of it as a backup file system, like the Cloud, or even better,
+                as a tool that's analogous to the "Save As" option in Word. By recording all your changes as you go, you can always go back to earlier versions of your code if you want to scrap recent edits.
+            </p>
+            <p> Github is used in industry by teams, so that people working on the same project can edit local versions of the code without overriding each other's work. Team members can work separately on their own local copies of the code, or they can merge
+                together their work so that everyone is on the same page. </p>
+
+            <p>If you want to learn more about GitHub (or Version Control in general), I highly recommend you check out these resources:
+                <ol>
+                    <li class="resources"><a href="http://stephaniehoh.github.io/blog/2013/10/07/git-vs-github-for-dummies/">Git VS Github </a></li>
+                    <li class="resources"><a href="http://skillcrush.com/2013/02/11/version-control/"> Version Control 101 </a></li>
+                    <li class="resources"><a href="https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html">Basic GIT Commands</a> </li>
+                </ol>
+            </p>
+            <div class="checkoff">
+                NOTE: In this course we're not going to learn the intricacies of GitHub. There are many commands like "merge" and "branch" which are useful for collaborating with others on a project. This course is mainly concerned with teaching you web development,
+                so the only commands we'll use for GitHub are "add," "status," "commit," and "push" (all necessary for saving the files to the remote repository). If you continue coding beyond this course, you'll likely want to learn the in's and out's
+                of GitHub, and the above tutorials are a great place to start.
+            </div>
+
+
+            <p> It's time to make an account. Github has an awesome deal for students: an unlimited number of <span class="emphasis"> free </span> repositories (folders) for projects. Get the pack <a href="https://education.github.com/"> here. </a></p>
+            <p> Time to make your first repository.
+                <ol>
+                    <li>Create a repository (private or public, it's up to you -- you can change the status at any time) called “FEMTechShare”</li>
+                    <li> Open your terminal and navigate to the directory you made for FemTech.</li>
+                    <li> Initialize Git. This command is used to create an empty Git repository. It creates a .git folder that allows you to start recording revisions of your files.</li>
+                    <pre class="output">$ <span class="input"> git init </span></pre>
+                    <br/>
+                    <li> Test that the .git folder is in your directory with the "ls" command </li>
+                    <li> Open your repository on GitHub and click the "Clone or download" button to left. Copy the code </li>
+                    <li> From the terminal, type the following to connect your local repo with your Git repo:</li>
+                    <pre class="output">$ <span class="input"> git clone [paste url] </span></pre>
+                    <br/>
+                    <li> Double check that you've cloned your remote repo correctly </li>
+                    <pre class="output">$ <span class="input"> git remote -v  </span></pre>
+                    <br/>
+                    <li> You should see something like this </li>
+                    <img height="100px" width="700px" src="../images/git_clone_repo.png" />
+                    <li> Tada! That's it.</li>
+                </ol>
+            </p>
+            <p> Finally, let's learn the basic commands with <a href="https://try.github.io/levels/1/challenges/1">another tutorial</a> </p>
+
+
+            <div class="exercise "> III. Blog</div>
+            <p> Let's set up a free, Git supported blog with <a href="http://hubpress.io/index.html "> Hubpress.io</a>. Writing a blog is awesome for a few reasons.
+                <ol>
+                    <li> It tracks your progress, so that you can go review how far you've come at the end of the semester </li>
+                    <li> Jot down your goals, project ideas, inspirations, and due dates. Writing it down will hold you accountable to yourself, and give you something concrete to work towards. </li>
+                    <li> It allows you to process difficulties, insights, frustrations, revelations, emotions, thoughts, inspirations etc. In other words, it forces you to slow down and work through what's coming up for you as you tackle this new challenge.
+                        For those of you who have never programmed before, you're about to pick up a new language (or a few), and that's no small feat! Sometimes just talking about it makes the process more enjoyable. </li>
+                    <li> Put it on your resume. Show employers something more lively and real than just the end result. Disclose your process: the up's, down's, challenges, and triumphs. Put your personality into it. For many of you, coding is 100% new and
+                        out of your comfort zone. Own it! The fact that you're willing to blog about your experiences shows courage, willingness to take risks, and ownership over your own learning. </li>
+
+                </ol>
+                <p>To get started, follow the instructions on this link to copy the hubpress repository to your GitHub account.For step 2, it tells you to set the values in your hubpress/config.json file. Let's do this from our terminal:
+                    <ol>
+                        <li>"CD " into your [name].io directory </li>
+                        <li>"CD " into your hubpress directory </li>
+                        <li> Open the config.json file with the "vim " command (remember this from lab1?)</li>
+                        <pre class="output ">$ <span class="input "> vim config.json </span></pre>
+                        <br/>
+                        <li> To edit the file, type "i " (this stands for insert). Use the arrow keys to move down to your userName and repositoryName parameters, and change them accordingly.</li>
+                        <li> To save your changse, type "esc " followed by ":wq " which should bring you back to your terminal.</li>
+                    </ol>
+                    Step 3 asks you to commit your changes.
+                    <ol>
+                        <li>To do this, you need to first "stage " the updated config.json file to what's called your "working directory " (if you need a refresher about Git, return to <a href="lab1.html "> Exercise III: Github </a> from lab 1).</li>
+                        <pre class="output ">$ <span class="input "> git add config.json </span></pre>
+                        <br/>
+                        <li> Next, we need to commit our changes to our remote repository (this is like pushing "Save " on a Word document). The "-m " stands for "message, " and is followed by some message that indicates the changes you've made. Messages make
+                            it easier for you to navigate through old commits and distinguish one version from another.</li>
+                        <pre class="output ">$ <span class="input "> git commit -m "adding updated config.json file " </span></pre></li>
+                        <br/>
+                        <li> Finally, we have to push our changes to our remote repository.
+                        </li>
+                        <pre class="output ">$ <span class="input "> git push origin master </span></pre>
+                        <br/> That's it! Open up your git account to make sure you commited your changes.
+                    </ol>
+                    Like it says on the Hubpress ReadMe doc, you should see <a href="https://camo.githubusercontent.com/bd45364c6c64475d1816cef50ddc8395f0f4165b/687474703a2f2f68756270726573732e696f2f696d672f686f6d652d696e7374616c6c2e706e67 ">this </a>image
+                    when you're done. Now it's time to post your first blog.
+                    <ol>
+                        <li> Go to https://[username].github.io/hubpress/ </li>
+                        <li> Follow <a href="https://github.com/HubPress/hubpress.io/blob/master/Administration.adoc "> this </a>set of instructions for how to make posts.</li>
+                        <li> Your blog will require you to know <a href="http://asciidoctor.org/docs/asciidoc-writers-guide/ ">Ascii syntax</a>, which is just plain text. Once you learn Ascii, read <a href="https://github.com/HubPress/hubpress.io/blob/master/Writers_Guide.adoc "> this Writer's Guide </a>                            on creating successful blog posts on HubPress. </li>
+                    </ol>
+                    Throughout this semester, I hope that you blog at least once a week on your progress. It can be as simple as a list of things you did that day or want to do that week. Just have fun with it.</p>
+
+                
+        </div>
+    </div>
+
+    <!--end wrapper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function() {
+
+            $('.toggleNav').on('click', function() {
+                $('.flex-nav ul').toggleClass('open');
+            });
+        });
+    </script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--add bootrap's JS plugins, jquery, and tether -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+</body>
+
+</html>
