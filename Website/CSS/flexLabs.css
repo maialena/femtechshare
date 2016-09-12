@@ -19,19 +19,6 @@ body {
 
 /*from flexMain */
 
-.flex-nav a {
-    color: white;
-    font-weight: 100;
-    letter-spacing: 2px;
-    text-decoration: none;
-    background: rgba(0, 0, 0, 0.2);
-    padding: 20px 5px;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    transition: all 0.5s;
-}
-
 h1 {
     text-align: center;
     color: white;
@@ -81,13 +68,6 @@ a:hover {
 
 .flex-nav .social {
     flex: 1;
-}
-
-
-/*don't display toggleNav when main screen */
-
-.toggleNav {
-    display: none;
 }
 
 
@@ -254,7 +234,7 @@ a:hover {
     letter-spacing: 2px;
     text-decoration: none;
     background: rgba(0, 0, 0, 0.2);
-    padding: 20px 5px;
+    padding: 20px 1px;
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -391,6 +371,13 @@ a:hover {
     background-color: hsla(120, 100%, 50%, 1);
 }
 
+
+/*don't display toggleNav when main screen */
+
+a.toggleNav {
+    display: none;
+}
+
 @media all and (max-width: 1000px) {
     .flex-nav ul {
         /*don't wnat flex-direction column since will all stack */
@@ -436,7 +423,7 @@ a:hover {
         order: 1;
     }
     /*display the Menu toggleNav */
-    .toggleNav {
+    a.toggleNav {
         display: block;
     }
     .flex-nav ul {
@@ -453,5 +440,4 @@ a:hover {
     .lesson {
         order: 3;
     }
-    
 }
