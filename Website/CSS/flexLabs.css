@@ -384,7 +384,7 @@ a:hover {
 
 /*don't display toggleNav when main screen */
 
-a.toggleNav {
+.flex-nav .toggleNav {
     display: none;
 }
 
@@ -456,7 +456,7 @@ a.toggleNav {
         order: 1;
     }
     /*display the Menu toggleNav */
-    a.toggleNav {
+    .flex-nav .toggleNav {
         display: block;
     }
     .flex-nav ul {
