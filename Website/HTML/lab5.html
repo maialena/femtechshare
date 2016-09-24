@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="../CSS/flexLabs.css" />
 
+    <!--adding bootstrap to code -->
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />-->
 
     <title> Lab5 </title>
 </head>
@@ -16,7 +18,7 @@
     <div class="wrapper">
 
         <header class="top">
-            <h1> Week5: Layout </h1>
+            <h1> Week 5: meSS with cSS</h1>
         </header>
         <img src="../images/8-21Logo.jpg" />
         <nav class="flex-nav">
@@ -40,141 +42,69 @@
 
         <div class="lesson">
             <div class="exercise">OVERVIEW</div>
-            <p>We're going to talk about perhaps the most important concept in web design and development: LAYOUT. A good layout is readable and highlights the most important information on the page. Here are <a href="http://www.creativebloq.com/netmag/create-balanced-page-layouts-7-pro-tips-121310009"> 7 Pro Layout Tips. </a>                to get you thinking about how you want to structure your page. </p>
-            <p> We'll take a closer look at something called 'responsive web design.' Responsive web design is the about making your content look good on any screen (tablet, phone, computer). There are many ways to do this, but three in particular are quite
-                common:
+            <p>Today we're going to dive deeper into the world of <span class="emphasis">CSS. </span> </p>
+            <p> We'll start with our weekly Internet update, <a href="https://www.youtube.com/watch?v=AYdF7b3nMto&index=4&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7"> Packets, Routing, and Reliability </a></p>
+
+            <div class="exercise">LEARNING OBJECTIVES</div>
+            <ol>
+                <li> Understand the difference between CSS and HTML </li>
+                <li> Learn basic CSS Syntax </li>
+                <li> Start using stylesheets in your webpage!</li>
+            </ol>
+            <div class="exercise"> I. CSS Syntax </div>
+            <p> First we're going to do some reading from the experts. Grab a partner and read <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Syntax"> this article </a> together. Stop periodically to discuss what you just read,
+                and take notes. Or even better, open up your terminal and practice by trying out what you read in a new "lab4.html" and "lab4.css" file. Ask questions if things are confusing. </p>
+            <div class="checkoff"> NOTE: If you finish early, or simply want to learn more, check out <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Selectors/Simple_selectors"> CSS Simple Selectors </a></div>
+            <br/>
+            <div class="exercise"> II. MeSS with cSS </div>
+            <p> We're going to learn about the super cool <span class="emphasis"> INSPECT </span> tool available in many web browsers (for this exercise, it's best to use Chrome if you can).
                 <ol>
-                    <li>Flexbox </li>
-                    <li>Bootstrap </li>
-                    <li>The Grid </li>
+                    <li>Step 1: Partner Up. </li>
+                    <li>Step 2: Open <a href="https://zapier.com/blog/inspect-element-tutorial/"> this </a> tutorial to get started. You can skim (or skip) over the first part, and start reading at the section entitled 'Change Anything With Elements.' </li>
+                    <li>Step 3: Follow along with the Tutorial! Ask questions (first to the people around you) if you get stuck. </li>
                 </ol>
             </p>
-            <p>This week we'll go over Flexbox. Next week we'll learn how to work with the Bootstrap API. Those are by far the most popular. If you're interested in tinkering with the Grid, see Further Reading below.</p>
-            <p> Creating a decent layout is perhaps the most confusing/frustrating parts of web development -- especially at the beginning. So it's important to spend adequate time building a strong foundation before jumping into more complex projects.
 
-                <p> But first, let's learn about <a href="https://www.youtube.com/watch?v=kBXQZMmiA4s&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=5">HTTP & HTML!</a>
-                    <div class="exercise">LEARNING OBJECTIVES</div>
-                    <ol>
-                        <li>Understand the basics of flexbox</li>
-                        <li>Implement a flex navigation bar, mobile app layout, and online booking form</li>
-                    </ol>
+            <div class="exercise"> III. Find The CSS From Within </div>
+            <p>Now that it's Week 4 it's time for some reflection. We want you to appreciate HOW MUCH you've learned in such a short amount of time. Seriously -- it might not look like a lot, but HTML & CSS are the backbone of almost every website out there.
+                So if you can get these languages down, you're well on your way to being an amazing front end web developer! To show you the power of CSS, we're going to follow along the <span class="emphasis"> CSS Zen Garden</span> exercise. Create a
+                new subdirectory in your Share folder (<span class="emphasis">challenge:</span> can you do this from your terminal?) and download the index.html & style.css files from the website.</p>
+            <p> Partner up and look through both files. First make sure you have a general sense of what's going on -- if you don't, talk through what you <em> think </em> the elements you're unsure about do.</p>
+            <p> Then test it out! Play with the CSS files and log your findings by writing comments next to the elements you've learned about. Use '/* */' to write comments like so:
+                <pre class="output"><span class="input"> /* This is a comment. The processor will not render it as code */ </span></pre>
+                <br/> If you really want to be the above-and-beyond-student, open up a TextEditor and log all the new things you've learned so that you can use it for reference later.
+            </p>
+            <p> We'll mess with the css for 20 minutes or so and then come to the board with our findings and any lingering questions.</p>
 
-                    <div class="exericse">I. Flexbox </div>
-                    <ul>
-                        <li> <u>Pro's</u>
-                            <ol>
-                                <li> It's supported by most browsers</li>
-                                <li> It's dynamic, meaning that each flex items (ie the children of the flex container) will shrink or expand according to the size of your screen.</li>
-                                <li> Once you get the hang of it, it's easy to use. </li>
-                            </ol>
-                        </li>
-                        <li> <u>Con's</u>
-                            <ol>
-                                <li> It may be difficult to learn at first, but this isn't really a Con because we're going to go through everything you need to know to get started together!</li>
-                            </ol>
-                        </li>
-                    </ul>
-                    <p> Create a new folder called "Flexbox" and in it make a flexbox.html and flexbox.css file. The following exercises are NOT my own but rather adopted from "flexbox.io" (a GREAT reference btw if you miss class or want a refresher). We're
-                        going to walk through the content in videos 1-13 together on the board. For quick reference, use the flex tool summaries below </p>
-                    <div class="subtitle">Flex Direction</div>
-                    <div class="subtitle">Flex Wrap</div>
-                    <div class="subtitle">Alignment with Align-Content </div>
-                    <div class="subtitle">Alignment with Justify-Content </div>
-                    <div class="subtitle">Flex properties: grow, shrink, baseline </div>
-                    <div class="subtitle">Auto-prefixing & Gulp</div>
-                    <!--WALK THROUGH THESE EXERCISES TOGETHER -- MAIA: TURN THIS INTO A LESSON PLAN!!!!: http://flexbox.io/view/ND8SjPJOk_M 
-        1. container with boxes (with borders and different colors so can see. declare container display: flex and explain how all the div's become flex items. min-height: 100vh
-        2. flex-direction:row (put side by side = default, main axis = left to right, so content goes left to right) vs. column (stack vertically, main axis = top to bottom, why main content goes top to bottom) vs. row-reverse vs. column-reverse
-        3. flex-wrap: (what happens when run out of space when give these things width? give widths to children, and flexbox will distribute widths evenly if over amount of pixels of screen...by default it's no wrap.But also have flex-wrap:wrap and flex-wrap: wrap.reverse.
-        Note: before we wrapped them, flex items will by default try to stretch their way across the container (ie the height you give it). When we turn the wrap on, it says 'Okay we need to stretch across the container and split it up between the 10 of us, so the browser figures out
-        that we need 4 rows here, and will split it amongst the others...main axis: left to right and cross axis: top to bottom. But if we do flex-wrap: wrap-reverse, the cross-axis is bottom to top now, and main axis is still left to right.-->
+            <div class="exercise"> IV. Online Business Card Challenge </div>
+            <p>To test all your newfound knowledge, we'll be completing Mozilla's' <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension">CSS coding challenge </a>. This is going to be a solo project, but
+                feel free to ask questions -- we're here to help!</p>
+            <div class="exercise"> Homework: </div>
+            <ol>
+                <li> Start your website! You now have all the tools to create your main page (index.html) using HTML and CSS (style.css). </li>
+                <li> (optional): <a href="https://davidwalsh.name/css-circles">CIRCLES!!!!!!</a></li>
+                <li> (optional) Browse through <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started"> this </a>website to learn more about CSS selectors, inheritance, cascading, layout, and more! If anything doesn't make sense to
+                    you, GOOGLE IT (and then come back next week with questions if you're still confused;) </li>
+                <li> (optional) Another <a href="http://cssvideos.com/">awesome resource </a>for refining your CSS skilSS </li>
+            </ol>
 
-                    <div class="exercise"> II. Make A Nav Bar </div>
-                    <p> Let's see flexbox in action by making a basic Nav Bar </p>
-
-                    <div clas="exercise"> III. Make A Mobile App Layout </div>
-                    <div class="exercise"> IV. Flexible Pricing Grid </div>
-                    <div class="exericse"> V. Online Booking Form </div>
-
-                    <div class="exericse"> III. Bootstrap </div>
-                    <!-- FOR MAIA: BOOTSTRAP VIA CODEACADEMY??-->
-                    <ul>
-                        <li> <u>Pro's</u>
-                            <ol>
-                                <li> </li>
-                            </ol>
-                        </li>
-                        <li> <u>Con's</u>
-                            <ol>
-                                <li> </li>
-                            </ol>
-                        </li>
-                    </ul>
-                    <div class="exercise">III (optional) Grid By Example</div>
-                    <p> The Grid is magical.</p>
-                    <ul>
-                        <li> <u>Pro's</u>
-                            <ol>
-                                <li> It's supported by Chrome and a few other browsers (lookup)</li>
-                                <li> It's SUPER easy and convenient to use once you get the hang of it </li>
-                                <li> It makes your CSS Style sheet look beautiful and neat </li>
-                            </ol>
-                        </li>
-                        <li> <u>Con's</u>
-                            <ol>
-                                <li> The biggest one: most browsers don't (currently) support the Grid. In fact, only IE officially does. </li>
-                            </ol>
-                        </li>
-                    </ul>
-
-                    <p> Yes, there's only one real Con -- but it's a biggie. If a Browser doesn't support the Grid, all your pretty formatting won't show up to the user, which is bad news bear. The good news is that a lot of browsers (Including Firefox, Chrome,
-                        and Safari) are in <em> the process </em>of developing support for the Grid since it's so 'up and coming.' In other words, it is still something valuable for you to learn. For the remainder of the lab, we'll work through the Grid
-                        examples on <a href="http://gridbyexample.com/examples/#example17"> this </a> website from CSS-Tricks </p>
-                </p>
-                <p> Create a new file in your Share folder (challenge: can you do this from your terminal?). Name it something like "grid_practice.html." Open it up and start walking through the exercises from <em> Grid By Example </em> above. If you don't
-                    understand something, ask for help or skip the exercise for now and come back. </p>
-                <div class="checkoff"> Pro Tip: Try NOT to copy and paste the provided .html and .css files from the website. You'll learn more if you actually type it out. </div>
-                <br/>
-
-                <!--<div class="exercise"> II. (optional) The Box Model </div>
-        <p> The Box Model is the foundation of Web layout and is perhaps the most commonly used layout. Though I prefer the Grid, feel free to check out <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Box_model"> the Box Model </a>            and experiment with the structure in your page. </p>
-        <div class="exercise"> III. It's Go Time </div>
-        <p> The moment we've all been waiting for: buff up your website using the Grid + all other tools we've learned so far. By now you should know the spiel: Create a new folder for your website files. In it, create two folders, one for your CSS files,
-            the other for your HTML (challenge: do this via the command line). If you have questions, get in the habit of looking them up online -- or ask, that's what we're here for;)
-        </p>-->
-
-
-                <div class="exercise">Homework </div>
-                <ol>
-                    <li>Fill out a mid-semester course evaluation by <span class="emphasis"> Wednesday</span> so that we have time to make adjustments accordingly. Please be honest with your feedback. This is the first time FemTECH has ever run a Web Design
-                        & Development series, so any constructive criticism (or positive reviews) are appreciated. We're always looking for ways to improve!</li>
-
-                    <li> (optional) <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units"> More Fun With CSS </a> </li>
-                    <li> Continue working on your site!</li>
-                </ol>
-
-                <div class="subtitle"> Good Reads </div>
-                <ol>
-                    <li><a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">CSS Inheritance, Specificity, & Cascading </a></li>
-                    <li><a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Debugging_CSS"> Debugging CSS </a></li>
-                </ol>
         </div>
         <!--end wrapper -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        $(function() {
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            $(function() {
 
-            $('.toggleNav').on('click', function() {
-                $('.flex-nav ul').toggleClass('open');
+                $('.toggleNav').on('click', function() {
+                    $('.flex-nav ul').toggleClass('open');
+                });
             });
-        });
-    </script>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!--add bootrap's JS plugins, jquery, and tether -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+        </script>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!--add bootrap's JS plugins, jquery, and tether -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../CSS/flexStyle.css" />
+    <link rel="stylesheet" href="../CSS/flexSched.css" />
+
+
+
+    <title> Schedule </title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="top">
+            <h1> Schedule</h1>
+        </header>
+        <img src="../images/8-21Logo.jpg" />
+        <nav class="flex-nav">
+            <a href="#" class="toggleNav"> <i class="fa fa-bars"></i> Menu </a>
+            <ul>
+                <li><a href="../index.html">About</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li class="social">
+                    <a href="https://twitter.com/femtechberkeley"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="social">
+                    <a href="https://www.facebook.com/FEMTechBerkeley/?fref=ts"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="social">
+                    <a href="http://femtechberkeley.com/"><i class = "fa fa-users"></i>
+                        </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--table attributes: border is boolean (1 for border, else 0), 
+    cellpadding defines width of border, 
+    ellspacing is amount of white space between border and content-->
+        <!--<div class="content">-->
+
+        <table class="table" border="1" cellpadding="5" cellspacing="5">
+            <!--th := "table headers"-->
+            <th>Week</th>
+            <th>Date</th>
+            <th>Lab</th>
+            <th>Homework</th>
+
+            <!--tr:=table row-->
+            <tr>
+                <!--table date := row1, column1-->
+                <td>Introductions & Setup</td>
+                <!--row1, column2-->
+                <td>September 16</td>
+                <!--row1, column3-->
+                <td><a href="lab1.html">Lab1: Setup, GitHub, & Workflow</a></td>
+                <!--row1, column5-->
+                <td class="homework">
+                    <ol>
+                        <li>EdX Module1: "Creating Web Pages using Hypertext Markup Language (HTML)"</li>
+                        <li> (optional) Check out
+                            <a class="hw_link" href="http://www.designbombs.com/"> designbombs.com </a> for inspiration</li>
+                    </ol>
+                </td>
+                <!--Link-->
+            </tr>
+            <tr>
+                <td>HTML Basics & Design</td>
+                <td>September 23</td>
+                <td><a href="lab2.html">Lab2: &lt!DOC&gt, Colors Theory, & Blog </a></td>
+                <td class="homework">
+                    <ol>
+                        <li>EdX Module2: “Creating Sophisticated Document Structures using HTML”</li>
+                        <li> (optional) Kahn Academy HTML (only the <a class="hw_link" href="https://www.khanacademy.org/computing/computer-programming/html-css">HTML sections</a></li>
+                        <li> Blog </li>
+                </td>
+            </tr>
+            <tr>
+                <!--lab 3-->
+                <td>Cool HTML5 & CSS</td>
+                <td>September 30</td>
+                <td><a href="lab3.html">Lab3: HTML5 Applications & CSS </a></td>
+                <td class="homework">
+                    <ol>
+                        <li> EdX Module 3: “Design Web Page Elements Using Cascading Style Sheets (CSS)” </li>
+                        <li> Blog </li>
+                    </ol>
+                </td>
+            </tr>
+            <!--lab 4-->
+            <tr>
+                <td>CSS Challenge</td>
+                <td>October 7</td>
+                <td><a href="lab4.html">Lab4: Mess with CSS</td>
+                 <td class="homework">
+                    <ol>
+                         <li> Start your website! </li>
+                        <li> (optional) <a class="hw_link" href="https://davidwalsh.name/css-circles"> CSS  circles </a></li>
+                    <li> (optional) <a class="hw_link" href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started"> MDN's Getting Started with CSS </a></li>
+                    <li>(optional)<a class="hw_link" href="http://cssvideos.com/"> CSS Videos </a></li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <!--lab 5-->
+                <td>Layout</td>
+                <td>October 14</td>
+                <td><a href="lab5.html">Lab5: Flexbox</a></td>
+                <td class="homework">
+                    <ol>
+                        <li> Fill out midsemester course evaluation by Tuesday.
+                            <!--link-->
+                        </li>
+                        <li> Work on website </li>
+                        <li> Blog </li>
+                        <li> (optional) <a class="hw_link" href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units"> CSS Values and Units </a></li>
+                        <li> (optional) Bootstrap on CodeAcademy </li>
+
+                        <!--link-->
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <!--lab 6 -->
+                <td>Programming Fundamentals</td>
+                <td>October 21</td>
+                <td><a href="lab6.html ">Lab6: Intro to JS & OOP</a></td>
+                <td class="homework">
+                    <ol>
+                        <li> Work on Website</li>
+                        <li> Blog </li>
+                        <li> (optional) Read up on <a class="hw_link" class="hw_link" href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples "> cool examples of web development using the DOM </a></li>
+                        <li> (optional) Read MDN's' <a class="hw_link" class="hw_link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide "> JavaScript Guide </a> to get a headstart on what we'll be going over next week </li>
+
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <!--lab 7-->
+                <td>JS Applications</td>
+                <td>October 28</td>
+                <td><a href="lab7.html ">Lab7: Games, JS Fundamentals, & Objects</a></td>
+                <td class="homework">
+                    <ol>
+                        <li>Work on Website</li>
+                        <li> (optional) EdX Module 4: “Implementing Program Flow Using JavaScript” </li>
+                        <li> Blog </li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>JS In Action</td>
+                <td>November 4</td>
+                <td><a href="lab8.html ">Lab8: Data Types, API's, & Tutorials</a></td>
+                <td class="homework">
+                    <ol>
+                        <li> Work on Website</li>
+                        <li> Sign up for an account on <a class="hw_link" class="hw_linK" href="http://www.codewars.com/ "> Code Wars </a> and procrastinate on your other hw with JS games </li>
+                        <li> Try to incoporate a few of <a class="hw_link" href="http://userwww.sfsu.edu/infoarts/technical/howto/wilson.javascript.exampls.html "> these </a> scripts in your website.</li>
+                        <li> Blog </li>
+                    </ol>
+                </td>
+            </tr>
+            <!--lab 9-->
+            <tr>
+                <td>HTML5 Canvas</td>
+                <td>November 11</td>
+                <td><a href="lab9.html ">Lab9: 2D Graphics & Animations</a></td>
+                <td class="homework">
+                    <ol>
+                        <li>Work on Website</li>
+                        <li> Blog </li>
+                    </ol>
+                </td>
+            </tr>
+
+            <!--THANKSGIVING BREAK: NOVEMBER 24th-->
+
+            <!--lab 10-->
+            <tr>
+                <td>Workshop Day</td>
+                <td>November 18</td>
+                <td><a href="lab10.html ">Lab10: Upgrade wesbite</a></td>
+                <td class="homework">
+                    <ol>
+                        <li>Work on Website</li>
+                        <li> Get Ready for Final ShareCase</li>
+                    </ol>
+                </td>
+
+            </tr>
+            <!--LAST MEETING !!!-->
+            <tr>
+                <td>Sharecase</td>
+                <td>December 2</td>
+                <td>You're now a budding front end developer!!! <a href="http://31.media.tumblr.com/88ee2a56006928ef66128912fec100f1/tumblr_n1cq2oeUeD1t77ydgo1_400.gif ">CONGRATULATIONS!</a></td>
+                <td class="homework">
+                    <ol class="list-unstyled">
+                        <li>Keep on learning:)</li>
+                    </ol>
+                </td>
+
+            </tr>
+        </table>
+
+        <!--Footer-->
+        <footer>
+
+            <p>&copy; Maia Rosengarten </p>
+        </footer>
+        <!--END NAV BAR -->
+
+        <!--end footer-->
+
+    </div>
+    <!--end wrapper -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function() {
+           
+            $('.toggleNav').on('click', function() {
+                $('.flex-nav ul').toggleClass('open');
+            });
+        });
+    </script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>-->
+</body>
+
+</html>

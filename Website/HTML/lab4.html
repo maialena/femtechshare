@@ -1,4 +1,3 @@
-<!--NEED TO BEEF THIS UP -->
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -8,21 +7,16 @@
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="../CSS/flexLabs.css" />
 
-    <!--adding bootstrap to code -->
-    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />-->
-
     <title> Lab4 </title>
 </head>
 
 <body>
     <div class="wrapper">
-
         <header class="top">
-            <h1> Week4: meSS with cSS</h1>
+            <h1> Week 4: HTML5 & CSS3</h1>
         </header>
         <img src="../images/8-21Logo.jpg" />
         <nav class="flex-nav">
-            <a href="#" class="toggleNav"> <i class="fa fa-bars"></i> Menu </a>
             <ul>
                 <li><a href="../index.html">About</a></li>
                 <li><a href="schedule.html">Schedule</a></li>
@@ -41,70 +35,122 @@
         </nav>
 
         <div class="lesson">
-            <div class="exercise">OVERVIEW</div>
-            <p>Today we're going to dive deeper into the world of <span class="emphasis">CSS. </span> </p>
-            <p> We'll start with our weekly Internet update, <a href="https://www.youtube.com/watch?v=AYdF7b3nMto&index=4&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7"> Packets, Routing, and Reliability </a></p>
 
+            <div class="exercise">OVERVIEW</div>
+            <p> We're going to practice our HTML today and dive into a pair programming challenge focused on CSS. </p>
+            <p> To kick us off, let's return to our ongoing exploration of the internet with a video on <a href="https://www.youtube.com/watch?v=5o8CwafCxnU&index=3&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7"> IP Addresses and DNS </a></p>
             <div class="exercise">LEARNING OBJECTIVES</div>
             <ol>
-                <li> Understand the difference between CSS and HTML </li>
-                <li> Learn basic CSS Syntax </li>
-                <li> Start using stylesheets in your webpage!</li>
+                <li>Understand the basic building blocks of an HTML5 Doc </li>
+                <li> Learn HTML5 Audio, Video, Form, and Geolocation </li>
+                <li> Clone a website </li>
+                <li> Pair program </li>
             </ol>
-            <div class="exercise"> I. CSS Syntax </div>
-            <p> First we're going to do some reading from the experts. Grab a partner and read <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Syntax"> this article </a> together. Stop periodically to discuss what you just read,
-                and take notes. Or even better, open up your terminal and practice by trying out what you read in a new "lab4.html" and "lab4.css" file. Ask questions if things are confusing. </p>
-            <div class="checkoff"> NOTE: If you finish early, or simply want to learn more, check out <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Selectors/Simple_selectors"> CSS Simple Selectors </a></div>
-            <br/>
-            <div class="exercise"> II. MeSS with cSS </div>
-            <p> We're going to learn about the super cool <span class="emphasis"> INSPECT </span> tool available in many web browsers (for this exercise, it's best to use Chrome if you can).
+
+            <div class="exercise">I. Stayin' Alive With HTML5</div>
+            <p> Exercises II-V are intended to show you how powerful HTML5 is on its own. Sure, CSS adds style to the page and javaScript adds interactivity. But even without those languages, you can have a fully functioning website with HTML alone. </p>
+            <p>Don't worry about completing all these exercisees today. Choose one or two to focus on, grab a partner (or work alone), and use the tutorials as <em> starting points. </em> If you come accross something you're confused about, I encourage you
+                to continue Google searching until you find an answer. Of course if you're really stuck, ask for help. Though you're not expected to do all these exercises in lab today, I encourage you to try them out when you have the time.</p>
+            <div class="checkoff"> Pro Tip: Here's a list of go-to websites to consult when you have a programming question, want to implement something new for the first time, or need help debugging</p>
                 <ol>
-                    <li>Step 1: Partner Up. </li>
-                    <li>Step 2: Open <a href="https://zapier.com/blog/inspect-element-tutorial/"> this </a> tutorial to get started. You can skim (or skip) over the first part, and start reading at the section entitled 'Change Anything With Elements.' </li>
-                    <li>Step 3: Follow along with the Tutorial! Ask questions (first to the people around you) if you get stuck. </li>
+                    <li> <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network </a> -- the official website for development and documentation of web standards for CSS, HTML, and JavaScript </li>
+                    <li> <a href="http://stackoverflow.com/"> Stack Overflow </a> -- a Q & A site for programmers </li>
+                    <li> <a href="https://css-tricks.com/"> CSS-Tricks </a> -- despite its name, this is site about all things web-related, not just CSS. It includes blog posts, video tutorials, and an active forum </li>
                 </ol>
-            </p>
+            </div>
+            <br/>
+            <p>Let's put those search-engine skills to practice. Choose one or two(or all) of the exercises below, and use the links provided as <em> starting </em> points. This is the fun and challenging part about programming. Don't treat it like a homeework
+                assignment, or a chore. Treat it like you're finally getting to play with that cool new toy you got for Christmas. Remember, ask for help if you get stuck. </p>
 
-            <div class="exercise"> III. Find The CSS From Within </div>
-            <p>Now that it's Week 4 it's time for some reflection. We want you to appreciate HOW MUCH you've learned in such a short amount of time. Seriously -- it might not look like a lot, but HTML & CSS are the backbone of almost every website out there.
-                So if you can get these languages down, you're well on your way to being an amazing front end web developer! To show you the power of CSS, we're going to follow along the <span class="emphasis"> CSS Zen Garden</span> exercise. Create a
-                new subdirectory in your Share folder (<span class="emphasis">challenge:</span> can you do this from your terminal?) and download the index.html & style.css files from the website.</p>
-            <p> Partner up and look through both files. First make sure you have a general sense of what's going on -- if you don't, talk through what you <em> think </em> the elements you're unsure about do.</p>
-            <p> Then test it out! Play with the CSS files and log your findings by writing comments next to the elements you've learned about. Use '/* */' to write comments like so:
-                <pre class="output"><span class="input"> /* This is a comment. The processor will not render it as code */ </span></pre>
-                <br/> If you really want to be the above-and-beyond-student, open up a TextEditor and log all the new things you've learned so that you can use it for reference later.
+            <div class="exercise"> II. Video in HTML5</div>
+            <p>
+                If you want to feature a video from YouTube or some video hosting site, you can easily do so by embedding it. Nowadays, many sites make this easy. You can often right-click on the video, choose "Copy embed code" and paste it into your html doc. What's
+                copied is something like this: &ltiframe width="640" height="360" src="https://www.youtube.com/embed/J---aiyznGQ" frameborder="0" allowfullscreen&gt&lt/iframe&gt
             </p>
-            <p> We'll mess with the css for 20 minutes or so and then come to the board with our findings and any lingering questions.</p>
-
-            <div class="exercise"> IV. Online Business Card Challenge </div>
-            <p>To test all your newfound knowledge, we'll be completing Mozilla's' <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension">CSS coding challenge </a>. This is going to be a solo project, but
-                feel free to ask questions -- we're here to help!</p>
-            <div class="exercise"> Homework: </div>
+            <p> Simply adjust the width and height attributes to the appropriate size, and you're done. 'Frameborder' is a boolean attribute (meaning it has two values, "on" or "of") that indicate whether or not you want to have a border. 0 is "off", 1 is
+                "yes."
+            </p>
+            <p> Say you have a .mp4 or .ogv file on your computer (say something you've filmed yourself, or an animated clip you've made with Flash) that you want to include on your website. Again, the easiest way to do so is to host the video through a site
+                like Youtube and embed it on your site as above. The upside is that video hosting sites will automatically convert your video into the various formats required by browsers. The downside of that is if you want your video to play exclusively
+                on your website. If that's the case, you'll have to host it, which takes a few more steps </p>
+            <p> The main consideration when hosting your own video is including all the various formats supported by different browsers, including AVI, Flash, MPEG, Quicktime, and more. Fortunately, HTML5 (which unfortunately is not supported by all browsers)
+                makes this easy with its &ltvideo&gt element. If you're interested in using HTML5 to embed video into your page, use the following links (ordered by usefulness) to learn more: </p>
             <ol>
-                <li> Start your website! You now have all the tools to create your main page (index.html) using HTML and CSS (style.css). </li>
-                <li> (optional): <a href="https://davidwalsh.name/css-circles">CIRCLES!!!!!!</a></li>
-                <li> (optional) Browse through <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started"> this </a>website to learn more about CSS selectors, inheritance, cascading, layout, and more! If anything doesn't make sense to
-                    you, GOOGLE IT (and then come back next week with questions if you're still confused;) </li>
-                <li> (optional) Another <a href="http://cssvideos.com/">awesome resource </a>for refining your CSS skilSS </li>
+                <li>Flash and HTML5<a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">Chapter 9, pgs 211-216</a></li>
+
+            </ol>
+            <div class="exercise"> III. Audio in HTML5 </div>
+            <p> As with video, there are different ways to embed audio into your webpage. The first is through a hosted service like Soundcloud.com that allows you to upload your audio; this route also provides an audio player that you can embed in your page
+                - making it really easy. The second method is harder, and relies on Flash. The third is through using HTML5's built-in &ltaudio&gt element. To delve into any of these methods, use the following links:</p>
+
+            <ol>
+                <li>Adding a Flash or HTML5 Audio Player<a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">Chapter 9, pgs 218-222</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video"> Basics Audio/Video in HTML5 </a></li>
+                <!--<li> <a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery"> Audio & Video </a></li>-->
+                <!--<li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement"> HTML Media element </a></li>-->
+            </ol>
+            </p>
+
+            <div class="exercise"> IV. Geolocation in HTML5 </div>
+            <p> * NOTE: The following tutorials pretty much all same the same thing -- so you only have to look at one or maybe two. If you get stuck, check out another way that might be getting at the same lesson in a different way. We all have different
+                learning styles, and part of being a web developer (or programmer in general) is learning to research, research, research until something clicks.</p>
+            <ol>
+                <li> <a href="https://www.sitepoint.com/html5-geolocation/"> Resource Numero Uno </a></li>
+                <li> <a href="http://www.w3schools.com/html/html5_geolocation.asp"> Resource Numero Dos </a></li>
+                <li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation"> Resource Numero Tres</a></li>
+                <li><a href="http://www.tutorialspoint.com/html5/html5_geolocation.htm">Resource Numero Cuatro </a></li>
+                <li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation"> Resource Numero Cinco </a></li>
+
+            </ol>
+
+            <div class="exercise"> V. Form in HTML5 </div>
+            <p>Let's add a form to your site! Navigate through the following tutorials for guidance:</p>
+            <ol>
+                <li> For the basics, scroll down to <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">Chapter 7, Pages 144-172</a> of Jon Duckett's <em> HTML & CSS </em></li>
+                <li> For a more in-depth look at forms, check out <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form"> this </a> website</li>
+                <li>Where does the data go? That's a bit beyond the scope of this course -- to actually retrieve the data, you'd have to implement a few methods using Python, Ruby, or PHP. Fortunately, you now have the research skills to learn those languages
+                    on your own! If you want a sneak peak about the underlying mechanics of the form, check out <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data"> this </a> article</li>
+                <li> And if you're still SUPER intrigued by the form, read <a href="http://apress.jensimmons.com/v5/pro-html5-programming/ch8.html"> this </a> article about everything and anything you could possibly want to learn about html5 form </li>
+            </ol>
+
+            <p> That was great. You just learned a lot about HTML! Take 5. Get up, Stretch.<br/> .....................................................................
+                <br/> ........................................................
+                <br/> .........................................
+                <br/> ................................
+                <br/> ............................
+                <br/> ......................
+                <br/> ..............
+                <br/> Now time for some CSS.<br/>
+            </p>
+            <div class="exercise"> VI. Super Sweet CSS</div>
+            <p> We're going to play around with some super sweet features of CSS3 just to show you how powerful this language is. We're going to walk through <a href="http://1stwebdesigner.com/css3-text-effects-typography/">these tutorials </a> on text effects
+                and <a href="http://www.w3schools.com/css/css_positioning.asp"> these on text positioning </a> together, and then I will set you free to have at it with your website </p>
+
+
+            <div class="exercise"> Homework</div>
+            <ol>
+                <li> Continue working on EdX Module 3: “Design Web Page Elements Using Cascading Style Sheets (CSS)”</li>
             </ol>
 
         </div>
-   <!--end wrapper -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        $(function() {
+        <!--end container-->
+        <!--end wrapper -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            $(function() {
 
-            $('.toggleNav').on('click', function() {
-                $('.flex-nav ul').toggleClass('open');
+                $('.toggleNav').on('click', function() {
+                    $('.flex-nav ul').toggleClass('open');
+                });
             });
-        });
-    </script>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!--add bootrap's JS plugins, jquery, and tether -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+        </script>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!--add bootrap's JS plugins, jquery, and tether -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
 </body>
+
 
 </html>

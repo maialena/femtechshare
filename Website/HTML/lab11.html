@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../CSS/flexLabs.css" />
+
+    <title> Lab11 </title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="top">
+            <h1> Week 11: Workshop Day </h1>
+        </header>
+        <img src="../images/8-21Logo.jpg" />
+        <nav class="flex-nav">
+            <a href="#" class="toggleNav"> <i class="fa fa-bars"></i> Menu </a>
+            <ul>
+                <li><a href="../index.html">About</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li class="social">
+                    <a href="https://twitter.com/femtechberkeley"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="social">
+                    <a href="https://www.facebook.com/FEMTechBerkeley/?fref=ts"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="social">
+                    <a href="http://femtechberkeley.com/"><i class = "fa fa-users"></i>
+                        </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="lesson">
+            <div class="exercise"> Overview </div>
+            <p> The end is almost here! Next week is our final Sharecase and end-of-the-semester party. We'll spend most of today cleaning up our websites, asking/answering questions, and giving peer feedback. </p>
+            <p> If you're at a loss for a project, look back at Labs <a href="lab8.html">8 </a> & <a href="lab9.html">9 </a>for suggestions. </p>
+        </div>
+    </div>
+    <!--end wrapper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function() {
+
+            $('.toggleNav').on('click', function() {
+                $('.flex-nav ul').toggleClass('open');
+            });
+        });
+    </script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--add bootrap's JS plugins, jquery, and tether -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+</body>
+
+
+</html>

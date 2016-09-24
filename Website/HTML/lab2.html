@@ -1,186 +1,73 @@
-<!--this page is about HTML/CSS Tables 
-
-resource: http://www.tutorialspoint.com/html/html_tables.htm-->
-
-<!--THINGS TO INCLUDE IN CLASS:
-1. Daily News (cool thing about tech)
-2. What is the Internet video?
--->
-
 <!DOCTYPE html>
 <html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/flexLabs.css" />
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" " href="../CSS/flexLabs.css "/>
-
     <title> Lab2 </title>
 </head>
 
 <body>
-   <div class="wrapper ">
-        <header class="top ">
-             
-            <h1> Week 2: Color Theory & CSS </h1>
+    <div class="wrapper">
+        <header class="top">
+            <h1> Week 2: HTML Basics</h1>
         </header>
-        <img src="../images/8-21Logo.jpg " />
-        <nav class="flex-nav ">
-            <a href="# " class="toggleNav "> <i class="fa fa-bars "></i> Menu </a>
+        <img src="../images/8-21Logo.jpg" />
+        <nav class="flex-nav">
+            <a href="#" class="toggleNav"> <i class="fa fa-bars"></i> Menu </a>
             <ul>
-                <li><a href="../index.html ">About</a></li>
-                <li><a href="schedule.html ">Schedule</a></li>
-                <li><a href="resources.html ">Resources</a></li>
-                <li class="social ">
-                    <a href="https://twitter.com/femtechberkeley "><i class="fa fa-twitter "></i></a>
+                <li><a href="../index.html">About</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li class="social">
+                    <a href="https://twitter.com/femtechberkeley"><i class="fa fa-twitter"></i></a>
                 </li>
-                <li class="social ">
-                    <a href="https://www.facebook.com/FEMTechBerkeley/?fref=ts "><i class="fa fa-facebook "></i></a>
+                <li class="social">
+                    <a href="https://www.facebook.com/FEMTechBerkeley/?fref=ts"><i class="fa fa-facebook"></i></a>
                 </li>
-                <li class="social ">
-                    <a href="http://femtechberkeley.com/ "><i class = "fa fa-users "></i>
+                <li class="social">
+                    <a href="http://femtechberkeley.com/"><i class = "fa fa-users"></i>
                         </a>
                 </li>
             </ul>
         </nav>
-        <div class="lesson ">
-            <div class="exercise "> Overview</div>
-            Welcome to the real first day of CSS! Today we'll explore the world of color theory and start styling the page. 
-            <p> Before we dive in, let's pick up on last week's intro to the internet with a clip on the basic <a href="https://www.youtube.com/watch?annotation_id=annotation_2686974021&feature=iv&index=1&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&src_vid=Dxcc6ycZ73M&v=ZhEf7e4kopM ">internet infrastructure. </a> </p>
-            <div class="exercise "> Learning Objectives </div>
-            <ol>
-                <li> Create a basic stylesheet </li>
-                <li> Get an introduction to color theory </li>
-            </ol>
-                 
-            <div class="exercise "> I. CSS 101 </div>
-            <p><span class="question ">'What is CSS??'</span></p>
 
-            <p>Here's how <span class="emphasis ">edX </span>defines it.
-             'Cascading Syle Sheets (CSS) is a language that controls and allows one to define the look of an HTML document. It permits the separation between the content of the HTML document from the style of the HTML file. CSS enables one to specify
-                    things such as the font you want on your page, the size of your text, the columns of the page, whether the text on a page is to be in bold or italics, background, link colors, margins, and placement of objects on a page and so on.
-                    By way of explanation, it is the part that controls the looks of a web page. With CSS, it is much easier to manage the appearance of multiple web pages since it separates the HTML element from display information. CSS also enables
-                    faster downloading of web pages, which works best with older computers and modems. It provides a method for retaining a common style.'
+
+        <div class="lesson">
+
+            <div class="exercise">OVERVIEW</div>
+            <p> HTML is the language we use to provide structure to our web pages. If you think of a word document, it's all the different parts of the page that make up its form: header, footer, title, subtitles, main text (or 'body' in HTML), paragraphs,
+                etc.) The font, text color, background color, and text size is all <em> styling </em> which is left to CSS (Cascading Style Sheets). We'll leave CSS to next week, but for now let's look at the basic building blocks of our HTML doc </p>
+            <p> To do so, we're going to go through Chapters 1-5 pages 12-94 from <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf ">Jon Ducket's HTML & CSS: Design and Build Websites </a>                (don't worry -- they're mostly pictures). Create a lab2.html file in your HTML directory, open up your text editor, and follow along as we play with HTML syntax. <br/>
             </p>
-            <p> To get a taste of CSS, we'll begin with messing with colors.</p>
 
-        
-            <div class="exercise color ">II. Color!</div>
-            <p> Let's create a very basic stylesheet. Make a new subdirectory in your main folder called "CSS " with a lab2.css file in it. Copy the following code:
-            <pre class="output "><span class="input "> body {</span></pre></li>
-            <pre class="output "><span class="input ">      background-color: ;</span></pre></li>
-            <pre class="output "><span class="input "> }</span></pre></li>
-            <pre class="output "><span class="input "> h1 {</span></pre></li>
-            <pre class="output "><span class="input ">      color: ; </span></pre></li>
-            <pre class="output "><span class="input "> }</span></pre></li>
-            <pre class="output "><span class="input "> p {</span></pre></li>
-            <pre class="output "><span class="input ">      color: ;</span></pre></li>
-            <pre class="output "><span class="input ">}</span></pre></li>
-            Make sure your selectors (body, h1, and p) are followed by opening and closing braces "{} " and the color properties are followed by a colon, [color], and semi-colon. Don't worry about this syntax now. We'll go over it soon. For now, let's play with colors. </p>
-            
-            <div class="subtitle
-        "> Hexadecimal Values </div>
-            <p> On the web, colors come in the form of hexadecimal values, which are a string of 6 integers that specify the intensity of a color. All colors are made up of combinations of red, green, and blue. Accordingly, we represent hexadecimal values with a "# " sign followed by two values that signal the amount of red, two values for blue, and two values for green, like so: #RRGGBB. </p>
-            <p class="red "> This is red, represented as #FF0000 </p>
-            <p class="green "> This is green, represented as #00FF00</p>
-            <p class="blue
-        "> This is blue, represented as #0000FF</p>
-            <p> What's with the F's? This goes back to how computers represent hexadecimal values. You've probably heard of 'binary representation,' where the computer translates values into two values: 0's and 1's. Hexadecimal representation counts up to 16 numbers, beginning with 0 and ending with 15. The first 10 numbers are 0 through 9. The number 10 is represented as "a ", 11 is "b ", 12 is "c ",  13 is "d ", 14 is "e ", and "15 " is f. So you can think of the values 00 through FF as a scale from 00 to 15, with 00 being "0%, 15 being "100%," and everything else being somewhere in between. </p>
-    <p> You can play with hexadecimal colors <a href="http://www.w3schools.com/colors/colors_hexadecimal.asp"> here </a></p>
+            <div class="exercise">LEARNING OBJECTIVES</div>
 
-    <div class="subtitle "> RGB </div>
-    <p> RGB representation is exactly like hexadecimal, except we separate out the colors red, green, blue and specify the intensity as an integer between 0 and 255. In other words, we can represent the same colors as above as follows: </p>
-    <p class="red "> This is red, represented as rgb(255, 0, 0)</p>
-    <p class="green "> This is green, represented as rgb(0, 255, 0)</p>
-    <p class="blue
-        "> This is blue, represented as rgb(0, 0, 255) </p>
-    <div class="subtitle "> HSLa </div>
-    <p> HSLa stands for "Hue Saturation Lightness and alpha." The first three values (hue, saturation, and lightness) determine the color, the last determines the transparency. This isn't as common as rgba but it's really useful if you want to make your text
-        or background-color more transparent. </p>
-    <p> Here's an example with text:
-        <p class="hsla10">Here's red with hsla(0,100%,50%, 1) </p>
-        <p class="hsla9">Here's red with hsla(0,100%,50%, 0.9) </p>
-        <p class="hsla8">Here's red with hsla(0,100%,50%, 0.8) </p>
-        <p class="hsla7">Here's red with hsla(0,100%,50%, 0.7) </p>
-        <p class="hsla6">Here's red with hsla(0,100%,50%, 0.6) </p>
-        <p class="hsla5">Here's red with hsla(0,100%,50%, 0.5) </p>
-        <p class="hsla4">Here's red with hsla(0,100%,50%, 0.4) </p>
-        <p class="hsla3">Here's red with hsla(0,100%,50%, 0.3) </p>
-        <p class="hsla2">Here's red with hsla(0,100%,50%, 0.2) </p>
-        <p class="hsla1">Here's red with hsla(0,100%,50%, 0.1) </p>
-        <p class="hsla0">Here's red with hsla(0,100%,50%, 0.0) </p>
-        <div class="checkoff"> NOTE: The last line above is "Here's red with hsla(0, 100%, 50%, 0.0)" but it's not showing up. Do you see why?</div>
-        <p> And here's an example with background color:
-            <p class="hslag10">Here's green with hsla(0,100%,50%, 1) </p>
-            <p class="hslag9">Here's green with hsla(0,100%,50%, 0.9) </p>
-            <p class="hslag8">Here's green with hsla(0,100%,50%, 0.8) </p>
-            <p class="hslag7">Here's green with hsla(0,100%,50%, 0.7) </p>
-            <p class="hslag6">Here's green with hsla(0,100%,50%, 0.6) </p>
-            <p class="hslag5">Here's green with hsla(0,100%,50%, 0.5) </p>
-            <p class="hslag4">Here's green with hsla(0,100%,50%, 0.4) </p>
-            <p class="hslag3">Here's green with hsla(0,100%,50%, 0.3) </p>
-            <p class="hslag2">Here's green with hsla(0,100%,50%, 0.2) </p>
-            <p class="hslag1">Here's green with hsla(0,100%,50%, 0.1) </p>
-            <p class="hslag0">Here's green with hsla(0,100%,50%, 0.0) </p>
-            <br/>
-        </p>
-        <p>Pretty cool huh? You can read more about Browser support and HSLa tools <a href="https://css-tricks.com/yay-for-hsla/"> here </a>.</p>
-        <div class="subtitle "> Color theory</div>
-        <p> Now that we know how to represent colors, we need to think about which colors we want to use in our website. Welcome to the world of design. This isn't an exact science here, and often good designers have an intuition and artistic eye that they've
-            cultivated over years of practice. But there are some basic guidelines that we can explore. Read about complentary, split complementary, triadic, analogous, and tetradic color schemes <a href="http://lifehacker.com/learn-the-basics-of-color-theory-to-know-what-looks-goo-1608972072"> here. </a>            </p>
-        <div class="exercise ">III. Play With Colors</div>
-        <p> Let's return to your lab2.css file. We have to link your lab2.html file to this css file. To do so, we include a link in the &lhead&gt section of your html file like so: </p>
-        <pre class="output "><span class="input "> &ltlink rel="stylesheet" href="../CSS/lab2.html"/&gt</span></pre></li>
-        <p> The property "rel" specifies the relation of the thing that you are linking to the html doc. In this case, it's the html document's stylesheet. "Href" points to the location of the file. There are two types of paths you can specify in your href
-            property. The first is <em> relative </em> and is relative to your local directory. That's what we're using here. The two dots ".." tell your browser to go one level up from the current directory (HTML, where your lab2.html file is). From
-            there, each "/" tells your browser to go down a level into the sub-directory to access the file. This is the same exact syntax we used to navigate through our directories in the terminal. You can also link an <em> absolute </em> path by specifying
-            the full domain page of a website, like "http://www.mywebsite.com." </p>
-        <p> Now it's time to fill in some colors!. Use Adobe's <a href="https://color.adobe.com/create/color-wheel/?base=2&rule=Compound&selected=1&name=My%20Color%20Theme&mode=rgb&rgbvalues=1,0.8064516129034018,0.09999999999999998,0.4,0.3655913978494937,0.24,0.8,0.5333333333331393,0.15999999999999998,0.37124999999999997,0.7692763157893561,0.8250000000000001,0.09999999999999998,1,0.8641509433963848&swatchOrder=0,1,2,3,4"> Kuler </a>            color wheel to mess with different colors in your html doc. If you're using <a href=""> Visual Studio Code</a> (highly recommended), you can split the view between your html and css file by pushing the "Split Editor" icon on the top right-hand
-            side of the page: <img height="50" width="50" src="../images/split_editor.jpg" /></p>
-
-        <div class="exercise ">IV. CSS: An Overview </div>
-        You do it! You stylized a page. Now you're ready to see what CSS has to offer.
-        <p> We're going to spend the next 20 minutes or so of this lab getting as far through <a href="https://www.codecademy.com/en/courses/web-beginner-en-TlhFi/0/1?curriculum_id=5035038ff76159000200b73c"> Code Academy's 'CSS: An Overview' video. </a> Feel
-            free to work solo or with a partner, and ask questions if you get stuck! </p>
-
-
-        <div class="exercise"> V. Clone This Website</div>
-        <p> Now you're ready to pair program! Partner up with someone for the next exercise (this might spill into next week, so no worries if you don't finish.) We're going to clone <a href=" http://www.berkshirehathaway.com "> this </a> website i.e. create
-            an exact replica.
-            <div class="checkoff">
-                <p> Pro Tip: Pair programming is often harder than it sounds. It's all about developing the right workflow to allow both people to contribute. WHat you <em> don't </em> want to happen is have one person type, while the other is on her phone
-                    playing Pokemon Go. So here's one suggestion: tradeoff typing. While Person A is at the keyboard, Person B should still follow along and dictate lines of code for Person A to type in. After some time, switch.
-                </p>
-            </div>
-            <ul>
-        </p>
-        <p> This exercise is going to incorporate a lot of the HTML elements that we've learned so far, including:
             <ol>
-                <li> Different sized headers (&lth1&gt-&lth6&gt)</li>
-                <li> paragraphs (&ltp&gt)</li>
-                <li> ordered and unordered lists (&ltul&gt vs &lol&gt)</li>
-                <li> header and footers </li>
+                <li> Learn basics of HTML Doc </li>
+                <li> For the next few weeks we'll be working on a personal portfolio page. This week we'll make the structure in HTMl, next week we'll add some style with CSS. </li>
             </ol>
-        </p>
-        <p> It's also going to include some things we haven't learned yet. Notice how the links are lined up in two nice columns? That's accomplished with a <span class="emphasis"> TABLE </span></p>
-        Read about the table <a href="http://www.tutorialspoint.com/html/html_tables.htm"> here </a></p>
-    <p> Still confused? Have no fear, Jon Duckett is <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf">here </a>(pages 130-140)</p>
-    <div class="checkoff"> Pro Tip: When designing the layout of your website, developers often use a 'dummy language'' called Lorem Impsum, which is used as a placeholder for the actual content. This allows designers to worry about the layout and style of the page rather than
-        the text, which they can fill in later. To use Lorem Impsum, check out <a href="http://www.lipsum.com/"> this </a> free online generator </div>
 
-    <br/>
+            <div class="exercise"> Powerpoint Slides </div>
+            Here's the slides for the week. Enjoy!
+            <iframe src="https://docs.google.com/presentation/d/1neu5413f0hfo6714bXAi-6EUtXO2bJTSi2iXDd3QVQU/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>            You might have noticed that we introduced a segment called "Keeping Up With Tech" this week. Because we have so many social science and humanities majors in the room, it's a great opportunity to look into some of the social, political, and
+            moral implications of new technology sprouting up. We'll get the opportunity to hear each other's reactions to privacy issues, artificial intelligence applications, and more. If you're interested in what we talked about last week, here are
+            the articles:
+            <ol>
+                <li><a href="http://www.livescience.com/56148-proterra-electric-bus-long-battery-life.html">New Electric Bus Can Travel 350 Miles on Single Charge</a></li>
+                <li><a href="http://pitchfork.com/news/68473-sony-shares-song-composed-by-artificial-intelligence-listen/">Sony Shares Song Composed by Artificial Intelligence</a></li>
+                <li><a href="http://www.independent.co.uk/life-style/gadgets-and-tech/news/google-allo-should-be-deleted-and-never-used-says-edward-snowden-a7320861.html">Google Allo should be deleted and never used, says Edward Snowden</a></li>
+                <li><a href="http://www.theverge.com/2016/9/22/13019688/singapore-self-driving-car-nutonomy-grab-ride-hail-test">http://www.theverge.com/2016/9/22/13019688/singapore-self-driving-car-nutonomy-grab-ride-hail-test</a></li>
+                <li><a href="http://www.theverge.com/transportation/2015/3/17/8232187/elon-musk-human-drivers-are-dangerous/in/3561301">Elon Musk: cars you can drive will eventually be outlawed</a></li>
+            </ol>
 
 
-    <div class="exercise"> Homework</div>
-    <ol>
-        <li>EdX Module2: “Creating Sophisticated Document Structures using HTML”
-        </li>
-        <li>(optional) <a href="https://www.khanacademy.org/computing/computer-programming/html-css">Kahn Academy Intro to HTML </a>(only the HTML sections)</li>
-    </ol>
 
+        </div>
     </div>
-    </div>
+
     <!--end wrapper -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
@@ -197,6 +84,6 @@ resource: http://www.tutorialspoint.com/html/html_tables.htm-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
-    </body>
+</body>
 
 </html>

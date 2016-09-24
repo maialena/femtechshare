@@ -1,6 +1,4 @@
-<!--everything you'd ever need to know about javaScript: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide -->
-<!--getting started with the web: https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web -->
-<!--tutorials: https://developer.mozilla.org/en-US/docs/Web/Tutorials -->
+<!--NEED TO BEEF THIS UP -->
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -9,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="../CSS/flexLabs.css" />
+
+
     <title> Lab6 </title>
 </head>
 
@@ -16,7 +16,7 @@
     <div class="wrapper">
 
         <header class="top">
-            <h1> Week6: Programming Fundamentals</h1>
+            <h1> Week 6: Layout </h1>
         </header>
         <img src="../images/8-21Logo.jpg" />
         <nav class="flex-nav">
@@ -37,347 +37,144 @@
                 </li>
             </ul>
         </nav>
+
         <div class="lesson">
             <div class="exercise">OVERVIEW</div>
-            <p> Today we get to explore the wonderful world of JavaScript. By now your website is looking pretty snazzy. You've got the layout. You've got the style. But perhaps you feel there's something missing....like animation, or a search box, or an
-                interactive form/survey, or give users feedback when they interact with your website in a particular way (like <a href="#"> this </a>). That's where JavaScript comes in.
-            </p>
-            <p> What exactly is JavaScript? And why learn it? Surprise!: it has nothing to do with Java. They are completely separate languages, despite the common name -- confusing, I know. Here's what the <span class="emphasis"> creators </span> of the
-                language have to say about it: "JavaScript ("JS" for short) is a full-fledged dynamic programming language that, when applied to an HTML document, can provide dynamic interactivity on websites. It was invented by Brendan Eich, co-founder
-                of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation. You can do pretty much anything with JavaScript. You'll start small with simple features such as carousels, image galleries, fluctuating layouts, and responses
-                to button clicks. Eventually as you get more experienced with the language, you'll be able to create games, animated 2D and 3D graphics, full blown database-driven apps, and more!"
-            </p>
-
-            <p> Let's break some of those words down:
-                <ul>
-                    <li> A <span class="emphasis">dynamic programming langauge </span> is one that executes a lot of behavior during 'run time' that 'static programming languages' would execute at compile time. 'Run time' refers to the time that a program
-                        is actually running. 'Compile time' refers to the time <em> before </em> a program is run, when it is checked for errors (usually syntax and 'typechecking' errors) by the <em> compiler </em>. Don't worry too much about the difference
-                        between these if you're confused. It requires understanding of some 'low level' computer science stuff that's outside the scope of this course. </li>
-                    <li> <span class="emphasis"> dynamic interactivivty </span> - this just means that JS allows users to interact with websites via forms, drop-down menus, etc.</li>
-
-                </ul>
-            </p>
-            <p> JS is a <em> scripting </em> language, meaning that the code is <em> interpreted </em> instead of compiled by the web-browser. Without getting too much in the weeds here, a lanugage that is <em> interpreted </em> means that each line is executed
-                one by one by the browser, top down, without any extra work. <em> Compilation </em> refers to an extra step performed by a <em> compiler </em> to transform the high level language (ie the source code that you write) into a 'lower level
-                language,' which can then be translated into 0's and 1's.
-            </p>
-
-            You can read the Mozilla Foundation's full description of JS <a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/What_is_JavaScript"> here </a> but we'll be going through most of the material together in class. Like we
-            said before, JavaScript can do just about <em> anything </em>, including:
-            <ol>
-                <li> Make websites respond to users </li>
-                <li> Build apps and games </li>
-                <li> Access info on the internet (like Twitter feeds)</li>
-                <li> Create a sign-up form</li>
-                <li> Search box with autocompletion features (brings up suggestions based on what you've typed so far -- typing "de" for instance would signal "desert," "delaware," "dentist")</li>
-                <li> Info that changes when you reload the page, like dates, times, sports match results, weather, stock market prices, etc.</li>
-                <li> Drop down menu bar </li>
-                <li> Organization and modification to the DOM (more on this this later)</li>
-                <li> Animate elements on a page (ex: show/hide info, highlight sections, etc.)</li>
-            </ol>
-            <p> And in case you still need convincing that it's worth learning, check out what the creator of Wordpress <a href="http://wesbos.com/learn-javascript/">has to say about the language </a></p>
-            <span class="emphasis">Let's get started!</span>
-            </p>
-            <div class="exercise">LEARNING OBJECTIVES</div>
-            <ol>
-                <li> Learn what an API is </li>
-                <li> Understand how JavaScript works with CSS and HTML</li>
-                <li> Incorporate new script in website </li>
-                <li> Learn basic data types </li>
-            </ol>
-            <div class="exercise"> I. Programming Fundamentals </div>
-            <!-- FOR MAIA: THIS SECTION SHOULD BE TAUGHT ON WHITEBOARD -- MAKE NOTES TO DO SO-->
-            <p> Before we can get into 'the DOM' & javaScript API's, we're going to learn some concepts relevant to <em> all </em> Object Oriented languages, including (but not limited to) Java & Ruby on Rails. So if you get this stuff down, you're well on
-                your way to doing back end development as well. We'll go over these on the board, but in case you miss class or want a review, refer to the following links for reference. </p>
-            <ol>
-                <!--FOR MAIA: TURN ALL OF THESE LINKS INTO LESSON PLANS SO CAN WALK THROUGH ON BOARD AS EVERYONE DOES THEM IN CONSOLE... GO THROUGH THESE EXERCISES IN DETAIL ONCE -- HAVE UMA DO THEM AND ASK FOR HER ADVICE.-->
-                <!--GOOD EXPLANATION OF SOME OF THE BASICS: http://htmldog.com/guides/javascript/beginner/variables/ -->
-                <li> <a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Variables"> Variables  </a> </li>
-                <li><a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Math">  Math Operations  </a></li>
-                <li> <a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Strings"> Strings  </a></li>
-                <li> <a href='https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Useful_string_methods'> Useful String Methods </a> </li>
-                <li> <a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Arrays"> Arrays  </a></li>
-
-            </ol>
-            <p> <span class="emphasis">Operator Reference Guide </span></p>
-            <ul>
-                <li> &lt (less than) </li>
-                <li> &gt (greater than) </li>
-                <li> &lt= (less than or equal to) </li>
-                <li> &gt= (greater than or equal to) </li>
-                <li> = (assignment operator, e.g.: a = 5) </li>
-                <li> === (equal to, e.g: a === b) </li>
-                <li> !== (not equal to, e.g.: a !== b) </li>
-            </ul>
-
-
-            <div class="exercise"> II. The OOP Approach </div>
-            <p> In Object Oriented programming, <em> everything </em> is an object. What's an object? Think of them as 'containers' defined by two characteristics: state and behavior. State is a description of the object's characteristics (think adjective
-                or quality or possession). Behavior is an action, or something that the object can do (think verb). </p>
-            <p>Don't overthink this yet -- try to develop an intuitive understanding of an 'object' before you figure out how to create one. Objects are everwhere -- dogs, TV's, your desk, friends, a bicycle, this class, your bank account. We can model <em> anything </em>that
-                has some characteristics and performs some behavior as an object. </li>
-            </p>
-            <p> We'll learn about classes, objects, and inheritance through an in-class exercise. If you miss class or want a refresher, walk through <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model"> this </a>                tutorial</p>
-
-
-            <li> Last but not least, read about <span class="emphasis"> String operations </span><a href="https://developer.mozilla.org/en-US/Learn/JavaScript/First_steps/Useful_string_methods">here </a></li>
-            </ol>
-            <div class="exercise"> III. The DOM</div>
-            <div class="subtitle"> What is the DOM? </div>
-            <p> The 'Document Object Model' is an <em> object oriented representation of the web page </em> that allows programmers to access and manipulate the content, style, and structure of HTML elements. A common way of manipulating the DOM is through
-                JavaScript -- what we're going to do today. </p>
-            <p>The DOM is made up of:
+            <p>We're going to talk about perhaps the most important concept in web design and development: LAYOUT. A good layout is readable and highlights the most important information on the page. Here are <a href="http://www.creativebloq.com/netmag/create-balanced-page-layouts-7-pro-tips-121310009"> 7 Pro Layout Tips. </a>                to get you thinking about how you want to structure your page. </p>
+            <p> We'll take a closer look at something called 'responsive web design.' Responsive web design is the about making your content look good on any screen (tablet, phone, computer). There are many ways to do this, but three in particular are quite
+                common:
                 <ol>
-                    <li> A set of <span class="emphasis"> objects</span> </li>
-                    <li> <span class="emphasis">A structure </span> of how these objects can be used/combined </li>
-                    <li> <span class="emphasis">An interface </span> to access and modify them </li>
+                    <li>Flexbox </li>
+                    <li>Bootstrap </li>
+                    <li>The Grid </li>
                 </ol>
             </p>
-            <p> The DOM is also referred to as the "DOM Tree" because it takes on a tree-like structure with 'branches' and 'leaves.' Trees are a fundamental data structure for most programming languages, so we'll go over them in more detail below. </p>
-            <!--GO OVER THIS WITH THEM: http://htmldog.com/guides/javascript/intermediate/thedom/ -->
-            <p>Key terms:
+            <p>This week we'll go over Flexbox. If we have time this semester we'll learn how to work with the Bootstrap API. Those are by far the most popular. If you're interested in tinkering with the Grid, see Further Reading below.</p>
+            <p> Creating a decent layout is perhaps the most confusing/frustrating parts of web development -- especially at the beginning. So it's important to spend adequate time building a strong foundation before jumping into more complex projects.
+
+                <p> But first, let's learn about <a href="https://www.youtube.com/watch?v=kBXQZMmiA4s&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=5">HTTP & HTML!</a>
+                    <div class="exercise">LEARNING OBJECTIVES</div>
+                    <ol>
+                        <li>Understand the basics of flexbox</li>
+                        <li>Implement a flex navigation bar, mobile app layout, and online booking form</li>
+                    </ol>
+
+                    <div class="exericse">I. Flexbox </div>
+                    <ul>
+                        <li> <u>Pro's</u>
+                            <ol>
+                                <li> It's supported by most browsers</li>
+                                <li> It's dynamic, meaning that each flex items (ie the children of the flex container) will shrink or expand according to the size of your screen.</li>
+                                <li> Once you get the hang of it, it's easy to use. </li>
+                            </ol>
+                        </li>
+                        <li> <u>Con's</u>
+                            <ol>
+                                <li> It may be difficult to learn at first, but this isn't really a Con because we're going to go through everything you need to know to get started together!</li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <p> Create a new folder called "Flexbox" and in it make a flexbox.html and flexbox.css file. The following exercises are NOT my own but rather adopted from "flexbox.io" (a GREAT reference btw if you miss class or want a refresher). We're
+                        going to walk through the content in videos 1-13 together on the board. For quick reference, use the flex tool summaries below </p>
+                    <div class="subtitle">Flex Direction</div>
+                    <div class="subtitle">Flex Wrap</div>
+                    <div class="subtitle">Alignment with Align-Content </div>
+                    <div class="subtitle">Alignment with Justify-Content </div>
+                    <div class="subtitle">Flex properties: grow, shrink, baseline </div>
+                    <div class="subtitle">Auto-prefixing & Gulp</div>
+                    <!--WALK THROUGH THESE EXERCISES TOGETHER -- MAIA: TURN THIS INTO A LESSON PLAN!!!!: http://flexbox.io/view/ND8SjPJOk_M 
+        1. container with boxes (with borders and different colors so can see. declare container display: flex and explain how all the div's become flex items. min-height: 100vh
+        2. flex-direction:row (put side by side = default, main axis = left to right, so content goes left to right) vs. column (stack vertically, main axis = top to bottom, why main content goes top to bottom) vs. row-reverse vs. column-reverse
+        3. flex-wrap: (what happens when run out of space when give these things width? give widths to children, and flexbox will distribute widths evenly if over amount of pixels of screen...by default it's no wrap.But also have flex-wrap:wrap and flex-wrap: wrap.reverse.
+        Note: before we wrapped them, flex items will by default try to stretch their way across the container (ie the height you give it). When we turn the wrap on, it says 'Okay we need to stretch across the container and split it up between the 10 of us, so the browser figures out
+        that we need 4 rows here, and will split it amongst the others...main axis: left to right and cross axis: top to bottom. But if we do flex-wrap: wrap-reverse, the cross-axis is bottom to top now, and main axis is still left to right.-->
+
+                    <div class="exercise"> II. Make A Nav Bar </div>
+                    <p> Let's see flexbox in action by making a basic Nav Bar </p>
+
+                    <div clas="exercise"> III. Make A Mobile App Layout </div>
+                    <div class="exercise"> IV. Flexible Pricing Grid </div>
+                    <div class="exericse"> V. Online Booking Form </div>
+
+                    <div class="exericse"> III. Bootstrap </div>
+                    <!-- FOR MAIA: BOOTSTRAP VIA CODEACADEMY??-->
+                    <ul>
+                        <li> <u>Pro's</u>
+                            <ol>
+                                <li> </li>
+                            </ol>
+                        </li>
+                        <li> <u>Con's</u>
+                            <ol>
+                                <li> </li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <div class="exercise">III (optional) Grid By Example</div>
+                    <p> The Grid is magical.</p>
+                    <ul>
+                        <li> <u>Pro's</u>
+                            <ol>
+                                <li> It's supported by Chrome and a few other browsers (lookup)</li>
+                                <li> It's SUPER easy and convenient to use once you get the hang of it </li>
+                                <li> It makes your CSS Style sheet look beautiful and neat </li>
+                            </ol>
+                        </li>
+                        <li> <u>Con's</u>
+                            <ol>
+                                <li> The biggest one: most browsers don't (currently) support the Grid. In fact, only IE officially does. </li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <p> Yes, there's only one real Con -- but it's a biggie. If a Browser doesn't support the Grid, all your pretty formatting won't show up to the user, which is bad news bear. The good news is that a lot of browsers (Including Firefox, Chrome,
+                        and Safari) are in <em> the process </em>of developing support for the Grid since it's so 'up and coming.' In other words, it is still something valuable for you to learn. For the remainder of the lab, we'll work through the Grid
+                        examples on <a href="http://gridbyexample.com/examples/#example17"> this </a> website from CSS-Tricks </p>
+                </p>
+                <p> Create a new file in your Share folder (challenge: can you do this from your terminal?). Name it something like "grid_practice.html." Open it up and start walking through the exercises from <em> Grid By Example </em> above. If you don't
+                    understand something, ask for help or skip the exercise for now and come back. </p>
+                <div class="checkoff"> Pro Tip: Try NOT to copy and paste the provided .html and .css files from the website. You'll learn more if you actually type it out. </div>
+                <br/>
+
+                <!--<div class="exercise"> II. (optional) The Box Model </div>
+        <p> The Box Model is the foundation of Web layout and is perhaps the most commonly used layout. Though I prefer the Grid, feel free to check out <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Box_model"> the Box Model </a>            and experiment with the structure in your page. </p>
+        <div class="exercise"> III. It's Go Time </div>
+        <p> The moment we've all been waiting for: buff up your website using the Grid + all other tools we've learned so far. By now you should know the spiel: Create a new folder for your website files. In it, create two folders, one for your CSS files,
+            the other for your HTML (challenge: do this via the command line). If you have questions, get in the habit of looking them up online -- or ask, that's what we're here for;)
+        </p>-->
+
+
+                <div class="exercise">Homework </div>
                 <ol>
-                    <li> <span class="emphasis">Tree </span> - a way to represent data in a hierarchial 'tree-like' structure (we'll see examples of this that'll make it clearer). </li>
-                    <li> <span class="emphasis">Root </span> the top node of a tree, from which all other 'child nodes' and subtrees branch. It has no 'parents.'</li>
-                    <li> <span class="emphasis"> Node </span> - an element or entry on a tree. Everything on you webpage is a node in the DOM. Each node has three attributes;
-                        <ul>
-                            <li> nodeType -- this is an integer value from 1 to 12 representing the type of node (e.g. "1" represents an element, "2" represents an attribute, "3" represents text, etc). For a full list of the 12 types of nodes, <a href="http://www.w3schools.com/jsref/prop_node_nodetype.asp"> Read here </a></li>
-                            <li> nodeName -- this is the name of the node as a string (e.g. name of the body element is "BODY.") </li>
-                            <li> nodeValue -- for element nodes, the value will be null (i.e. 'no value'). For text nodes, the value is the text itself. For attribute nodes, the value is the attribute itself. </li>
-                        </ul>
-                        <p> Say you have the following div element in your page: </p>
-                        <pre class="output"><span class="input"> &ltdiv id="about"&gt Welcome to FemTechShare, a course on web design. &lt/div&gt  </span></pre>
-                        <p> You can learn info about this node as follows:</p>
-                        <pre class="output"><span class="input"> var element = document.getElementById("about");  </span></pre>
-                        <pre class="output"><span class="input"> alert(element.nodeType) //displays 1 </span></pre>
-                        <pre class="output"><span class="input"> alert(element.nodeName) // displays "DIV" </span></pre>
-                        <pre class="output"><span class="input"> alert(element.nodeValue) // displays null  </span></pre>
-                        <br/>
-                        <div class="checkoff"> NOTE: alert("text"); displays an alert box with a specific message and an OK button. To test this out, "Inspect" this page and go to the Console tab. Type alert("whatever you want here"); and push enter </div>
+                    <li>Fill out a mid-semester course evaluation by <span class="emphasis"> Wednesday</span> so that we have time to make adjustments accordingly. Please be honest with your feedback. This is the first time FemTECH has ever run a Web Design
+                        & Development series, so any constructive criticism (or positive reviews) are appreciated. We're always looking for ways to improve!</li>
 
-                    </li>
-                    <li> <span class="emphasis">Parent Node - </span> a node that is one level 'higher' (towards the top) than a child node, connecting </li>
-                    <li> <span class="emphasis">Child Node - </span> an entry branching from a parent, one level 'deeper' in the tree -- think of the tree as growing <em> downward </em> such that the children are closer to the bottom of the structure</li>
-                    <li> <span class="emphasis">Leaf</span> - nodes without children</li>
-                    <li> <span class="emphasis">Branch</span> - the edges connecting nodes together</li>
+                    <li> (optional) <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units"> More Fun With CSS </a> </li>
+                    <li> Continue working on your site!</li>
                 </ol>
-            </p>
 
-            <p> Here's a lecture slide from <em>CS61A: 'The Structure & Interpretation of Computer Programs'</em> of the tree for your reference:
-                <br/>
-                <br/>
-                <img align="center" width="500px" height="500px" align="center" src="../images/the_tree.png" />
-            </p>
-            <div class="subtitle"> Accessing Elements via the Dom </div>
-            <p> * NOTE: The below information was borrowed from <a href="http://www.elated.com/articles/looking-inside-dom-page-elements/"> this article </a>from elated.com. </a>
-            </p>
-            <p> Next thing to know is how to access elements on your HTML page with JavaScript. We use the <code> document </code> object to do so, using the built-in methods listed below: </p>
-            <ol>
-                <li> document.getElementById
-                    <pre class="output"><span class="input"> var detailElem = document.getElementById("details")  </span></pre>
-                    <p> Now we've grabbed the elements (e.g. div's, p's, li's, etc.) with the id "details." We can now change their color or size, or declare some other function to do something when those elements are clicked or hovered over</p>
-                </li>
-                <br/>
-                <li> document.getElementsByTagName
-                    <pre class="output"><span class="input"> var paragraphs = document.getElementsByTagName("p")  </span></pre>
-                    <p> This works the same way as getElementById except that we've grabbed a tag (a, li, p, body, etc.). This method returns a 'NodeList' which is an Array of the DOM elements that were selected. To change them all, you can iterate over the
-                        elements in the list in a loop.</p>
-                </li>
-
-                <li> document.getElementsByClassName</li>
-                <pre class="output"><span class="input"> var articles = document.getElementById("articles")  </span></pre>
-                <p> This is the same as getElementsByTagName except we're accessing elements based on their class name. This method also returns a NodeList of DOM elements with the same class, which can be iterated over in a loop</p>
-                </li>
-            </ol>
-
-            <div class="checkoff"> NOTE: There are more ways to access DOM objects, but these are the most common </div>
-            <br/>
-
-            <p> Once you have a node, you can access other nodes related to it. All nodes have the following built-in properties: </p>
-            <ol>
-                <li>childNodes - a collection of all the node's children</li>
-                <li>firstChild - the first child in the collection of children nodes </li>
-                <li>lastChild - the last child in the collection of children nodes</li>
-                <li>nextSibling - the next node with the same parent as the selected node </li>
-                <li>previousSibling - the previous node with the same parent as the selected node </li>
-                <li>parentNode - the node's parent </li>
-            </ol>
-
-            <p> Say we had the following elements in our web page: </p>
-            <pre class="output"><span class="input"> &ltul&gt </span></pre>
-            <pre class="output"><span class="input">    &ltli id="item1"&gt &lta href="www.fakewebsite1.com"&gt   Hey there what's up? &lt/a&gt&lt/li&gt</span></pre>
-            <pre class="output"><span class="input">    &ltli id="item2"&gt &lta href="www.fakewebsite2.com"&gt Not much, how about you? &lt/a&gt &lt/li&gt</span></pre>
-            <pre class="output"><span class="input">    &ltli&gt id="item3"&gt &lta href="www.fakewebsite3.com"&gt   Good, thanks for asking. &lt/a&gt &lt/li&gt</span></pre>
-            <pre class="output"><span class="input">&lt/ul&gt</span></pre>
-            <p> Q: How would you access the text "Not much, how about you?" </p>
-            <p> A: With the following code:</p>
-            <pre class="output"><span class="input"> var item2Text = document.getElementById("item2"); </span></pre>
-            <pre class="output"><span class="input"> alert(item2Text.firstChild.firtChild.nodeValue); </span></pre>
-            <p> Why does this work? Because getElementById returns the second 'id' object and stores it in the variable item2Text. item2Text.firstChild returns the &lta&gt node. Calling .firstChild again returns the firstChild of the &lta&gt node, which is
-                the text node "Not much, how about you." To access the text itself, you need to use nodeValue. </p>
-            <br/>
-            <div class="subtitle"> Getting Attributes </div>
-            <p> Selecting attributes in the DOM is a bit different than getting tags or elements by id. You access an element's attributes with the <code> attributes </code> property like so:
-                <pre class="output"><span class="input"> var elemAttributes = [element].attributes </span></pre>
-            </p>
-            <p>This returns a collection of all the attributes, which you can iterate through in a loop to change individually.
-                <br/> Here's an example - say you have the following image on your webpage: </p>
-            <pre class="output"><span class="input"> &lt img id="favPic" height="500px" width="400px" src="images/pic.jpg" /&gt </span></pre>
-            <p> You can use the following code to display the attributes: </p>
-            <pre class="output"><span class="input"> var output = ""; </span></pre>
-            <pre class="output"><span class="input"> var image = document.getElementById("favPic"); </span></pre>
-            <pre class="output"><span class="input"> var attributes = image.attributes </span></pre>
-            <pre class="output"><span class="input"> for (i=0; i < attributes.length; i ++) {</span></pre>
-            <pre class="output"><span class="input">    output +=(attributes[i].name + "=" + attributes[i].value ) + '\n' }</span></pre>
-            <pre class="output"><span class="input"> alert(output) </span></pre>
-            <p> This code has some things that we haven't gone over yet (like loops and string concatenatoin). Ignore that for now. The big take-away is that we can retrieve and manipulate an element's attributes using the '.attributes' property.</p>
-
-            <div class="subtitle"> Changing Contents of an Element </div>
-            <p> So you know how to retrieve an element as well as look deep inside the DOM to access an element's nodes and parents. But how do you change the contents of an element? </p>
-            <p> One way is to simply assign a new value to the elements .nodeValue property. Say we have the following code on our webpage: </p>
-            <pre class="output"><span class="input">    &ltli id="greeting"&gt &lta href="www.fakewebsite.com"&gt Yo yo yo &lt/a&gt &lt/li&gt</span></pre>
-            <br/>We can change the text like so:
-            <pre class="output"><span class="input">var text = document.getElementById("greeting");</span></pre>
-            <pre class="output"><span class="input">text.firstChild.firstChild.nodeValue = "hey hey hey"</span></pre>
-            <br/>
-            <p> If you want to make bigger changes -- like adding a new paragraph of text to the page -- you can do so by adding new nodes! To do so, you can create a new element like so:
-                <pre class="output"><span class="input"> var newElem = document.createElement(<em>tagName</em>) </span></pre> <br/>Then add it as a child to an existing node:
-                <pre class="output"><span class="input"> existingElement.appendChild(newElem); </span></pre> <br/>You can also add the new node before the existing node with:
-                <pre class="output"><span class="input"> existingElement.insertBefore(newElem); </span></pre> Like .createElement, you can use .createTextNode("insert text here") to create a text node (duh).<br/>
-            </p>
-            <p> You can also remove a node by first retrieving it the usual way (e.g. getElementByID or element.firstChild()), and then removing it from its parent like so:
-                <pre class="output"><span class="input"> removedElem = parent.removeChild(elementToRemove);</span></pre> The method <code> removeChild </code> removes the elementToRemove and <em> returns </em> it. You can either store the removed element
-                in a variable like above (which might come in handy if you want to put it in a different spot on the page) or discard it altogether.
-            </p>
-            <p> Next, you can replace items on the page. There's a few ways to do this. One is a bit convoluted: you remove the node you want to replace from its parent, create a new node containing the content you want to replace it with, and append the
-                new node to the existing parent. Here's an example of that (note: this example is taken from <a href="http://www.elated.com/articles/changing-page-elements-with-the-dom/"> here </a>:</p>
-            <pre class="output"><span class="input"> var welcome = document.getElementById( "welcome" );</span></pre>
-            <pre class="output"><span class="input"> var oldChild = welcome.lastChild;</span></pre>
-            <pre class="output"><span class="input"> welcome.removeChild( oldChild );</span></pre>
-            <pre class="output"><span class="input"> var newPara = document.createElement( "p" );</span></pre>
-            <pre class="output"><span class="input"> newPara.appendChild( document.createTextNode( "Feel free to have a browse." ) );</span></pre>
-            <pre class="output"><span class="input">  welcome.appendChild( newPara );</span></pre>
-            <br/>
-            <p> A better way to do all that is with <code> replaceChild(). </code> This takes in two arguments: the existing node, and the node you want to replace it with. Here's the above code rewritten with <code> replaceChild</code>:
-                <pre class="output"><span class="input"> var welcome = document.getElementById( "welcome" );</span></pre>
-                <pre class="output"><span class="input"> var oldChild = welcome.lastChild;</span></pre>
-                <pre class="output"><span class="input"> var newPara = document.createElement( "p" );</span></pre>
-                <pre class="output"><span class="input"> newPara.appendChild( document.createTextNode( "Feel free to have a browse." ) );</span></pre>
-                <pre class="output"><span class="input">  welcome.replaceChild( newPara, oldChild );</span></pre>
-            </p>
-            <p> Last but not least, you have all the tools to move nodes around and change attributes. Rather than replicating the example here, take five minutes to read <a href="http://www.elated.com/articles/changing-page-elements-with-the-dom/"> this article </a>                Scroll down to "Moving Elements Around." We did the first few exercises together above, so you can skip over those. </p>
-
-            <div class="subtitle"> Let's turn your webpage into a DOM! </div>
-            <p> Now we're going to model your webpage as a graphical tree representation. For this exercise, get out your good ole fashion pen and paper. We'll do an example together on the board to get you started.</p>
-            <div class="checkoff"> NOTE: If you're still confused, read <a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/How_CSS_works"> here </a> about how the browser turns HTML into a DOM & applies CSS to parts of the DOM. For a more complete description
-                of the DOM in general, read all about <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"> here, </a>though we'll be going over most of the content together as a class.</div>
-            <br/>
-
-            <div class="subtitle"> More Practice with the DOM </div>
-            If you're still itching to learn more, here are some more tutorials and exercises for working with the DOM (the last resource is great for learning more about what you can <em> do </em> with javaScript by manipulating the DOM):
-            <ol>
-                <li> Watch this great <a href="https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-access/p/finding-elements-by-id">Kahn Academy tutorial</a> on DOM Access Methods. The whole thing is 30-45 minutes, but will definitely
-                    get you caught up to speed </li>
-                <li><a href="http://www.elated.com/articles/javascript-dom-intro/"> Another introduction </a></li>
-                <li><a href="https://www.w3.org/"> World Wide Web Consortium (W3C)</a>'s <a href="https://www.w3.org/TR/DOM-Level-2-Core/introduction.html"> explanation </a>(these are the guys who MADE the DOM)</li>
-                <li> Mozilla Developer Network's <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"> meaty explanation of the DOM </a></li>
-                <li>Mozilla's <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/API"> list of Web API's accessed via the DOM</a></li>
-                <li> <a href="http://eloquentjavascript.net/13_dom.html"> The DOM </a></li>
-            </ol>
-
-
-            <div class="exercise"> IV. javaScript Basics </div>
-            <div class="subtitle"> Your first program </div>
-            <p> For this program, we're going to learn a real nifty tool that comes with most web browsers: Scratchpad. So that we're on the same page, you might want to use Chrome (what I'll be referring to in this tutorial). You can download <a href="https://developer.mozilla.org/en-US/docs/Tools/Scratchpad">ScratchPad for Chrome  </a>                for free as an extension. <br/>Scratchpad is a JavaScript tool that allows you to write and run code that interacts with your window. </p>
-
-            <ol>
-                <li> Once you've downloaded Scratchpad, open up Chrome and navigate to your favorite site. </li>
-                <li> On the top-right hand corner of the browser, click the symbol with the three horizontal lines: </li>
-                <br/>
-                <img width="400px" height="300px" src="../images/three_line_symbol.png" />
-                <br/>
-                <li> Click 'More Tools' >> 'Developer Tools' like so:</li>
-                <br/>
-                <img width="400px" height="300px" src="../images/developer_tools.png" />
-                <br/>
-                <li> Click the double right-arrow symbol: '>>' and select "Scratch JS". Your screen should look something like this:</li>
-                <br/>
-                <img width="400px" height="300px" src="../images/scratch_js.png">
-                <br/>
-                <li> Now let's write your first program! We'll disect each part of the code below, but for now just copy and paste it into your browser:</li>
-                <br/>
-                <img width="400px" height="300px" src="../images/scratch_code.png">
-                <br/>
-                <li> Click "Run" at the bottom right hand of the Scratchpad. </li>
-
-            </ol>
-            <br/> Cool, right?!
-            <br/>
-            <br/>
-            <div class="subtitle"> Boolean Logic</div>
-            <p> We know that javaScript can do basic math and represent data as Strings. Now let's learn about <span class="emphasis"> boolean logic </span> </p>
-            <p class="emphasis"> <em>Say hello to the 'if/else' statement. </em></p>
-            <p> Let's write an if/else program in Scratchpad:
-                <pre class="output"> &lt <span class="input"> if ("myName".length >= 5){ console.log("You have a long name!");} </span> </pre>
-
-                <p> NOTE: Now we're writing to the console, which is a window that logs info about the current web page, including errors in your code, warnings, network information, etc. Click "Run" on Scratchpad, then move over to the "Console" tab to see
-                    if your message was printed </p>
-                <div class="checkoff"> Pro Tip: The method console.log("stuff") is equivalent to the 'print' statement you see in other languages. This is a GREAT way to debug your code if it is not running how you'd expect. The idea is to throw print statements all throughout
-                    your program and run it. When you hit an error in your code, the browser will just stop running your code entirely. If you have two print statements sandwiching your code, and the first statement printed but the second didn't, you've
-                    arrowed down the area of your code that the error is occuring! You can apply the same strategy to just that area of code (write more print statements and see which ones don't get printed) until you narrow down the error to one or two
-                    lines. Usually errors occur with simple syntax mistakes, so by then the fix should be more obvious. </div>
-                <br/>
-                <div class="subtitle"> Building the Foundation </div>
-                <p> To really understand what's going on with JS, we're going to run through Mozilla Foundation's <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics"> Getting Started with the Web: JavaScript Basics </a>                    Tutorial. It in a text editor together. It has the ABC's of javaScript <em> and </em> other programming languages like Java and Python, which JS heavily borrows from. </p>
-            </p>
-
-
-            <div class="checkoff"> Pro Tip: Check out <a href="http://stackoverflow.com/questions/436411/where-is-the-best-place-to-put-script-tags-in-html-markup">this discussion on Stack Overflow </a>about where to put the &ltscript&gt tags in your doc </div>
-            <br/>
-
-            <div class="exercise">Homework</div>
-            <p>
+                <div class="subtitle"> Good Reads </div>
                 <ol>
-                    <li> Run through <a href="http://www.ibm.com/developerworks/library/wa-jsanddom-pr/#exercise1"> these </a> exercises of DOM manipulation. Try your best NOT to look at the solutions until you've attempted each problem at least once. Struggling
-                        is a good thing -- don't get frustrated with it. In fact, the more you struggle and push through, the better. </li>
-                    <li> (optional) Run through
-                        <a href="http://www.w3resource.com/javascript-exercises/javascript-dom-exercises.php#EDITOR"> </a>
-                    </li>
-                    <li> Work on website.</li>
-                    <!--<li> (optional) Check out <a href="http://www.javascriptkit.com/cutpastejava.shtml">this <span class="emphasis"> free </span> archive of JavaScript scripts </a>that you can use in your website </li>-->
+                    <li><a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">CSS Inheritance, Specificity, & Cascading </a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Debugging_CSS"> Debugging CSS </a></li>
                 </ol>
-            </p>
-
-            <div class="subtitle"> Good Reads </div>
-            <ol>
-                <li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples">Cool Examples </a> of using the DOM. </li>
-                <li> One of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"> the best resources for learning JS </a> -- straight from the developers of the language, Mozilla Developer Network. </li>
-                <li> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"> DOM Interfaces </li>
-             <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Basics"> JS Grammer and Syntax -- warning: this is a little more advanced so may be confusing. Come with your questions next week.</a></li>
-                <li><a href="http://jsforcats.com/"> JavaScript for Cats </a></li>
-                <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript"> Overview of JavaScript </a></li>
-                <li> <a href="http://exercism.io/"> Coding Practice Problems </a></li>
-                <li> <a href="http://jsbooks.revolunet.com/"> The Best Free JS Books </a></li>
-            </ol>
-
         </div>
-       
-  <!--end wrapper -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        $(function() {
+        <!--end wrapper -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            $(function() {
 
-            $('.toggleNav').on('click', function() {
-                $('.flex-nav ul').toggleClass('open');
+                $('.toggleNav').on('click', function() {
+                    $('.flex-nav ul').toggleClass('open');
+                });
             });
-        });
-    </script>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!--add bootrap's JS plugins, jquery, and tether -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+        </script>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!--add bootrap's JS plugins, jquery, and tether -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
 </body>
 
 </html>
