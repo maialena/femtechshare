@@ -1,0 +1,365 @@
+/***
+FONT FAMILIES FROM GOOGLE:
+
+font-family: 'Lobster', cursive;
+font-family: 'Anton', sans-serif;
+font-family: 'Rammetto One', cursive;
+font-family: 'Ultra', serif;
+font-family: 'Mogra', cursive;
+font-family: 'Joti One', cursive;
+font-family: 'Poller One', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Aclonica', sans-serif;
+font-family: 'Berkshire Swash', cursive;
+font-family: 'GT Walsheim';
+font-family: 'PT Sans';
+font-family: 'Ubuntu'; 
+font-family: 'Open Sans'; 
+font-family: 'Vollkorn'; 
+font-family: 'Lato'; 
+font-family: 'Pacifico';
+font-family: 'Rammetto One';
+font-family:: 'Sigmar One';
+font-family: 'Abhaya Libre', serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Trocchi', serif;
+
+
+*/
+
+
+/*******************
+PAGE SET UP 
+*******************/
+
+body,
+html,
+wrapper,
+section {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lobster', cursive;
+}
+
+
+/*******************
+Images
+*******************/
+
+img {
+    opacity: 0.8;
+}
+
+
+/*******************
+Navigation Bar
+*******************/
+
+a {
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Abril Fatface';
+    letter-spacing: 2px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px 1px;
+}
+
+a:hover {
+    /*background: rgba(1, 1, 2, .5);*/
+    background: rgba(127, 63, 191, .5);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 90px;
+    font-family: Berkshire Swash, cursive;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+/*******************
+CONTENT, SECTIONS
+*******************/
+
+div {
+    display: block;
+}
+
+section,
+footer {
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+    font-weight: 100;
+}
+
+.about,
+.details,
+.story,
+.inspiration {
+    font-family: 'Lobster', cursive;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+    font-weight: 100;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.story,
+.details {
+    background-color: indigo;
+}
+
+.story > section {
+    font-family: 'Trocchi', serif;
+    text-align: left;
+    font-size: 20px;
+}
+
+.story > section p {
+    text-indent: 50px;
+}
+
+.details {
+    font-size: 60px;
+}
+
+.about {
+    font-size: 40px;
+}
+
+.inspiration,
+.story {
+    font-size: 30px;
+}
+
+.inspiration {}
+
+h2 {
+    font-family: Berkshire Swash, cursive;
+    font-size: 50px;
+    text-decoration: bold;
+    text-align: center;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.3), 4px 4px 0 rgba(0, 0, 0, 0.8);
+}
+
+
+/*******************
+BACKGROUNDS
+*******************/
+
+.cd-container {
+    /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+    width: 90%;
+    max-width: 768px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.cd-fixed-bg {
+    background-color: rgba(0, 0, 0, 0.3);
+    min-height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*width: 100%;*/
+}
+
+.cd-fixed-bg.cd-bg-1 {
+    background-image: url("../../Assets/share_teaching.jpg");
+    /*height: 100%;*/
+}
+
+.cd-fixed-bg.cd-bg-2 {
+    background-image: url("../images/femTechFam.jpg");
+}
+
+.cd-fixed-bg.cd-bg-3 {
+    background-image: url("../images/FemTechCrew.jpg");
+}
+
+.cd-scrolling-bg {
+    min-height: 100%;
+}
+
+.cd-color-1 {
+    background-color: indigo;
+}
+
+
+/*******************
+TEAM
+*******************/
+
+.flex_container {
+    margin: 20px;
+    display: flex;
+    min-height: 50vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
+    /*border: 10px solid goldenrod;*/
+    justify-content: stretch;
+    align-content: center;
+    /*border: 10px solid rgba(128, 0, 128, 0.4);*/
+    /*background-color: rgba(0, 0, 0, 0.3);*/
+}
+
+.person {
+    padding: .5vw;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 80vh;
+}
+
+.major {
+    background: rgba(255, 255, 255, 0.75);
+    color: black;
+    font-size: 20px;
+    width: 50%;
+    align-self: center;
+    margin: 20px;
+}
+
+.title {
+    font-family: 'Ubuntu', cursive;
+    font-size: 40px;
+    text-decoration: bold;
+    color: white;
+}
+
+.question {
+    font-size: 40px;
+    font-family: 'Joti One', cursive;
+    text-align: center;
+}
+
+.flex_img {
+    max-width: 100%;
+    width: 40%;
+    height: auto;
+    display: block;
+    padding: 0;
+    /*margin: 30px;*/
+    /*flex: .5;*/
+    border: 1px solid black;
+    border-radius: 150%;
+    align-self: center;
+    opacity: 1;
+}
+
+
+/*******************
+ORDER
+*******************/
+
+
+/**Flex Item Ordering */
+
+.logo {
+    order: 0;
+}
+
+.flex-nav {
+    order: 1;
+}
+
+.top {
+    order: 2;
+}
+
+.femtech {
+    order: 3;
+}
+
+.about {
+    order: 4;
+}
+
+.details {
+    order: 5;
+}
+
+.box {
+    order: 7;
+}
+
+.team {
+    order: 8;
+}
+
+.birth {
+    order: 6;
+}
+
+.drive {
+    order: 9;
+}
+
+
+/*******************
+EXTRAS: FUN TEXT EFFECTS
+*******************/
+
+.threeD {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    position: relative;
+    left: 30px;
+    width: 500px;
+    font-size: 70px;
+    color: purple;
+    top: -20px;
+    /*border: 1px solid red;*/
+}
+
+.inset {
+    text-shadow: 0px -2px 0px #333, 0px 2px 3px #666;
+    position: relative;
+    top: -50px;
+    right: -200px;
+    width: 500px;
+    height: 100px;
+    font-size: 80px;
+    color: blue;
+    /*border: 3px solid green;*/
+}
+
+.neon {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    font-size: 90px;
+    color: orange;
+    position: relative;
+    right: -600px;
+    bottom: -100px;
+    width: 100px;
+    height: 100px;
+    /*border: 1px solid blue;*/
+}
+
+.emboss {
+    margin: 50px auto;
+    text-align: center;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.3), 1px 1px 0 rgba(0, 0, 0, 0.8);
+    color: #333;
+    font-size: 70px;
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+    width: 600px;
+    padding: 50px;
+    border-radius: 15px;
+    background: grey;
+    /*border: 3px solid yellow;*/
+}
