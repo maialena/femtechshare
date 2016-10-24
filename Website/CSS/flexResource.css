@@ -1,181 +1,40 @@
-/*CSS Setup -- nothing to do with flexbox */
-
-html {
-    box-sizing: border-box;
-}
-
-
-/**,
-*:before,
-*:after {
-    box-sizing: inherit;
-}*/
-
 body {
-    font-family: sans-serif;
-    margin: 0;
-    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+    background: url("../images/colored_pencils.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-
-/*constrain the width of the navigation with a wrapper */
-
-.wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
+.info {
+    background: rgba(127, 63, 191, .5);
+    border-radius: 50%;
+    margin: 60px;
     padding: 50px;
-    display: flex;
-    flex-direction: column;
 }
 
-.wrapper > * {
-    flex: 9999;
-}
-
-
-/*this keeps image the same width as the wrapper */
-
-img {
-    width: 100%;
-}
-
-input {
-    padding: 10px;
-    border: 0;
-}
-
-section,
-footer {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin: 20px 0;
-    color: white;
-    font-weight: 100;
-}
-
-.about {
-    text-align: left;
-}
-
-.details {
-    font-family: sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-
-/*Flex Container*/
-
-.flex-nav ul {
-    /*border: 1px solid black;*/
-    /*list-style is what makes the list items merge together as one clump */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    /*display:flex is what makes the items go left to right since default flex-direction is row*/
-    /*they'll take exact as much room as needed...so need to fill out the extra space */
-    display: flex;
-}
-
-
-/*to take care of extra space make each item 'li' fill the extra space evenly */
-
-.flex-nav li {
-    /*flex:1 sets flex grow (too much space) and flex shrink (not enough space) */
-    flex: 3;
-}
-
-.flex-nav .social {
-    flex: 1;
-}
-
-
-/*now want to talk about mobile */
-
-
-/*once we hit 1000px (small) we want our social icons to be under the main elem */
-
-
-/* to do this we need to turn on our wrapper */
-
-
-/*Flex Item Ordering */
-
-.flex-nav {
-    order: 1;
-}
-
-.top {
-    order: 2;
-}
-
-.lesson {
-    order: 3;
-    background: rgba(241, 221, 243, 0.3);
-    border-radius: 5px;
-    padding: 30px;
-}
-
-footer {
-    font-size: 2;
-    order: 999;
-    background: none;
-}
-
-
-/*Style */
-
-.titles {
-    font-size: 40px;
-    text-align: center;
-    font-family: cursive;
-    border: 1px solid;
-    font-weight: bold;
-    color: black;
-    padding: 10px;
-}
-
-lesson ul li {
-    list-style: circle;
-    text-align: left;
-}
-
-a {
-    font-size: 20px;
-    color: darkblue;
-    font-weight: 50;
-    line-height: 135%;
+.info a {
+    font-size: 30px;
     text-decoration: none;
+    margin: 10px;
 }
 
 h3 {
-    font-size: 30px;
-    text-align: left;
-}
-
-.flex-nav a {
-    font-size: 20px;
-    color: white;
-    font-weight: 100;
-    letter-spacing: 2px;
-    text-decoration: none;
-    background: rgba(0, 0, 0, 0.2);
-    padding: 20px 1px;
-    display: inline-block;
-    width: 100%;
     text-align: center;
-    transition: all 0.5s;
+    font-style: italic;
 }
 
-h1 {
-    text-align: center;
-    color: white;
-    font-size: 40px;
+footer {
+    color: rgba(127, 63, 191, 1);
 }
 
-a:hover {
-    background: rgba(0, 0, 0, 0.3);
+
+/*******************
+ORDER 
+*******************/
+
+.info {
+    order: 90;
 }
 
 @media all and (max-width: 1000px) {

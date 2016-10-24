@@ -31,31 +31,6 @@ font-family: 'Dosis', sans-serif;
 
 
 /*******************
-PAGE SET UP 
-*******************/
-
-
-/*body,
-html,
-wrapper,
-section {*/
-
-
-/*height: 100%;*/
-
-
-/*margin: 0;*/
-
-
-/*}
-
-body {
-    font-family: 'Helvetica', 'sans serif';
-    background: indigo;
-}*/
-
-
-/*******************
 Images
 *******************/
 
@@ -80,7 +55,8 @@ Images
 
 
 /*******************
-CONTENT, SECTIONS FOR MAIN PAGE
+CONTENT, SECTIONS FOR MAIN PAGE, 
+.info also used for resources
 *******************/
 
 section,
@@ -94,7 +70,7 @@ footer {
 
 .about,
 .details,
-.story,
+.info,
 .inspiration {
     font-family: 'Lobster', cursive;
     letter-spacing: 1px;
@@ -106,12 +82,12 @@ footer {
     /*background: rgba(127, 63, 191, .5);*/
 }
 
-.story,
+.info,
 .details {
     background-color: indigo;
 }
 
-.story > section {
+.info > section {
     font-family: 'Helvetica', 'sans serif';
     /*font-family: 'Josefin Sans';*/
     text-align: left;
@@ -125,7 +101,7 @@ footer {
     font-family: 'Dosis';
 }
 
-.story > section p {
+.info > section p {
     text-indent: 50px;
 }
 
@@ -145,7 +121,7 @@ footer {
 }
 
 .inspiration,
-.story {
+.info {
     font-size: 30px;
 }
 
