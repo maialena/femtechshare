@@ -474,3 +474,90 @@ a:hover {
         order: 3;
     }
 }
+
+
+/*STYLE FOR FUN CSS3 TEXT */
+
+
+/*
+USE MULTIPLE SHADOWS TO CREATE 3D EFFECT http://markdotto.com/playground/3d-text/*/
+
+
+/*http://hallofhavoc.com/2011/03/cool-text-effects-using-css3-text-shadow/*/
+
+
+/*COOL EFFECTS */
+
+
+/*SOMETHING ELSE TO PLAY WITH AT SOME POINT: TEXT OVER IMAGE!: http://www.w3schools.com/css/css_positioning.asp */
+
+.threeD {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    position: relative;
+    left: 30px;
+    width: 500px;
+    font-size: 70px;
+    color: purple;
+    top: -20px;
+    /*border: 1px solid red;*/
+}
+
+.inset {
+    text-shadow: 0px -2px 0px #333, 0px 2px 3px #666;
+    position: relative;
+    top: -50px;
+    right: -200px;
+    width: 500px;
+    height: 100px;
+    font-size: 80px;
+    color: blue;
+    /*border: 3px solid green;*/
+}
+
+.neon {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    font-size: 90px;
+    color: orange;
+    position: relative;
+    right: -600px;
+    bottom: -100px;
+    width: 100px;
+    height: 100px;
+    /*border: 1px solid blue;*/
+}
+
+.emboss {
+    margin: 50px auto;
+    text-align: center;
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.3), 1px 1px 0 rgba(0, 0, 0, 0.8);
+    color: #333;
+    font-size: 70px;
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+    width: 600px;
+    padding: 50px;
+    border-radius: 15px;
+    background: grey;
+    /*border: 3px solid yellow;*/
+}
+
+iframe {
+    width: 100%;
+    text-align: right;
+    margin: 20px;
+}
+
+#workshop {
+    color: blue;
+    font-size: 60px;
+    background-color: cyan;
+    text-decoration: bold;
+    border: 3px solid yellow;
+    font-family: Ariel;
+    padding: 50px;
+    margin: 50px;
+    letter-spacing: 5px;
+    text-align: center;
+    border-radius: 50%;
+}

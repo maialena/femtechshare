@@ -1,5 +1,9 @@
 /*override bootstrap setting to box-sizing: inherit */
 
+body {
+    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+}
+
 a:hover {
     background: rgba(0, 0, 0, 0.3);
     text-decoration: none;
@@ -103,6 +107,9 @@ td {
 
 /*order elements on page, widescreen */
 
+
+/*ALEX LOOK HERE THIS IS WHAT I'M TALKING ABOUT THIS IS THE .LOGO, .TOP, .FLEX-NAV and .TABLE_RESPONNSIVE ARE THE FLEX CHILDREN OF THE WRAPPER AND I"VE GIVEN THEM A CERTAIN ORDER ON THE PAGE*/
+
 .logo {
     order: 1;
 }
@@ -117,6 +124,10 @@ td {
 
 .table-responsive {
     order: 10;
+}
+
+.toggleNav {
+    display: none;
 }
 
 @media all and (max-width: 1000px) {
