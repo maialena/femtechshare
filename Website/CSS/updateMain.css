@@ -34,27 +34,30 @@ font-family: 'Dosis', sans-serif;
 PAGE SET UP 
 *******************/
 
-body,
+
+/*body,
 html,
 wrapper,
-section {
-    /*height: 100%;*/
-    margin: 0;
-}
+section {*/
+
+
+/*height: 100%;*/
+
+
+/*margin: 0;*/
+
+
+/*}
 
 body {
     font-family: 'Helvetica', 'sans serif';
     background: indigo;
-}
+}*/
 
 
 /*******************
 Images
 *******************/
-
-img {
-    opacity: 0.8;
-}
 
 #andrea,
 #turnout,
@@ -77,39 +80,8 @@ img {
 
 
 /*******************
-Navigation Bar
+CONTENT, SECTIONS FOR MAIN PAGE
 *******************/
-
-a {
-    font-size: 30px;
-    font-weight: 100;
-    font-family: 'Abril Fatface';
-    letter-spacing: 2px;
-    background: rgba(0, 0, 0, 0.2);
-    padding: 20px 1px;
-}
-
-a:hover {
-    /*background: rgba(1, 1, 2, .5);*/
-    background: rgba(127, 63, 191, .5);
-}
-
-h1 {
-    text-align: center;
-    color: white;
-    font-size: 90px;
-    font-family: Berkshire Swash, cursive;
-    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-
-/*******************
-CONTENT, SECTIONS
-*******************/
-
-div {
-    display: block;
-}
 
 section,
 footer {
@@ -184,12 +156,6 @@ h2 {
     text-align: center;
     text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.3), 4px 4px 0 rgba(0, 0, 0, 0.8);
 }
-
-
-/*.flex-section {
-    display: flex;
-    flex-direction: column;
-}*/
 
 
 /*******************
@@ -304,27 +270,8 @@ TEAM
 
 
 /*******************
-ORDER
+MAIN PAGE ORDER
 *******************/
-
-
-/**Flex Item Ordering */
-
-.logo {
-    order: 0;
-}
-
-.flex-nav {
-    order: 1;
-}
-
-.top {
-    order: 2;
-}
-
-.femtech {
-    order: 3;
-}
 
 .about {
     order: 4;

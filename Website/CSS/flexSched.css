@@ -1,13 +1,5 @@
-/*override bootstrap setting to box-sizing: inherit */
-
 body {
     background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
-}
-
-a:hover {
-    background: rgba(0, 0, 0, 0.3);
-    text-decoration: none;
-    color: white;
 }
 
 *,
@@ -17,14 +9,10 @@ a:hover {
     box-sizing: content-box;
 }
 
-h1 {
-    text-align: center;
-    color: white;
-    font-size: 40px;
-    display: block;
-    font-weight: bold;
-    padding: 20px;
-}
+
+/*********************
+TABLE 
+***********************/
 
 th {
     text-transform: uppercase;
@@ -69,7 +57,7 @@ tr:nth-child(odd) {
     background-color: rgba(30, 30, 30, 0.2);
 }
 
-td a {
+td > a {
     background: rgba(0, 0, 0, 0);
 }
 
@@ -78,7 +66,12 @@ td {
 }
 
 
-/*this is for the td elements in homework sectio n*/
+/********************
+TABLE STYLE 
+*********************/
+
+
+/*this is for the td elements in homework section*/
 
 .homework {
     text-align: left;
@@ -105,22 +98,9 @@ td {
 }
 
 
-/*order elements on page, widescreen */
-
-
-/*ALEX LOOK HERE THIS IS WHAT I'M TALKING ABOUT THIS IS THE .LOGO, .TOP, .FLEX-NAV and .TABLE_RESPONNSIVE ARE THE FLEX CHILDREN OF THE WRAPPER AND I"VE GIVEN THEM A CERTAIN ORDER ON THE PAGE*/
-
-.logo {
-    order: 1;
-}
-
-.top {
-    order: 3;
-}
-
-.flex-nav {
-    order: 2;
-}
+/***************************
+SCHEDULE ORDER 
+*************************/
 
 .table-responsive {
     order: 10;
@@ -129,6 +109,11 @@ td {
 .toggleNav {
     display: none;
 }
+
+
+/***************************
+ MOBILE RESPONSIVE TABLE
+***********************/
 
 @media all and (max-width: 1000px) {
     .flex-nav ul {
