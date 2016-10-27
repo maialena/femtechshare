@@ -6,84 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/flexLabs.css" />
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../CSS/flexStyles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre|Dosis|Abhaya+Libre|Josefin+Sans|Trocchi|Anton|Joti+One|PT Sans|Pacifico|Rammetto+One|Sigmar+One|GT Walsheim|Ubuntu|Lobster|Abril Fatface|Vollkorn|Open Sans|Lato|Mogra|Poller+One|Rammetto+One|Ultra|Aclonica|Berkshire+Swash|Righteous|Josefin Slab|Avo|"
+        rel="stylesheet">
     <title> Lab2 </title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="top">
-            <h1> Week 2: HTML Basics</h1>
-        </header>
-        <img src="../images/8-21Logo.jpg" />
-        <nav class="flex-nav">
-            <a href="#" class="toggleNav"> <i class="fa fa-bars"></i> Menu </a>
-            <ul>
-                <li><a href="../index.html">About</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li class="social">
-                    <a href="https://twitter.com/femtechberkeley"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li class="social">
-                    <a href="https://www.facebook.com/FEMTechBerkeley/?fref=ts"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li class="social">
-                    <a href="http://femtechberkeley.com/"><i class = "fa fa-users"></i>
-                        </a>
-                </li>
-            </ul>
-        </nav>
+    <div>
+        <div class="wrapper ">
+
+            <header class="top ">
+                <h1> Lab 2: HTML Basics</h1>
+            </header>
+
+            <img class="logo" src="../images/8-21Logo.jpg" />
+
+            <nav class="flex-nav">
+                <a href="#" class="toggleNav"> <i class="fa fa-bars"></i> Menu </a>
+                <!--the flex container is NOT flex-nav...it's ul!-->
+                <ul>
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li class="social">
+                        <a href="https://twitter.com/femtechberkeley"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="social">
+                        <a href="https://www.facebook.com/FEMTechBerkeley/?fref=ts"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="social">
+                        <a href="http://femtechberkeley.com/"><i class = "fa fa-users"></i>
+                    </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="lesson">
+
+                <div class="exercise">OVERVIEW</div>
+                <p> HTML is the language we use to provide structure to our web pages. If you think of a word document, it's all the different parts of the page that make up its form: header, footer, title, subtitles, main text (or 'body' in HTML), paragraphs,
+                    etc.) The font, text color, background color, and text size is all <em> styling </em> which is left to CSS (Cascading Style Sheets). We'll leave CSS to next week, but for now let's look at the basic building blocks of our HTML doc
+                    </p>
+                <p> To do so, we're going to go through Chapters 1-5 pages 12-94 from <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf ">Jon Ducket's HTML & CSS: Design and Build Websites </a>                    (don't worry -- they're mostly pictures). Create a lab2.html file in your HTML directory, open up your text editor, and follow along as we play with HTML syntax. <br/>
+                </p>
+
+                <div class="exercise">LEARNING OBJECTIVES</div>
+
+                <ol>
+                    <li> Learn basics of HTML Doc </li>
+                    <li> For the next few weeks we'll be working on a personal portfolio page. This week we'll make the structure in HTMl, next week we'll add some style with CSS. </li>
+                </ol>
+
+                <div class="exercise"> Powerpoint Slides </div>
+                Here's the slides for the week. Enjoy!
+                <iframe src="https://docs.google.com/presentation/d/1neu5413f0hfo6714bXAi-6EUtXO2bJTSi2iXDd3QVQU/embed?start=false&loop=false&delayms=3000" frameborder="0" width="900" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+                <div class="exercise"> Keeping Up With Tech </div>
+                You might have noticed that we introduced a segment called "Keeping Up With Tech" this week. Because we have so many social science and humanities majors in the room, it's a great opportunity to look into some of the social, political, and moral implications
+                of new technology sprouting up. We'll get the opportunity to hear each other's reactions to privacy issues, artificial intelligence applications, and more. If you're interested in what we talked about last week, here are the articles:
+                <ol>
+                    <li><a href="http://www.livescience.com/56148-proterra-electric-bus-long-battery-life.html">New Electric Bus Can Travel 350 Miles on Single Charge</a></li>
+                    <li><a href="http://pitchfork.com/news/68473-sony-shares-song-composed-by-artificial-intelligence-listen/">Sony Shares Song Composed by Artificial Intelligence</a></li>
+                    <li><a href="http://www.independent.co.uk/life-style/gadgets-and-tech/news/google-allo-should-be-deleted-and-never-used-says-edward-snowden-a7320861.html">Google Allo should be deleted and never used, says Edward Snowden</a></li>
+                    <li><a href="http://www.theverge.com/2016/9/22/13019688/singapore-self-driving-car-nutonomy-grab-ride-hail-test">http://www.theverge.com/2016/9/22/13019688/singapore-self-driving-car-nutonomy-grab-ride-hail-test</a></li>
+                    <li><a href="http://www.theverge.com/transportation/2015/3/17/8232187/elon-musk-human-drivers-are-dangerous/in/3561301">Elon Musk: cars you can drive will eventually be outlawed</a></li>
+                </ol>
 
 
-        <div class="lesson">
 
-            <div class="exercise">OVERVIEW</div>
-            <p> HTML is the language we use to provide structure to our web pages. If you think of a word document, it's all the different parts of the page that make up its form: header, footer, title, subtitles, main text (or 'body' in HTML), paragraphs,
-                etc.) The font, text color, background color, and text size is all <em> styling </em> which is left to CSS (Cascading Style Sheets). We'll leave CSS to next week, but for now let's look at the basic building blocks of our HTML doc </p>
-            <p> To do so, we're going to go through Chapters 1-5 pages 12-94 from <a href="http://www.wufai.edu.tw/information_technology_center/datasheet/HTML%20and%20CSS%20design%20and%20build%20websites.pdf ">Jon Ducket's HTML & CSS: Design and Build Websites </a>                (don't worry -- they're mostly pictures). Create a lab2.html file in your HTML directory, open up your text editor, and follow along as we play with HTML syntax. <br/>
-            </p>
-
-            <div class="exercise">LEARNING OBJECTIVES</div>
-
-            <ol>
-                <li> Learn basics of HTML Doc </li>
-                <li> For the next few weeks we'll be working on a personal portfolio page. This week we'll make the structure in HTMl, next week we'll add some style with CSS. </li>
-            </ol>
-
-            <div class="exercise"> Powerpoint Slides </div>
-            Here's the slides for the week. Enjoy!
-            <iframe src="https://docs.google.com/presentation/d/1neu5413f0hfo6714bXAi-6EUtXO2bJTSi2iXDd3QVQU/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>            You might have noticed that we introduced a segment called "Keeping Up With Tech" this week. Because we have so many social science and humanities majors in the room, it's a great opportunity to look into some of the social, political, and
-            moral implications of new technology sprouting up. We'll get the opportunity to hear each other's reactions to privacy issues, artificial intelligence applications, and more. If you're interested in what we talked about last week, here are
-            the articles:
-            <ol>
-                <li><a href="http://www.livescience.com/56148-proterra-electric-bus-long-battery-life.html">New Electric Bus Can Travel 350 Miles on Single Charge</a></li>
-                <li><a href="http://pitchfork.com/news/68473-sony-shares-song-composed-by-artificial-intelligence-listen/">Sony Shares Song Composed by Artificial Intelligence</a></li>
-                <li><a href="http://www.independent.co.uk/life-style/gadgets-and-tech/news/google-allo-should-be-deleted-and-never-used-says-edward-snowden-a7320861.html">Google Allo should be deleted and never used, says Edward Snowden</a></li>
-                <li><a href="http://www.theverge.com/2016/9/22/13019688/singapore-self-driving-car-nutonomy-grab-ride-hail-test">http://www.theverge.com/2016/9/22/13019688/singapore-self-driving-car-nutonomy-grab-ride-hail-test</a></li>
-                <li><a href="http://www.theverge.com/transportation/2015/3/17/8232187/elon-musk-human-drivers-are-dangerous/in/3561301">Elon Musk: cars you can drive will eventually be outlawed</a></li>
-            </ol>
-
-
-
+            </div>
         </div>
-    </div>
 
-    <!--end wrapper -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        $(function() {
+        <!--end wrapper -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            $(function() {
 
-            $('.toggleNav').on('click', function() {
-                $('.flex-nav ul').toggleClass('open');
+                $('.toggleNav').on('click', function() {
+                    $('.flex-nav ul').toggleClass('open');
+                });
             });
-        });
-    </script>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!--add bootrap's JS plugins, jquery, and tether -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+        </script>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!--add bootrap's JS plugins, jquery, and tether -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
 </body>
 
 </html>

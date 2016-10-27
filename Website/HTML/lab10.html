@@ -4,122 +4,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="../CSS/flexLabs.css" />
-
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../CSS/flexStyles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre|Dosis|Abhaya+Libre|Josefin+Sans|Trocchi|Anton|Joti+One|PT Sans|Pacifico|Rammetto+One|Sigmar+One|GT Walsheim|Ubuntu|Lobster|Abril Fatface|Vollkorn|Open Sans|Lato|Mogra|Poller+One|Rammetto+One|Ultra|Aclonica|Berkshire+Swash|Righteous|Josefin Slab|Avo|"
+        rel="stylesheet">
     <title> Lab10 </title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="top">
-            <h1> Week 10: HTML5 Canvas </h1>
-        </header>
-        <img src="../images/8-21Logo.jpg" />
-        <nav class="flex-nav">
-            <a href="#" class="toggleNav"> <i class="fa fa-bars"></i> Menu </a>
-            <ul>
-                <li><a href="../index.html">About</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li class="social">
-                    <a href="https://twitter.com/femtechberkeley"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li class="social">
-                    <a href="https://www.facebook.com/FEMTechBerkeley/?fref=ts"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li class="social">
-                    <a href="http://femtechberkeley.com/"><i class = "fa fa-users"></i>
-                        </a>
-                </li>
-            </ul>
-        </nav>
+    <div>
+        <div class="wrapper ">
 
-        <div class="lesson">
-            <div class="exercise"> Overview </div>
-            <p> Today we're going to have some fun with HTML5 Canvas, which is a tool used to draw 2D graphics on your web page. </p>
-            <div class="exercise"> Learning Objectives </div>
-            <ol>
-                <li> Draw shapes and text using HTML5 Canvas </li>
-                <li>Create basic and advanced animations </li>
-                <li> Transform the canvas grid </li>
-                <li> Manipulate pixels</li>
-            </ol>
-            <div class="exercise"> Basic Canvas Example </div>
-            <!--<p> Read about the basic canvas setup <a href="http://www.w3schools.com/html/html5_canvas.asp"> here </a></p>-->
-            <p> This is a self-paced class today. Read and work through Opera's <a href="https://dev.opera.com/articles/html5-canvas-basics/#introduction"> tutorial </a> on HTML5 Canvas </p>
-            <p> I'd also like you to glimpse over <a href="http://www.w3schools.com/tags/ref_canvas.asp"> W3School's Canvas Reference Guide </a> for a list of common methods and properties of the getContext("2d") object.</p>
-            <div class="exercise"> Animation </div>
-            <p> Now that we've gone over how to use Canvas, we'll make our very own Canvas Painting Application! </p>
-            <p> Create new canvas.html and canvas.css files in your labs directory. We'll walk through <a href="https://dev.opera.com/articles/html5-canvas-painting/"> this tutorial </a> from Dev.Opera together in class.</p>
-            <!--<p> We'll continue with the above MDN tutorial together as a class. Open up your terminal, and we'll walk through "Basic Animations" and "Advanced Animations" more slowly so that everyone is on the same page. You can create a new graphics.html
+            <header class="top ">
+                <h1> Lab 10: HTML5 Canvas</h1>
+            </header>
+
+            <img class="logo" src="../images/8-21Logo.jpg" />
+
+            <nav class="flex-nav">
+                <a href="#" class="toggleNav"> <i class="fa fa-bars"></i> Menu </a>
+                <!--the flex container is NOT flex-nav...it's ul!-->
+                <ul>
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li class="social">
+                        <a href="https://twitter.com/femtechberkeley"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="social">
+                        <a href="https://www.facebook.com/FEMTechBerkeley/?fref=ts"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="social">
+                        <a href="http://femtechberkeley.com/"><i class = "fa fa-users"></i>
+                    </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="lesson">
+                <div class="exercise"> Overview </div>
+                <p> Today we're going to have some fun with HTML5 Canvas, which is a tool used to draw 2D graphics on your web page. </p>
+                <div class="exercise"> Learning Objectives </div>
+                <ol>
+                    <li> Draw shapes and text using HTML5 Canvas </li>
+                    <li>Create basic and advanced animations </li>
+                    <li> Transform the canvas grid </li>
+                    <li> Manipulate pixels</li>
+                </ol>
+                <div class="exercise"> Basic Canvas Example </div>
+                <!--<p> Read about the basic canvas setup <a href="http://www.w3schools.com/html/html5_canvas.asp"> here </a></p>-->
+                <p> This is a self-paced class today. Read and work through Opera's <a href="https://dev.opera.com/articles/html5-canvas-basics/#introduction"> tutorial </a> on HTML5 Canvas </p>
+                <p> I'd also like you to glimpse over <a href="http://www.w3schools.com/tags/ref_canvas.asp"> W3School's Canvas Reference Guide </a> for a list of common methods and properties of the getContext("2d") object.</p>
+                <div class="exercise"> Animation </div>
+                <p> Now that we've gone over how to use Canvas, we'll make our very own Canvas Painting Application! </p>
+                <p> Create new canvas.html and canvas.css files in your labs directory. We'll walk through <a href="https://dev.opera.com/articles/html5-canvas-painting/"> this tutorial </a> from Dev.Opera together in class.</p>
+                <!--<p> We'll continue with the above MDN tutorial together as a class. Open up your terminal, and we'll walk through "Basic Animations" and "Advanced Animations" more slowly so that everyone is on the same page. You can create a new graphics.html
                 and graphics.css file in a subdirectory and tinker there. </p>
             <p> Again, the sections called "Pixel manipulation," "Hit regions and accessibility," and "Optimizing the canvas" are left to you as an optional homework exercise.</p>
             <p> We'll spend the last 15 minutes or so of class sharing what we've designed :) </p>-->
-            <div class="exercise"> Homework </div>
-            <ol>
-                <li>Work on your website</li>
-                <li> (optional) MDN's <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API"> Canvas API tutorial </a></li>
+                <div class="exercise"> Homework </div>
+                <ol>
+                    <li>Work on your website</li>
+                    <li> (optional) MDN's <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API"> Canvas API tutorial </a></li>
 
-            </ol>
-            <!--canvas set up -->
-            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
-            <!--draw a rectangle -->
-            <script>
-                var c = document.getElementById("myCanvas");
-                var ctx = c.getContext("2d");
-                ctx.fillStyle = "#FF0000";
-                ctx.fillRect(0, 0, 150, 75);
-            </script>
+                </ol>
+                <!--canvas set up -->
+                <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                <!--draw a rectangle -->
+                <script>
+                    var c = document.getElementById("myCanvas");
+                    var ctx = c.getContext("2d");
+                    ctx.fillStyle = "#FF0000";
+                    ctx.fillRect(0, 0, 150, 75);
+                </script>
 
-            <!--draw a line -->
-            <canvas id="lineCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
-            <script>
-                var p = document.getElementById("lineCanvas");
-                var ctxLine = p.getContext("2d");
-                ctxLine.moveTo(0, 0);
-                ctxLine.lineTo(200, 100);
-                ctxLine.stroke();
-            </script>
+                <!--draw a line -->
+                <canvas id="lineCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                <script>
+                    var p = document.getElementById("lineCanvas");
+                    var ctxLine = p.getContext("2d");
+                    ctxLine.moveTo(0, 0);
+                    ctxLine.lineTo(200, 100);
+                    ctxLine.stroke();
+                </script>
 
-            <!--draw a circle -->
+                <!--draw a circle -->
 
-            <canvas id="circle" width="200" height="100" style="border:1px solid #000000;"></canvas>
-            <script>
-                var t = document.getElementById("circle");
-                var ctxCircle = t.getContext("2d");
-                ctxCircle.beginPath();
-                ctxCircle.arc(95, 50, 40, 0, 2 * Math.PI);
-                ctxCircle.stroke();
-            </script>
+                <canvas id="circle" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                <script>
+                    var t = document.getElementById("circle");
+                    var ctxCircle = t.getContext("2d");
+                    ctxCircle.beginPath();
+                    ctxCircle.arc(95, 50, 40, 0, 2 * Math.PI);
+                    ctxCircle.stroke();
+                </script>
 
-            <!--draw Text -->
-            <canvas id="text" width="200" height="100" style="border:1px solid #000000;"></canvas>
-            <script>
-                var c = document.getElementById("text");
-                var ctx = c.getContext("2d");
-                ctx.font = "30px Arial";
-                ctx.fillText("Hello World", 10, 50);
-            </script>
+                <!--draw Text -->
+                <canvas id="text" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                <script>
+                    var c = document.getElementById("text");
+                    var ctx = c.getContext("2d");
+                    ctx.font = "30px Arial";
+                    ctx.fillText("Hello World", 10, 50);
+                </script>
+            </div>
+
         </div>
+        <!--end wrapper -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            $(function() {
 
-    </div>
-    <!--end wrapper -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        $(function() {
-
-            $('.toggleNav').on('click', function() {
-                $('.flex-nav ul').toggleClass('open');
+                $('.toggleNav').on('click', function() {
+                    $('.flex-nav ul').toggleClass('open');
+                });
             });
-        });
-    </script>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!--add bootrap's JS plugins, jquery, and tether -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+        </script>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!--add bootrap's JS plugins, jquery, and tether -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
 </body>
 
 </html>

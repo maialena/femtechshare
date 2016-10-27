@@ -6,72 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/flexLabs.css" />
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../CSS/flexStyles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre|Dosis|Abhaya+Libre|Josefin+Sans|Trocchi|Anton|Joti+One|PT Sans|Pacifico|Rammetto+One|Sigmar+One|GT Walsheim|Ubuntu|Lobster|Abril Fatface|Vollkorn|Open Sans|Lato|Mogra|Poller+One|Rammetto+One|Ultra|Aclonica|Berkshire+Swash|Righteous|Josefin Slab|Avo|"
+        rel="stylesheet">
     <title> Lab1 </title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="top">
-            <h1> Week 1: Environment Setup & HTML</h1>
-        </header>
-        <img src="../images/8-21Logo.jpg" />
-        <nav class="flex-nav">
-            <a href="#" class="toggleNav"> <i class="fa fa-bars"></i> Menu </a>
-            <ul>
-                <li><a href="../index.html">About</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li class="social">
-                    <a href="https://twitter.com/femtechberkeley"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li class="social">
-                    <a href="https://www.facebook.com/FEMTechBerkeley/?fref=ts"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li class="social">
-                    <a href="http://femtechberkeley.com/"><i class = "fa fa-users"></i>
-                        </a>
-                </li>
-            </ul>
-        </nav>
+    <div>
+        <div class="wrapper ">
+
+            <header class="top ">
+                <h1> Lab 1: Environment Setup & HTML</h1>
+            </header>
+
+            <img class="logo" src="../images/8-21Logo.jpg" />
+
+            <nav class="flex-nav">
+                <a href="#" class="toggleNav"> <i class="fa fa-bars"></i> Menu </a>
+                <!--the flex container is NOT flex-nav...it's ul!-->
+                <ul>
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li class="social">
+                        <a href="https://twitter.com/femtechberkeley"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="social">
+                        <a href="https://www.facebook.com/FEMTechBerkeley/?fref=ts"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="social">
+                        <a href="http://femtechberkeley.com/"><i class = "fa fa-users"></i>
+                    </a>
+                    </li>
+                </ul>
+            </nav>
 
 
-        <div class="lesson">
+            <div class="lesson info">
 
-            <div class="exercise">OVERVIEW</div>
-            <p>Welcome to FemTECH Share! The purpose of this series is to teach you the basics of HTML5, CSS, and JavaScript so that you can build your own website in just 10 weeks. If you've wanted to learn programming but didn't know where to start, this
-                is a great jumping off point into the world of web development. We'll begin each week by sharing a cool video, article, or 'hot topic' in the tech world -- something to get inspired by. We'll likely open the floor up to a brief discussion
-                and check-in, and then dive straight into the lab.</p>
-            <p> In the beginning, the labs will be made up of equal parts instruction and self-paced exercises. As we progress throughout the semester, however, instruction time will decrease and self-paced-learning time will increase. By the end, you'll
-                be leading yourself (and each other) as you learn new tricks and choose the projects that most interest you. </p>
-            <p> While you'll pick up programming skills by the end of this series, that's certaintly not the sole purpose. Beyond the technical know-how, we also hope you'll leave with more confidence, research skills, and support to dive as deep into the
-                world of web development (and programming) as you'd like after the semester is through.</p>
+                <div class="exercise">OVERVIEW</div>
+                <p>Welcome to FemTECH Share! The purpose of this series is to teach you the basics of HTML5, CSS, and JavaScript so that you can build your own website in just 10 weeks. If you've wanted to learn programming but didn't know where to start,
+                    this is a great jumping off point into the world of web development. We'll begin each week by sharing a cool video, article, or 'hot topic' in the tech world -- something to get inspired by. We'll likely open the floor up to a brief
+                    discussion and check-in, and then dive straight into the lab.</p>
+                <p> In the beginning, the labs will be made up of equal parts instruction and self-paced exercises. As we progress throughout the semester, however, instruction time will decrease and self-paced-learning time will increase. By the end, you'll
+                    be leading yourself (and each other) as you learn new tricks and choose the projects that most interest you. </p>
+                <p> While you'll pick up programming skills by the end of this series, that's certaintly not the sole purpose. Beyond the technical know-how, we also hope you'll leave with more confidence, research skills, and support to dive as deep into
+                    the world of web development (and programming) as you'd like after the semester is through.</p>
 
-            <p> But before we jump in, let's answer a basic question that's at the core of anything web-related: what exactly is the internet? Though you don't need to understand what the internet is to develop a website, let alone use one, you'll have way
-                more street cred if you do ;) So let's watch this awesome video to get oriented.<br/><br/>
+                <p> But before we jump in, let's answer a basic question that's at the core of anything web-related: what exactly is the internet? Though you don't need to understand what the internet is to develop a website, let alone use one, you'll have
+                    way more street cred if you do ;) So let's watch this awesome video to get oriented.<br/><br/>
 
-                <iframe width="640" height="360" src="https://www.youtube.com/embed/Dxcc6ycZ73M" frameborder="0" allowfullscreen></iframe>
-            </p>
+                    <iframe width="640" height="450" src="https://www.youtube.com/embed/Dxcc6ycZ73M" frameborder="0" allowfullscreen></iframe>
+                </p>
 
-            <p> Now onto the meat and potatoes: setting up our work environment.</p>
+                <p> Now onto the meat and potatoes: setting up our work environment.</p>
 
-            <div class="exercise">LEARNING OBJECTIVES</div>
+                <div class="exercise">LEARNING OBJECTIVES</div>
 
-            <ol>
-                <li> Meet the team! </li>
-                <li> Set up your work environment (terminal, Text Editor, directories) </li>
-                <li> Sign up for EdX "HTML, CSS, javaScript online course" (free)</li>
-            </ol>
+                <ol>
+                    <li> Meet the team! </li>
+                    <li> Set up your work environment (terminal, Text Editor, directories) </li>
+                    <li> Sign up for EdX "HTML, CSS, javaScript online course" (free)</li>
+                </ol>
 
-            <div class="exercise">I. Introductions </div>
-            <p> In case you missed the first meeting, we went over the 'syllabus' and goals for the semester, and introduced each other. You can breeze through the slides here if you'd like.
-                <iframe src="https://docs.google.com/presentation/d/1oSzi75h9yBhbmerwn43aK1jFHpjTxvo3WMKXD9vvahA/embed?start=false&loop=false&delayms=3000" frameborder="0" width="900" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-            </p>
+                <div class="exercise">Introductions </div>
+                <p> In case you missed the first meeting, we went over the 'syllabus' and goals for the semester, and introduced each other. You can breeze through the slides here if you'd like.
+                    <iframe src="https://docs.google.com/presentation/d/1oSzi75h9yBhbmerwn43aK1jFHpjTxvo3WMKXD9vvahA/embed?start=false&loop=false&delayms=3000" frameborder="0" width="900" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                </p>
 
 
-            <div class="exercise"> II. Environment Set-Up </div>
-            <p> We're going to create all the subdirectories we will need to build a website. There are a few conventions that website developers use, so we'll start by learning them.</p>
-            <ol>
-                <!-- YO AS PART OF INTAKE FORM ASK A FEW QUESTIONS: 
+                <div class="exercise"> Environment Set-Up </div>
+                <p> We're going to create all the subdirectories we will need to build a website. There are a few conventions that website developers use, so we'll start by learning them.</p>
+                <ol>
+                    <!-- YO AS PART OF INTAKE FORM ASK A FEW QUESTIONS: 
                 1. MAC OR PC USERS
                 2. HAVE THEY HEARD OF GIT? DO THEY WANT TO LEARN IT (with a short explanation about how it can be very confusing for beginners, so might take away from web dev time...but is still useful/possible to learn, no matter the level)
                 3. What they're most excited for this semester
@@ -79,50 +87,50 @@
                 5. Name, major, year, etc.
                 6. Something cute and random like favorite ice cream flavor -->
 
-                <!--<li> First, open your terminal and <span class="code"> $cd </span> into your main directory </li>-->
-                <li> Let's create some folders. We'll need a <span class="code"> HTML, CSS, images, </span> & <span class="code"> JS </span> (javaScript) directories for now. </li>
-                <li> In your <span class="emphasis"> root directory </span> (the one that contains all sub-directories), make a new <span class="code"> index.html </span> file </li>
-                <li> <span class="code"> In your HTML directory, make a new <span class="code"> style.html </span> file </li>
-            </ol>
-            <p> Why are the main files called "index.html" and "style.css"? No particular reason. It's just the convention that Web Developers use. </p>
-            <p> Now we're ready to code!...well almost. You need a text editor. If you're using Mac there's a built-in TextEdit editor (which is a little boring, in my opinion) and tons of free editors online (read <a href="http://learn.onemonth.com/the-best-text-editors-for-beginners"> this </a>                article here listing Best Editors for Beginners if you want suggestions). I personally like <a href="https://code.visualstudio.com/c?utm_expid=101350005-27.GqBWbOBuSRqlazQC_nNSRg.2&utm_referrer=https%3A%2F%2Fwww.google.com%2F"> VisualStudioCode </a>                for web development because it allows you to 'split' the screen so that you can have your HTML, CSS, and JS files next to each other simultaneously. <a href="https://www.sublimetext.com/">Sublime </a>is also really popular, and a great
-                all-purpose editor for any language. If you're using a PC, you can use Notepad, which can be found under All Program --> Accessories.
-                <br/> </br>We'll walk through the basics of a markup page together on the board in class. If you miss class, or want a refresher later on, use <a href="https://www.sitepoint.com/a-basic-html5-template/">this resource </a>to get started.
-                </a>
-            </p>
-
-
-            <div class="exercise">III. (OPTIONAL) Homework </div>
-            <p>Whaaaaa??? HOMEWORK?! I know, last thing you need is another assignment. Good news is that it's optional. Think of it as a way more productive way to procrastinate on your paper than mindlessly browsing Facebook. Coding is the kind of thing
-                that has a steep learning curve but gets exponentially better with practice, so the more you can do throughout the week (even if it's 10 minutes a day), the better off you'll be in the long run (again, optional). <br/><br/> We’re going
-                to be using the FREE online course: “HTML5 Introduction” to buff up our skills. This is a great introduction to the material we’ll be covering this term. It will be really helpful if you try to complete one section per week so that you
-                can come to Share with questions.
-                <ol>
-                    <li>Sign up for the course <a href="https://www.edx.org/course/html5-introduction-w3cx-html5-0x-0"> here </a> </li>
-                    <li> Once you're signed up, you can start the first week's, EdX Module 1: “Creating Web Pages using Hypertext Markup Language (HTML).”</li>
-                    <li> Another optional assignment: next week we're going to start designing our websites. You can get a head start with <a href="http://www.designbombs.com/"> designbombs.com </a> to read up on things to think about when choosing colors,
-                        fonts, styles (and more) for your website</li>
+                    <!--<li> First, open your terminal and <span class="code"> $cd </span> into your main directory </li>-->
+                    <li> Let's create some folders. We'll need a <span class="code"> HTML, CSS, images, </span> & <span class="code"> JS </span> (javaScript) directories for now. </li>
+                    <li> In your <span class="emphasis"> root directory </span> (the one that contains all sub-directories), make a new <span class="code"> index.html </span> file </li>
+                    <li> <span class="code"> In your HTML directory, make a new <span class="code"> style.html </span> file </li>
                 </ol>
-            </p>
+                <p> Why are the main files called "index.html" and "style.css"? No particular reason. It's just the convention that Web Developers use. </p>
+                <p> Now we're ready to code!...well almost. You need a text editor. If you're using Mac there's a built-in TextEdit editor (which is a little boring, in my opinion) and tons of free editors online (read <a href="http://learn.onemonth.com/the-best-text-editors-for-beginners"> this </a>                    article here listing Best Editors for Beginners if you want suggestions). I personally like <a href="https://code.visualstudio.com/c?utm_expid=101350005-27.GqBWbOBuSRqlazQC_nNSRg.2&utm_referrer=https%3A%2F%2Fwww.google.com%2F"> VisualStudioCode </a>                    for web development because it allows you to 'split' the screen so that you can have your HTML, CSS, and JS files next to each other simultaneously. <a href="https://www.sublimetext.com/">Sublime </a>is also really popular, and a great
+                    all-purpose editor for any language. If you're using a PC, you can use Notepad, which can be found under All Program --> Accessories.
+                    <br/> </br>We'll walk through the basics of a markup page together on the board in class. If you miss class, or want a refresher later on, use <a href="https://www.sitepoint.com/a-basic-html5-template/">this resource </a>to get started.
+                    </a>
+                </p>
+
+
+                <div class="exercise">(OPTIONAL) Homework </div>
+                <p>Whaaaaa??? HOMEWORK?! I know, last thing you need is another assignment. Good news is that it's optional. Think of it as a way more productive way to procrastinate on your paper than mindlessly browsing Facebook. Coding is the kind of
+                    thing that has a steep learning curve but gets exponentially better with practice, so the more you can do throughout the week (even if it's 10 minutes a day), the better off you'll be in the long run (again, optional). <br/><br/> We’re
+                    going to be using the FREE online course: “HTML5 Introduction” to buff up our skills. This is a great introduction to the material we’ll be covering this term. It will be really helpful if you try to complete one section per week so
+                    that you can come to Share with questions.
+                    <ol>
+                        <li>Sign up for the course <a href="https://www.edx.org/course/html5-introduction-w3cx-html5-0x-0"> here </a> </li>
+                        <li> Once you're signed up, you can start the first week's, EdX Module 1: “Creating Web Pages using Hypertext Markup Language (HTML).”</li>
+                        <li> Another optional assignment: next week we're going to start designing our websites. You can get a head start with <a href="http://www.designbombs.com/"> designbombs.com </a> to read up on things to think about when choosing colors,
+                            fonts, styles (and more) for your website</li>
+                    </ol>
+                </p>
+            </div>
         </div>
-    </div>
 
-    <!--end wrapper -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        $(function() {
+        <!--end wrapper -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            $(function() {
 
-            $('.toggleNav').on('click', function() {
-                $('.flex-nav ul').toggleClass('open');
+                $('.toggleNav').on('click', function() {
+                    $('.flex-nav ul').toggleClass('open');
+                });
             });
-        });
-    </script>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!--add bootrap's JS plugins, jquery, and tether -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+        </script>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!--add bootrap's JS plugins, jquery, and tether -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
 </body>
 
 </html>
